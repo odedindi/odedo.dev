@@ -1,6 +1,5 @@
-import { device } from 'helpers/mediaQueries';
+import { device } from 'utils/mediaQueries';
 import styled from 'styled-components';
-
 
 // ============= general layout =============
 export const LayoutWrapper = styled.section`
@@ -8,10 +7,9 @@ export const LayoutWrapper = styled.section`
 	line-height: 1.5;
 	height: 100vh;
 	width: 100vw;
-	
+
 	${device.phone} {
 		padding: 5%;
-
 	}
 `;
 
@@ -21,11 +19,11 @@ export const ChildrenWrapper = styled.section`
 	flex-flow: column wrap;
 	align-items: center;
 	justify-content: center;
-	
+
 	${device.phone} {
 		min-height: 57.5vh;
 	}
-	`;
+`;
 // =============== navigation ===============
 export const NavigationWrapper = styled.section`
 	display: flex;
@@ -43,14 +41,14 @@ export const NavigationWrapper = styled.section`
 export const LinksWrapper = styled.div`
 	display: flex;
 	gap: 5px;
-	
-    ${device.phone} {
-        display: flex;
-        flex-flow: column;
-        justify-content: space-between;
-        align-items: center;
+
+	${device.phone} {
+		display: flex;
+		flex-flow: column;
+		justify-content: space-between;
+		align-items: center;
 	}
-	`;
+`;
 // ================= footer =================
 export const FooterWrapper = styled.footer`
 	display: flex;

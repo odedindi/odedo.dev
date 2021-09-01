@@ -1,14 +1,14 @@
 // ================== styles ==================
 import * as S from '../style';
 // ================= helpers ==================
-import { contactSource, contactLinks } from 'helpers/ContactLinks';
+import { contactSource, contactLinks } from 'utils/ContactLinks';
 // ================ components ================
 import { SocialIcon } from 'react-social-icons';
+import CreateAnimation from 'components/CreateAnimation';
 // ============================================
 type ContactMeProps = {
 	onClick: ContactLink;
 };
-
 
 const SocialMediaButton = ({ onClick }: ContactMeProps) => (
 	<SocialIcon
@@ -20,10 +20,12 @@ const SocialMediaButton = ({ onClick }: ContactMeProps) => (
 const ContactMeButtons = () => (
 	<S.ContactMeButtonsWrapper>
 		{contactSource.map((source: ContactSource) => (
-			<SocialMediaButton
-				key={source}
-				onClick={contactLinks[source]}
-			/>
+			<CreateAnimation key={source} type="Hover">
+				<SocialMediaButton
+					key={source}
+					onClick={contactLinks[source]}
+				/>
+			</CreateAnimation>
 		))}
 	</S.ContactMeButtonsWrapper>
 );

@@ -7,7 +7,7 @@ const contactSource: ContactSource[] = [
 ];
 
 const contactLinks: ContactLinks = {
-	facebook: 'https://www.facebook.com/oded.weinberger/',
+	facebook: 'https://www.facebook.com/oded.winberger/',
 	linkedin: 'https://www.linkedin.com/in/odedw/',
 	github: 'https://github.com/odedindi',
 	discord: 'https://discordapp.com/users/804035729201037353',

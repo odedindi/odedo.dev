@@ -15,8 +15,7 @@ const Navigation = () => {
 		home = '/',
 		about = '/about',
 		portfolio = '/portfolio',
-	};
-	
+	}
 
 	return (
 		<S.NavigationWrapper>

@@ -14,7 +14,7 @@ type UseFadeInFadeOutEffect = {
 		componentWrapperRef: React.RefObject<HTMLElement>;
 		FadeOutFadeInComponent: React.FC;
 		triggerAnimationFunctions: {
-			setEndX: React.Dispatch<React.SetStateAction<number>>;
+			setEndY: React.Dispatch<React.SetStateAction<number>>;
 			setOpacity: React.Dispatch<React.SetStateAction<number>>;
 			setIsFirstLoad: React.Dispatch<React.SetStateAction<boolean>>;
 		};
@@ -34,18 +34,18 @@ export const useFadeOutFadeInEffect: UseFadeInFadeOutEffect = (
 	const [isFadeInComponentVisible, setIsFadeInComponentVisible] =
 		React.useState(() => (isFirstLoad ? false : true));
 
-	const [endX, setEndX] = React.useState(0);
+	const [endY, setEndY] = React.useState(0);
 
 	const [opacity, setOpacity] = React.useState(1);
 
 	// store the timeline in a ref.
 	const timeline = React.useRef<gsap.core.Timeline>();
-
+	
 	const triggerAnimationFunctions = {
 		// how far should the component drift before disappearing
-		// => numbers will take it left and positive numbers to the right
-		// for example setEndX(-200) or setEndX(200)
-		setEndX,
+		// => negative numbers will take it up and positive numbers to the down
+		// for example setEndY(-200) or setEndY(200)
+		setEndY,
 
 		// to make the component disapear nicely recommend to set to 0
 		// for example setOpacity(0)
@@ -64,16 +64,17 @@ export const useFadeOutFadeInEffect: UseFadeInFadeOutEffect = (
 			timeline.current = gsap
 				.timeline()
 				.to(q(`.${fadeInComponentClassName}`), {
-					x: 200,
+					y: 200,
 					opacity: 0,
+					scale: 0,
 				});
 			// make sure animation kicks in only if
 			// the element is on the document
-			if (document.querySelector(`.${fadeOutComponentClassName}`)) {
+			if (document.querySelector(`.${fadeOutComponentClassName}`)) {			
 				timeline.current = gsap
 					.timeline()
 					.to(q(`.${fadeOutComponentClassName}`), {
-						x: endX,
+						y: endY,
 						opacity: opacity,
 					});
 				if (!isFirstLoad) {
@@ -85,12 +86,13 @@ export const useFadeOutFadeInEffect: UseFadeInFadeOutEffect = (
 			if (isFadeInComponentVisible) {
 				timeline.current = gsap
 					.timeline()
-					.set(`.${fadeOutComponentClassName}`, {
+					.set(q(`.${fadeOutComponentClassName}`), {
 						visibility: 'hidden',
 					})
 					.to(q(`.${fadeInComponentClassName}`), {
-						x: 0,
+						y: 0,
 						opacity: 1,
+						scale: 1,
 					});
 			}
 		}
@@ -99,7 +101,7 @@ export const useFadeOutFadeInEffect: UseFadeInFadeOutEffect = (
 			isRefMounted.current = false;
 		};
 	}, [
-		endX,
+		endY,
 		fadeInComponentClassName,
 		fadeOutComponentClassName,
 		isFadeInComponentVisible,

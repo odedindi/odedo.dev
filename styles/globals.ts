@@ -28,7 +28,8 @@ const theme = {
 	colors: {
 		primary: '#0070f3',
 		dark: '#3d1e9d',
-		bright: '#1583ae',
+		bright: '#1e7e9d',
+		links: '9d3d1e',
 	},
 	fontSizes: {
 		title: '2.25rem',

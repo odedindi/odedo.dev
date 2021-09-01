@@ -13,11 +13,10 @@ import PageLayout from '../components/Layout';
 const AboutPage: NextPage = () => {
 	const { t } = useTranslation('about');
 
-
 	return (
 		<PageLayout title={t('title')}>
 			<S.PageWrapper>
-				<div >
+				<div>
 					<h2>good morning vietnam</h2>
 				</div>
 			</S.PageWrapper>

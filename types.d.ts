@@ -2,7 +2,6 @@
 
 type Page = 'home' | 'about' | 'portfolio';
 
-
 // footer
 type ContactSource =
 	| 'facebook'

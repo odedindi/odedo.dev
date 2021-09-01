@@ -7,15 +7,11 @@ import Navigation from 'components/Layout/Navigation';
 // ============================================
 
 type PageLayoutProps = {
-
 	title: string;
 	children: React.ReactNode;
 };
 
-const PageLayout = ({
-	children,
-	title,
-}: PageLayoutProps) => (
+const PageLayout = ({ children, title }: PageLayoutProps) => (
 	<S.LayoutWrapper>
 		<Header title={title} />
 		{/* <Navigation /> */}

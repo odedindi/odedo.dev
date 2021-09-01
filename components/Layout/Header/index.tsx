@@ -19,7 +19,11 @@ const Header = ({ title }: HeaderProps) => (
 				href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css"
 				rel="stylesheet"
 			/>
-			{/* <link data-react-helmet='true' rel='icon' href='https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/spaces%2F-L9iS6Wm2hynS5H9Gj7j%2Favatar.png?generation=1523462254548780&amp;alt=media' /> */}
+			<link rel="manifest" href="/manifest.json" />
+			<meta name="theme-color" content="#fff" />
+			<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png"/>
+
+			<link data-react-helmet="true" rel="icon" href="/favicon.ico" />
 		</Head>
 	</>
 );

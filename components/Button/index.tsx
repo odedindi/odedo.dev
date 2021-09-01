@@ -4,7 +4,6 @@ import HoveringButton from './Hovering';
 import MainButton from './Main';
 // ============================================
 
-
 type ButtonProps = {
 	type: 'ContactMeButtons' | 'HoveringButton' | 'MainButton';
 	onClick?: () => void;

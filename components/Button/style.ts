@@ -1,4 +1,4 @@
-import { device } from 'helpers/mediaQueries';
+import { device } from 'utils/mediaQueries';
 import styled from 'styled-components';
 
 // ============== main button ===============
@@ -20,7 +20,7 @@ const Button = styled.button`
 		transition: border-color 0s, width 0.25s, height 0.25s;
 	}
 
-    ${device.phone} {
+	${device.phone} {
 		width: 75vw;
 	}
 `;
@@ -81,10 +81,10 @@ export const ContactMeButtonsWrapper = styled.section`
 	${device.xs} {
 		flex-direction: column;
 		position: absolute;
-	bottom: 40px;
-	left: -50px;
-	width: 5rem;
-	height: 12rem;
+		bottom: 40px;
+		left: -50px;
+		width: 5rem;
+		height: 12rem;
 	}
 `;
 // ==========================================

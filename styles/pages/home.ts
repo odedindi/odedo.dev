@@ -1,12 +1,11 @@
-import { device } from 'helpers/mediaQueries';
+import { device } from 'utils/mediaQueries';
 import styled from 'styled-components';
 
-export const PageWrapper = styled.main `
-
-${device.tablet} {
-	width: 10rem;
+export const PageWrapper = styled.main`
+	${device.tablet} {
+		width: 10rem;
 	}
-`
+`;
 
 export const SlogenWrapper = styled.section`
 	width: 8rem;
@@ -29,11 +28,9 @@ export const Slogen = styled.p`
 	justify-content: center;
 	text-align: center;
 	color: ${({ theme }) => theme.colors.dark};
-	`;
+`;
 
-
-export const MyName = styled.h1 `
-
+export const MyName = styled.h1`
 	${device.tablet} {
 		line-height: 2.125rem;
 		width: 15rem;
@@ -41,5 +38,4 @@ export const MyName = styled.h1 `
 	${device.phone} {
 		width: 10rem;
 	}
-
-`
+`;
