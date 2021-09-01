@@ -1,7 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is my personal website, made with love using [Next.js](https://nextjs.org/), [Express.js](https://expressjs.com/), [i18Next](https://www.i18next.com/), [styled-components](https://styled-components.com/), [GSAP(v3)](https://greensock.com/gsap/). 
+The project was bootstrapped using [`yarn create next-app --typescript`](https://nextjs.org/docs/basic-features/typescript).
 
 ## Getting Started
-
 First, run the development server:
 
 ```bash

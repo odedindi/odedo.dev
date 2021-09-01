@@ -4,7 +4,9 @@
 	"private": true,
 	"scripts": {
 		"dev": "nodemon --exec ts-node --project tsconfig.server.json server",
-		"build": "next build && tsc --project tsconfig.server.json",
+		"build:server": "tsc --project tsconfig.server.json",
+		"build:next": "next build",
+		"build": "npm run build:next && npm run build:server",
 		"start": "NODE_ENV=production node .build/server",
 		"lint": "next lint",
 		"prettier": "prettier --write ."
