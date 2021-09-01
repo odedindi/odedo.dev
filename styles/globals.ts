@@ -27,9 +27,9 @@ h1 {
 const theme = {
 	colors: {
 		primary: '#0070f3',
-		dark: '#3d1e9d',
-		bright: '#1e7e9d',
-		links: '9d3d1e',
+		dark: '#322f47',
+		bright: '#c57f1e',
+		links: '#472f38',
 	},
 	fontSizes: {
 		title: '2.25rem',

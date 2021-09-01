@@ -27,7 +27,7 @@ const LocaleSwitcher = () => {
 								locale={locale}>
 								<S.FlagWrapper>
 									<S.Flag
-										src={`/img/flags/${locale}.png`}
+										src={`/assets/flags/${locale}.png`}
 										alt={`${locale} flag`}
 										layout="responsive"
 										height="50%"

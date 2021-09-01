@@ -27,10 +27,11 @@ export const Slogen = styled.p`
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	color: ${({ theme }) => theme.colors.dark};
+	color: ${({ theme }) => theme.colors.bright};
 `;
 
 export const MyName = styled.h1`
+	color: ${({ theme }) => theme.colors.dark};
 	${device.tablet} {
 		line-height: 2.125rem;
 		width: 15rem;

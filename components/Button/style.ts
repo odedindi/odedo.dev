@@ -16,7 +16,7 @@ const Button = styled.button`
 
 	:focus,
 	:active {
-		color: ${({ theme }) => theme.colors.dark};
+		color: ${({ theme }) => theme.colors.bright};
 		transition: border-color 0s, width 0.25s, height 0.25s;
 	}
 
@@ -26,8 +26,8 @@ const Button = styled.button`
 `;
 
 export const MainButton = styled(Button)`
-	box-shadow: inset 0 0 0 4px ${({ theme }) => theme.colors.bright};
-	color: ${({ theme }) => theme.colors.bright};
+	box-shadow: inset 0 0 0 4px ${({ theme }) => theme.colors.dark};
+	color: ${({ theme }) => theme.colors.dark};
 	transition: ease-in-out color 0.25s 0.0833333333s;
 	position: relative;
 
@@ -52,11 +52,11 @@ export const MainButton = styled(Button)`
 		border-right-width: 4px;
 	}
 	:hover {
-		color: ${({ theme }) => theme.colors.dark};
+		color: ${({ theme }) => theme.colors.bright};
 	}
 	:hover::before,
 	:hover::after {
-		border-color: ${({ theme }) => theme.colors.dark};
+		border-color: ${({ theme }) => theme.colors.bright};
 		transition: border-color 0s, width 0.25s, height 0.25s;
 		width: 100%;
 		height: 100%;

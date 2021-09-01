@@ -8,8 +8,7 @@ type HeaderProps = {
 const Header = ({ title }: HeaderProps) => (
 	<>
 		<Head>
-			<title>{title}</title>
-
+			<title>{`Oded Winberger Software & Web - ${title}`}</title>
 			<link
 				href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
 				rel="stylesheet"
@@ -21,9 +20,17 @@ const Header = ({ title }: HeaderProps) => (
 			/>
 			<link rel="manifest" href="/manifest.json" />
 			<meta name="theme-color" content="#fff" />
-			<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png"/>
-
-			<link data-react-helmet="true" rel="icon" href="/favicon.ico" />
+			<link
+				rel="apple-touch-icon"
+				sizes="180x180"
+				href="/assets/icons/apple/apple-touch-icon-180x180.png"
+			/>
+			<link
+				data-react-helmet="true"
+				rel="icon"
+				type="image/png"
+				href="/favicon.png"
+			/>
 		</Head>
 	</>
 );

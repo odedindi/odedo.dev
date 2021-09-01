@@ -40,7 +40,7 @@ export const useFadeOutFadeInEffect: UseFadeInFadeOutEffect = (
 
 	// store the timeline in a ref.
 	const timeline = React.useRef<gsap.core.Timeline>();
-	
+
 	const triggerAnimationFunctions = {
 		// how far should the component drift before disappearing
 		// => negative numbers will take it up and positive numbers to the down
@@ -70,7 +70,7 @@ export const useFadeOutFadeInEffect: UseFadeInFadeOutEffect = (
 				});
 			// make sure animation kicks in only if
 			// the element is on the document
-			if (document.querySelector(`.${fadeOutComponentClassName}`)) {			
+			if (document.querySelector(`.${fadeOutComponentClassName}`)) {
 				timeline.current = gsap
 					.timeline()
 					.to(q(`.${fadeOutComponentClassName}`), {
