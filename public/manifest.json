@@ -1,0 +1,21 @@
+{
+	"name": "Oded Winberger Software & Web",
+	"short_name": "Oded Winberger Business Card",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#fff",
+	"theme_color": "#fff",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "/android-chrome-192x192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/android-chrome-512x512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	]
+}
