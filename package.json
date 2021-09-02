@@ -10,7 +10,12 @@
 		"prettier": "prettier --write ."
 	},
 	"huskey": {
-		"hooks": {}
+		"hooks": {
+			"applypatch-msg": "echo \"[Husky] applypatch-msg\"",
+			"pre-applypatch": "echo \"[Husky] pre-applypatch\"",
+			"post-applypatch": "echo \"[Husky] post-applypatch\"",
+			"pre-commit": "echo \"[Husky] pre-commit\""
+		}
 	},
 	"dependencies": {
 		"express": "^4.17.1",
