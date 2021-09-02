@@ -7,20 +7,12 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"prettier": "prettier --write ."
-	},
-	"huskey": {
-		"hooks": {
-			"applypatch-msg": "echo \"[Husky] applypatch-msg\"",
-			"pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-			"post-applypatch": "echo \"[Husky] post-applypatch\"",
-			"pre-commit": "echo \"[Husky] pre-commit\""
-		}
+		"prettier": "prettier --write .",
+		"postinstall": "husky install"
 	},
 	"dependencies": {
 		"express": "^4.17.1",
 		"gsap": "^3.7.1",
-		"husky": "^7.0.2",
 		"i18next": "^20.4.0",
 		"i18next-express-middleware": "^2.0.0",
 		"i18next-node-fs-backend": "^2.1.3",
@@ -45,6 +37,7 @@
 		"babel-plugin-styled-components": "^1.13.2",
 		"eslint": "7.32.0",
 		"eslint-config-next": "11.1.0",
+		"husky": "^7.0.2",
 		"nodemon": "^2.0.12",
 		"prettier": "2.3.2",
 		"ts-node": "^10.2.1",
