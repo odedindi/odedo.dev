@@ -6,8 +6,11 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
-		"prettier": "prettier --write .",
+		"check:types": "tsc --pretty --noEmit",
+		"check:format": "prettier --check .",
+		"check:lint": "next lint",
+		"format": "prettier --write .",
+		"test-all": "yarn check:format && yarn check:lint && yarn check:types && yarn build",
 		"postinstall": "husky install"
 	},
 	"dependencies": {
@@ -37,6 +40,7 @@
 		"babel-plugin-styled-components": "^1.13.2",
 		"eslint": "7.32.0",
 		"eslint-config-next": "11.1.0",
+		"eslint-config-prettier": "^8.3.0",
 		"husky": "^7.0.2",
 		"nodemon": "^2.0.12",
 		"prettier": "2.3.2",

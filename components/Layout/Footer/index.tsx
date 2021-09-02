@@ -38,8 +38,7 @@ const Footer = () => {
 	);
 
 	const handleAnimation = () => {
-		const { setEndY, setOpacity, setIsFirstLoad } =
-			triggerAnimationFunctions;
+		const { setEndY, setOpacity, setIsFirstLoad } = triggerAnimationFunctions;
 		setEndY(30);
 		setOpacity(0);
 		setIsFirstLoad(false);

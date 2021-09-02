@@ -61,13 +61,11 @@ export const useFadeOutFadeInEffect: UseFadeInFadeOutEffect = (
 		let timeout: NodeJS.Timeout;
 		if (isRefMounted.current) {
 			const q = gsap.utils.selector(componentWrapperRef);
-			timeline.current = gsap
-				.timeline()
-				.to(q(`.${fadeInComponentClassName}`), {
-					y: 200,
-					opacity: 0,
-					scale: 0,
-				});
+			timeline.current = gsap.timeline().to(q(`.${fadeInComponentClassName}`), {
+				y: 200,
+				opacity: 0,
+				scale: 0,
+			});
 			// make sure animation kicks in only if
 			// the element is on the document
 			if (document.querySelector(`.${fadeOutComponentClassName}`)) {

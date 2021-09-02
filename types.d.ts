@@ -3,12 +3,7 @@
 type Page = 'home' | 'about' | 'portfolio';
 
 // footer
-type ContactSource =
-	| 'facebook'
-	| 'linkedin'
-	| 'github'
-	| 'discord'
-	| 'email';
+type ContactSource = 'facebook' | 'linkedin' | 'github' | 'discord' | 'email';
 
 type ContactLink = string;
 type ContactLinks = {

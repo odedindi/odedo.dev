@@ -17,10 +17,7 @@ const RollTwice: React.FC = ({ children }) => {
 		*/
 		isAnimationRefMounted.current = true;
 		let timeout: NodeJS.Timeout;
-		if (
-			isAnimationRefMounted.current &&
-			animationRef.current !== null
-		) {
+		if (isAnimationRefMounted.current && animationRef.current !== null) {
 			if (!animationCounter) {
 				gsap.to(animationRef.current, {
 					duration: 2,
@@ -35,10 +32,7 @@ const RollTwice: React.FC = ({ children }) => {
 				});
 			}
 		}
-		timeout = setTimeout(
-			() => setAnimationCounter(animationCounter + 1),
-			2250,
-		);
+		timeout = setTimeout(() => setAnimationCounter(animationCounter + 1), 2250);
 
 		return () => {
 			clearTimeout(timeout);

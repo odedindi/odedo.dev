@@ -16,29 +16,28 @@ const BlogPage: NextPage = () => {
 	const ideasForArticles = [
 		'what-lint-code-and-why-linting-important',
 		'https://www.perforce.com/blog/qac/what-lint-code-and-why-linting-important',
-		
 
-        'bootstrapping a React app with my favorite labraries',
+		'bootstrapping a React app with my favorite labraries',
 		'bootstrapping a Next app with my favorite labraries',
 
 		'bootstrapping Express server',
-        'bootstrapping DRF server',
+		'bootstrapping DRF server',
 
-        'demonstating maping using leaflet',
+		'demonstating maping using leaflet',
 		'demonstating animation using gsap',
-        'demonstating animation using three.js',
+		'demonstating animation using three.js',
 
-        'collaborating on an open source project',
+		'collaborating on an open source project',
 
-        'using a github repo',
-        'husky js',
-        '',
+		'using a github repo',
+		'husky js',
+		'',
 
-        'programing theory',
-        'databases theory',
+		'programing theory',
+		'databases theory',
 
-        'data types',
-        'big O etc..'
+		'data types',
+		'big O etc..',
 	];
 	return (
 		<PageLayout title={t('title')}>

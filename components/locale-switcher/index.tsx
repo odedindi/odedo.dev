@@ -10,9 +10,7 @@ import CreateAnimation from 'components/CreateAnimation';
 const LocaleSwitcher = () => {
 	const router = useRouter();
 	const { locales, locale: activeLocale } = router;
-	const otherLocales = locales!.filter(
-		(locale) => locale !== activeLocale,
-	);
+	const otherLocales = locales!.filter((locale) => locale !== activeLocale);
 	return (
 		<ul>
 			{otherLocales.map((locale) => {

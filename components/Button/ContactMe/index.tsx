@@ -11,20 +11,14 @@ type ContactMeProps = {
 };
 
 const SocialMediaButton = ({ onClick }: ContactMeProps) => (
-	<SocialIcon
-		url={onClick}
-		style={{ width: '1.75rem', height: '1.75rem' }}
-	/>
+	<SocialIcon url={onClick} style={{ width: '1.75rem', height: '1.75rem' }} />
 );
 
 const ContactMeButtons = () => (
 	<S.ContactMeButtonsWrapper>
 		{contactSource.map((source: ContactSource) => (
 			<CreateAnimation key={source} type="Hover">
-				<SocialMediaButton
-					key={source}
-					onClick={contactLinks[source]}
-				/>
+				<SocialMediaButton key={source} onClick={contactLinks[source]} />
 			</CreateAnimation>
 		))}
 	</S.ContactMeButtonsWrapper>

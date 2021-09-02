@@ -3,3 +3,7 @@ build
 coverage
 .next
 node_modules
+
+package-lock.json
+yarn.lock
+next-env.d.ts

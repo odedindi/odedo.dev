@@ -13,18 +13,10 @@ type ButtonProps = {
 const Button: React.FC<ButtonProps> = ({ onClick, text, type }) => {
 	if (type === 'ContactMeButtons') return <ContactMeButtons />;
 	if (type === 'MainButton')
-		return (
-			<MainButton
-				onClick={onClick as () => void}
-				text={text as string}
-			/>
-		);
+		return <MainButton onClick={onClick as () => void} text={text as string} />;
 	if (type === 'HoveringButton')
 		return (
-			<HoveringButton
-				onClick={onClick as () => void}
-				text={text as string}
-			/>
+			<HoveringButton onClick={onClick as () => void} text={text as string} />
 		);
 	return null;
 };

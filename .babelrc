@@ -1,6 +1,4 @@
 {
 	"presets": ["next/babel"],
-	"plugins": [
-		["styled-components", { "ssr": true, "preprocess": false }]
-	]
+	"plugins": [["styled-components", { "ssr": true, "preprocess": false }]]
 }
