@@ -9,9 +9,13 @@
 		"lint": "next lint",
 		"prettier": "prettier --write ."
 	},
+	"huskey": {
+		"hooks": {}
+	},
 	"dependencies": {
 		"express": "^4.17.1",
 		"gsap": "^3.7.1",
+		"husky": "^7.0.2",
 		"i18next": "^20.4.0",
 		"i18next-express-middleware": "^2.0.0",
 		"i18next-node-fs-backend": "^2.1.3",

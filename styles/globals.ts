@@ -58,5 +58,4 @@ h1 {
 }
 `;
 
-
 export { GlobalStyle, theme };
