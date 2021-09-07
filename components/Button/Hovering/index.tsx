@@ -4,11 +4,12 @@ import Button from '..';
 type HoveringButtonProps = {
 	onClick?: () => void;
 	text?: string;
+	id: string;
 };
 
-const HoveringButton = ({ onClick, text }: HoveringButtonProps) => (
+const HoveringButton = ({ id, onClick, text }: HoveringButtonProps) => (
 	<CreateAnimation type="Hover">
-		<Button type="MainButton" onClick={onClick} text={text} />
+		<Button id={id} type="Main" onClick={onClick} text={text} />
 	</CreateAnimation>
 );
 

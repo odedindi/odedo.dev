@@ -1,3 +1,4 @@
+import * as React from 'react';
 // ================== styles ==================
 import * as S from './style';
 // ================ components ================
@@ -11,13 +12,19 @@ type PageLayoutProps = {
 	children: React.ReactNode;
 };
 
-const PageLayout = ({ children, title }: PageLayoutProps) => (
-	<S.LayoutWrapper>
-		<Header title={title} />
-		{/* <Navigation /> */}
-		<S.ChildrenWrapper>{children}</S.ChildrenWrapper>
-		<Footer />
-	</S.LayoutWrapper>
-);
+const PageLayout = ({ children, title }: PageLayoutProps) => {
+	const [isMounted, setIsMounted] = React.useState(false);
+	React.useEffect(() => setIsMounted(true), []);
+
+	if (!isMounted) return null;
+	return (
+		<S.LayoutWrapper>
+			<Header title={title} />
+			<Navigation />
+			<S.ChildrenWrapper>{children}</S.ChildrenWrapper>
+			<Footer />
+		</S.LayoutWrapper>
+	);
+};
 
 export default PageLayout;

@@ -15,13 +15,20 @@
 		"jsx": "preserve",
 		"baseUrl": "./",
 		"paths": {
+			"assets/*": ["assets/*"],
 			"components/*": ["components/*"],
-			"utils/*": ["utils/*"],
 			"hooks/*": ["hooks/*"],
 			"pages/*": ["pages/*"],
-			"styles/*": ["styles/*"]
+			"styles/*": ["styles/*"],
+			"utils/*": ["utils/*"]
 		}
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next-i18next.config.js"],
+	"include": [
+		"lib/github-cms.js",
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		"next-i18next.c"
+	],
 	"exclude": ["node_modules"]
 }

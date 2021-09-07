@@ -1,5 +1,8 @@
 // =============== React & Next ===============
 import { useRouter } from 'next/router';
+// ================== hooks ===================
+// ================ constants =================
+import { isDev } from 'utils/constants';
 // ================== styles ==================
 import * as S from '../style';
 // =============== translation ================
@@ -7,31 +10,38 @@ import { useTranslation } from 'next-i18next';
 // =============== components =================
 import Button from '../../Button';
 // ============================================
+
 const Navigation = () => {
 	const { t } = useTranslation('navigation');
 	const { pathname, push } = useRouter();
 
 	enum Routes {
 		home = '/',
-		about = '/about',
+		blog = '/blog',
 		portfolio = '/portfolio',
+		about = '/about',
 	}
+	const pages = isDev ? Object.keys(Routes) : ['home', 'about'];
 
 	return (
 		<S.NavigationWrapper>
 			<S.LinksWrapper>
-				{Object.keys(Routes).map((page) => {
+				{pages.map((page) => {
 					if (pathname !== Routes[page as Page])
 						return (
 							<Button
+								id={page}
 								key={page}
-								type="MainButton"
+								type="Main"
 								text={t(`${page}`)}
 								onClick={() => push(Routes[page as Page])}
 							/>
 						);
 				})}
 			</S.LinksWrapper>
+			<S.DarkModeTogglerWrapper>
+				<Button id="darkModeToggler" type="ColorModeToggle" />
+			</S.DarkModeTogglerWrapper>
 		</S.NavigationWrapper>
 	);
 };

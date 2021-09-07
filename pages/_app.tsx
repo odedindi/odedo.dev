@@ -5,8 +5,7 @@ import Router from 'next/router';
 import NProgress from 'nprogress'; //nprogress module
 import 'nprogress/nprogress.css'; //styles of nprogress
 
-import { ThemeProvider } from 'styled-components';
-import { GlobalStyle, theme } from '../styles/globals';
+import Providers from 'components/Providers';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	NProgress.configure({ showSpinner: false });
@@ -15,12 +14,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 	Router.events.on('routeChangeError', () => NProgress.done());
 
 	return (
-		<>
-			<GlobalStyle />
-			<ThemeProvider theme={theme}>
-				<Component {...pageProps} />
-			</ThemeProvider>
-		</>
+		<Providers>
+			<Component {...pageProps} />
+		</Providers>
 	);
 };
 export default appWithTranslation(MyApp);

@@ -5,9 +5,12 @@ import * as S from '../style';
 type MainButtonProps = {
 	onClick: () => void;
 	text: string;
+	id: string;
 };
-const MainButton = ({ onClick, text }: MainButtonProps) => (
-	<S.MainButton onClick={onClick}>{text}</S.MainButton>
+const MainButton = ({ id, onClick, text }: MainButtonProps) => (
+	<S.MainButton id={id} onClick={onClick}>
+		{text}
+	</S.MainButton>
 );
 
 export default MainButton;

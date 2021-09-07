@@ -1,3 +1,30 @@
 {
-	"title": "Über Seite"
+	"title": "Über Seite",
+	"hi": "Hi,  ich bin Oded",
+	"developer": "Full-Stack Entwickler",
+	"storyStart": "Meine Codierungsreise begann im Jahr 2020, nachdem Corona in unser Leben eingetreten war und mir geholfen hat, meine berufliche Karriere neu zu gestalten.",
+	"storyCurrent": {
+		"intro": "Seitdem baue ich meine eigenen Projekte, berate Online-Shop-Betreiber und habe mit ",
+		"people": "talentierten Leuten ",
+		"on a": "an einem ",
+		"hackathon": "Klima Hackathon ",
+		"using": "mit ",
+		"satellite": "Satellitendaten",
+		"for": "zusammengearbeitet und eine KI-basierte Lösung zur Kontrolle der Kohlenstoffkonzentrationstrends in Böden und Vegetation entwickelt. führt zu ",
+		"landpro": "LandPro."
+	},
+	"aboutMe": {
+		"first": "Ich bin ein selbstbewusster und fähiger Mensch, habe Spaß an und profitiere von Teamarbeit, bin von Natur aus neugierig und ständig eifrig und arbeite daran, meine Fähigkeiten Problem für Problem zu verbessern.",
+		"second": "Ich liebe es am Leben zu sein, zu tauchen, zu campen und im Freien zu reisen, Kaffee unter einem Baum mit schöner Aussicht, Gartenarbeit, Natur und Tiere im Allgemeinen, so viele verschiedene Sportarten, Bauen und Reparieren, Lesen, gute Musik und Filme , und vor allem liebe ich meine Frau und meine Tochter.",
+		"third": "Ich liebe es, Code zu lesen und Dinge von Grund auf neu zu programmieren, und es macht mir großen Spaß, Ideen im Browser zum Leben zu erwecken."
+	},
+	"like to use": "Sprachen, Frameworks, Bibliotheken & Entwicklungstools, die ich gerne verwende",
+	"languages": "Sprachen",
+	"frontend": "Frontend",
+	"backend": "Backend",
+	"databases": "Datanbanken",
+	"design": "Design",
+	"versionControl": "Versionkontrolle",
+	"ides": "IDEs",
+	"packageManagers": "Paketmanagers"
 }

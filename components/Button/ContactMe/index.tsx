@@ -6,19 +6,28 @@ import { contactSource, contactLinks } from 'utils/ContactLinks';
 import { SocialIcon } from 'react-social-icons';
 import CreateAnimation from 'components/CreateAnimation';
 // ============================================
-type ContactMeProps = {
+type SocialMediaButtonProps = {
+	id: string;
 	onClick: ContactLink;
 };
 
-const SocialMediaButton = ({ onClick }: ContactMeProps) => (
-	<SocialIcon url={onClick} style={{ width: '1.75rem', height: '1.75rem' }} />
+const SocialMediaButton = ({ id, onClick }: SocialMediaButtonProps) => (
+	<SocialIcon
+		id={id}
+		url={onClick}
+		style={{ width: '1.75rem', height: '1.75rem' }}
+	/>
 );
 
-const ContactMeButtons = () => (
-	<S.ContactMeButtonsWrapper>
+type ContactMeProps = {
+	id: string;
+};
+
+const ContactMeButtons = ({ id }: ContactMeProps) => (
+	<S.ContactMeButtonsWrapper id={id}>
 		{contactSource.map((source: ContactSource) => (
 			<CreateAnimation key={source} type="Hover">
-				<SocialMediaButton key={source} onClick={contactLinks[source]} />
+				<SocialMediaButton id={source} onClick={contactLinks[source]} />
 			</CreateAnimation>
 		))}
 	</S.ContactMeButtonsWrapper>

@@ -7,7 +7,7 @@ import * as S from './style';
 import CreateAnimation from 'components/CreateAnimation';
 // ============================================
 
-const LocaleSwitcher = () => {
+const LanguageChanger = () => {
 	const router = useRouter();
 	const { locales, locale: activeLocale } = router;
 	const otherLocales = locales!.filter((locale) => locale !== activeLocale);
@@ -25,11 +25,11 @@ const LocaleSwitcher = () => {
 								locale={locale}>
 								<S.FlagWrapper>
 									<S.Flag
-										src={`/assets/flags/${locale}.png`}
+										src={`/flags/${locale}.png`}
 										alt={`${locale} flag`}
-										layout="responsive"
-										height="50%"
-										width="50%"
+										layout="fixed"
+										height="25rem"
+										width="25rem"
 									/>
 								</S.FlagWrapper>
 							</Link>
@@ -41,4 +41,4 @@ const LocaleSwitcher = () => {
 	);
 };
 
-export default LocaleSwitcher;
+export default LanguageChanger;

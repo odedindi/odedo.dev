@@ -1,8 +1,10 @@
 // =============== React & Next ===============
 import * as React from 'react';
-import type { GetStaticProps, NextPage } from 'next';
+import type { GetServerSideProps, GetStaticProps, NextPage } from 'next';
 // ================== styles ==================
-import * as S from 'styles/pages/portfolio';
+import * as S from 'styles/pages/blog';
+import * as Style from 'components/Mdx/style';
+
 // =============== translation ================
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -10,8 +12,13 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import PageLayout from '../components/Layout';
 // ============================================
 
-const BlogPage: NextPage = () => {
-	const { t } = useTranslation('portfolio');
+import githubCms from '../lib/github-cms';
+// import { promises as fsPromises } from 'fs';
+import ms from 'ms';
+import Link from 'next/link';
+
+const BlogPage: NextPage = ({ postList }: any) => {
+	const { t } = useTranslation('blog');
 
 	const ideasForArticles = [
 		'what-lint-code-and-why-linting-important',
@@ -45,19 +52,40 @@ const BlogPage: NextPage = () => {
 				<div>
 					<h2>blogin</h2>
 				</div>
+
+				<Style.MdxPostList>
+					{postList.map((post: any) => (
+						<div key={post.slug} className="post-link">
+							<Link href="/post/[slug]" as={`/post/${post.slug}`}>
+								<a>
+									<div className="time">
+										{ms(Date.now() - post.createdAt, { long: true })} ago
+									</div>
+									<div className="title">{post.title}</div>
+								</a>
+							</Link>
+						</div>
+					))}
+				</Style.MdxPostList>
 			</S.PageWrapper>
 		</PageLayout>
 	);
 };
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => ({
-	props: {
-		...(await serverSideTranslations(locale as string, [
-			'navigation',
-			'portfolio',
-			'footer',
-		])),
-	},
-});
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+	const postList = await githubCms.getPostList();
+
+	return {
+		props: {
+			...(await serverSideTranslations(locale as string, [
+				'navigation',
+				'blog',
+				'footer',
+			])),
+			postList,
+		},
+		revalidate: 2,
+	};
+};
 
 export default BlogPage;

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="75 30 200 200" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs><path id="a" d="M0 0h318v318H0z"/>
+<mask id="b" width="318" height="318" x="0" y="0"><use xlink:href="#a"/></mask>
+</defs><g fill="none" fill-rule="evenodd">
+<use stroke="#4A4A4A" stroke-width="8" mask="url(#b)" xlink:href="#a"/>
+<text fill="#000" font-family="AppleColorEmoji, Apple Color Emoji" font-size="100" letter-spacing=".5" transform="translate(38 44)">
+<tspan x="70" y="100">💅</tspan></text></g></svg>

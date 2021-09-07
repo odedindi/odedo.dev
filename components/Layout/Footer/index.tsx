@@ -5,52 +5,47 @@ import * as S from '../style';
 // =============== translation ================
 import { useTranslation } from 'next-i18next';
 // ================== hooks ===================
-import { useFadeOutFadeInEffect } from 'hooks/useFadeOutFadeInEffect';
+import { useFadeOutFadeIn } from 'hooks/useFadeOutFadeIn';
 // ================ components ================
 import Button from 'components/Button';
-import LocaleSwitcher from 'components/locale-switcher';
+import LanguageChanger from 'components/LanguageChanger';
 // ============================================
 
 const Footer = () => {
 	const { t } = useTranslation('footer');
 
-	const fadeOutComponentClassName = 'contactButtonSection';
-	const FadeOutComponent = () => (
-		<Button
-			type="HoveringButton"
-			onClick={() => handleAnimation()}
-			text={t('contact')}
-		/>
-	);
-
-	const fadeInComponentClassName = 'socialMediaButtonsSection';
-	const FadeInComponent = () => <Button type="ContactMeButtons" />;
-
-	const {
-		componentWrapperRef,
-		FadeOutFadeInComponent,
-		triggerAnimationFunctions,
-	} = useFadeOutFadeInEffect(
-		fadeOutComponentClassName,
-		FadeOutComponent,
-		fadeInComponentClassName,
-		FadeInComponent,
-	);
-
-	const handleAnimation = () => {
-		const { setEndY, setOpacity, setIsFirstLoad } = triggerAnimationFunctions;
-		setEndY(30);
-		setOpacity(0);
-		setIsFirstLoad(false);
-	};
+	const { componentWrapperRef, FadeOutFadeInComponent } = useFadeOutFadeIn({
+		fadeOut: {
+			id: 'contactButton',
+			component: (
+				<Button
+					id="contactButton"
+					type="Main"
+					onClick={() => {}}
+					text={t('contact')}
+				/>
+			),
+		},
+		fadeIn: {
+			id: 'socialMediaButtons',
+			component: <Button id="socialMediaButtons" type="ContactMe" />,
+		},
+		yAxis: {
+			from: 125,
+			to: 125,
+		},
+		delay: 0.25,
+	});
 
 	return (
 		<S.FooterWrapper ref={componentWrapperRef}>
-			<FadeOutFadeInComponent />
-			<S.BottomWrapper>
-				<LocaleSwitcher />
+			<S.ContactMeWrapper>
+				<FadeOutFadeInComponent />
+			</S.ContactMeWrapper>
+			<S.CopyRightsAndLanguagesWrapper>
+				<LanguageChanger />
 				<S.CopyRights>&copy;{new Date().getFullYear()}</S.CopyRights>
-			</S.BottomWrapper>
+			</S.CopyRightsAndLanguagesWrapper>
 		</S.FooterWrapper>
 	);
 };

@@ -20,12 +20,14 @@ const RollTwice: React.FC = ({ children }) => {
 		if (isAnimationRefMounted.current && animationRef.current !== null) {
 			if (!animationCounter) {
 				gsap.to(animationRef.current, {
+					x: 10,
 					duration: 2,
 					rotation: 360,
 					scale: 0.65,
 				});
 			} else {
 				gsap.to(animationRef.current, {
+					x: 0,
 					duration: 2,
 					rotation: -360,
 					scale: 1,
