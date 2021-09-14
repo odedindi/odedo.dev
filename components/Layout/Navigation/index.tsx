@@ -8,7 +8,7 @@ import * as S from '../style';
 // =============== translation ================
 import { useTranslation } from 'next-i18next';
 // =============== components =================
-import Button from '../../Button';
+import Button from 'components/Button';
 // ============================================
 
 const Navigation = () => {
@@ -40,7 +40,7 @@ const Navigation = () => {
 				})}
 			</S.LinksWrapper>
 			<S.DarkModeTogglerWrapper>
-				<Button id="darkModeToggler" type="ColorModeToggle" />
+				<Button type="DarkModeToggler" />
 			</S.DarkModeTogglerWrapper>
 		</S.NavigationWrapper>
 	);

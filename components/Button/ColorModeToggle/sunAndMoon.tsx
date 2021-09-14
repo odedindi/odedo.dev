@@ -23,7 +23,7 @@ const Toggle = ({ checked, onChange }: ToggleProps) => (
 
 const ColorModeToggle = () => {
 	const darkMode = useDarkMode(false);
-
+	console.log(darkMode.value);
 	const [isMounted, setIsMounted] = React.useState(false);
 	React.useEffect(() => setIsMounted(true), []);
 

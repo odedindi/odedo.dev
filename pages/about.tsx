@@ -43,10 +43,21 @@ const AboutPage: NextPage = () => {
 		landPro: 'https://landpro.ch',
 	};
 
-	const DevToolLink: React.FC<{ href: string }> = ({ children, href }) => (
+	type DevToolLinkType = {
+		content: JSX.Element | any | string;
+		href: string;
+		noStyle?: boolean;
+		title?: string;
+	};
+
+	const DevToolLink = ({ content, href, noStyle, title }: DevToolLinkType) => (
 		<Link href={href} passHref>
-			<a target="_blank" style={{ borderBottom: 'none' }}>
-				{children}
+			<a
+				target="_blank"
+				rel="noopener noreferrer"
+				title={title}
+				style={(noStyle as boolean) ? {} : { borderBottom: 'none' }}>
+				{content}
 			</a>
 		</Link>
 	);
@@ -58,20 +69,26 @@ const AboutPage: NextPage = () => {
 				{devTools.map((devTool) => {
 					if (logosToBeUsedAsImageSource.includes(devTool.id)) {
 						return (
-							<DevToolLink key={devTool.id} href={devTool.link}>
-								<Image
-									src={devTool.logo}
-									alt={`${devTool.id} logo`}
-									width="70"
-									height="100"
-								/>
-							</DevToolLink>
+							<DevToolLink
+								key={devTool.id}
+								href={devTool.link}
+								content={
+									<Image
+										src={devTool.logo}
+										alt={`${devTool.id} logo`}
+										width="70"
+										height="100"
+									/>
+								}
+							/>
 						);
 					}
 					return (
-						<DevToolLink key={devTool.id} href={devTool.link}>
-							{devTool.logo}
-						</DevToolLink>
+						<DevToolLink
+							key={devTool.id}
+							href={devTool.link}
+							content={devTool.logo}
+						/>
 					);
 				})}
 			</S.DevToolsIconsWrapper>
@@ -90,29 +107,55 @@ const AboutPage: NextPage = () => {
 					<p>
 						{t('storyCurrent.intro')}
 
-						<Link href={links.hacktheclimate.ourTeam}>
+						<DevToolLink
+							content={t('storyCurrent.people')}
+							href={links.hacktheclimate.ourTeam}
+							title="The Team"
+						/>
+						{/* <Link href={links.hacktheclimate.ourTeam}>
 							<a target="_blank" title="The Team">
 								{t('storyCurrent.people')}
 							</a>
-						</Link>
+						</Link> */}
+
 						{t('storyCurrent.on a')}
-						<Link href={links.hacktheclimate.website}>
+
+						<DevToolLink
+							content={t('storyCurrent.hackathon')}
+							href={links.hacktheclimate.website}
+							title="Hack the climate"
+						/>
+						{/* <Link href={links.hacktheclimate.website}>
 							<a target="_blank" title="Hack the climate">
 								{t('storyCurrent.hackathon')}
 							</a>
-						</Link>
+						</Link> */}
+
 						{t('storyCurrent.using')}
-						<Link href={links.sentinelII}>
+
+						<DevToolLink
+							content={t('storyCurrent.satellite')}
+							href={links.sentinelII}
+							title="Sentinel-2"
+						/>
+						{/* <Link href={links.sentinelII}>
 							<a target="_blank" title="Sentinel-2">
 								{t('storyCurrent.satellite')}
 							</a>
-						</Link>
+						</Link> */}
+
 						{t('storyCurrent.for')}
-						<Link href="href={links.landPro}">
+
+						<DevToolLink
+							content={t('landpro')}
+							href={links.landPro}
+							title="LandPro.ch"
+						/>
+						{/* <Link href={links.landPro}>
 							<a target="_blank" title="LandPro.ch">
 								{t('landpro')}
 							</a>
-						</Link>
+						</Link> */}
 					</p>
 					<p>{t('aboutMe.first')}</p>
 					<p>{t('aboutMe.second')}</p>

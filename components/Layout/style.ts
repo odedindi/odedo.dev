@@ -25,7 +25,7 @@ export const ChildrenWrapper = styled.section`
 		min-height: 60.25vh;
 	}
 	${device.phone} {
-		min-height: 58vh;
+		min-height: 56.5vh;
 	}
 `;
 // =============== navigation ===============
