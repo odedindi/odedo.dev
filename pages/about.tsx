@@ -112,12 +112,6 @@ const AboutPage: NextPage = () => {
 							href={links.hacktheclimate.ourTeam}
 							title="The Team"
 						/>
-						{/* <Link href={links.hacktheclimate.ourTeam}>
-							<a target="_blank" title="The Team">
-								{t('storyCurrent.people')}
-							</a>
-						</Link> */}
-
 						{t('storyCurrent.on a')}
 
 						<DevToolLink
@@ -125,12 +119,6 @@ const AboutPage: NextPage = () => {
 							href={links.hacktheclimate.website}
 							title="Hack the climate"
 						/>
-						{/* <Link href={links.hacktheclimate.website}>
-							<a target="_blank" title="Hack the climate">
-								{t('storyCurrent.hackathon')}
-							</a>
-						</Link> */}
-
 						{t('storyCurrent.using')}
 
 						<DevToolLink
@@ -138,11 +126,6 @@ const AboutPage: NextPage = () => {
 							href={links.sentinelII}
 							title="Sentinel-2"
 						/>
-						{/* <Link href={links.sentinelII}>
-							<a target="_blank" title="Sentinel-2">
-								{t('storyCurrent.satellite')}
-							</a>
-						</Link> */}
 
 						{t('storyCurrent.for')}
 
@@ -151,11 +134,6 @@ const AboutPage: NextPage = () => {
 							href={links.landPro}
 							title="LandPro.ch"
 						/>
-						{/* <Link href={links.landPro}>
-							<a target="_blank" title="LandPro.ch">
-								{t('landpro')}
-							</a>
-						</Link> */}
 					</p>
 					<p>{t('aboutMe.first')}</p>
 					<p>{t('aboutMe.second')}</p>
