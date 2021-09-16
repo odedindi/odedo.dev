@@ -51,96 +51,96 @@ define('./sw.js', ['./workbox-21b21c9a'], function (e) {
 		e.precacheAndRoute(
 			[
 				{
-					url: '/_next/static/BOtPhB4j5yQkHgQ4-P2iM/_buildManifest.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					url: '/_next/static/-CGipOvw8UTWVD1Kfe6NH/_buildManifest.js',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
-					url: '/_next/static/BOtPhB4j5yQkHgQ4-P2iM/_ssgManifest.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					url: '/_next/static/-CGipOvw8UTWVD1Kfe6NH/_ssgManifest.js',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
-					url: '/_next/static/chunks/172-a403272c9b9c61051148.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					url: '/_next/static/chunks/172-86520a72ae99b927fe20.js',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/chunks/41-19002d58ce3ba5edaf57.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/chunks/816.1ceffd53f675086c68ac.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/chunks/framework-c93ed74a065331c4bd75.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/chunks/main-93bb57c15cfb012a26dc.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
-					url: '/_next/static/chunks/pages/404-259ffcec106600f713a6.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					url: '/_next/static/chunks/pages/404-ddda943fe9ca3c22bb38.js',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/chunks/pages/_app-f620141244401f60b90b.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/chunks/pages/_error-737a04e9a0da63c9d162.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
-					url: '/_next/static/chunks/pages/about-6b45a56b0ce4bfcd6cd7.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					url: '/_next/static/chunks/pages/about-d8666ac8fe6b33c598a3.js',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/chunks/pages/index-b35a6770f9190def3276.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/chunks/pages/portfolio-8cbc6e9d3dbff37618af.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/chunks/polyfills-a54b4f32bdc1ef890ddd.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/chunks/webpack-a11402cbfb0e6ceaa2b7.js',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/css/3bb64badf9c37aa7ddbb.css',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/image/assets/logos/Threejs.34faec932f70929fc2778eaf26de073c.svg',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/image/assets/logos/antd.134e60e1a9ccebac18bd758ebd7dd2b1.svg',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/image/assets/logos/gsap-greensock.dff87e2debbe5d37479732018b2a575a.svg',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/image/assets/logos/nestjs.0e0db7ab36375122424d2ba212efbb67.svg',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/image/assets/logos/recoil.431f0ae1f6c31cd5f4c2af38d83363b1.svg',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/image/assets/logos/styled-components.4556583bbab4e6fd51c084e1f40b8e79.svg',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{
 					url: '/_next/static/image/assets/logos/vercel.87cbc3ae54216d27604d464ebe78eb6f.svg',
-					revision: 'BOtPhB4j5yQkHgQ4-P2iM',
+					revision: '-CGipOvw8UTWVD1Kfe6NH',
 				},
 				{ url: '/favicon.png', revision: '4f7c809f9a038e185a396b7e263e9e54' },
 				{ url: '/flags/de.png', revision: 'a6e7e74ef8a37e177e2081091079371b' },

@@ -9,16 +9,16 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // ================ components ================
 import PageLayout from '../components/Layout';
 // ============================================
+import Charts from 'components/Charts';
 
 const PortfolioPage: NextPage = () => {
 	const { t } = useTranslation('portfolio');
-
+	const [toggle, setToggle] = React.useState(false);
 	return (
 		<PageLayout title={t('title')}>
 			<S.PageWrapper>
-				<div>
-					<h2>portfolioing vietnam</h2>
-				</div>
+				<button onClick={() => setToggle(!toggle)}>Toggle</button>
+				{toggle ? <Charts /> : ''}
 			</S.PageWrapper>
 		</PageLayout>
 	);
