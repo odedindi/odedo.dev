@@ -112,3 +112,5 @@ export const useFadeOutFadeIn: UseFadeInFadeOut = ({
 		FadeOutFadeInComponent,
 	};
 };
+
+export default useFadeOutFadeIn;

@@ -40,7 +40,8 @@ const Footer = () => {
 	return (
 		<S.FooterWrapper ref={componentWrapperRef}>
 			<S.ContactMeWrapper>
-				<FadeOutFadeInComponent />
+				{/* <FadeOutFadeInComponent /> */}
+				<Button id="socialMediaButtons" type="ContactMe" />
 			</S.ContactMeWrapper>
 			<S.CopyRightsAndLanguagesWrapper>
 				<LanguageChanger />

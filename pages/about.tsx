@@ -4,7 +4,7 @@ import type { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 // =================== hooks ==================
-import { useDevToolsLogos } from 'hooks/useDevToolsLogos';
+import { useDevToolsLogos } from 'hooks';
 // ================== styles ==================
 import * as S from 'styles/pages/about';
 // =============== translation ================
@@ -12,7 +12,7 @@ import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // ================ components ================
 import PageLayout from 'components/Layout';
-import CreateAnimation from 'components/CreateAnimation';
+// import CreateAnimation from 'components/CreateAnimation';
 // ============================================
 
 type DevToolsProps = {

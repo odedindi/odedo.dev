@@ -15,7 +15,10 @@ export const PageWrapper = styled.main`
 `;
 
 export const AboutParagraph = styled.div`
-	justify-self: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	margin-top: 3.5rem;
 	width: auto;
 	padding: 0 2.5rem 0 2.5rem;

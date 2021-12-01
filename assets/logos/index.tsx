@@ -1,9 +1,10 @@
-import styledComponentsLogo from './styled-components.svg';
 import antdLogo from './antd.svg';
-import recoilLogo from './recoil.svg';
-import ThreeJSLogo from './Threejs.svg';
 import gsapLogo from './gsap-greensock.svg';
 import nestjsLogo from './nestjs.svg';
+import prismaLogo from './prisma.svg';
+import recoilLogo from './recoil.svg';
+import styledComponentsLogo from './styled-components.svg';
+import ThreeJSLogo from './Threejs.svg';
 import vercelLogo from './vercel.svg';
 
 // front end libraries
@@ -354,6 +355,7 @@ const heroku = (
 	</svg>
 );
 // databases
+const prisma = prismaLogo;
 const postgressQL = (
 	<svg viewBox="0 0 150 150" width="70" height="100">
 		<path d="M93.809 92.112c.785-6.533.55-7.492 5.416-6.433l1.235.108c3.742.17 8.637-.602 11.513-1.938 6.191-2.873 9.861-7.668 3.758-6.409-13.924 2.873-14.881-1.842-14.881-1.842 14.703-21.815 20.849-49.508 15.543-56.287-14.47-18.489-39.517-9.746-39.936-9.52l-.134.025c-2.751-.571-5.83-.912-9.289-.968-6.301-.104-11.082 1.652-14.709 4.402 0 0-44.683-18.409-42.604 23.151.442 8.841 12.672 66.898 27.26 49.362 5.332-6.412 10.484-11.834 10.484-11.834 2.558 1.699 5.622 2.567 8.834 2.255l.249-.212c-.078.796-.044 1.575.099 2.497-3.757 4.199-2.653 4.936-10.166 6.482-7.602 1.566-3.136 4.355-.221 5.084 3.535.884 11.712 2.136 17.238-5.598l-.22.882c1.474 1.18 1.375 8.477 1.583 13.69.209 5.214.558 10.079 1.621 12.948 1.063 2.868 2.317 10.256 12.191 8.14 8.252-1.764 14.561-4.309 15.136-27.985"></path>
@@ -898,6 +900,7 @@ export {
 	digitalOcean,
 	vercel,
 	heroku,
+	prisma,
 	postgressQL,
 	graphQL,
 	mongoDB,

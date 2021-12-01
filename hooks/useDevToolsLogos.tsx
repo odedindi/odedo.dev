@@ -2,12 +2,13 @@ import * as L from 'assets/logos';
 
 export const useDevToolsLogos = () => {
 	const logosToBeUsedAsImageSource: LogoId[] = [
-		'styledComponents',
 		'antd',
-		'recoil',
-		'three',
 		'gsap',
 		'nestjs',
+		'prisma',
+		'recoil',
+		'styledComponents',
+		'three',
 		'vercel',
 	];
 
@@ -149,6 +150,11 @@ export const useDevToolsLogos = () => {
 	];
 	const databaseLogos: DevTool[] = [
 		{
+			id: 'prisma',
+			logo: L.prisma,
+			link: 'https://www.prisma.io/',
+		},
+		{
 			id: 'postgressQL',
 			logo: L.postgressQL,
 			link: 'https://www.postgresql.org/docs/',
@@ -225,3 +231,5 @@ export const useDevToolsLogos = () => {
 		packagesManagerLogos,
 	};
 };
+
+export default useDevToolsLogos;
