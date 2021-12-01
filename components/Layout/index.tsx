@@ -5,6 +5,7 @@ import * as S from './style';
 import Footer from 'components/Layout/Footer';
 import Header from 'components/Layout/Header';
 import Navigation from 'components/Layout/Navigation';
+import Providers from 'components/Providers';
 // ============================================
 
 type PageLayoutProps = {
@@ -18,12 +19,14 @@ const PageLayout = ({ children, title }: PageLayoutProps) => {
 
 	if (!isMounted) return null;
 	return (
-		<S.LayoutWrapper>
-			<Header title={title} />
-			<Navigation />
-			<S.ChildrenWrapper>{children}</S.ChildrenWrapper>
-			<Footer />
-		</S.LayoutWrapper>
+		<Providers>
+			<S.LayoutWrapper>
+				<Header title={title} />
+				<Navigation />
+				<S.ChildrenWrapper>{children}</S.ChildrenWrapper>
+				<Footer />
+			</S.LayoutWrapper>
+		</Providers>
 	);
 };
 

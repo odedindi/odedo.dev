@@ -25,7 +25,7 @@ const PortfolioPage: NextPage = () => {
 					</p>
 					<Button
 						id="Return home"
-						type="Main"
+						type="Exploding"
 						onClick={() => push('/')}
 						text={t('returnHome')}
 					/>

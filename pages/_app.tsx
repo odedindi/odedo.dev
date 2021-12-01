@@ -1,11 +1,11 @@
 import type { AppProps } from 'next/app';
+import * as React from 'react';
 import { appWithTranslation } from 'next-i18next';
 
 import Router from 'next/router';
 import NProgress from 'nprogress'; //nprogress module
 import 'nprogress/nprogress.css'; //styles of nprogress
-
-import Providers from 'components/Providers';
+import 'antd/dist/antd.css';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	NProgress.configure({ showSpinner: false });
@@ -13,10 +13,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 	Router.events.on('routeChangeComplete', () => NProgress.done());
 	Router.events.on('routeChangeError', () => NProgress.done());
 
-	return (
-		<Providers>
-			<Component {...pageProps} />
-		</Providers>
-	);
+	return <Component {...pageProps} />;
 };
 export default appWithTranslation(MyApp);

@@ -21,7 +21,8 @@
 			"pages/*": ["pages/*"],
 			"styles/*": ["styles/*"],
 			"utils/*": ["utils/*"]
-		}
+		},
+		"incremental": true
 	},
 	"include": [
 		"lib/github-cms.js",

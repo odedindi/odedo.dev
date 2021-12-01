@@ -10,8 +10,6 @@ import * as S from '../style';
 import { useTranslation } from 'next-i18next';
 // =============== components =================
 import Button from 'components/Button';
-import AnimatedButton from 'components/AnimatedButton';
-
 // ============================================
 
 const Navigation = () => {
@@ -43,8 +41,9 @@ const Navigation = () => {
 				{pages.map((page, index) => {
 					if (pathname !== Routes[page as Page])
 						return (
-							<AnimatedButton
+							<Button
 								key={index}
+								type="Exploding"
 								text={t(`${page}`)}
 								onClick={() => push(Routes[page as Page])}
 							/>

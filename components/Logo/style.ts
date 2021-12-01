@@ -13,8 +13,8 @@ export const SlogenWrapper = styled.section`
 
 	${device.tablet} {
 		position: relative;
-		top: 2.84rem;
-		left: 2.9rem;
+		top: 3.625rem;
+		left: 3.075rem;
 	}
 `;
 

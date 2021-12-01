@@ -1,16 +1,13 @@
 {
 	"title": "About",
-	"hi": "Hi, I'm Oded",
-	"developer": "Full-Stack Developer",
+	"hi": "Hi, I'm Oded a Full-Stack Developer",
 	"storyStart": "My coding journey began in 2020, after corona entered our lives and helped me redirect my professional career.",
 	"storyCurrent": {
 		"intro": "Since then I've been building my own projects, and collaborated with different partners, for exemple together with ",
 		"people": "talented data scientists ",
-		"on a": "on a ",
-		"hackathon": "Climate hackathon ",
 		"using": "using ",
-		"satellite": "satellite data ",
-		"for": "we developed an AI-based prototype for monitoring carbon concentrations trends in soils and vegetation, leading to ",
+		"satellite": "Sentinel-II ",
+		"for": "data we developed an AI-based prototype for monitoring carbon concentrations trends in soils and vegetation, leading to ",
 		"landpro": "LandPro"
 	},
 	"aboutMe": {

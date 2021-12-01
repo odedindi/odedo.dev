@@ -9,6 +9,7 @@ import { useFadeOutFadeIn } from 'hooks/useFadeOutFadeIn';
 // ================ components ================
 import Button from 'components/Button';
 import LanguageChanger from 'components/LanguageChanger';
+import GithubStats from './GithubStats';
 // ============================================
 
 const Footer = () => {
@@ -40,12 +41,12 @@ const Footer = () => {
 	return (
 		<S.FooterWrapper ref={componentWrapperRef}>
 			<S.ContactMeWrapper>
-				{/* <FadeOutFadeInComponent /> */}
 				<Button id="socialMediaButtons" type="ContactMe" />
 			</S.ContactMeWrapper>
 			<S.CopyRightsAndLanguagesWrapper>
 				<LanguageChanger />
 				<S.CopyRights>&copy;{new Date().getFullYear()}</S.CopyRights>
+				<GithubStats />
 			</S.CopyRightsAndLanguagesWrapper>
 		</S.FooterWrapper>
 	);

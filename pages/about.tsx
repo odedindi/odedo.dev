@@ -64,7 +64,9 @@ const AboutPage: NextPage = () => {
 
 	const DevTools = ({ devTools, title }: DevToolsProps) => (
 		<S.AboutParagraph>
-			<h5>{title}:</h5>
+			<section className="title">
+				<h5>{title}:</h5>
+			</section>
 			<S.DevToolsIconsWrapper>
 				{devTools.map((devTool) =>
 					logosToBeUsedAsImageSource.includes(devTool.id) ? (
@@ -98,7 +100,6 @@ const AboutPage: NextPage = () => {
 				<S.AboutParagraph>
 					<section className="title">
 						<h3>{t('hi')}</h3>
-						<h4>{t('developer')}</h4>
 					</section>
 					<p>{t('storyStart')}</p>
 					<p>
@@ -107,12 +108,6 @@ const AboutPage: NextPage = () => {
 							content={t('storyCurrent.people')}
 							href={links.hacktheclimate.ourTeam}
 							title="The Team"
-						/>
-						{t('storyCurrent.on a')}
-						<DevToolLink
-							content={t('storyCurrent.hackathon')}
-							href={links.hacktheclimate.website}
-							title="Hack the climate"
 						/>
 						{t('storyCurrent.using')}
 						<DevToolLink

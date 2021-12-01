@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { css, createGlobalStyle } from 'styled-components';
 
 const theme = {
 	colors: {
@@ -85,3 +85,9 @@ p {
 `;
 
 export default GlobalStyle;
+
+export const sharedTransition = (properties: string) => css`
+	transition-duration: var(--transition-duration);
+	transition-timing-function: linear;
+	transition-property: ${properties};
+`;

@@ -38,14 +38,29 @@ export const AboutParagraph = styled.div`
 	.title {
 		margin: 0 0 30px 0;
 		line-height: 40px;
-		border-bottom: 0.25rem solid
-			${({ theme }) => theme.colors.background.primary};
 		margin-bottom: 20px;
 		text-align: center;
+		h3,
+		h4,
+		h5 {
+			color: ${({ theme }) => theme.colors.text.secondary};
+			color: ${({ theme }) => theme.colors.text.secondary};
+			border-bottom: solid 0.5px ${({ theme }) => theme.colors.text.onPrimary};
+		}
 	}
 	p {
 		text-align: center;
 		padding: 1rem;
+	}
+`;
+export const AboutTitle = styled.section`
+	margin: 0 0 30px 0;
+	line-height: 40px;
+	margin-bottom: 20px;
+	text-align: center;
+	h3,
+	h4 {
+		color: ${({ theme }) => theme.colors.text.onPrimary};
 	}
 `;
 

@@ -31,7 +31,6 @@ export const ChildrenWrapper = styled.section`
 `;
 // =============== navigation ===============
 export const NavigationWrapper = styled.section`
-	/* width: 90vw; */
 	z-index: 1;
 	display: flex;
 	flex-direction: row;
@@ -41,10 +40,9 @@ export const NavigationWrapper = styled.section`
 
 	${device.phone} {
 		padding: 0;
-		flex-direction: column;
 		align-items: baseline;
-		position: relative;
-		left: 0.75rem;
+
+		padding: 0 0.5rem;
 	}
 `;
 
@@ -95,8 +93,8 @@ export const CopyRightsAndLanguagesWrapper = styled.section`
 	left: 44.5%;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
-	justify-content: flex-end;
+	align-items: center;
+	justify-content: center;
 
 	${device.tablet} {
 		left: 42.5%;
