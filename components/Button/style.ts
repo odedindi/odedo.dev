@@ -77,13 +77,12 @@ export const ContactMeButtonsWrapper = styled.section`
 	justify-content: space-evenly;
 	align-items: center;
 	width: 15rem;
-	margin-top: -6.75rem;
 
 	${device.xs} {
 		flex-direction: column;
-		position: absolute;
+		/* position: absolute;
 		bottom: 40px;
-		left: -50px;
+		left: -50px; */
 		width: 5rem;
 		height: 12rem;
 	}

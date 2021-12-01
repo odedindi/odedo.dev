@@ -207,11 +207,11 @@ export const useDevToolsLogos = () => {
 		},
 	];
 	const packagesManagerLogos: DevTool[] = [
-		{
-			id: 'npm',
-			logo: L.npm,
-			link: 'https://docs.npmjs.com/',
-		},
+		// {
+		// 	id: 'npm',
+		// 	logo: L.npm,
+		// 	link: 'https://docs.npmjs.com/',
+		// },
 		{
 			id: 'yarn',
 			logo: L.yarn,

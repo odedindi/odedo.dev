@@ -6,12 +6,10 @@ import { useRouter } from 'next/router';
 import { isDev } from 'utils/constants';
 // ================== styles ==================
 import * as S from '../style';
-import styled from 'styled-components';
 // =============== translation ================
 import { useTranslation } from 'next-i18next';
 // =============== components =================
 import Button from 'components/Button';
-import ParticleEffectButton from 'react-particle-effect-button';
 import AnimatedButton from 'components/AnimatedButton';
 
 // ============================================

@@ -14,7 +14,8 @@ export const LayoutWrapper = styled.section`
 `;
 
 export const ChildrenWrapper = styled.section`
-	min-height: 60.25vh;
+	min-height: 50.25vh;
+
 	display: flex;
 	flex-flow: column wrap;
 	align-items: center;
@@ -30,11 +31,11 @@ export const ChildrenWrapper = styled.section`
 `;
 // =============== navigation ===============
 export const NavigationWrapper = styled.section`
-	width: 90vw;
+	/* width: 90vw; */
 	z-index: 1;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	padding: 0 3.5rem;
 	margin-bottom: 2.5rem;
 

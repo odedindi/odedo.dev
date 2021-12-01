@@ -66,31 +66,28 @@ const AboutPage: NextPage = () => {
 		<S.AboutParagraph>
 			<h5>{title}:</h5>
 			<S.DevToolsIconsWrapper>
-				{devTools.map((devTool) => {
-					if (logosToBeUsedAsImageSource.includes(devTool.id)) {
-						return (
-							<DevToolLink
-								key={devTool.id}
-								href={devTool.link}
-								content={
-									<Image
-										src={devTool.logo}
-										alt={`${devTool.id} logo`}
-										width="70"
-										height="100"
-									/>
-								}
-							/>
-						);
-					}
-					return (
+				{devTools.map((devTool) =>
+					logosToBeUsedAsImageSource.includes(devTool.id) ? (
+						<DevToolLink
+							key={devTool.id}
+							href={devTool.link}
+							content={
+								<Image
+									src={devTool.logo}
+									alt={`${devTool.id} logo`}
+									width="70"
+									height="100"
+								/>
+							}
+						/>
+					) : (
 						<DevToolLink
 							key={devTool.id}
 							href={devTool.link}
 							content={devTool.logo}
 						/>
-					);
-				})}
+					),
+				)}
 			</S.DevToolsIconsWrapper>
 		</S.AboutParagraph>
 	);
@@ -106,34 +103,30 @@ const AboutPage: NextPage = () => {
 					<p>{t('storyStart')}</p>
 					<p>
 						{t('storyCurrent.intro')}
-
 						<DevToolLink
 							content={t('storyCurrent.people')}
 							href={links.hacktheclimate.ourTeam}
 							title="The Team"
 						/>
 						{t('storyCurrent.on a')}
-
 						<DevToolLink
 							content={t('storyCurrent.hackathon')}
 							href={links.hacktheclimate.website}
 							title="Hack the climate"
 						/>
 						{t('storyCurrent.using')}
-
 						<DevToolLink
 							content={t('storyCurrent.satellite')}
 							href={links.sentinelII}
 							title="Sentinel-2"
 						/>
-
 						{t('storyCurrent.for')}
-
 						<DevToolLink
-							content={t('landpro')}
+							content={t('storyCurrent.landpro')}
 							href={links.landPro}
 							title="LandPro.ch"
 						/>
+						.
 					</p>
 					<p>{t('aboutMe.first')}</p>
 					<p>{t('aboutMe.second')}</p>

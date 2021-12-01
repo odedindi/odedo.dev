@@ -50,5 +50,8 @@ export const AboutParagraph = styled.div`
 `;
 
 export const DevToolsIconsWrapper = styled.section`
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
 	padding: 0 2rem;
 `;

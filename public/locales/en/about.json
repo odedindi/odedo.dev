@@ -4,18 +4,18 @@
 	"developer": "Full-Stack Developer",
 	"storyStart": "My coding journey began in 2020, after corona entered our lives and helped me redirect my professional career.",
 	"storyCurrent": {
-		"intro": "Since then I've been building my own projects, consulted for online shop owners, and collaborated with ",
-		"people": "talented people ",
+		"intro": "Since then I've been building my own projects, and collaborated with different partners, for exemple together with ",
+		"people": "talented data scientists ",
 		"on a": "on a ",
 		"hackathon": "Climate hackathon ",
 		"using": "using ",
 		"satellite": "satellite data ",
-		"for": "and create an AI-based solution for controlling carbon concentrations trends in soils and vegetation, leading to ",
-		"landpro": "LandPro."
+		"for": "we developed an AI-based prototype for monitoring carbon concentrations trends in soils and vegetation, leading to ",
+		"landpro": "LandPro"
 	},
 	"aboutMe": {
 		"first": "I'm a confident and capable individual, enjoy and profit from team work, curious by nature, and perpetually eager and work on improving my skills one problem at a time.",
-		"second": "I love being alive, diving, camping and traveling in the outdoor, coffee under a tree with nice view, gardening, nature and animals in general, so many different kinds of sports, building and repairing stuff, reading, good music and films, and on top of all I love my wife and daughter.",
+		"second": "I love diving, camping and traveling in the outdoor, coffee under a tree with nice view, gardening, nature and animals in general, so many different kinds of sports, building and repairing stuff, reading, good music and films, and on top of all I love my wife and daughter.",
 		"third": "I love reading code as well as code things from scratch, and enjoy very much bringing to life ideas on the browser."
 	},
 	"like to use": "Languages, Frameworks, Libraries & Dev tools I like using",

@@ -12,6 +12,7 @@ import PageLayout from 'components/Layout';
 
 const Logo = dynamic(() => import('components/Logo'));
 // ============================================
+
 const Home: NextPage = () => {
 	const { t } = useTranslation('common');
 
