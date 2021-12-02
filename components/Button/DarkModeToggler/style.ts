@@ -1,149 +1,173 @@
-import styled, { css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-const colors = {
-	moon1: '#EDDDD4',
-	moon2: '#FCFAFA',
+const sunRise = keyframes`  
+0% {
+    left: 45px;
+    width: 2.1rem;
+  }
+  60% {
+    left: 20px;
+    width: 4rem;
+  }
+  100% {
+    left: 2px;
+  }`;
 
-	sun1: '#FFFFFF',
-	sun2: '#FFBE0B',
-	sun3: '#FB5607',
-};
-// const animationSpeed = '1s';
-const width = 50;
-const height = width / 2;
+const sunSet = keyframes`  
+    0% {
+    left: 2px;
+  }
+  60% {
+    left: 4px;
+    width: 4rem;
+  }
+  100% {
+    left: 51px;
+    width: 2.1rem;
+  }`;
 
-export const Toggle = styled.div`
-	box-shadow: 0 0 10px rgba(black, 0.1);
-	width: ${`${width}px`};
-	height: ${`${height}px`};
-	border: 5px solid rgba(${colors.moon2}, 0.125);
-	background: rgba(${colors.moon2}, 0.05);
-	padding: 20px;
-	position: relative;
-	border-radius: ${`${width}px`};
-	cursor: pointer;
-`;
+export const Switch = styled.div`
+	// borrowed from https://daily-dev-tips.com/posts/creating-day-night-css-only-toggle-switch/
 
-// export const Switch = styled.div`
-// 	height: ${`${height - 10}px`};
-// 	width: ${`${width / 2 - 10}px`};
-// 	background: yellow;
-// 	border-radius: ${`${width}px`};
-// 	/* pointer-events: none; */
+	/** sunny side **/
+	--blue-background: #c2e9f6;
+	--blue-border: #72cce3;
+	--blue-color: #96dcee;
+	--yellow-background: #fffaa8;
+	--yellow-border: #f5eb71;
+	/** dark side **/
+	--indigo-background: #808fc7;
+	--indigo-border: #5d6baa;
+	--indigo-color: #6b7abb;
+	--gray-border: #e8e8ea;
+	--gray-dots: #e8e8ea;
+	/** general **/
+	--white: #fff;
 
-// 	transition: left ${animationSpeed} ease, box-shadow ${animationSpeed} ease,
-// 		border ${animationSpeed} ease, top ${animationSpeed} ease;
-// 	background: ${colors.moon1}; /* Old browsers */
-// 	background: linear-gradient(
-// 		135deg,
-// 		rgba(${colors.moon1}, 1) 0%,
-// 		rgba(${colors.moon2}, 1) 50%,
-// 		rgba(${colors.moon1}, 1) 51%,
-// 		rgba(${colors.moon2}, 1) 100%
-// 	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-// 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-// 	box-shadow: 0 0 25px 5px ${colors.moon1};
-// 	border: 5px solid rgba(${colors.moon1}, 0.5);
-
-// 	&::before {
-// 		content: '';
-// 		height: ${`${height - 1}px`};
-// 		width: ${`${width / 2 - 1}px`};
-// 		background: red;
-
-// 		border-radius: ${`${width}px`};
-// 		background: ${colors.sun1}; /* Old browsers */
-// 		background: radial-gradient(
-// 			ellipse at center,
-// 			rgba(${colors.sun1}, 1) 0%,
-// 			rgba(${colors.sun2}, 1) 50%,
-// 			rgba(${colors.sun3}, 1) 100%
-// 		); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-// 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-// 		transition: opacity ${animationSpeed} ease;
-// 		opacity: 0;
-// 	}
-
-// 	&[data-time='day'] {
-// 		box-shadow: 0 0 10px 10px ${colors.sun3};
-// 		border: 1px solid rgba(${colors.sun3}, 1) !important;
-
-// 		&::before {
-// 			opacity: 1;
-// 		}
-// 	}
-// `;
-
-export const Switcher = styled.div<{ dark: boolean }>`
-	border-radius: 50%;
-	width: 2rem;
-	height: 2rem;
-	position: relative;
-	box-shadow: inset 1rem -0.25rem 0 0 ${colors.moon1};
-	-webkit-transform: scale(1) rotate(-25deg);
-	transform: scale(1) rotate(-25deg);
-	-webkit-transition: box-shadow 0.5s ease 0s, -webkit-transform 0.4s ease 0.1s;
-	transition: box-shadow 0.5s ease 0s, -webkit-transform 0.4s ease 0.1s;
-	transition: box-shadow 0.5s ease 0s, transform 0.4s ease 0.1s;
-	transition: box-shadow 0.5s ease 0s, transform 0.4s ease 0.1s,
-		-webkit-transform 0.4s ease 0.1s;
-
-	&:before {
-		content: '';
-		width: inherit;
-		height: inherit;
-		border-radius: inherit;
-		position: absolute;
-		left: 0;
-		top: 0;
-		-webkit-transition: background 0.3s ease;
-		transition: background 0.3s ease;
+	:hover {
+		cursor: pointer;
 	}
-	&:after {
+
+	.checkbox {
+		display: none;
+	}
+	.celestialBodies {
+		cursor: pointer;
+		/** Placeholder element, starting at blue **/
+		width: 6rem;
+		height: 3rem;
+		background: var(--blue-color);
+		border-radius: 100px;
+		border: 5px solid var(--blue-border);
+		display: flex;
+		position: relative;
+		transition: all 350ms ease-in;
+		/** The sun cloud and moon stars **/
+		/** Sun/Moon element **/
+		/** Gray dots on the moon **/
+	}
+	.celestialBodiesBackground {
+		width: 0.3rem;
+		height: 0.15rem;
+		border-radius: 5px;
+		position: relative;
+		background: var(--white);
+		left: 67.5px;
+		top: 12px;
+		transition: all 150ms ease-in;
+	}
+	.celestialBodiesBackground:before {
 		content: '';
-		width: 8px;
-		height: 8px;
+		position: absolute;
+		width: 1rem;
+		height: 0.15rem;
+		border-radius: 5px;
+		background: var(--white);
+		top: -3px;
+		left: -12px;
+		transition: all 150ms ease-in;
+	}
+	.celestialBodiesBackground:after {
+		content: '';
+		position: absolute;
+		width: 1rem;
+		height: 0.15rem;
+		border-radius: 5px;
+		background: var(--white);
+		left: -3px;
+		top: 2.5px;
+
+		transition: all 150ms ease-in;
+	}
+	.celestialBodies:before {
+		animation-name: ${sunRise};
+		animation-duration: 350ms;
+		animation-fill-mode: forwards;
+		transition: all 350ms ease-in;
+		content: '';
+		width: 2.1rem;
+		height: 2.1rem;
+		border: 2.5px solid var(--yellow-border);
+		top: 2px;
+		left: 4px;
+		position: absolute;
+		border-radius: 2.1rem;
+		background: var(--yellow-background);
+	}
+	//makteshim
+	.celestialBodies:after {
+		transition-delay: 0ms;
+		transition: all 250ms ease-in;
+		position: absolute;
+		content: '';
+		box-shadow: var(--gray-dots) -13px 0 0 2px,
+			var(--gray-dots) -24px 14px 0 -2px;
+		left: 77px;
+		top: 7px;
+		width: 7.5px;
+		height: 7.5px;
+		background: transparent;
 		border-radius: 50%;
-		margin: -4px 0 0 -4px;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		/* box-shadow: 0 -1.25rem 0 ${colors.sun3}, 0 1.25rem 0 ${colors.sun3},
-			1.25rem 0 0 ${colors.sun3}, -1.25rem 0 0 ${colors.sun3},
-			0.8rem 0.8rem 0 ${colors.sun3}, -0.8rem 0.8rem 0 ${colors.sun3},
-			0.8rem -0.8rem 0 ${colors.sun3}, -0.8rem -0.8rem 0 ${colors.sun3}; */
-		-webkit-transform: scale(0);
-		transform: scale(0);
-		-webkit-transition: all 0.2s ease-in;
-		transition: all 0.2s ease-in;
+		opacity: 0;
 	}
-	${({ dark }) =>
-		dark
-			? css`
-					box-shadow: inset 32px -32px 0 0 #fff;
-					-webkit-transform: scale(1.25) rotate(0deg);
-					transform: scale(1.25) rotate(0deg);
-					-webkit-transition: box-shadow 0.2s ease 0s,
-						-webkit-transform 0.3s ease 0.1s;
-					transition: box-shadow 0.2s ease 0s, -webkit-transform 0.3s ease 0.1s;
-					transition: transform 0.3s ease 0.1s, box-shadow 0.2s ease 0s;
-					transition: transform 0.3s ease 0.1s, box-shadow 0.2s ease 0s,
-						-webkit-transform 0.3s ease 0.1s;
-					&:before {
-						background: ${colors.sun2};
-						-webkit-transition: background 0.3s ease 0.1s;
-						transition: background 0.3s ease 0.1s;
-					}
-					&:after {
-						-webkit-transform: scale(1.5);
-						transform: scale(1.5);
-						-webkit-transition: -webkit-transform 0.5s ease 0.15s;
-						transition: -webkit-transform 0.5s ease 0.15s;
-						transition: transform 0.5s ease 0.15s;
-						transition: transform 0.5s ease 0.15s,
-							-webkit-transform 0.5s ease 0.15s;
-					}
-			  `
-			: null}
+	.checkbox:checked {
+		/** This will all flip from sun to moon **/
+		/** Change the label color **/
+	}
+	.checkbox:checked ~ .background {
+		background: var(--indigo-background);
+	}
+	.checkbox:checked + .celestialBodies {
+		background: var(--indigo-color);
+		border-color: var(--indigo-border);
+		/** Change the cloud to stars **/
+		/** Change the sun into the moon **/
+		/** Show the dimples on the moon **/
+	}
+	.checkbox:checked + .celestialBodies .celestialBodiesBackground {
+		left: 25px;
+		width: 5px;
+	}
+	.checkbox:checked + .celestialBodies .celestialBodiesBackground:before {
+		width: 3px;
+		height: 3px;
+		top: 7px;
+	}
+	.checkbox:checked + .celestialBodies .celestialBodiesBackground:after {
+		width: 3px;
+		height: 3px;
+		left: -20px;
+		top: 3px;
+	}
+	.checkbox:checked + .celestialBodies:before {
+		background: var(--white);
+		border-color: var(--gray-border);
+		animation-name: ${sunSet};
+		animation-duration: 350ms;
+		animation-fill-mode: forwards;
+	}
+	.checkbox:checked + .celestialBodies:after {
+		transition-delay: 350ms;
+		opacity: 1;
+	}
 `;

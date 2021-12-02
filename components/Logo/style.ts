@@ -1,5 +1,5 @@
 import { device } from 'utils/mediaQueries';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const SlogenWrapper = styled.section`
 	display: flex;
@@ -7,8 +7,8 @@ export const SlogenWrapper = styled.section`
 	justify-content: flex-end;
 	width: 10rem;
 	position: relative;
-	top: 1.75rem;
-	left: 10.3rem;
+	top: 2.7125rem;
+	left: 10.5rem;
 	letter-spacing: 0.12rem;
 
 	${device.tablet} {
@@ -30,6 +30,7 @@ export const MyName = styled.h1`
 	color: ${({ theme }) => theme.colors.text.primary};
 	font-size: ${({ theme }) => theme.fontSizes.h1};
 	letter-spacing: 0.1rem;
+
 	${device.tablet} {
 		line-height: 2.125rem;
 		width: 15rem;

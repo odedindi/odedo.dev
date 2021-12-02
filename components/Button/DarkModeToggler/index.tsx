@@ -16,10 +16,12 @@ const DarkModeToggler = () => {
 	// }, [darkMode.value]);
 
 	return (
-		<S.Toggle onClick={darkMode.toggle}>
-			{/* <S.Switch className="Button" data-time={time} /> */}
-			<S.Switcher dark={!darkMode.value} />
-		</S.Toggle>
+		<S.Switch onClick={darkMode.toggle}>
+			<input type="checkbox" className="checkbox" checked={darkMode.value} />
+			<label htmlFor="toggle" className="celestialBodies">
+				<span className="celestialBodiesBackground"></span>
+			</label>
+		</S.Switch>
 	);
 };
 
