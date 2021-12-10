@@ -1,16 +1,12 @@
 // =============== React & Next ===============
 import * as React from 'react';
 import type { GetStaticProps, NextPage } from 'next';
-import dynamic from 'next/dynamic';
-// ================== styles ==================
-import * as S from 'styles/pages/home';
 // =============== translation ================
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // ================ components ================
 import PageLayout from 'components/Layout';
-
-const Logo = dynamic(() => import('components/Logo'));
+import Signature from 'components/Signature';
 // ============================================
 
 const Home: NextPage = () => {
@@ -18,9 +14,7 @@ const Home: NextPage = () => {
 
 	return (
 		<PageLayout title={t('title')}>
-			<S.PageWrapper>
-				<Logo />
-			</S.PageWrapper>
+			<Signature />
 		</PageLayout>
 	);
 };

@@ -1,41 +1,3 @@
-const exampleTheme = {
-	light: {
-		bg: {
-			primary: '#eff0f5',
-			secondary: '#ffffff',
-			inset: '#e2e4e8',
-			input: 'rgba(65,67,78,0.12)',
-		},
-		text: {
-			primary: '#050505',
-			secondary: '#2f3037',
-			tertiary: '#525560',
-			quarternary: '#9194a1',
-			placeholder: 'rgba(82,85,96,0.5)',
-			onPrimary: '#ffffff',
-		},
-		// ...
-	},
-
-	dark: {
-		bg: {
-			primary: '#050505',
-			secondary: '#111111',
-			inset: '#111111',
-			input: 'rgba(191,193,201,0.12)',
-		},
-		text: {
-			primary: '#fbfbfc',
-			secondary: '#e3e4e8',
-			tertiary: '#a9abb6',
-			quarternary: '#6c6f7e',
-			placeholder: 'rgba(145,148,161,0.5)',
-			onPrimary: '#050505',
-		},
-		// ...
-	},
-};
-
 const light = {
 	colors: {
 		background: {
@@ -58,8 +20,8 @@ const light = {
 			bright: '#c57f1e',
 		},
 		naviAndContactButtons: {
-			primary: '#59253a',
-			secondary: '#0677a1',
+			primary: '#0677a1',
+			secondary: '#59253a',
 		},
 	},
 };
@@ -85,8 +47,8 @@ const dark = {
 			bright: '#c57f1e',
 		},
 		naviAndContactButtons: {
-			primary: '#8a6675',
-			secondary: '#82bad0',
+			primary: '#82bad0',
+			secondary: '#8a6675',
 		},
 	},
 };

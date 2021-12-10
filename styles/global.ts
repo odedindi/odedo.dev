@@ -34,6 +34,9 @@ const theme = {
 };
 
 const GlobalStyle = createGlobalStyle`
+* {
+	transition: all 500ms;
+}
 html,
 body {
 	padding: 0;

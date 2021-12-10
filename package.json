@@ -19,6 +19,7 @@
 		"@fortawesome/free-solid-svg-icons": "^5.15.4",
 		"@fortawesome/react-fontawesome": "^0.1.16",
 		"antd": "^4.17.2",
+		"canvas-confetti": "^1.4.0",
 		"chart.js": "^3.5.1",
 		"gsap": "^3.7.1",
 		"i18next": "^20.4.0",
@@ -40,11 +41,14 @@
 		"react-query": "^3.34.0",
 		"react-select": "^4.3.1",
 		"react-social-icons": "^5.6.1",
+		"react-streams": "^13.6.6",
+		"rxjs": "^7.4.0",
 		"sharp": "^0.29.0",
 		"styled-components": "^5.3.1",
 		"use-dark-mode": "^2.3.1"
 	},
 	"devDependencies": {
+		"@types/canvas-confetti": "^1.4.2",
 		"@types/chart.js": "^2.9.34",
 		"@types/gsap": "^3.0.0",
 		"@types/i18next-node-fs-backend": "^2.1.1",

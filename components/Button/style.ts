@@ -1,5 +1,5 @@
 import { device } from 'utils/mediaQueries';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 // ============== main button ===============
 const Button = styled.button`
@@ -24,7 +24,7 @@ const Button = styled.button`
 	}
 `;
 
-export const MainButton = styled(Button)`
+export const MainButton = styled(Button)<{ disabled?: boolean }>`
 	box-shadow: inset 0 0 0 4px
 		${({ theme }) => theme.colors.naviAndContactButtons.primary};
 	color: ${({ theme }) => theme.colors.naviAndContactButtons.primary};
@@ -68,23 +68,35 @@ export const MainButton = styled(Button)`
 	:hover::after {
 		transition-delay: 0.25s, 0.25s, 0s;
 	}
+	${({ disabled }) =>
+		disabled
+			? css`
+					cursor: not-allowed;
+					:hover,
+					:hover:before,
+					:hover:after {
+						color: ${({ theme }) => theme.colors.naviAndContactButtons.primary};
+						border: none;
+						border-color: ${({ theme }) =>
+							theme.colors.naviAndContactButtons.primary};
+						transition: none;
+					}
+			  `
+			: null}
 `;
 
 // =============== contact me ===============
 export const ContactMeButtonsWrapper = styled.section`
 	display: flex;
-	flex-direction: row;
+	flex-flow: row;
 	justify-content: space-evenly;
 	align-items: center;
 	width: 15rem;
 
 	${device.xs} {
-		flex-direction: column;
-		/* position: absolute;
-		bottom: 40px;
-		left: -50px; */
+		flex-flow: row wrap;
+		justify-content: space-evenly;
 		width: 5rem;
-		height: 12rem;
 	}
 `;
 // =============== color mode ===============

@@ -6,9 +6,10 @@ type MainButtonProps = {
 	onClick: () => void;
 	text: string;
 	id: string;
+	disabled?: boolean;
 };
-const MainButton = ({ id, onClick, text }: MainButtonProps) => (
-	<S.MainButton id={id} onClick={onClick}>
+const MainButton = ({ disabled, id, onClick, text }: MainButtonProps) => (
+	<S.MainButton disabled={disabled} id={id} onClick={onClick}>
 		{text}
 	</S.MainButton>
 );

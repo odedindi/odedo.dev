@@ -1,59 +1,45 @@
 // =============== React & Next ===============
 import * as React from 'react';
 import { useRouter } from 'next/router';
-// ================== hooks ===================
+import Link from 'next/link';
 // ================ constants =================
 import { isDev } from 'utils/constants';
 // ================== styles ==================
-import * as S from '../style';
-// =============== translation ================
-import { useTranslation } from 'next-i18next';
+import * as S from './style';
+// =================== icons ==================
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 // =============== components =================
-import Button from 'components/Button';
+import Slidebar from './Slidebar';
 // ============================================
 
 const Navigation = () => {
-	const { t } = useTranslation('navigation');
-	const { pathname, push } = useRouter();
+	const { pathname } = useRouter();
+	const [isOpen, setIsOpen] = React.useState(false);
+	const toggle = () => setIsOpen(!isOpen);
 
 	enum Routes {
 		home = '/',
 		portfolio = '/portfolio',
 		about = '/about',
 	}
-	const pages = isDev ? Object.keys(Routes) : ['home', 'about'];
+	const pages = (isDev ? Object.keys(Routes) : ['home', 'about']).map(
+		(page) => ({ page: page, route: Routes[page as Page] }),
+	);
 
 	return (
-		<S.NavigationWrapper>
-			<S.LinksWrapper>
-				{/* {pages.map((page) => {
-					if (pathname !== Routes[page as Page])
-						return (
-							<Button
-								id={page}
-								key={page}
-								type="Main"
-								text={t(`${page}`)}
-								onClick={() => push(Routes[page as Page])}
-							/>
-						);
-				})} */}
-				{pages.map((page, index) => {
-					if (pathname !== Routes[page as Page])
-						return (
-							<Button
-								key={index}
-								type="Exploding"
-								text={t(`${page}`)}
-								onClick={() => push(Routes[page as Page])}
-							/>
-						);
-				})}
-			</S.LinksWrapper>
-			<S.DarkModeTogglerWrapper>
-				<Button type="DarkModeToggler" />
-			</S.DarkModeTogglerWrapper>
-		</S.NavigationWrapper>
+		<S.Nav>
+			<Link passHref href="/">
+				<S.Logo />
+			</Link>
+
+			<S.MenuIcon onClick={toggle} icon={faBars} />
+
+			<Slidebar
+				toggle={toggle}
+				isOpen={isOpen}
+				pages={pages.filter(({ page }) => pathname !== Routes[page as Page])}
+			/>
+		</S.Nav>
 	);
 };
 

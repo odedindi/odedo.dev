@@ -7,7 +7,6 @@ import Header from 'components/Layout/Header';
 import Navigation from 'components/Layout/Navigation';
 import Providers from 'components/Providers';
 // ============================================
-
 type PageLayoutProps = {
 	title: string;
 	children: React.ReactNode;
@@ -23,6 +22,7 @@ const PageLayout = ({ children, title }: PageLayoutProps) => {
 			<S.LayoutWrapper>
 				<Header title={title} />
 				<Navigation />
+
 				<S.ChildrenWrapper>{children}</S.ChildrenWrapper>
 				<Footer />
 			</S.LayoutWrapper>

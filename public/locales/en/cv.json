@@ -1,0 +1,65 @@
+{
+	"title": "CV",
+
+	"siteUrl": "https://odedo.dev",
+
+	"name": "Ryan Fitzgerald",
+
+	"myTitle": "Ryan Fitzgerald | Full-Stack Developer",
+
+	"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit, ipsum.",
+
+	"author": "@rfitzio",
+
+	"github": "https://github.com/ryanfitzgerald",
+	"linkedin": "https://www.linkedin.com/in/ryanafitzgerald/",
+	"about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus perferendis porro cumque ea error ab voluptatem. Temporibus adipisci exercitationem similique itaque quibusdam laudantium, qui molestiae quas, aut amet animi id.",
+	"projects": [
+		{
+			"name": "Devfolio",
+			"description": "A zero-config and blazing fast personal site + blog built with GatsbyJs and TailwindCSS",
+			"link": "https://github.com/RyanFitzgerald/devfolio"
+		},
+		{
+			"name": "ChromeExtensionKit",
+			"description": "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates",
+			"link": "https://chromeextensionkit.com/?ref=devfolio"
+		},
+		{
+			"name": "Another Cool Project",
+			"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit ducimus perferendis",
+			"link": "https://github.com/RyanFitzgerald/devfolio"
+		}
+	],
+	"experience": [
+		{
+			"name": "Acme Corp",
+			"description": "Full-Stack Developer, February 2020 - Present",
+			"link": "https://github.com/RyanFitzgerald/devfolio"
+		},
+		{
+			"name": "Globex Corp",
+			"description": "Full-Stack Developer, December 2017 - February 2020",
+			"link": "https://github.com/RyanFitzgerald/devfolio"
+		},
+		{
+			"name": "Hooli",
+			"description": "Full-Stack Developer, May 2015 - December 2017",
+			"link": "https://github.com/RyanFitzgerald/devfolio"
+		}
+	],
+	"skills": [
+		{
+			"name": "Languages & Frameworks",
+			"description": "JavaScript (ES6+), Golang, Node.js, Express.js, React, Ruby on Rails, PHP"
+		},
+		{
+			"name": "Databases",
+			"description": "MongoDB, PostreSQL, MySQL"
+		},
+		{
+			"name": "Other",
+			"description": "Docker, Amazon Web Services (AWS), CI / CD, Microservices, API design, Agile / Scrum"
+		}
+	]
+}

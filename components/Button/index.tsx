@@ -11,9 +11,16 @@ type ButtonProps = {
 	onClick?: () => void;
 	type: 'DarkModeToggler' | 'ContactMe' | 'Exploding' | 'Hovering' | 'Main';
 	text?: string;
+	disabled?: boolean;
 };
 
-const Button: React.FC<ButtonProps> = ({ id, onClick, text, type }) => {
+const Button: React.FC<ButtonProps> = ({
+	disabled,
+	id,
+	onClick,
+	text,
+	type,
+}) => {
 	if (type === 'ContactMe') return <ContactMeButtons id={id as string} />;
 	if (type === 'DarkModeToggler') return <DarkModeToggler />;
 	if (type === 'Exploding')
@@ -26,6 +33,7 @@ const Button: React.FC<ButtonProps> = ({ id, onClick, text, type }) => {
 				id={id as string}
 				onClick={onClick as () => void}
 				text={text as string}
+				disabled={disabled as boolean}
 			/>
 		);
 	if (type === 'Hovering')

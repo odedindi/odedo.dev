@@ -29,7 +29,8 @@
 		"next-env.d.ts",
 		"**/*.ts",
 		"**/*.tsx",
-		"next-i18next.js"
+		"next-i18next.js",
+		"pages/test/experiment.js"
 	],
 	"exclude": ["node_modules"]
 }

@@ -6,7 +6,7 @@ import * as S from './style';
 import CreateAnimation from 'components/CreateAnimation';
 // ============================================
 
-const Logo = () => {
+const Signature = () => {
 	const [isMounted, setIsMounted] = React.useState(false);
 	React.useEffect(() => setIsMounted(true), []);
 
@@ -23,4 +23,4 @@ const Logo = () => {
 		</>
 	);
 };
-export default Logo;
+export default Signature;

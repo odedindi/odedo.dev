@@ -1,20 +1,22 @@
 import { device } from 'utils/mediaQueries';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 export const SlogenWrapper = styled.section`
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-	width: 10rem;
 	position: relative;
-	top: 2.7125rem;
-	left: 10.5rem;
-	letter-spacing: 0.12rem;
+	top: 0.95rem;
+	left: 16.2rem;
+	letter-spacing: 0.025rem;
 
 	${device.tablet} {
 		position: relative;
-		top: 3.625rem;
-		left: 3.075rem;
+		top: 2rem;
+		left: 8.775rem;
+	}
+	${device.phone} {
+		display: none;
 	}
 `;
 
@@ -34,8 +36,5 @@ export const MyName = styled.h1`
 	${device.tablet} {
 		line-height: 2.125rem;
 		width: 15rem;
-	}
-	${device.phone} {
-		width: 10rem;
 	}
 `;

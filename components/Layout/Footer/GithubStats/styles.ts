@@ -5,10 +5,8 @@ export const Stats = styled.div`
 	display: grid;
 	grid-template-columns: max-content max-content;
 	justify-content: center;
-	justify-items: center;
 	align-items: center;
 	gap: 1rem;
-	padding: 0.8rem 0;
 `;
 
 export const Stat = styled.a.attrs({
