@@ -3,10 +3,12 @@ import * as L from 'assets/logos';
 export const useDevToolsLogos = () => {
 	const logosToBeUsedAsImageSource: LogoId[] = [
 		'antd',
+		'chartjs',
 		'gsap',
 		'nestjs',
 		'prisma',
 		'recoil',
+		'rxjs',
 		'styledComponents',
 		'three',
 		'vercel',
@@ -56,6 +58,11 @@ export const useDevToolsLogos = () => {
 			link: 'https://www.gatsbyjs.com/docs',
 		},
 		{
+			id: 'rxjs',
+			logo: L.rxjs,
+			link: 'https://rxjs.dev/api',
+		},
+		{
 			id: 'recoil',
 			logo: L.recoil,
 			link: 'https://recoiljs.org/docs/introduction/getting-started',
@@ -84,6 +91,11 @@ export const useDevToolsLogos = () => {
 			id: 'antd',
 			logo: L.antd,
 			link: 'https://ant.design/docs/react/introduce',
+		},
+		{
+			id: 'chartjs',
+			logo: L.chartjs,
+			link: 'https://www.chartjs.org/docs/latest/',
 		},
 		{
 			id: 'd3',

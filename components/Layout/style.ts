@@ -11,7 +11,6 @@ export const LayoutWrapper = styled.section`
 
 export const ChildrenWrapper = styled.section`
 	min-height: 50.25vh;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;

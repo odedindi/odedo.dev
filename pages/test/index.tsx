@@ -11,7 +11,8 @@ import Modal from 'components/Modal/custom';
 // ============================================
 
 import TicTacToe from 'Games/TikTakToe';
-import { MyRxJS } from './experiment';
+import { InputBox, MyRxJS } from './experiment';
+
 // ============================================
 
 const Tests: NextPage = () => {
@@ -22,21 +23,36 @@ const Tests: NextPage = () => {
 	const closeModal = () => setIsOpen(false);
 
 	const games = [{ title: 'Tic-Tac-Toe', game: <TicTacToe /> }];
+
+	// const getBob = async () => {
+	// 	const bob = await require('./bob.json');
+	// 	console.log(await bob);
+	// 	return bob
+	// };
+
+	// React.useEffect(() => {
+	// 	getBob();
+	// }, []);
 	return (
 		<PageLayout title={t('title')}>
-			<button onClick={openModal}>Open Modal</button>
+			{/* <button onClick={openModal}>Open Modal</button> */}
 
 			{/* <Modal title={games[0].title} isOpen={isOpen} closeModal={closeModal}>
 				{games[0].game}
 			</Modal> */}
-
+			{/* 
 			<Modal
 				// title={'RxJS Counter'}
 				isOpen={isOpen}
 				toggle={closeModal}>
 				<TicTacToe />
-			</Modal>
-			{/* <MyRxJS /> */}
+			</Modal> */}
+
+			{/* <MyRxJS bob={getBob} /> */}
+
+			<InputBox />
+
+			{null ? null : null}
 		</PageLayout>
 	);
 };

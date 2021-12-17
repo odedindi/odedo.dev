@@ -6,14 +6,15 @@ export const SlogenWrapper = styled.section`
 	align-items: center;
 	justify-content: flex-end;
 	position: relative;
-	top: 0.95rem;
-	left: 16.2rem;
-	letter-spacing: 0.025rem;
+	top: -1.1rem;
+	left: 20.675rem;
+	letter-spacing: 0.0235rem;
 
 	${device.tablet} {
 		position: relative;
-		top: 2rem;
-		left: 8.775rem;
+		top: -0.1rem;
+		left: 13.205rem;
+		/* letter-spacing: 0.065rem; */
 	}
 	${device.phone} {
 		display: none;

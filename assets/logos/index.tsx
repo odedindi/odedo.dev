@@ -1,8 +1,10 @@
 import antdLogo from './antd.svg';
+import chartjsLogo from './chartjs.svg';
 import gsapLogo from './gsap-greensock.svg';
 import nestjsLogo from './nestjs.svg';
 import prismaLogo from './prisma.svg';
 import recoilLogo from './recoil.svg';
+import rxjsLogo from './rxjs.svg';
 import styledComponentsLogo from './styled-components.svg';
 import ThreeJSLogo from './Threejs.svg';
 import vercelLogo from './vercel.svg';
@@ -90,6 +92,8 @@ const redux = (
 			fill="#764abc"></path>
 	</svg>
 );
+const rxjs = rxjsLogo;
+const chartjs = chartjsLogo;
 const d3 = (
 	<svg viewBox="0 0 150 150" width="70" height="100">
 		{' '}
@@ -885,8 +889,10 @@ export {
 	react,
 	next,
 	gatsby,
+	rxjs,
 	recoil,
 	redux,
+	chartjs,
 	d3,
 	three,
 	gsap,

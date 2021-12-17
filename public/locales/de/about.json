@@ -1,9 +1,9 @@
 {
 	"title": "Über Seite",
 	"hi": "Hi,  ich bin Oded ein Full-Stack Entwickler",
-	"storyStart": "Meine Codierungsreise begann im Jahr 2020, nachdem Corona in unser Leben eingetreten war und mir geholfen hat, meine berufliche Karriere neu zu gestalten.",
+	"storyStart": "Meine Programmierreise begann in der High School weit in den frühen 2000er Jahren und mein Abenteuer in der Webentwicklung begann im Jahr 2020, als ich beschloss, meine berufliche Karriere neu zu gestalten.",
 	"storyCurrent": {
-		"intro": "Seitdem baue ich eigene Projekte und arbeite mit verschiedenen Partnern zusammen, zum Beispiel zusammen mit ",
+		"intro": "Meistens bin ich freiberuflich tätig, baue eigene Projekte oder arbeite beispielsweise zusammen mit ",
 		"people": "talentierte Datenwissenschaftler ",
 		"using": "unter Verwendung von ",
 		"satellite": "Sentinel-II ",
@@ -11,8 +11,8 @@
 		"landpro": "LandPro"
 	},
 	"aboutMe": {
-		"first": "Ich bin ein selbstbewusster und fähiger Mensch, habe Spaß an und profitiere von Teamarbeit, bin von Natur aus neugierig und ständig eifrig und arbeite daran, meine Fähigkeiten Problem für Problem zu verbessern.",
-		"second": "Ich liebe zu tauchen, zu campen und im Freien zu reisen, Kaffee unter einem Baum mit schöner Aussicht, Gartenarbeit, Natur und Tiere im Allgemeinen, so viele verschiedene Sportarten, Bauen und Reparieren, Lesen, gute Musik und Filme , und vor allem liebe ich meine Frau und meine Tochter.",
+		"first": "Ich bin ein selbstbewusster und fähiger Mensch, habe Spaß und profitiere von Teamarbeit, bin von Natur aus neugierig und ständig eifrig und arbeite daran, meine Fähigkeiten Problem für Problem zu verbessern.",
+		"second": "Ich liebe Tauchen, Camping und Reisen im Freien, werde nie nein sagen für eine Tasse Kaffee unter einem Baum mit schöner Aussicht, Bauen und Reparieren, Lesen, gute Musik und Filme und obendrein Ich liebe meine Frau und meine Tochter.",
 		"third": "Ich liebe es, Code zu lesen und Dinge von Grund auf neu zu programmieren, und es macht mir großen Spaß, Ideen im Browser zum Leben zu erwecken."
 	},
 	"like to use": "Sprachen, Frameworks, Bibliotheken & Entwicklungstools, die ich gerne verwende",

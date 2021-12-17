@@ -2,7 +2,7 @@ import { device } from 'utils/mediaQueries';
 import styled from 'styled-components';
 
 export const PageWrapper = styled.main`
-	padding: 0 1rem 0 1rem;
+	padding: 0 1rem 5rem 1rem;
 	${device.desktop} {
 		width: 98vw;
 	}
@@ -63,10 +63,24 @@ export const AboutTitle = styled.section`
 		color: ${({ theme }) => theme.colors.text.onPrimary};
 	}
 `;
-
-export const DevToolsIconsWrapper = styled.section`
+export const DevToolsIconWrapper = styled.div`
 	display: flex;
 	flex-flow: row wrap;
+
 	justify-content: center;
-	padding: 0 2rem;
+	align-items: center;
+	transform: scale(0.75);
+`;
+
+export const DevToolsIconsWrapper = styled.section`
+	max-width: 25rem;
+	padding: 0.25rem 1rem;
+	border-radius: 0.5rem;
+
+	background: ${({ theme }) => theme.colors.background.secondary};
+	border: solid 1px ${({ theme }) => theme.colors.background.menu};
+
+	:hover {
+		border-color: ${({ theme }) => theme.colors.background.secondary};
+	}
 `;
