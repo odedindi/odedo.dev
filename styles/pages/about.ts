@@ -69,12 +69,16 @@ export const DevToolsIconWrapper = styled.div`
 
 	justify-content: center;
 	align-items: center;
-	transform: scale(0.75);
+	transform: scale(0.6);
+	a {
+		padding: 0 0.25rem;
+	}
 `;
 
 export const DevToolsIconsWrapper = styled.section`
+	min-width: 14rem;
 	max-width: 25rem;
-	padding: 0.25rem 1rem;
+	/* padding: 0.25rem 0; */
 	border-radius: 0.5rem;
 
 	background: ${({ theme }) => theme.colors.background.secondary};
