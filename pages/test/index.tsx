@@ -11,7 +11,7 @@ import Modal from 'components/Modal/custom';
 // ============================================
 
 import TicTacToe from 'Games/TikTakToe';
-import { InputBox, MyRxJS } from './experiment';
+// import { InputBox, MyRxJS } from './experiment';
 
 // ============================================
 
@@ -50,7 +50,7 @@ const Tests: NextPage = () => {
 
 			{/* <MyRxJS bob={getBob} /> */}
 
-			<InputBox />
+			{/* <InputBox /> */}
 
 			{null ? null : null}
 		</PageLayout>
