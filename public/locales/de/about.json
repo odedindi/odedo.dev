@@ -8,14 +8,14 @@
 		"using": "unter Verwendung von ",
 		"satellite": "Sentinel-II ",
 		"for": "Satellitendaten einen KI-basierten Prototyp zur Überwachung von Kohlenstoffkonzentrationstrends in Böden und Vegetation entwickelt, führt zu ",
-		"landpro": "LandPro"
+		"landpro": "LandPro."
 	},
 	"aboutMe": {
 		"first": "Ich bin ein selbstbewusster und fähiger Mensch, habe Spaß und profitiere von Teamarbeit, bin von Natur aus neugierig und ständig eifrig und arbeite daran, meine Fähigkeiten Problem für Problem zu verbessern.",
 		"second": "Ich liebe Tauchen, Camping und Reisen im Freien, werde nie nein sagen für eine Tasse Kaffee unter einem Baum mit schöner Aussicht, Bauen und Reparieren, Lesen, gute Musik und Filme und obendrein Ich liebe meine Frau und meine Tochter.",
 		"third": "Ich liebe es, Code zu lesen und Dinge von Grund auf neu zu programmieren, und es macht mir großen Spaß, Ideen im Browser zum Leben zu erwecken."
 	},
-	"like to use": "Sprachen, Frameworks, Bibliotheken & Entwicklungstools, die ich gerne verwende",
+	"like to use": "Entwicklungstools, die ich gerne verwende",
 	"languages": "Sprachen",
 	"frontend": "Frontend",
 	"backend": "Backend",

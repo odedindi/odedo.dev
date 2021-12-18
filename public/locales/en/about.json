@@ -8,14 +8,14 @@
 		"using": "using ",
 		"satellite": "Sentinel-II ",
 		"for": "data we developed an AI-based prototype for monitoring carbon concentrations trends in soils and vegetation, leading to ",
-		"landpro": "LandPro"
+		"landpro": "LandPro."
 	},
 	"aboutMe": {
 		"first": "I'm a confident and capable individual, enjoy and profit from team work, curious by nature, and perpetually eager and work on improving my skills one problem at a time.",
 		"second": "I love diving, camping and traveling in the outdoor, will never say no for a cup of coffee under a tree with some nice view, building and repairing stuff, reading, good music and films, and on top of all I love my wife and daughter.",
 		"third": "I love reading code as well as code things from scratch, and enjoy very much bringing to life ideas on the browser."
 	},
-	"like to use": "Languages, Frameworks, Libraries & Dev tools I like using",
+	"like to use": "Dev tools I like using",
 	"languages": "Languages",
 	"frontend": "Frontend",
 	"backend": "Backend",

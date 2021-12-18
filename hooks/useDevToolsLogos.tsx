@@ -2,228 +2,228 @@ import * as L from 'assets/logos';
 
 export const useDevToolsLogos = () => {
 	const logosToBeUsedAsImageSource: LogoId[] = [
-		'antd',
-		'chartjs',
-		'gsap',
-		'nestjs',
-		'prisma',
-		'recoil',
-		'rxjs',
-		'styledComponents',
-		'three',
-		'vercel',
+		'Antd',
+		'Chart.js',
+		'Gsap',
+		'Nest.js',
+		'Prisma',
+		'Recoil',
+		'RxJS',
+		'Styled-Components',
+		'Three.js',
+		'Vercel',
 	];
 
 	const langLogos: DevTool[] = [
 		{
-			id: 'html',
+			id: 'HTML',
 			logo: L.html,
 			link: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
 		},
 		{
-			id: 'css',
+			id: 'CSS',
 			logo: L.css,
 			link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
 		},
 		{
-			id: 'js',
+			id: 'JavaScript',
 			logo: L.js,
 			link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
 		},
 		{
-			id: 'ts',
+			id: 'TypeScript',
 			logo: L.ts,
 			link: 'https://www.typescriptlang.org/docs/',
 		},
 		{
-			id: 'python',
+			id: 'Python',
 			logo: L.python,
 			link: 'https://www.python.org/doc/',
 		},
 	];
 	const frontLogos: DevTool[] = [
 		{
-			id: 'react',
+			id: 'React.js',
 			logo: L.react,
 			link: 'https://reactjs.org/docs/getting-started.html',
 		},
 		{
-			id: 'next',
+			id: 'Next.js',
 			logo: L.next,
 			link: 'https://nextjs.org/docs/getting-started',
 		},
 		{
-			id: 'gatsby',
+			id: 'Gatsby',
 			logo: L.gatsby,
 			link: 'https://www.gatsbyjs.com/docs',
 		},
 		{
-			id: 'rxjs',
+			id: 'RxJS',
 			logo: L.rxjs,
 			link: 'https://rxjs.dev/api',
 		},
 		{
-			id: 'recoil',
+			id: 'Recoil',
 			logo: L.recoil,
 			link: 'https://recoiljs.org/docs/introduction/getting-started',
 		},
 		{
-			id: 'redux',
+			id: 'Redux',
 			logo: L.redux,
 			link: 'https://redux.js.org/introduction/getting-started',
 		},
 		{
-			id: 'sass',
+			id: 'SASS',
 			logo: L.sass,
 			link: 'https://sass-lang.com/documentation',
 		},
 		{
-			id: 'styledComponents',
+			id: 'Styled-Components',
 			logo: L.styledComponents,
 			link: 'https://styled-components.com/docs',
 		},
 		{
-			id: 'materialUI',
+			id: 'MaterialUI',
 			logo: L.materialUI,
 			link: 'https://material-ui.com/',
 		},
 		{
-			id: 'antd',
+			id: 'Antd',
 			logo: L.antd,
 			link: 'https://ant.design/docs/react/introduce',
 		},
 		{
-			id: 'chartjs',
+			id: 'Chart.js',
 			logo: L.chartjs,
 			link: 'https://www.chartjs.org/docs/latest/',
 		},
 		{
-			id: 'd3',
+			id: 'D3',
 			logo: L.d3,
 			link: 'https://github.com/d3/d3/wiki',
 		},
 		{
-			id: 'three',
+			id: 'Three.js',
 			logo: L.three,
 			link: 'https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene',
 		},
 		{
-			id: 'gsap',
+			id: 'Gsap',
 			logo: L.gsap,
 			link: 'https://greensock.com/docs/v3/GSAP',
 		},
 	];
 	const backLogos: DevTool[] = [
 		{
-			id: 'node',
+			id: 'Node.js',
 			logo: L.node,
 			link: 'https://nodejs.org/en/docs/',
 		},
 		{
-			id: 'express',
+			id: 'Express.js',
 			logo: L.express,
 			link: 'https://expressjs.com/en/5x/api.html',
 		},
 		{
-			id: 'nestjs',
+			id: 'Nest.js',
 			logo: L.nestjs,
 			link: 'https://docs.nestjs.com/',
 		},
 		{
-			id: 'django',
+			id: 'Django',
 			logo: L.django,
 			link: 'https://docs.djangoproject.com/en/3.2/contents/',
 		},
 		{
-			id: 'docker',
+			id: 'Docker',
 			logo: L.docker,
 			link: 'https://docs.docker.com/',
 		},
 		{
-			id: 'nginx',
+			id: 'Nginx',
 			logo: L.nginx,
 			link: 'http://nginx.org/en/docs/',
 		},
 		{
-			id: 'digitalOcean',
+			id: 'DigitalOcean',
 			logo: L.digitalOcean,
 			link: 'https://docs.digitalocean.com/',
 		},
 		{
-			id: 'vercel',
+			id: 'Vercel',
 			logo: L.vercel,
 			link: 'https://vercel.com/docs',
 		},
 		{
-			id: 'heroku',
+			id: 'Heroku',
 			logo: L.heroku,
 			link: 'https://devcenter.heroku.com/categories/reference',
 		},
 	];
 	const databaseLogos: DevTool[] = [
 		{
-			id: 'prisma',
+			id: 'Prisma',
 			logo: L.prisma,
 			link: 'https://www.prisma.io/',
 		},
 		{
-			id: 'postgressQL',
+			id: 'PostgressQL',
 			logo: L.postgressQL,
 			link: 'https://www.postgresql.org/docs/',
 		},
 		{
-			id: 'graphQL',
+			id: 'GraphQL',
 			logo: L.graphQL,
 			link: 'https://graphql.org/learn/',
 		},
 		{
-			id: 'mongoDB',
+			id: 'MongoDB',
 			logo: L.mongoDB,
 			link: 'https://docs.mongodb.com/',
 		},
 	];
 	const designLogos: DevTool[] = [
 		{
-			id: 'figma',
+			id: 'Figma',
 			logo: L.figma,
 			link: 'https://www.figma.com/developers',
 		},
 		{
-			id: 'gimp',
+			id: 'Gimp',
 			logo: L.gimp,
 			link: 'https://docs.gimp.org/2.10/en/',
 		},
 	];
 	const versionControlLogos: DevTool[] = [
 		{
-			id: 'github',
+			id: 'Github',
 			logo: L.github,
 			link: 'https://docs.github.com/en',
 		},
 		{
-			id: 'gitlab',
+			id: 'Gitlab',
 			logo: L.gitlab,
 			link: 'https://docs.gitlab.com/',
 		},
 	];
 	const ideLogos: DevTool[] = [
 		{
-			id: 'pyCharm',
+			id: 'PyCharm',
 			logo: L.pyCharm,
 			link: 'https://www.jetbrains.com/pycharm/guide/',
 		},
 		{
-			id: 'vsCode',
+			id: 'VSCode',
 			logo: L.vsCode,
 			link: 'https://code.visualstudio.com/docs',
 		},
 	];
 	const packagesManagerLogos: DevTool[] = [
-		// {
-		// 	id: 'npm',
-		// 	logo: L.npm,
-		// 	link: 'https://docs.npmjs.com/',
-		// },
+		{
+			id: 'npm',
+			logo: L.npm,
+			link: 'https://docs.npmjs.com/',
+		},
 		{
 			id: 'yarn',
 			logo: L.yarn,
@@ -231,16 +231,44 @@ export const useDevToolsLogos = () => {
 		},
 	];
 
+	const devToolsTitlesAndIcons = [
+		{
+			title: 'languages',
+			devTools: langLogos,
+		},
+		{
+			title: 'frontend',
+			devTools: frontLogos,
+		},
+		{
+			title: 'backend',
+			devTools: backLogos,
+		},
+		{
+			title: 'databases',
+			devTools: databaseLogos,
+		},
+		{
+			title: 'design',
+			devTools: designLogos,
+		},
+		{
+			title: 'versionControl',
+			devTools: versionControlLogos,
+		},
+		{
+			title: 'ides',
+			devTools: ideLogos,
+		},
+		{
+			title: 'packageManagers',
+			devTools: packagesManagerLogos,
+		},
+	];
+
 	return {
+		devToolsTitlesAndIcons,
 		logosToBeUsedAsImageSource,
-		langLogos,
-		frontLogos,
-		backLogos,
-		databaseLogos,
-		designLogos,
-		versionControlLogos,
-		ideLogos,
-		packagesManagerLogos,
 	};
 };
 

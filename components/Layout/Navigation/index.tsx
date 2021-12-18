@@ -17,14 +17,35 @@ const Navigation = () => {
 	const [isOpen, setIsOpen] = React.useState(false);
 	const toggle = () => setIsOpen(!isOpen);
 
-	enum Routes {
-		home = '/',
-		portfolio = '/portfolio',
-		about = '/about',
-	}
-	const pages = (isDev ? Object.keys(Routes) : ['home', 'about']).map(
-		(page) => ({ page: page, route: Routes[page as Page] }),
-	);
+	const routes = {
+		home: '/' as Page,
+		about: '/about' as Page,
+		portfolio: '/portfolio' as Page,
+		projects: '/projects' as Page,
+		test: '/test' as Page,
+	};
+
+	const RoutesDev = {
+		home: routes.home,
+		about: routes.about,
+		portfolio: routes.portfolio,
+		test: routes.test,
+	};
+
+	const RoutesProd = {
+		home: routes.home,
+		about: routes.about,
+	};
+
+	const pages = isDev
+		? Object.keys(RoutesDev).map((pageKey) => ({
+				pageKey: pageKey as PageKey,
+				route: RoutesDev[pageKey as keyof typeof RoutesDev],
+		  }))
+		: Object.keys(RoutesProd).map((pageKey) => ({
+				pageKey: pageKey as PageKey,
+				route: RoutesProd[pageKey as keyof typeof RoutesProd],
+		  }));
 
 	return (
 		<S.Nav>
@@ -37,7 +58,9 @@ const Navigation = () => {
 			<Slidebar
 				toggle={toggle}
 				isOpen={isOpen}
-				pages={pages.filter(({ page }) => pathname !== Routes[page as Page])}
+				pages={pages.filter(
+					({ pageKey }: { pageKey: PageKey }) => pathname !== routes[pageKey],
+				)}
 			/>
 		</S.Nav>
 	);
