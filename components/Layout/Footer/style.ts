@@ -5,6 +5,7 @@ export const FooterWrapper = styled.footer`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding-top: 2rem;
 `;
 export const ContactMeWrapper = styled.section`
 	height: 5rem;
@@ -23,7 +24,7 @@ export const SocialMediaButtonsWrapper = styled.section`
 	width: 15rem;
 `;
 
-export const BottomWrapper = styled.section`
+export const GitHubStatsWrapper = styled.section`
 	padding-top: 1rem;
 	display: flex;
 	flex-direction: column;
@@ -35,4 +36,15 @@ export const CopyRights = styled.p`
 	font-size: ${({ theme }) => theme.fontSizes.small};
 	color: ${({ theme }) => theme.colors.text.primary};
 `;
+
+export const LanguageAndThemeChangersWrapper = styled.section`
+	position: absolute;
+	right: 1.75rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 4rem 0;
+`;
+
 // ==========================================

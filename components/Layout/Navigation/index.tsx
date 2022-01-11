@@ -18,23 +18,26 @@ const Navigation = () => {
 	const toggle = () => setIsOpen(!isOpen);
 
 	const routes = {
-		home: '/' as Page,
-		about: '/about' as Page,
-		portfolio: '/portfolio' as Page,
-		projects: '/projects' as Page,
-		test: '/test' as Page,
+		home: '/' as PageRoute,
+		about: '/about' as PageRoute,
+		portfolio: '/portfolio' as PageRoute,
+		projects: '/projects' as PageRoute,
+		dictionaries: '/projects/dictionaries' as PageRoute,
 	};
 
 	const RoutesDev = {
 		home: routes.home,
 		about: routes.about,
 		portfolio: routes.portfolio,
-		test: routes.test,
+		projects: routes.projects,
+		dictionaries: routes.dictionaries,
 	};
 
 	const RoutesProd = {
 		home: routes.home,
 		about: routes.about,
+		projects: routes.projects,
+		dictionaries: routes.dictionaries,
 	};
 
 	const pages = isDev
@@ -59,7 +62,8 @@ const Navigation = () => {
 				toggle={toggle}
 				isOpen={isOpen}
 				pages={pages.filter(
-					({ pageKey }: { pageKey: PageKey }) => pathname !== routes[pageKey],
+					({ pageKey }: { pageKey: PageKey }) =>
+						pathname !== routes[pageKey as keyof typeof routes],
 				)}
 			/>
 		</S.Nav>

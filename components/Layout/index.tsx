@@ -2,11 +2,13 @@ import * as React from 'react';
 // ================== styles ==================
 import * as S from './style';
 // ================ components ================
-import Footer from 'components/Layout/Footer';
-import Header from 'components/Layout/Header';
-import Navigation from 'components/Layout/Navigation';
-import Providers from 'components/Providers';
+import Footer from './Footer';
+import Header from './Header';
+import Navigation from './Navigation';
+import Providers from '../Providers';
+import TransitionLayout from './TransitionLayout';
 // ============================================
+
 type PageLayoutProps = {
 	title: string;
 	children: React.ReactNode;
@@ -19,13 +21,13 @@ const PageLayout = ({ children, title }: PageLayoutProps) => {
 	if (!isMounted) return null;
 	return (
 		<Providers>
-			<S.LayoutWrapper>
+			<TransitionLayout>
 				<Header title={title} />
 				<Navigation />
 
 				<S.ChildrenWrapper>{children}</S.ChildrenWrapper>
 				<Footer />
-			</S.LayoutWrapper>
+			</TransitionLayout>
 		</Providers>
 	);
 };

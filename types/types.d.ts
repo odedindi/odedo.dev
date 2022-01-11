@@ -1,7 +1,25 @@
 // navigation
-type Page = 'home' | 'about' | 'portfolio' | 'projects' | 'test';
-type PageKey = 'home' | 'about' | 'portfolio' | 'projects' | 'test';
-type PageRoute = '/home' | '/about' | '/portfolio' | '/projects' | '/test';
+type Page =
+	| 'home'
+	| 'about'
+	| 'portfolio'
+	| 'projects'
+	| 'dictionaries'
+	| 'test';
+type PageKey =
+	| 'home'
+	| 'about'
+	| 'portfolio'
+	| 'projects'
+	| 'dictionaries'
+	| 'test';
+type PageRoute =
+	| '/'
+	| '/about'
+	| '/portfolio'
+	| '/projects'
+	| '/projects/dictionaries'
+	| '/test';
 // footer
 type ContactSource = 'facebook' | 'linkedin' | 'github' | 'discord' | 'email';
 

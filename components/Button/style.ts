@@ -93,10 +93,11 @@ export const ContactMeButtonsWrapper = styled.section`
 	align-items: center;
 	width: 15rem;
 
-	${device.xs} {
+	${device.phone} {
 		flex-flow: row wrap;
 		justify-content: space-evenly;
 		width: 5rem;
+		gap: 0.25rem;
 	}
 `;
 // =============== color mode ===============
@@ -106,8 +107,8 @@ export const ColorModeToggleBoxWrapper = styled.span`
 	display: flex;
 	align-items: center;
 `;
-export const ColorModeToggleBox = styled.input`
-	width: 40px;
+export const ColorModeToggleBox = styled.input.attrs({ type: 'checkbox' })`
+	width: 30px;
 	height: 10px;
 	background: #555;
 	position: relative;
@@ -121,7 +122,7 @@ export const ColorModeToggleBox = styled.input`
 `;
 
 type LabelProps = {
-	checked: boolean;
+	isDarkMode: boolean;
 };
 export const ColorModeToggleBoxLabel = styled.label<LabelProps>`
 	display: inline-block;
@@ -132,9 +133,9 @@ export const ColorModeToggleBoxLabel = styled.label<LabelProps>`
 	cursor: pointer;
 	position: absolute;
 	background: #fff;
-	opacity: ${({ checked }) => (checked ? 0.6 : 0.9)};
+	opacity: ${({ isDarkMode }) => (isDarkMode ? 0.6 : 0.9)};
 	background-color: #f6f6f6;
-	left: ${({ checked }) => (checked ? '35px' : '5px')};
+	left: ${({ isDarkMode }) => (isDarkMode ? '18px' : '3px')};
 `;
 
 type ColorModeToggler = { darkMode: boolean };

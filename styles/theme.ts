@@ -1,3 +1,4 @@
+import { DefaultTheme } from 'styled-components';
 const light = {
 	colors: {
 		background: {
@@ -25,7 +26,7 @@ const light = {
 		},
 	},
 };
-const dark = {
+const dark: ThemeColors = {
 	colors: {
 		background: {
 			primary: '#2f4454',
@@ -53,7 +54,7 @@ const dark = {
 	},
 };
 
-const defaultTheme = {
+const fonts = {
 	fontSizes: {
 		small: '0.8rem',
 		p: '1rem',
@@ -79,6 +80,7 @@ const defaultTheme = {
 	},
 	// ...
 };
-
-export const lightTheme = { ...defaultTheme, ...light };
-export const darkTheme = { ...defaultTheme, ...dark };
+export type ThemeColors = typeof light;
+export type ThemeFonts = typeof fonts;
+export const lightTheme: DefaultTheme = { ...fonts, ...light };
+export const darkTheme: DefaultTheme = { ...fonts, ...dark };

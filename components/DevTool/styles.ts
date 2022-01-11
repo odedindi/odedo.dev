@@ -64,9 +64,9 @@ export const DevToolsIconsWrapper = styled.section`
 	/* display: flex;
 	align-items: center; */
 	background: ${({ theme }) => theme.colors.background.secondary};
-	border: solid 1px ${({ theme }) => theme.colors.background.menu};
+	border: solid 1px ${({ theme }) => theme.colors.background.secondary};
 
 	:hover {
-		border-color: ${({ theme }) => theme.colors.background.secondary};
+		border-color: ${({ theme }) => theme.colors.background.menu};
 	}
 `;

@@ -12,18 +12,16 @@ type ToggleProps = {
 };
 const Toggle = ({ checked, onChange }: ToggleProps) => (
 	<S.ColorModeToggleBoxWrapper>
-		<S.ColorModeToggleBox
-			type="checkbox"
-			checked={checked}
-			onChange={onChange}
+		<S.ColorModeToggleBox checked={checked} onChange={onChange} />
+		<S.ColorModeToggleBoxLabel
+			id="colorModeToggleBoxLabel"
+			isDarkMode={checked}
 		/>
-		<S.ColorModeToggleBoxLabel id="colorModeToggleBoxLabel" checked={checked} />
 	</S.ColorModeToggleBoxWrapper>
 );
 
 const ColorModeToggle = () => {
 	const darkMode = useDarkMode(false);
-	console.log(darkMode.value);
 	const [isMounted, setIsMounted] = React.useState(false);
 	React.useEffect(() => setIsMounted(true), []);
 

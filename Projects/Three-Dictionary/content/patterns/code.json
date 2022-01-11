@@ -1,0 +1,6 @@
+{
+	"code": [
+		"const subject = new rx.Subject();",
+		"const behaviorSubject = new rx.BehaviorSubject([]);"
+	]
+}

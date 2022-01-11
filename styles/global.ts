@@ -35,7 +35,7 @@ const theme = {
 
 const GlobalStyle = createGlobalStyle`
 * {
-	transition: all 500ms;
+	transition: all 0.25s ease-in-out;
 }
 html,
 body {

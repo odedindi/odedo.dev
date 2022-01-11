@@ -14,6 +14,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // ================ components ================
 import PageLayout from 'components/Layout';
 import { DevToolLink, DevTools } from 'components/DevTool';
+import { Skew } from 'animations';
 // import CreateAnimation from 'components/CreateAnimation';
 // ============================================
 
@@ -35,51 +36,54 @@ const AboutPage: NextPage = () => {
 		<PageLayout title={t('title')}>
 			<S.PageWrapper>
 				<S.AboutParagraph>
-					<section className="title">
-						<h3>{t('hi')}</h3>
-					</section>
-					<p>
-						{t('storyStart')}
-						{/* </p>
+					<Skew>
+						<section className="title">
+							<h3>{t('hi')}</h3>
+						</section>
+						<p>
+							{t('storyStart')}
+							{/* </p>
 					<p> */}
-						{t('storyCurrent.intro')}
-						<DevToolLink
-							content={t('storyCurrent.people')}
-							href={links.hacktheclimate.ourTeam}
-							title="The Team"
-						/>
-						{t('storyCurrent.using')}
-						<DevToolLink
-							content={t('storyCurrent.satellite')}
-							href={links.sentinelII}
-							title="Sentinel-2"
-						/>
-						{t('storyCurrent.for')}
-						<DevToolLink
-							content={t('storyCurrent.landpro')}
-							href={links.landPro}
-							title="LandPro.ch"
-						/>
-					</p>
-					<p>
-						{t('aboutMe.first')}
-						{t('aboutMe.second')}
-					</p>
-					<p>{t('aboutMe.third')}</p>
+							{t('storyCurrent.intro')}
+							<DevToolLink
+								content={t('storyCurrent.people')}
+								href={links.hacktheclimate.ourTeam}
+								title="The Team"
+							/>
+							{t('storyCurrent.using')}
+							<DevToolLink
+								content={t('storyCurrent.satellite')}
+								href={links.sentinelII}
+								title="Sentinel-2"
+							/>
+							{t('storyCurrent.for')}
+							<DevToolLink
+								content={t('storyCurrent.landpro')}
+								href={links.landPro}
+								title="LandPro.ch"
+							/>
+						</p>
+						<p>
+							{t('aboutMe.first')}
+							{t('aboutMe.second')}
+						</p>
+						<p>{t('aboutMe.third')}</p>
+					</Skew>
 				</S.AboutParagraph>
-
 				<S.AboutParagraph>
-					<section className="title">
-						<h3>{t('like to use')}:</h3>
-					</section>
+					<Skew>
+						<section className="title">
+							<h3>{t('like to use')}:</h3>
+						</section>
 
-					{devToolsTitlesAndIcons.map((tool) => (
-						<DevTools
-							key={tool.title}
-							title={t(tool.title)}
-							devTools={tool.devTools}
-						/>
-					))}
+						{devToolsTitlesAndIcons.map((tool) => (
+							<DevTools
+								key={tool.title}
+								title={t(tool.title)}
+								devTools={tool.devTools}
+							/>
+						))}
+					</Skew>
 				</S.AboutParagraph>
 			</S.PageWrapper>
 		</PageLayout>

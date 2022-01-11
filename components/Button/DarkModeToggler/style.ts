@@ -47,6 +47,7 @@ export const Checkbox = styled.input.attrs({
 `;
 
 export const Switch = styled.label<{ checked: boolean }>`
+	transform: scale(0.6);
 	cursor: pointer;
 	/** Placeholder element, starting at blue **/
 	width: 6rem;

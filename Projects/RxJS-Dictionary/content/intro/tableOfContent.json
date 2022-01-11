@@ -1,0 +1,45 @@
+{
+	"MajorEntities": {
+		"intro": "There are high level entities that are frequently discussed. It's important to define them separately from other lower-level concepts, because they relate to the nature of observable.",
+		"consumer": "The code that is subscribing to the observable. This is whoever is being notified of nexted values, and errors or completions.",
+		"producer": "",
+		"subscription": "",
+		"observable": "",
+		"observer": ""
+	},
+	"MajorActions": {
+		"subscribe": "",
+		"teardown": "",
+		"unsubscription": "",
+		"observation": "",
+		"observationChain": "",
+		"next": "",
+		"error": "",
+		"complete": "",
+		"notification": ""
+	},
+	"MajorConcepts": {
+		"multicat": "",
+		"unicast": "",
+		"cold": "",
+		"hot": "",
+		"push": "",
+		"pull": ""
+	},
+	"MinorEntities": {
+		"operator": "",
+		"operatorFunction": "",
+		"operatorion": "",
+		"stream": "",
+		"source": "",
+		"observableInput": "",
+		"notifier": "",
+		"innerSource": "",
+		"partialObserver": ""
+	},
+	"otherConcepts": {
+		"unhandledErrors": "",
+		"producerInterference": "",
+		"upstreamAndDownstream": ""
+	}
+}

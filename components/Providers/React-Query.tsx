@@ -2,7 +2,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { Hydrate } from 'react-query/hydration';
 
-const QueryProvider: React.FC = ({ children }) => {
+const ReactQueryProvider: React.FC = ({ children }) => {
 	const client = new QueryClient();
 	return (
 		<QueryClientProvider client={client}>
@@ -14,4 +14,4 @@ const QueryProvider: React.FC = ({ children }) => {
 	);
 };
 
-export default QueryProvider;
+export default ReactQueryProvider;

@@ -1,16 +1,22 @@
 import * as React from 'react';
 
-import Theme from './Theme';
-import SEO from './SEO';
-import Toast from './Toaster';
+import GSAPTimeLingProvider from './GSAPTimeline';
+import Mdx from './Mdx';
 import QueryProvider from './React-Query';
+import SEO from './SEO';
+import Theme from './Theme';
+import Toast from './Toaster';
 
 const Providers: React.FC = ({ children }) => (
 	<QueryProvider>
 		<Theme>
-			<SEO />
-			<Toast />
-			{children}
+			<Mdx>
+				<GSAPTimeLingProvider>
+					<SEO />
+					<Toast />
+					{children}
+				</GSAPTimeLingProvider>
+			</Mdx>
 		</Theme>
 	</QueryProvider>
 );

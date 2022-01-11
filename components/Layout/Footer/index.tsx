@@ -7,6 +7,7 @@ import { useTranslation } from 'next-i18next';
 // ================ components ================
 import Button from 'components/Button';
 import GithubStats from './GithubStats';
+import LanguageChanger from 'components/LanguageChanger';
 // ============================================
 
 const Footer = () => {
@@ -17,10 +18,14 @@ const Footer = () => {
 			<S.ContactMeWrapper>
 				<Button id="socialMediaButtons" type="ContactMe" />
 			</S.ContactMeWrapper>
-			<S.BottomWrapper>
+			<S.GitHubStatsWrapper>
 				<GithubStats />
 				<S.CopyRights>&copy;2020</S.CopyRights>
-			</S.BottomWrapper>
+			</S.GitHubStatsWrapper>
+			<S.LanguageAndThemeChangersWrapper>
+				<LanguageChanger />
+				<Button type="DarkModeToggler" />
+			</S.LanguageAndThemeChangersWrapper>
 		</S.FooterWrapper>
 	);
 };

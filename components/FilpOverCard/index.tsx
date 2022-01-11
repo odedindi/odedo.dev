@@ -9,34 +9,50 @@ type AnimatedCardProps = {
 	back?: any;
 	width?: string;
 	height?: string;
+	backgroundUrlFront?: string;
+	backgroundUrlBack?: string;
 	randomBackground?: boolean;
+	onClick?: () => void;
 };
 
 const FlipOverCard = ({
-	front,
 	back,
-	width,
+	backgroundUrlBack,
+	backgroundUrlFront,
+	front,
 	height,
+	onClick,
 	randomBackground,
+	width,
 }: AnimatedCardProps) => {
 	return (
-		<S.Card width={width}>
+		<S.Card width={width} onClick={onClick}>
 			<S.CardContainer height={height}>
 				<div
 					className="front"
 					style={{
-						backgroundImage: randomBackground
+						backgroundImage: backgroundUrlFront
+							? `url(${backgroundUrlFront})`
+							: `url(${randomBackground})`
 							? `url(https://picsum.photos/200/300)`
 							: '',
+						backgroundSize: 'cover',
+						backgroundRepeat: 'no-repeat',
+						backgroundPosition: 'center center',
 					}}>
 					<S.ContentWrapper>{front}</S.ContentWrapper>
 				</div>
 				<div
 					className="back"
 					style={{
-						backgroundImage: randomBackground
-							? `url(https://picsum.photos/200/300)`
+						backgroundImage: backgroundUrlBack
+							? `url(${backgroundUrlBack})`
+							: `url(${randomBackground})`
+							? `https://picsum.photos/200/300)`
 							: '',
+						backgroundSize: 'cover',
+						backgroundRepeat: 'no-repeat',
+						backgroundPosition: 'center center',
 					}}>
 					<S.ContentWrapper>{back}</S.ContentWrapper>
 				</div>

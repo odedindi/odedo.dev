@@ -7,6 +7,9 @@ import NProgress from 'nprogress'; //nprogress module
 import 'nprogress/nprogress.css'; //styles of nprogress
 import 'antd/dist/antd.css';
 
+import '@toast-ui/editor/dist/toastui-editor.css';
+import 'codemirror/lib/codemirror.css';
+
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	NProgress.configure({ showSpinner: false });
 	Router.events.on('routeChangeStart', () => NProgress.start());

@@ -1,13 +1,6 @@
 import styled from 'styled-components';
 import { device } from 'utils/mediaQueries';
 
-export const DarkModeTogglerWrapper = styled.section`
-	transform: scale(0.6);
-	position: absolute;
-	top: 2.25rem;
-	right: 2.75rem;
-`;
-
 export const Menu = styled.div`
 	display: grid;
 	grid-template-columns: 1fr;
@@ -30,10 +23,4 @@ export const MenuItem = styled.a`
 		color: ${({ theme }) => theme.colors.naviAndContactButtons.secondary};
 		transition: 0.2s ease-in-out;
 	}
-`;
-
-export const LanguageChangerWrapper = styled.div`
-	position: absolute;
-	bottom: 2.25rem;
-	right: 1.75rem;
 `;

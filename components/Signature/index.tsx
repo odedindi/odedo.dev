@@ -4,6 +4,7 @@ import * as React from 'react';
 import * as S from './style';
 // ================ components ================
 import CreateAnimation from 'components/CreateAnimation';
+import AnimatedFullStackDeveloper from './AnimatedLogo';
 // ============================================
 
 const Signature = () => {
@@ -13,14 +14,12 @@ const Signature = () => {
 	if (!isMounted) return null;
 
 	return (
-		<>
-			<S.SlogenWrapper>
-				<CreateAnimation type="RollTwice">
-					<S.Slogen>Full Stack Developer</S.Slogen>
-				</CreateAnimation>
-			</S.SlogenWrapper>
+		<S.SignatureContainer>
 			<S.MyName>Oded Winberger</S.MyName>
-		</>
+			<S.SlogenWrapper>
+				<AnimatedFullStackDeveloper />
+			</S.SlogenWrapper>
+		</S.SignatureContainer>
 	);
 };
 export default Signature;
