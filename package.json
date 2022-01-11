@@ -28,7 +28,7 @@
 		"@toast-ui/editor-plugin-code-syntax-highlight": "^3.0.0",
 		"@toast-ui/editor-plugin-color-syntax": "^3.0.2",
 		"@toast-ui/editor-plugin-table-merged-cell": "^3.0.1",
-		"@toast-ui/react-editor": "^2.5.4",
+		"@toast-ui/react-editor": "^3.0.0",
 		"antd": "^4.17.2",
 		"canvas-confetti": "^1.4.0",
 		"chart.js": "^3.5.1",
