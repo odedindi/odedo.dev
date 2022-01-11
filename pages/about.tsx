@@ -42,8 +42,7 @@ const AboutPage: NextPage = () => {
 						</section>
 						<p>
 							{t('storyStart')}
-							{/* </p>
-					<p> */}
+
 							{t('storyCurrent.intro')}
 							<DevToolLink
 								content={t('storyCurrent.people')}

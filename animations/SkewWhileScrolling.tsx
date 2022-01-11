@@ -20,7 +20,7 @@ export const Skew: React.FC = ({ children }) => {
 					proxy.skew = skew;
 					gsap.to(proxy, {
 						skew: 0,
-						duration: 0.2,
+						duration: 0.05,
 						ease: 'power3',
 						overwrite: true,
 						onUpdate: () => skewSetter(proxy.skew),
