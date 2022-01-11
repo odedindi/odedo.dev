@@ -4,7 +4,8 @@ import * as React from 'react';
 import * as S from './style';
 // ================ components ================
 import CreateAnimation from 'components/CreateAnimation';
-import AnimatedFullStackDeveloper from './AnimatedLogo';
+import FullStackDeveloper from './AnimatedFullStackDeveloper';
+import MyName from './MyName';
 // ============================================
 
 const Signature = () => {
@@ -15,10 +16,8 @@ const Signature = () => {
 
 	return (
 		<S.SignatureContainer>
-			<S.MyName>Oded Winberger</S.MyName>
-			<S.SlogenWrapper>
-				<AnimatedFullStackDeveloper />
-			</S.SlogenWrapper>
+			<MyName />
+			<FullStackDeveloper />
 		</S.SignatureContainer>
 	);
 };

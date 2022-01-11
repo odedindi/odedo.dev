@@ -9,9 +9,9 @@ import Document, {
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
-	static async getInitialProps(
+	static getInitialProps = async (
 		ctx: DocumentContext,
-	): Promise<DocumentInitialProps> {
+	): Promise<DocumentInitialProps> => {
 		const sheet = new ServerStyleSheet();
 		const originalRenderPage = ctx.renderPage;
 
@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
 		} finally {
 			sheet.seal();
 		}
-	}
+	};
 	render() {
 		return (
 			<Html>

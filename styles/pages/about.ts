@@ -63,28 +63,11 @@ export const AboutTitle = styled.section`
 		color: ${({ theme }) => theme.colors.text.onPrimary};
 	}
 `;
-export const DevToolsIconWrapper = styled.div`
+
+export const DevToolsContainer = styled.section`
+	width: auto;
+	max-width: 50vw;
 	display: flex;
 	flex-flow: row wrap;
-
 	justify-content: center;
-	align-items: center;
-	transform: scale(0.6);
-	a {
-		padding: 0 0.25rem;
-	}
-`;
-
-export const DevToolsIconsWrapper = styled.section`
-	min-width: 14rem;
-	max-width: 25rem;
-	/* padding: 0.25rem 0; */
-	border-radius: 0.5rem;
-
-	background: ${({ theme }) => theme.colors.background.secondary};
-	border: solid 1px ${({ theme }) => theme.colors.background.menu};
-
-	:hover {
-		border-color: ${({ theme }) => theme.colors.background.secondary};
-	}
 `;

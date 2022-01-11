@@ -1,4 +1,3 @@
-import useDevToolsLogos from './useDevToolsLogos';
 import useFadeOutFadeIn from './useFadeOutFadeIn';
 import useFormInput from './useFormInput';
 import useGSAPTimeline from './useGSAPTimeline';
@@ -15,7 +14,6 @@ import useSlideEffect from './useGsapEffect/useSlideEffect';
 import useWindowSize from './useWindowSize';
 
 export {
-	useDevToolsLogos,
 	useFadeOutFadeIn,
 	useFormInput,
 	useGSAPTimeline,

@@ -42,8 +42,8 @@ export const TransitionLayout: React.FC = ({ children }) => {
 	useLayoutEffect(() => {
 		const animation = gsap.to(el.current, {
 			background,
-			duration: 0.1,
-			ease: 'power5',
+			duration: 0.5,
+			ease: 'power3',
 		});
 		return () => {
 			animation.kill(); // cleanup

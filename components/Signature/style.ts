@@ -1,4 +1,3 @@
-import { device } from 'utils/mediaQueries';
 import styled, { keyframes } from 'styled-components';
 
 const write = keyframes`
@@ -20,7 +19,7 @@ export const SVG = styled.svg.attrs({ className: 'center' })`
 	stroke-dasharray: 1000;
 	stroke-dashoffset: 1000;
 
-	#FullStackDeveloper {
+	g {
 		fill-opacity: 0;
 	}
 `;

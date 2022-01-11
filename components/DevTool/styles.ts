@@ -6,34 +6,27 @@ export const DevToolsContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 3.5rem;
+
+	min-width: 14rem;
+	max-width: 35rem;
 	width: auto;
-	padding: 0 2.5rem 0 2.5rem;
+
+	padding: 0.5rem 0;
+
+	border-radius: 0.5rem;
+	border: solid 1px transparent;
+	background: ${({ theme }) => theme.colors.background.devToolsContainer};
 	color: ${({ theme }) => theme.colors.text.primary};
 
-	${device.tablet} {
+	transform: scale(0.9);
+	:hover {
+		border-color: ${({ theme }) => theme.colors.background.menu};
 	}
-
 	a {
 		color: ${({ theme }) => theme.colors.text.onPrimary};
 		text-decoration: none;
 		:hover {
 			border-bottom: 2px solid ${({ theme }) => theme.colors.text.onPrimary};
-		}
-	}
-
-	.title {
-		margin: 0 0 30px 0;
-		line-height: 40px;
-		margin-bottom: 20px;
-		text-align: center;
-		h3,
-		h4,
-		h5 {
-			color: ${({ theme }) => theme.colors.text.secondary};
-			color: ${({ theme }) => theme.colors.text.secondary};
-			border-bottom: solid 0.5px ${({ theme }) => theme.colors.text.onPrimary};
-			width: 100%;
 		}
 	}
 	p {
@@ -49,25 +42,26 @@ export const DevToolsIconWrapper = styled.div`
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	transform: scale(0.9);
+	padding: 0 0.25rem;
+
+	transform: scale(0.8);
 	a {
 		padding: 0 0.25rem;
 	}
+
+	${DevToolsContainer}:hover & {
+		transform: scale(1);
+	}
 `;
 
-export const DevToolsIconsWrapper = styled.section`
-	min-width: 14rem;
-	max-width: 25rem;
-	padding-top: 0.5rem;
-
-	border-radius: 0.5rem;
-	transform: scale(0.8);
-	/* display: flex;
-	align-items: center; */
-	background: ${({ theme }) => theme.colors.background.secondary};
-	border: solid 1px ${({ theme }) => theme.colors.background.secondary};
-
-	:hover {
-		border-color: ${({ theme }) => theme.colors.background.menu};
+export const DevToolsTitle = styled.section`
+	text-align: center;
+	h3,
+	h4,
+	h5 {
+		color: ${({ theme }) => theme.colors.text.secondary};
+		color: ${({ theme }) => theme.colors.text.secondary};
+		border-bottom: solid 0.5px ${({ theme }) => theme.colors.text.onPrimary};
+		width: 100%;
 	}
 `;

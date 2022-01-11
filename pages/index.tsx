@@ -7,7 +7,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 // ================ components ================
 import PageLayout from 'components/Layout';
 import Signature from 'components/Signature';
-import AnimatedLogo from 'components/Signature/AnimatedLogo';
+import AnimatedLogo from 'components/Signature/AnimatedFullStackDeveloper';
 // ============================================
 
 const Home: NextPage = () => {

@@ -9,13 +9,10 @@ import DevTool from './DevTool';
 export const DevTools = ({ devTools, title }: DevToolsProps) => {
 	return (
 		<S.DevToolsContainer>
-			<section className="title">
+			<S.DevToolsTitle>
 				<h5>{title}:</h5>
-			</section>
-
-			<S.DevToolsIconsWrapper>
-				<DevTool devTools={devTools} />
-			</S.DevToolsIconsWrapper>
+			</S.DevToolsTitle>
+			<DevTool devTools={devTools} />
 		</S.DevToolsContainer>
 	);
 };

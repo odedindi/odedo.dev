@@ -4,19 +4,19 @@ import Image from 'next/image';
 // ================== styles ==================
 import * as S from './styles';
 // =================== hooks ==================
-import { useDevToolsLogos } from 'hooks';
 // ================ components ================
 import DevToolLink from './DevLink';
 import CreateAnimation from 'components/CreateAnimation';
+// ================= devtools =================
+import myDevTools from 'utils/devToolsLogos';
 // ============================================
 
 export const DevTool = ({ devTools }: Partial<DevToolsProps>) => {
-	const { logosToBeUsedAsImageSource: logosImagesSources } = useDevToolsLogos();
 	return (
 		<S.DevToolsIconWrapper>
 			{devTools?.map((devTool) => (
 				<CreateAnimation type="Hover" key={devTool.id}>
-					{logosImagesSources.includes(devTool.id) ? (
+					{myDevTools.logosToBeUsedAsImageSource.includes(devTool.id) ? (
 						<DevToolLink
 							href={devTool.link}
 							content={

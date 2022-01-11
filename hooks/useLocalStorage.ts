@@ -2,11 +2,8 @@ import * as React from 'react';
 
 type SetValue<T> = React.Dispatch<React.SetStateAction<T>>;
 
-const useLocalStorage = <T,>(
-	key: string,
-	initialValue: T,
-): [T, SetValue<T>] => {
-	const parseJSON = <T,>(value: string | null): T | undefined => {
+const useLocalStorage = <T>(key: string, initialValue: T): [T, SetValue<T>] => {
+	const parseJSON = <T>(value: string | null): T | undefined => {
 		try {
 			return value === 'undefined' ? undefined : JSON.parse(value ?? '');
 		} catch (error) {

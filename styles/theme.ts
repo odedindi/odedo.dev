@@ -6,6 +6,7 @@ const light = {
 			secondary: '#CED7D5',
 			menu: '#0677a1',
 			paragraph: '#CED7D5',
+			devToolsContainer: '#aaa',
 		},
 		text: {
 			primary: '	#1D1C1D',
@@ -33,6 +34,7 @@ const dark: ThemeColors = {
 			secondary: '#2E343B',
 			menu: '#859D96',
 			paragraph: '#1D1C1D',
+			devToolsContainer: '#444',
 		},
 		text: {
 			primary: '	#F2EDE7',
