@@ -58,7 +58,8 @@ export const DevToolsIconWrapper = styled.div`
 export const DevToolsIconsWrapper = styled.section`
 	min-width: 14rem;
 	max-width: 25rem;
-	/* padding: 0.25rem 0; */
+	padding-top: 0.5rem;
+
 	border-radius: 0.5rem;
 	transform: scale(0.8);
 	/* display: flex;

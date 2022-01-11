@@ -12,7 +12,7 @@ export const Skew: React.FC = ({ children }) => {
 	useLayoutEffect(() => {
 		const proxy = { skew: 0 };
 		const skewSetter = gsap.quickSetter(skewRef.current, 'skewY', 'deg');
-		const clamp = gsap.utils.clamp(-5, 5);
+		const clamp = gsap.utils.clamp(-4, 4);
 		ScrollTrigger.create({
 			onUpdate: (self) => {
 				const skew = clamp(self.getVelocity() / -300); // animate only when scrolling is rather instense
@@ -20,7 +20,7 @@ export const Skew: React.FC = ({ children }) => {
 					proxy.skew = skew;
 					gsap.to(proxy, {
 						skew: 0,
-						duration: 0.8,
+						duration: 0.2,
 						ease: 'power3',
 						overwrite: true,
 						onUpdate: () => skewSetter(proxy.skew),
