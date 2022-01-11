@@ -36,8 +36,8 @@ const Navigation = () => {
 	const RoutesProd = {
 		home: routes.home,
 		about: routes.about,
-		projects: routes.projects,
-		dictionaries: routes.dictionaries,
+		// projects: routes.projects,
+		// dictionaries: routes.dictionaries,
 	};
 
 	const pages = isDev
