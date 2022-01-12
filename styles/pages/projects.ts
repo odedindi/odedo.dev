@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { device } from 'utils/mediaQueries';
 
 export const PageWrapper = styled.main`
-	background: red;
 	padding: 0 1rem 5rem 1rem;
 	height: 100%;
 	width: 100%;

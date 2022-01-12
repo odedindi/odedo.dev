@@ -28,6 +28,7 @@ type Project = {
 	id: string;
 	title: string;
 	shortDiscription?: string;
+	href: string;
 };
 
 const Projects: NextPage = () => {
@@ -38,24 +39,27 @@ const Projects: NextPage = () => {
 			id: 'dictionaries',
 			title: 'Programming Dictionaries',
 			shortDiscription: 'RxJS, GSAP, Three.js',
+			href: '/projects/dictionaries/rxjs',
 		},
-		{ id: 'jsGames', title: 'JS Games', shortDiscription: 'Tic Tac Toe' },
+		{
+			id: 'jsGames',
+			title: 'JS Games',
+			shortDiscription: 'Tic Tac Toe',
+			href: '/projects/games',
+		},
 	];
 	return (
 		<PageLayout title={t('title')}>
 			<S.PageWrapper>
-				<h2>Project</h2>
+				<h2>Projects</h2>
 				<S.ProjectsCardWrapper>
 					{projects.map((project) => (
-						<Link key={project.id} passHref href="/projects/dictionaries/rxjs">
+						<Link key={project.id} passHref href={project.href}>
 							<FlipOverCard
 								height="10rem"
 								width="10rem"
 								front={project.title}
 								back={project.shortDiscription}
-								onClick={() => {
-									console.log(project.title);
-								}}
 							/>
 						</Link>
 					))}

@@ -39,12 +39,10 @@ export const CopyRights = styled.p`
 
 export const LanguageAndThemeChangersWrapper = styled.section`
 	position: absolute;
-	right: 1.75rem;
+	right: 2.75rem;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding: 4rem 0;
+	padding: 6rem 0 0;
 `;
-
-// ==========================================

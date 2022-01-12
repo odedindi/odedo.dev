@@ -3,7 +3,6 @@ import * as React from 'react';
 // ================== styles ==================
 import * as S from './style';
 // ================ components ================
-import CreateAnimation from 'components/CreateAnimation';
 import FullStackDeveloper from './AnimatedFullStackDeveloper';
 import MyName from './MyName';
 // ============================================

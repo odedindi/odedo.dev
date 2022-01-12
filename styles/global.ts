@@ -11,7 +11,8 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
 		sans-serif;
-	/* background: ${({ theme }) => theme.colors.background.primary}; */
+	/* height: auto; */
+	background: ${({ theme }) => theme.colors.background.primary};
 }
 
 a {

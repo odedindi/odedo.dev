@@ -66,8 +66,15 @@ export const AboutTitle = styled.section`
 
 export const DevToolsContainer = styled.section`
 	width: auto;
-	max-width: 50vw;
+	max-width: 75vw;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
+	align-items: center;
+
+	padding: auto;
+
+	${device.desktop} {
+		max-width: 100%;
+	}
 `;

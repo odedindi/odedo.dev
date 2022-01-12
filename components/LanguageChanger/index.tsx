@@ -1,4 +1,5 @@
 // =============== React & Next ===============
+import * as React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 // ================== styles ==================
@@ -12,32 +13,31 @@ const LanguageChanger = () => {
 	const { locales, locale: activeLocale } = router;
 	const otherLocales = locales!.filter((locale) => locale !== activeLocale);
 	return (
-		<ul>
+		<>
 			{otherLocales.map((locale) => {
 				const { pathname, query, asPath } = router;
 				return (
-					<li key={locale}>
-						<CreateAnimation type="Hover">
-							<Link
-								passHref
-								href={{ pathname, query }}
-								as={asPath}
-								locale={locale}>
-								<S.FlagWrapper>
-									<S.Flag
-										src={`/flags/${locale}.png`}
-										alt={`${locale} flag`}
-										layout="fixed"
-										height="25rem"
-										width="25rem"
-									/>
-								</S.FlagWrapper>
-							</Link>
-						</CreateAnimation>
-					</li>
+					<Link
+						key={locale}
+						passHref
+						href={{ pathname, query }}
+						as={asPath}
+						locale={locale}>
+						<div>
+							<CreateAnimation type="Hover">
+								<S.Flag
+									src={`/flags/${locale}.png`}
+									alt={`${locale} flag`}
+									layout="fixed"
+									height="25rem"
+									width="25rem"
+								/>
+							</CreateAnimation>
+						</div>
+					</Link>
 				);
 			})}
-		</ul>
+		</>
 	);
 };
 

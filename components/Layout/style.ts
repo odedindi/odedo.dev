@@ -4,6 +4,7 @@ export const LayoutWrapper = styled.section`
 	padding-top: 0.75rem;
 	line-height: 1.5;
 	min-height: 100vh;
+	height: auto;
 	width: 100%;
 	display: flex;
 	flex-direction: column;

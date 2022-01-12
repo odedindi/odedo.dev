@@ -15,23 +15,19 @@ export const DevToolsContainer = styled.div`
 
 	border-radius: 0.5rem;
 	border: solid 1px transparent;
-	background: ${({ theme }) => theme.colors.background.devToolsContainer};
-	color: ${({ theme }) => theme.colors.text.primary};
+	background: ${({ theme: { colors } }) => colors.background.devToolsContainer};
+	color: ${({ theme: { colors } }) => colors.text.primary};
 
 	transform: scale(0.9);
 	:hover {
-		border-color: ${({ theme }) => theme.colors.background.menu};
+		border-color: ${({ theme: { colors } }) => colors.background.menu};
 	}
-	a {
-		color: ${({ theme }) => theme.colors.text.onPrimary};
-		text-decoration: none;
-		:hover {
-			border-bottom: 2px solid ${({ theme }) => theme.colors.text.onPrimary};
-		}
+
+	${device.desktop} {
+		min-width: 16rem;
 	}
-	p {
-		text-align: center;
-		padding: 1rem;
+	${device.tablet} {
+		width: 100%;
 	}
 `;
 
@@ -55,13 +51,14 @@ export const DevToolsIconWrapper = styled.div`
 `;
 
 export const DevToolsTitle = styled.section`
+	position: relative;
+	top: 0.5rem;
 	text-align: center;
-	h3,
-	h4,
+
+	border-bottom: solid 0.5px ${({ theme: { colors } }) => colors.text.onPrimary};
+	width: 90%;
+
 	h5 {
-		color: ${({ theme }) => theme.colors.text.secondary};
-		color: ${({ theme }) => theme.colors.text.secondary};
-		border-bottom: solid 0.5px ${({ theme }) => theme.colors.text.onPrimary};
-		width: 100%;
+		color: ${({ theme: { colors } }) => colors.text.secondary};
 	}
 `;
