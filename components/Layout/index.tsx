@@ -6,28 +6,31 @@ import Footer from './Footer';
 import Header from './Header';
 import Navigation from './Navigation';
 import Providers from '../Providers';
-import TransitionLayout from './TransitionLayout';
 // ============================================
-
+import gsap from 'gsap';
 type PageLayoutProps = {
 	title: string;
 	children: React.ReactNode;
 };
 
 const PageLayout = ({ children, title }: PageLayoutProps) => {
-	const [isMounted, setIsMounted] = React.useState(false);
-	React.useEffect(() => setIsMounted(true), []);
+	const childrenWrapperRef = React.useRef<HTMLElement>(undefined!);
+	React.useEffect(() => {
+		gsap.set(childrenWrapperRef.current, { autoAlpha: 1 });
+	}, []);
 
-	if (!isMounted) return null;
 	return (
 		<Providers>
-			<TransitionLayout>
+			<>
 				<Header title={title} />
 				<Navigation />
 
-				<S.ChildrenWrapper>{children}</S.ChildrenWrapper>
+				<S.ChildrenWrapper ref={childrenWrapperRef}>
+					{children}
+				</S.ChildrenWrapper>
+
 				<Footer />
-			</TransitionLayout>
+			</>
 		</Providers>
 	);
 };

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useLayoutEffect, useGSAPTimeline } from 'hooks';
+import { useLayoutEffect } from 'hooks';
 
 import gsap from 'gsap';
 
@@ -12,7 +12,7 @@ export const FadeInOut: React.FC<FadeInOutProps> = ({
 	durationIn,
 	durationOut,
 }) => {
-	const { timeline } = useGSAPTimeline();
+	const timeline = gsap.timeline({ pause: true });
 	const el = React.useRef<HTMLDivElement>(undefined!);
 
 	useLayoutEffect(() => {

@@ -1,73 +1,110 @@
-// =============== React & Next ===============
 import * as React from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-// ================ constants =================
-import { isDev } from 'utils/constants';
-// ================== styles ==================
+
 import * as S from './style';
-// =================== icons ==================
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-// =============== components =================
-import Slidebar from './Slidebar';
-// ============================================
+
+import { FullStackDeveloper, MyName } from './Signature';
+
+import gsap from 'gsap';
 
 const Navigation = () => {
-	const { pathname } = useRouter();
-	const [isOpen, setIsOpen] = React.useState(false);
-	const toggle = () => setIsOpen(!isOpen);
-
-	const routes = {
-		home: '/' as PageRoute,
-		about: '/about' as PageRoute,
-		portfolio: '/portfolio' as PageRoute,
-		projects: '/projects' as PageRoute,
-		dictionaries: '/projects/dictionaries' as PageRoute,
+	const nav = React.useRef<HTMLElement>(undefined!);
+	const logo = React.useRef<HTMLDivElement>(undefined!);
+	const svg = React.useRef<SVGSVGElement>(undefined!);
+	const q = gsap.utils.selector(svg);
+	const animatedRects = React.useRef<SVGRectElement[]>([]);
+	const rectRefs = (el: SVGRectElement) => {
+		if (!animatedRects.current.includes(el)) animatedRects.current.push(el);
 	};
+	const [timeline] = React.useState(() => gsap.timeline({ delay: 0.5 }));
+	React.useEffect(() => {
+		const animateNav = () => {
+			timeline
+				.from(logo.current, {
+					y: -40,
+					opacity: 0,
+					duration: 2,
+					ease: 'power4',
+				})
+				.from(
+					q('rect'),
+					{
+						scale: 0,
+						transformOrigin: 'center ',
+						duration: 0.6,
+						ease: 'power4',
+						stagger: 0.1,
+					},
+					0.6,
+				)
+				.to(
+					animatedRects.current,
+					{
+						scale: 0.8,
+						transformOrigin: 'center left',
+						duration: 0.4,
+						ease: 'power2',
+						stagger: 0.1,
+					},
+					'-=0.6',
+				);
+		};
 
-	const RoutesDev = {
-		home: routes.home,
-		about: routes.about,
-		portfolio: routes.portfolio,
-		projects: routes.projects,
-		dictionaries: routes.dictionaries,
+		animateNav();
+		gsap.set(nav.current, { autoAlpha: 1 });
+		return () => {
+			timeline.kill();
+		};
+	}, [q, timeline]);
+
+	const anchorHandle = {
+		click: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+			e.preventDefault();
+			gsap.to(window, { duration: 2, scrollTo: { y: '#intro' } });
+		},
+		mouseEnter: () =>
+			gsap.to(animatedRects.current, {
+				scaleX: 1,
+				transformOrigin: 'top left',
+				duration: 0.4,
+				ease: 'power4',
+				stagger: 0.25,
+			}),
+		mouseLeave: () =>
+			gsap.to(animatedRects.current, {
+				scaleX: 0.8,
+				transformOrigin: 'top left',
+				duration: 0.6,
+				ease: 'power4',
+				stagger: 0.1,
+			}),
 	};
-
-	const RoutesProd = {
-		home: routes.home,
-		about: routes.about,
-		// projects: routes.projects,
-		// dictionaries: routes.dictionaries,
-	};
-
-	const pages = isDev
-		? Object.keys(RoutesDev).map((pageKey) => ({
-				pageKey: pageKey as PageKey,
-				route: RoutesDev[pageKey as keyof typeof RoutesDev],
-		  }))
-		: Object.keys(RoutesProd).map((pageKey) => ({
-				pageKey: pageKey as PageKey,
-				route: RoutesProd[pageKey as keyof typeof RoutesProd],
-		  }));
 
 	return (
-		<S.Nav>
-			<Link passHref href="/">
-				<S.Logo />
-			</Link>
-
-			<S.MenuIcon onClick={toggle} icon={faBars} />
-
-			<Slidebar
-				toggle={toggle}
-				isOpen={isOpen}
-				pages={pages.filter(
-					({ pageKey }: { pageKey: PageKey }) =>
-						pathname !== routes[pageKey as keyof typeof routes],
-				)}
-			/>
+		<S.Nav ref={nav}>
+			<S.SignatureContainer>
+				<Signature ref={logo} />
+			</S.SignatureContainer>
+			<S.ButtonAnchor
+				onClick={anchorHandle.click}
+				onMouseEnter={anchorHandle.mouseEnter}
+				onMouseLeave={anchorHandle.mouseLeave}>
+				<S.ButtonSvg ref={svg}>
+					<rect ref={rectRefs} x="18" y="8" />
+					<rect ref={rectRefs} x="8" y="14" />
+					<rect x="8" y="20" />
+				</S.ButtonSvg>
+			</S.ButtonAnchor>
 		</S.Nav>
 	);
 };
 
 export default Navigation;
+
+const Signature = React.forwardRef<HTMLDivElement>((_props, ref) => (
+	<S.SignatureContainer ref={ref}>
+		<MyName />
+		<FullStackDeveloper />
+	</S.SignatureContainer>
+));
+
+Signature.displayName = 'signature';

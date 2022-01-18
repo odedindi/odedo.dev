@@ -1,63 +1,61 @@
-import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-export const Nav = styled.nav`
-	position: sticky;
-	top: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1rem;
-	height: 5rem;
-	z-index: 998;
-	transition: 0.75s all ease-in-out;
-`;
-
-export const MenuIcon = styled(FontAwesomeIcon)`
-	font-size: 2rem;
-	cursor: pointer;
-	color: ${({ theme }) => theme.colors.naviAndContactButtons.primary};
-
-	position: absolute;
-	top: 1.75rem;
-	right: 1.75rem;
-	&:hover {
-		transition: 0.5s ease-in-out;
-		color: ${({ theme }) => theme.colors.naviAndContactButtons.secondary};
-	}
-`;
-
-export const NavMenu = styled.div`
-	display: flex;
-	align-items: center;
-	list-style: none;
-	text-align: center;
-	margin-right: -22px;
-	position: sticky;
-	@media screen and (max-width: 768px) {
-		display: none;
-	}
-`;
-
-export const DarkModeTogglerWrapper = styled.section`
-	scale: 0.6;
-	/* padding-top: 1.25rem; */
-`;
-
-export const Logo = styled.img.attrs(() => ({
-	alt: '',
-	src: '/logo.png',
-}))`
-	width: 2.5rem;
-	height: 2.5rem;
-
-	position: absolute;
+import styled, { css } from 'styled-components';
+import { device } from 'utils/mediaQueries';
+export const Nav = styled.header`
+	position: fixed;
 	top: 1.5rem;
-	left: 1.75rem;
 
-	:hover {
-		cursor: pointer;
-		transition: 0.2s ease-in-out;
-		transform: scale(1.5, 1.5);
+	padding: 0 3rem;
+
+	z-index: 10;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	width: 100vw;
+
+	opacity: 0;
+`;
+
+export const SignatureContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	${device.tablet} {
+		transform: scale(0.5);
+
+		position: fixed;
+		left: 3.5rem;
+		top: 0.5rem;
+	}
+`;
+
+const buttonWidth = '56px';
+const buttonHeight = '30px';
+const buttonSize = css`
+	width: ${buttonWidth};
+	height: ${buttonHeight};
+`;
+export const ButtonAnchor = styled.a`
+	${buttonSize};
+	display: block;
+	margin: -2px 0 0 56px;
+
+	${device.tablet} {
+		margin: 18px 0 0 -6px;
+	}
+`;
+
+export const ButtonSvg = styled.svg.attrs({
+	xmlns: 'http://www.w3.org/2000/svg',
+	viewBox: `0 0 ${buttonWidth} ${buttonHeight}`,
+})`
+	${buttonSize};
+	pointer-events: none;
+
+	rect {
+		width: 40px;
+		height: 2px;
+		fill: ${({ theme }) => theme.colors.logo.bright};
 	}
 `;

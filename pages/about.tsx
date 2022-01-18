@@ -10,8 +10,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import PageLayout from 'components/Layout';
 import { DevToolLink, DevTools } from 'components/DevTool';
 import { Skew } from 'animations';
-// import CreateAnimation from 'components/CreateAnimation';
-// ================= devtools =================
 import myDevTools from 'utils/devToolsLogos';
 // ============================================
 

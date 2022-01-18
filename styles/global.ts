@@ -15,39 +15,42 @@ body {
 	background: ${({ theme }) => theme.colors.background.primary};
 }
 
+body {
+	overflow-x: hidden;
+}
 a {
 	color: inherit;
 	text-decoration: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	line-height: ${({ theme }) => theme.lineHeights.heading};
+	margin: 0;
+}
+
 h1 {
 	font-size: ${({ theme }) => theme.fontSizes.h1};
-	line-height: ${({ theme }) => theme.lineHeights.heading}
 }
 h2 {
 	font-size: ${({ theme }) => theme.fontSizes.h2};
-	line-height: ${({ theme }) => theme.lineHeights.heading}
 }
 h3 {
 	font-size: ${({ theme }) => theme.fontSizes.h3};
-	line-height: ${({ theme }) => theme.lineHeights.heading}
 }
 h4 {
 	font-size: ${({ theme }) => theme.fontSizes.h4};
-	line-height: ${({ theme }) => theme.lineHeights.heading}
 }
 h5 {
 	font-size: ${({ theme }) => theme.fontSizes.h5};
-	line-height: ${({ theme }) => theme.lineHeights.heading}
 }
 h6 {
 	font-size: ${({ theme }) => theme.fontSizes.h6};
-	line-height: ${({ theme }) => theme.lineHeights.heading}
 }
 
 p {
 	font-size: ${({ theme }) => theme.fontSizes.p};
 	line-height: ${({ theme }) => theme.lineHeights.body};
+	margin: 0;
 }
 
 * {

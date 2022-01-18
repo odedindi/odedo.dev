@@ -1,5 +1,5 @@
 const customMediaQuery = (maxWidth: number) =>
-	`@media (max-width: ${maxWidth}px)`;
+	`@media all and (max-width: ${maxWidth}px)`;
 
 export const device = {
 	desktop: customMediaQuery(1440),

@@ -1,7 +1,0 @@
-{
-	"src": "rxjs.dev",
-	"intro": "When discussing and documenting observables, it's important to have a common language and a known set of rules around what is going on. This document is an attempt to standardize these things so we can try to control the language in our docs, and hopefully other publications about RxJS, so we can discuss reactive programming with RxJS on consistent terms. While not all of the documentation for RxJS reflects this terminology, it is a goal of the team to ensure it does, and to ensure the language and names around the library use this document as a source of truth and unified language.",
-	"title": "RxJS Dictionry",
-	"subTitle": "Explanation with examples",
-	"tableOfContent": "Table of content"
-}

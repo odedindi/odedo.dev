@@ -1,3 +1,32 @@
 {
-	"title": "Home"
+	"title": "Personal Website",
+	"about": {
+		"firstPart": {
+			"intro": "Young hearted developer, with passion for awesomes designs.",
+			"title": "About Me",
+			"texts": [
+				"I love reading code as well as code things from scratch, and enjoy very much bringing to life ideas on the browser.",
+				"I'm a confident and capable individual, enjoy and profit from team work, curious by nature, and perpetually eager and work on improving my skills one problem at a time."
+			]
+		},
+		"secondPart": {
+			"intro": "Mostly I freelance, build my own projects, or collaborate, for exemple together with ",
+			"people": "talented data scientists ",
+			"using": "using ",
+			"satellite": "Sentinel-II ",
+			"for": "data we developed an AI-based prototype for monitoring carbon concentrations trends in soils and vegetation, leading to ",
+			"landpro": "LandPro."
+		},
+		"devTools": {
+			"title": "Dev tools I like using",
+			"languages": "Languages",
+			"frontend": "Frontend",
+			"backend": "Backend",
+			"databases": "Databases",
+			"design": "Design",
+			"versionControl": "Version Control",
+			"ides": "IDEs",
+			"packageManagers": "Package Managers"
+		}
+	}
 }
