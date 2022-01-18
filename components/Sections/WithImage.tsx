@@ -13,7 +13,7 @@ type SectionProps = {
 	lottieAnimation?: Object;
 };
 
-const Section: React.FC<SectionProps> = ({
+const SectionWithImage: React.FC<SectionProps> = ({
 	lottieAnimation,
 	texts,
 	title,
@@ -99,4 +99,4 @@ const Section: React.FC<SectionProps> = ({
 	);
 };
 
-export default Section;
+export default SectionWithImage;

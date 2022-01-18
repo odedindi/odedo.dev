@@ -8,7 +8,7 @@ export const FooterWrapper = styled.footer`
 	flex-direction: column;
 	background: #cecece;
 
-	height: 60vh;
+	height: 20vh;
 `;
 export const ContactMeWrapper = styled.section`
 	height: 5rem;

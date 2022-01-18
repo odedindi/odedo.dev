@@ -8,6 +8,7 @@ import Navigation from './Navigation';
 import Providers from '../Providers';
 // ============================================
 import gsap from 'gsap';
+
 type PageLayoutProps = {
 	title: string;
 	children: React.ReactNode;
@@ -21,16 +22,12 @@ const PageLayout = ({ children, title }: PageLayoutProps) => {
 
 	return (
 		<Providers>
-			<>
-				<Header title={title} />
-				<Navigation />
+			<Header title={title} />
+			<Navigation />
 
-				<S.ChildrenWrapper ref={childrenWrapperRef}>
-					{children}
-				</S.ChildrenWrapper>
+			<S.ChildrenWrapper ref={childrenWrapperRef}>{children}</S.ChildrenWrapper>
 
-				<Footer />
-			</>
+			<Footer />
 		</Providers>
 	);
 };

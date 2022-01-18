@@ -1,3 +1,38 @@
 {
-	"title": "Hauptseite"
+	"title": "Persönliche Webseite",
+	"intro": {
+		"hey": "Gruezi wohl!",
+		"thanks": "Vielen Dank, dass du dir die Zeit nimmst und nach mir schaust.",
+		"serious": "Ob für ernsthafte Arbeit oder ernsthaftes Spiel oder gar nichts Ernstes.",
+		"contact": "Zögern Sie nicht, mich zu kontaktieren."
+	},
+	"about": {
+		"firstPart": {
+			"intro": "Jungherziger Entwickler mit Leidenschaft für tolle Designs.",
+			"title": "Über mich",
+			"texts": [
+				"Ich liebe es, Code zu lesen und Dinge von Grund auf neu zu programmieren, und es macht mir sehr viel Spaß, Ideen im Browser zum Leben zu erwecken.",
+				"Ich bin ein selbstbewusster und fähiger Mensch, genieße und profitiere von Teamarbeit, bin aus neugierig und immer eifrig und arbeite daran, meine Fähigkeiten Problem für Problem zu verbessern."
+			]
+		},
+		"secondPart": {
+			"intro": "Mostly I freelance, build my own projects, or collaborate, for exemple together with ",
+			"people": "talented data scientists ",
+			"using": "using ",
+			"satellite": "Sentinel-II ",
+			"for": "data we developed an AI-based prototype for monitoring carbon concentrations trends in soils and vegetation, leading to ",
+			"landpro": "LandPro."
+		},
+		"devTools": {
+			"title": "Entwicklungstools, die ich gerne verwende",
+			"languages": "Sprachen",
+			"frontend": "Frontend",
+			"backend": "Backend",
+			"databases": "Datanbanken",
+			"design": "Design",
+			"versionControl": "Versionkontrolle",
+			"ides": "IDEs",
+			"packageManagers": "Paketmanagers"
+		}
+	}
 }

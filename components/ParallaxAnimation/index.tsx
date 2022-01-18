@@ -4,9 +4,6 @@ import * as S from './style';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-import Lottie from 'react-lottie';
-import lottieAnim from './lottie/astronaut.json';
-
 type ParallaxImageProps = {
 	animationTrigger: gsap.DOMTarget;
 	toLeft?: boolean;
@@ -15,6 +12,7 @@ type ParallaxImageProps = {
 
 const ParallaxImage: React.FC<ParallaxImageProps> = ({
 	animationTrigger: trigger,
+	lottieAnimation,
 	toLeft,
 }) => {
 	const wrapper = React.useRef<HTMLDivElement>(undefined!);
@@ -32,8 +30,8 @@ const ParallaxImage: React.FC<ParallaxImageProps> = ({
 
 		const parallaxAnimation = gsap.fromTo(
 			wrapper.current,
-			{ y: '-30vh' },
-			{ y: '30vh', scrollTrigger: parallaxEffect, ease: 'none' },
+			{ y: '-40vh' },
+			{ y: '40vh', scrollTrigger: parallaxEffect, ease: 'none' },
 		);
 		return () => {
 			parallaxAnimation.kill();
@@ -43,14 +41,14 @@ const ParallaxImage: React.FC<ParallaxImageProps> = ({
 	const lottieOptions = {
 		loop: true,
 		autoplay: true,
-		animationData: lottieAnim,
+		animationData: lottieAnimation,
 		rendererSettings: {
 			preserveAspectRatio: 'xMidYMid slice',
 		},
 	};
 	return (
 		<S.ImageWrapper ref={wrapper} toLeft={toLeft}>
-			<Lottie options={lottieOptions} height="100vh" width="100%" />
+			<S.Animation options={lottieOptions} height="100vh" />
 		</S.ImageWrapper>
 	);
 };

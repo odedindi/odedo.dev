@@ -1,8 +1,14 @@
 {
 	"title": "Personal Website",
+	"intro": {
+		"hey": "Hey you!",
+		"thanks": "Thank you very much for taking your time and checking up on me.",
+		"serious": "Whether it is for serious work or serious play, or nothing serious at all.",
+		"contact": "Don't hesitate to contact me."
+	},
 	"about": {
 		"firstPart": {
-			"intro": "Young hearted developer, with passion for awesomes designs.",
+			"intro": "Young hearted developer, with passion for awesome designs.",
 			"title": "About Me",
 			"texts": [
 				"I love reading code as well as code things from scratch, and enjoy very much bringing to life ideas on the browser.",

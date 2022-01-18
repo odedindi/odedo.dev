@@ -94,10 +94,10 @@ export const ContactMeButtonsWrapper = styled.section`
 	width: 15rem;
 
 	${device.phone} {
-		flex-flow: row wrap;
+		/* flex-flow: row wrap; */
 		justify-content: space-evenly;
 		width: 5rem;
-		gap: 0.25rem;
+		gap: 0.5rem;
 	}
 `;
 // =============== color mode ===============

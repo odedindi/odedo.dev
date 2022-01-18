@@ -1,37 +1,31 @@
 import * as React from 'react';
 import * as S from './style';
 
+import { useTranslation } from 'next-i18next';
+
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
-import ParallaxAnimation from 'components/ParallaxAnimation';
+import { DevTools } from 'components/DevTool';
+import { Skew } from 'animations';
+import myDevTools from 'utils/devToolsLogos';
 
-type SectionProps = {
-	sectionIntro?: string;
-	title?: string;
-	texts: string[];
-	lottieAnimation?: Object;
-};
+const SectionWithDevTools = () => {
+	const { t } = useTranslation('common');
 
-const Section: React.FC<SectionProps> = ({
-	lottieAnimation,
-	texts,
-	title,
-	sectionIntro,
-}) => {
 	const sectionRef = React.useRef<HTMLElement>(undefined!);
 	const titleRef = React.useRef<HTMLHeadingElement>(undefined!);
 	const titleBlockRef = React.useRef<HTMLSpanElement>(undefined!);
+
 	const textsRefs = React.useRef<HTMLParagraphElement[]>([]);
 	const addTextRef = (el: HTMLParagraphElement) => {
 		if (!textsRefs.current.includes(el)) textsRefs.current.push(el);
 	};
+
 	React.useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
 		const timeline = gsap.timeline({
-			scrollTrigger: {
-				trigger: sectionRef.current,
-			},
+			scrollTrigger: { trigger: sectionRef.current },
 		});
 		const sectionAnimation = timeline
 			.from(titleRef.current, {
@@ -68,35 +62,30 @@ const Section: React.FC<SectionProps> = ({
 
 	return (
 		<S.Section ref={sectionRef}>
-			<S.ContentContainer>
+			<S.AboutParagraph>
 				<S.ContentColumn>
 					<S.TextWrapper>
-						{sectionIntro && <S.P ref={addTextRef}>{sectionIntro}</S.P>}
-					</S.TextWrapper>
-					{title && (
-						<S.Title ref={titleRef}>
-							<S.TitleBlock ref={titleBlockRef}>{title}</S.TitleBlock>
-						</S.Title>
-					)}
-					<S.TextWrapper>
-						{texts.map((t, i) => (
-							<S.P key={i} ref={addTextRef}>
-								{t}
+						<Skew>
+							<S.P ref={addTextRef}>
+								<S.TitleBlock ref={titleBlockRef}>
+									{t('about.devTools.title')}:
+								</S.TitleBlock>
 							</S.P>
-						))}
+							<S.DevToolsContainer>
+								{myDevTools.titlesAndIcons.map((tool) => (
+									<DevTools
+										key={tool.title}
+										title={t(`about.devTools.${tool.title}`)}
+										devTools={tool.devTools}
+									/>
+								))}
+							</S.DevToolsContainer>
+						</Skew>
 					</S.TextWrapper>
 				</S.ContentColumn>
-			</S.ContentContainer>
-			<S.ImageContainer>
-				{lottieAnimation && (
-					<ParallaxAnimation
-						lottieAnimation={lottieAnimation}
-						animationTrigger={sectionRef.current}
-					/>
-				)}
-			</S.ImageContainer>
+			</S.AboutParagraph>
 		</S.Section>
 	);
 };
 
-export default Section;
+export default SectionWithDevTools;

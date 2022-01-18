@@ -3,7 +3,7 @@ import { device } from 'utils/mediaQueries';
 export const Nav = styled.header`
 	position: fixed;
 	top: 1.5rem;
-
+	right: 2rem;
 	padding: 0 3rem;
 
 	z-index: 10;
@@ -11,23 +11,9 @@ export const Nav = styled.header`
 	flex-direction: row;
 	justify-content: space-between;
 
-	width: 100vw;
+	/* width: 100vw; */
 
 	opacity: 0;
-`;
-
-export const SignatureContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	${device.tablet} {
-		transform: scale(0.5);
-
-		position: fixed;
-		left: 3.5rem;
-		top: 0.5rem;
-	}
 `;
 
 const buttonWidth = '56px';

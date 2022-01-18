@@ -2,13 +2,13 @@ import * as React from 'react';
 
 import * as S from './style';
 
-import { FullStackDeveloper, MyName } from './Signature';
-
 import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 const Navigation = () => {
 	const nav = React.useRef<HTMLElement>(undefined!);
-	const logo = React.useRef<HTMLDivElement>(undefined!);
+
 	const svg = React.useRef<SVGSVGElement>(undefined!);
 	const q = gsap.utils.selector(svg);
 	const animatedRects = React.useRef<SVGRectElement[]>([]);
@@ -17,14 +17,9 @@ const Navigation = () => {
 	};
 	const [timeline] = React.useState(() => gsap.timeline({ delay: 0.5 }));
 	React.useEffect(() => {
+		gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 		const animateNav = () => {
 			timeline
-				.from(logo.current, {
-					y: -40,
-					opacity: 0,
-					duration: 2,
-					ease: 'power4',
-				})
 				.from(
 					q('rect'),
 					{
@@ -59,7 +54,7 @@ const Navigation = () => {
 	const anchorHandle = {
 		click: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
 			e.preventDefault();
-			gsap.to(window, { duration: 2, scrollTo: { y: '#intro' } });
+			gsap.to(window, { scrollTo: { y: 0 }, duration: 2, ease: 'power4' });
 		},
 		mouseEnter: () =>
 			gsap.to(animatedRects.current, {
@@ -81,9 +76,6 @@ const Navigation = () => {
 
 	return (
 		<S.Nav ref={nav}>
-			<S.SignatureContainer>
-				<Signature ref={logo} />
-			</S.SignatureContainer>
 			<S.ButtonAnchor
 				onClick={anchorHandle.click}
 				onMouseEnter={anchorHandle.mouseEnter}
@@ -99,12 +91,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
-const Signature = React.forwardRef<HTMLDivElement>((_props, ref) => (
-	<S.SignatureContainer ref={ref}>
-		<MyName />
-		<FullStackDeveloper />
-	</S.SignatureContainer>
-));
-
-Signature.displayName = 'signature';
