@@ -4,15 +4,14 @@
 		"hey": "Gruezi wohl!",
 		"thanks": "Vielen Dank, dass du dir die Zeit nimmst und nach mir schaust.",
 		"serious": "Ob für ernsthafte Arbeit oder ernsthaftes Spiel oder gar nichts Ernstes.",
-		"contact": "Zögern Sie nicht, mich zu kontaktieren."
+		"contact": "Zögere nicht, mich zu kontaktieren."
 	},
 	"about": {
 		"firstPart": {
-			"intro": "Jungherziger Entwickler mit Leidenschaft für tolle Designs.",
+			"intro": "Jungherziger Entwickler, von Natur aus neugierig und mit Leidenschaft für tolle Herausforderungen.",
 			"title": "Über mich",
 			"texts": [
-				"Ich liebe es, Code zu lesen und Dinge von Grund auf neu zu programmieren, und es macht mir sehr viel Spaß, Ideen im Browser zum Leben zu erwecken.",
-				"Ich bin ein selbstbewusster und fähiger Mensch, genieße und profitiere von Teamarbeit, bin aus neugierig und immer eifrig und arbeite daran, meine Fähigkeiten Problem für Problem zu verbessern."
+				"Ich liebe es, Code zu lesen und Dinge von Grund auf neu zu programmieren."
 			]
 		},
 		"secondPart": {

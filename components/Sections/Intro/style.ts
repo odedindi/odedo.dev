@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { device } from 'utils/mediaQueries';
 
 export const Intro = styled.section`
@@ -46,56 +46,29 @@ export const P = styled.p`
 		margin-left: 5vw;
 	}
 `;
-const Image = styled.img`
+const Img = styled.img`
 	position: absolute;
 	width: 35%;
 	max-width: 390px;
 	height: auto;
 	border-radius: 1rem;
 
+	display: block;
+	border: 0.125rem solid rgba(255, 255, 255, 0.2);
+	filter: grayscale(0);
+
 	${device.tablet} {
 		width: 75vw;
 	}
 `;
-export const Image1 = styled(Image)`
-	z-index: 2;
-	left: 10%;
-	bottom: 35%;
+export const Image = styled(Img)<{ position?: 'front' | 'back' }>`
+	z-index: ${({ position }) => (position === 'back' ? 1 : 2)};
+	left: ${({ position }) => (position === 'back' ? '25%' : '10%')};
+	bottom: ${({ position }) => (position === 'back' ? '45%' : '35%')};
 
 	${device.tablet} {
-		left: 40%;
-		bottom: 50vh;
+		left: ${({ position }) => (position === 'back' ? '80%' : '40%')};
+		bottom: ${({ position }) => (position === 'back' ? '60vh' : '50vh')};
+		display: ${({ position }) => (position === 'back' ? 'none' : null)};
 	}
-`;
-export const Image2 = styled(Image)`
-	z-index: 1;
-	left: 25%;
-	bottom: 45%;
-	${device.tablet} {
-		display: none;
-		left: 80%;
-		bottom: 60vh;
-	}
-`;
-
-export const ZoomImg = styled.img`
-	pointer-events: none;
-	position: relative;
-	top: 50%;
-	left: 50%;
-`;
-
-export const Zoom = styled.div`
-	position: absolute;
-	width: 250px;
-	height: 250px;
-	box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.5),
-		5px 5px 10px 5px rgba(0, 0, 0, 0.2);
-	border-radius: 50%;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-	pointer-events: none;
-	visibility: hidden;
-	opacity: 0;
 `;

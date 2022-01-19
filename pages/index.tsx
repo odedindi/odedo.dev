@@ -12,27 +12,30 @@ import {
 	Intro,
 	SectionWithDevTools,
 	SectionWithImage,
+	SectionWithMemes,
 } from 'components/Sections';
 import astronaut from 'assets/lottie/astronaut.json';
 import ProjectsCarousel from 'components/ProjectsCarousel';
 
 const Home: NextPage = () => {
+	const isDev = process.env.NODE_ENV !== 'production';
 	const { t } = useTranslation('common');
 
 	const sections = {
 		id: 'about.firstPart',
 		sectionIntro: 'about.firstPart.intro',
 		title: 'about.firstPart.title',
-		texts: ['about.firstPart.texts.0', 'about.firstPart.texts.1'],
+		texts: 'about.firstPart.texts',
 		lottie: astronaut,
 	};
 
 	return (
 		<PageLayout title={t('title')}>
 			<Intro />
-			{process.env.NODE_ENV !== 'production' && <ProjectsCarousel />}
+			{/* {isDev && <SectionWithMemes />} */}
+			{isDev && <ProjectsCarousel />}
 			<SectionWithImage
-				texts={sections.texts.map((text) => t(text))}
+				texts={t(sections.texts, { returnObjects: true })}
 				title={t(`${sections.title}`)}
 				sectionIntro={t(`${sections.sectionIntro}`)}
 				lottieAnimation={sections.lottie}
