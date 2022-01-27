@@ -12,7 +12,7 @@ import {
 	Intro,
 	SectionWithDevTools,
 	SectionWithImage,
-	SectionWithMemes,
+	// SectionWithMemes,
 } from 'components/Sections';
 import astronaut from 'assets/lottie/astronaut.json';
 import ProjectsCarousel from 'components/ProjectsCarousel';
@@ -32,7 +32,6 @@ const Home: NextPage = () => {
 	return (
 		<PageLayout title={t('title')}>
 			<Intro />
-			{/* {isDev && <SectionWithMemes />} */}
 			{isDev && <ProjectsCarousel />}
 			<SectionWithImage
 				texts={t(sections.texts, { returnObjects: true })}

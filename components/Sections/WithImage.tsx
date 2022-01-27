@@ -78,13 +78,13 @@ const SectionWithImage: React.FC<SectionProps> = ({
 							<S.TitleBlock ref={titleBlockRef}>{title}</S.TitleBlock>
 						</S.Title>
 					)}
-					<S.TextWrapper>
+					{/* <S.TextWrapper>
 						{texts.map((t, i) => (
 							<S.P key={i} ref={addTextRef}>
 								{t}
 							</S.P>
 						))}
-					</S.TextWrapper>
+					</S.TextWrapper> */}
 				</S.ContentColumn>
 			</S.ContentContainer>
 			<S.ImageContainer>

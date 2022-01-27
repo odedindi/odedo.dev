@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { device } from 'utils/mediaQueries';
+
 export const Nav = styled.header`
 	position: fixed;
 	top: 1.5rem;
@@ -16,14 +17,9 @@ export const Nav = styled.header`
 	opacity: 0;
 `;
 
-const buttonWidth = '56px';
-const buttonHeight = '30px';
-const buttonSize = css`
-	width: ${buttonWidth};
-	height: ${buttonHeight};
-`;
 export const ButtonAnchor = styled.a`
-	${buttonSize};
+	width: 56px;
+	height: 30px;
 	display: block;
 	margin: -2px 0 0 56px;
 
@@ -34,9 +30,10 @@ export const ButtonAnchor = styled.a`
 
 export const ButtonSvg = styled.svg.attrs({
 	xmlns: 'http://www.w3.org/2000/svg',
-	viewBox: `0 0 ${buttonWidth} ${buttonHeight}`,
+	viewBox: '0 0 56px 30px',
 })`
-	${buttonSize};
+	width: 56px;
+	height: 30px;
 	pointer-events: none;
 
 	rect {
