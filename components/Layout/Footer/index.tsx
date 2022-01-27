@@ -15,9 +15,9 @@ const Footer = () => {
 
 	return (
 		<S.FooterWrapper>
-			<S.ContactMeWrapper>
+			{/* <S.ContactMeWrapper>
 				<Button id="socialMediaButtons" type="ContactMe" />
-			</S.ContactMeWrapper>
+			</S.ContactMeWrapper> */}
 
 			<S.GitHubStatsWrapper>
 				<GithubStats />
