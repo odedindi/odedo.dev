@@ -1,4 +1,5 @@
 import { extendType, idArg, objectType } from 'nexus';
+import { Position as PositionT } from 'src/types/sourceTypes';
 
 export const Position = objectType({
 	name: 'Position',
@@ -29,7 +30,7 @@ export const PositionQuery = extendType({
 			args: { id: idArg() },
 			// @ts-ignore
 			resolve: (_root, { id }: { id: string }, { db: { positions } }) =>
-				positions.find((p) => p.id === id),
+				positions.find((p: PositionT) => p.id === id),
 		});
 
 		t.list.field('allMyOtherExperiences', {
@@ -44,7 +45,7 @@ export const PositionQuery = extendType({
 			args: { id: idArg() },
 			// @ts-ignore
 			resolve: (_root, { id }: { id: string }, { db: { otherExperience } }) =>
-				otherExperience.find((e) => e.id === id),
+				otherExperience.find((e: PositionT) => e.id === id),
 		});
 	},
 });
