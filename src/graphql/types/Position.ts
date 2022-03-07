@@ -8,8 +8,8 @@ export const Position = objectType({
 		t.string('company')!;
 		t.string('employmentType')!;
 		t.string('location')!;
-		t.date('startDate', { description: 'When I started at this position' })!;
-		t.nullable.date('endDate');
+		t.string('startDate', { description: 'When I started at this position' })!;
+		t.nullable.string('endDate');
 		t.list.string('achievements')!;
 	},
 });
