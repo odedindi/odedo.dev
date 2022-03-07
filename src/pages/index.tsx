@@ -36,9 +36,6 @@ const Home: NextPage = () => {
 							<Accordion.Item label="Education">
 								<Education />
 							</Accordion.Item>
-							<Accordion.Item label="Other Experience">
-								<OtherExperiences />
-							</Accordion.Item>
 						</Accordion>
 					</Container>
 				</Grid.Col>

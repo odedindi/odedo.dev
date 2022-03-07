@@ -6,6 +6,7 @@ import moment from 'moment';
 export const OtherExperiences = () => {
 	const allMyOtherExperiences =
 		useAllMyOtherExperiences().data?.allMyOtherExperiences;
+	console.log('allMyOtherExperiences: ', allMyOtherExperiences);
 	return (
 		<>
 			<Title order={2} align="center">

@@ -4,13 +4,13 @@
 
 type Bio {
   email: String
-  github: URL
-  linkedin: URL
+  github: String
+  linkedin: String
   name: String
   objective: String
   skills: [String]
   tagline: String
-  website: URL
+  website: String
 }
 
 """
@@ -23,11 +23,11 @@ type Education {
   endDate: String
   id: ID
   institute: String
-  link: URL
+  link: String
   location: String
 
   """When I started at this education"""
-  startDate: Date
+  startDate: String
   title: String
 }
 
@@ -35,12 +35,12 @@ type Position {
   achievements: [String]
   company: String
   employmentType: String
-  endDate: Date
+  endDate: String
   id: ID
   location: String
 
   """When I started at this position"""
-  startDate: Date
+  startDate: String
   title: String
 }
 
