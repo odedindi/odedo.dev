@@ -1,0 +1,15 @@
+# Ignore artifacts:
+__generated__
+/__generated__
+build
+.next
+node_modules
+/node_modules
+
+yarn-error.log
+yarn.lock
+next-env.d.ts
+schema.prisma
+schema.graphql
+*.env
+*.yml
