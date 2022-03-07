@@ -5,17 +5,12 @@ import {
 	MantineProvider,
 } from '@mantine/core';
 
-import {
-	useColorScheme,
-	useHotkeys,
-	useLocalStorageValue,
-} from '@mantine/hooks';
+import { useHotkeys, useLocalStorageValue } from '@mantine/hooks';
 
 export const StylesProvider: React.FC = ({ children }) => {
-	const preferredColorScheme = useColorScheme();
 	const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
 		key: 'OdedWinbergerCV-color-scheme',
-		defaultValue: preferredColorScheme,
+		defaultValue: 'dark',
 	});
 
 	useHotkeys([['mod+J', () => toggleColorScheme()]]);
