@@ -7,8 +7,8 @@ import {
 	MYOBJECTIVE,
 	ALLMYEDUCATION,
 	MYEDUCATION,
-	ALLMYOTHEREXPERIENCES,
-	MYOTHEREXPERIENCE,
+	// ALLMYOTHEREXPERIENCES,
+	// MYOTHEREXPERIENCE,
 	MYPOSITION,
 	ALLMYPOSITIONS,
 } from '.';
@@ -21,10 +21,10 @@ export const useMyQueries = () => {
 		{ label: 'MyObjective', code: MYOBJECTIVE },
 		{ label: 'AllMyPositions', code: ALLMYPOSITIONS },
 		{ label: 'AllMyEducation', code: ALLMYEDUCATION },
-		{ label: 'AllMyOtherExperiences', code: ALLMYOTHEREXPERIENCES },
+		// { label: 'AllMyOtherExperiences', code: ALLMYOTHEREXPERIENCES },
 		{ label: 'MyPosition', code: MYPOSITION },
 		{ label: 'MyEducation', code: MYEDUCATION },
-		{ label: 'MyOtherExperience', code: MYOTHEREXPERIENCE },
+		// { label: 'MyOtherExperience', code: MYOTHEREXPERIENCE },
 	];
 	const language: Language = 'graphql';
 	return { language, queries };
