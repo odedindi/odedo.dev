@@ -7,9 +7,9 @@ export const Bio = objectType({
 		t.string('tagline')!;
 		t.string('email')!;
 		t.string('objective')!;
-		t.url('github')!;
-		t.url('website')!;
-		t.url('linkedin')!;
+		t.string('github')!;
+		t.string('website')!;
+		t.string('linkedin')!;
 		t.list.string('skills')!;
 	},
 });

@@ -7,7 +7,7 @@ export const Education = objectType({
 		t.string('title')!;
 		t.string('institute')!;
 		t.string('location')!;
-		t.url('link')!;
+		t.string('link')!;
 		t.date('startDate', { description: 'When I started at this education' })!;
 		t.nullable.string('endDate')!;
 		t.list.string('description')!;
