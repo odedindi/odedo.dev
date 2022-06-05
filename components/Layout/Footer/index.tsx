@@ -1,33 +1,56 @@
 // =============== React & Next ===============
 import * as React from 'react';
 // ================== styles ==================
-import * as S from './style';
+import gsap from 'gsap';
+
 // =============== translation ================
 // import { useTranslation } from 'next-i18next';
 // ================ components ================
-import Button from 'components/Button';
+import { Box, Text, Title } from '@mantine/core';
 import GithubStats from './GithubStats';
-import LanguageChanger from 'components/LanguageChanger';
 // ============================================
 
 const Footer = () => {
 	// const { t } = useTranslation('footer');
 
-	return (
-		<S.FooterWrapper>
-			{/* <S.ContactMeWrapper>
-				<Button id="socialMediaButtons" type="ContactMe" />
-			</S.ContactMeWrapper> */}
+	const boxRef = React.useRef<HTMLDivElement>(undefined!);
 
-			<S.GitHubStatsWrapper>
-				<GithubStats />
-				<S.Copyrights>&copy; 2022 ODEDINDI</S.Copyrights>
-			</S.GitHubStatsWrapper>
-			<S.LanguageAndThemeChangersWrapper>
-				<LanguageChanger />
-				{/* <Button type="DarkModeToggler" /> */}
-			</S.LanguageAndThemeChangersWrapper>
-		</S.FooterWrapper>
+	React.useEffect(() => {
+		gsap.fromTo(
+			boxRef.current,
+			{ autoAlpha: 0 },
+			{ autoAlpha: 1, duration: 1 },
+		);
+	}, []);
+
+	return (
+		<Box
+			ref={boxRef}
+			sx={(theme) => ({
+				display: 'flex',
+				alignItems: 'center',
+				justifyContent: 'center',
+				flexDirection: 'column',
+
+				height: '15vh',
+
+				backgroundColor:
+					theme.colorScheme === 'dark'
+						? theme.colors.dark[0]
+						: theme.colors.gray[8],
+			})}>
+			<GithubStats />
+			<Title
+				sx={(theme) => ({
+					color:
+						theme.colorScheme === 'dark'
+							? theme.colors.cyan[9]
+							: theme.colors.teal[5],
+					fontSize: theme.fontSizes.xl,
+				})}>
+				&copy; {new Date().getFullYear()} ODEDINDI
+			</Title>
+		</Box>
 	);
 };
 

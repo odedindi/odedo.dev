@@ -1,9 +1,9 @@
 import { css, createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-* {
+/* * {
 	transition: all 0.25s ease-in-out;
-}
+} */
 html,
 body {
 	padding: 0;

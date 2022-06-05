@@ -31,7 +31,8 @@
 		"**/*.ts",
 		"**/*.tsx",
 		"next-i18next.js",
-		"pages/projects/dictionaries/experiment.js"
+		"pages/projects/dictionaries/experiment.js",
+		"components/Layout/MouseTracker copy.jsx"
 	],
 	"exclude": ["node_modules"]
 }

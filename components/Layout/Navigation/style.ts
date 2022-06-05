@@ -13,8 +13,6 @@ export const Nav = styled.header`
 	justify-content: space-between;
 
 	/* width: 100vw; */
-
-	opacity: 0;
 `;
 
 export const ButtonAnchor = styled.a`
@@ -28,10 +26,7 @@ export const ButtonAnchor = styled.a`
 	}
 `;
 
-export const ButtonSvg = styled.svg.attrs({
-	xmlns: 'http://www.w3.org/2000/svg',
-	viewBox: '0 0 56px 30px',
-})`
+export const ButtonSvg = styled.svg`
 	width: 56px;
 	height: 30px;
 	pointer-events: none;

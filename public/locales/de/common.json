@@ -3,8 +3,10 @@
 	"intro": {
 		"hey": "Gruezi wohl!",
 		"thanks": "Vielen Dank, dass du dir die Zeit nimmst und nach mir schaust.",
-		"serious": "Ob für ernsthafte Arbeit oder ernsthaftes Spiel oder gar nichts Ernstes.",
-		"contact": "Zögere nicht, mich zu kontaktieren."
+		"contact": "Zögere nicht, mich zu kontaktieren.",
+		"cv": {
+			"link": "Sehen Sie sich hier meinen ziemlich aktuellen Lebenslauf an"
+		}
 	},
 	"about": {
 		"firstPart": {

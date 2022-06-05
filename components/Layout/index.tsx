@@ -1,6 +1,5 @@
 import * as React from 'react';
 // ================== styles ==================
-import * as S from './style';
 // ================ components ================
 import Footer from './Footer';
 import Header from './Header';
@@ -8,28 +7,24 @@ import Navigation from './Navigation';
 import Providers from '../Providers';
 // ============================================
 import gsap from 'gsap';
+import MouseTracker from 'components/MouseTracker';
+import Main from './MainContentContainer';
 
 type PageLayoutProps = {
 	title: string;
-	children: React.ReactNode;
 };
 
-const PageLayout = ({ children, title }: PageLayoutProps) => {
-	const childrenWrapperRef = React.useRef<HTMLElement>(undefined!);
-	React.useEffect(() => {
-		gsap.set(childrenWrapperRef.current, { autoAlpha: 1 });
-	}, []);
+const PageLayout: React.FC<PageLayoutProps> = ({ children, title }) => (
+	<Providers>
+		<Header title={title} />
+		<MouseTracker numOfCircles={4} />
 
-	return (
-		<Providers>
-			<Header title={title} />
-			<Navigation />
+		<Navigation />
 
-			<S.ChildrenWrapper ref={childrenWrapperRef}>{children}</S.ChildrenWrapper>
+		<Main>{children}</Main>
 
-			<Footer />
-		</Providers>
-	);
-};
+		<Footer />
+	</Providers>
+);
 
 export default PageLayout;

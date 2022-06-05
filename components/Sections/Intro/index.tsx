@@ -119,8 +119,7 @@ const Intro = () => {
 				<S.P ref={addTexts}>{t('intro.hey')}</S.P>
 				<br />
 				<S.P ref={addTexts}>{t('intro.thanks')}</S.P>
-				<S.P ref={addTexts}>{t('intro.serious')}</S.P>
-				<br />
+
 				<S.P ref={addTexts}>{t('intro.contact')}</S.P>
 				<ContactMeButtons ref={contactMe} />
 			</S.Content>

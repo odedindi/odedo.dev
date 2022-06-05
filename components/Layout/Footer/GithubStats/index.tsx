@@ -2,6 +2,7 @@
 import * as React from 'react';
 // ================== styles ==================
 import * as S from './styles';
+import { useMantineTheme } from '@mantine/core';
 // ================== querys ==================
 import { useQuery } from 'react-query';
 // ================== icons ===================
@@ -49,7 +50,7 @@ const GithubStats = () => {
 
 	const StatButton = ({ link, title, value }: GithubStatsButton) => (
 		<CreateAnimation type="Hover">
-			<S.Stat href={link}>
+			<S.Stat href={link} dark={useMantineTheme().colorScheme === 'dark'}>
 				<S.Icon>
 					{title === 'star' ? <StarOutlined /> : <ForkOutlined />}
 				</S.Icon>

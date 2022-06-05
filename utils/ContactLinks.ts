@@ -1,11 +1,3 @@
-const contactSource: ContactSource[] = [
-	'facebook',
-	'linkedin',
-	'github',
-	'discord',
-	'email',
-];
-
 const contactLinks: ContactLinks = {
 	facebook: 'https://www.facebook.com/oded.winberger/',
 	linkedin: 'https://www.linkedin.com/in/odedw/',
@@ -14,4 +6,4 @@ const contactLinks: ContactLinks = {
 	email: 'mailto:oded.winberger@gmail.com',
 };
 
-export { contactSource, contactLinks };
+export { contactLinks };

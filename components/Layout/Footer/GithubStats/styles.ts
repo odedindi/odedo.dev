@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { sharedTransition } from 'styles/global';
 
 export const Stats = styled.div`
 	display: grid;
@@ -12,16 +11,12 @@ export const Stats = styled.div`
 export const Stat = styled.a.attrs({
 	target: '_blank',
 	rel: 'noopener noreferrer',
-})`
+})<{ dark?: boolean }>`
 	width: max-content;
 	display: flex;
 	align-items: center;
 	gap: 0.25rem;
-	color: ${({ theme }) => theme.colors.text.primary};
-	${sharedTransition('color, background-color')}
-	&:hover {
-		text-decoration: none;
-	}
+	color: ${({ dark }) => (dark ? 'darkcyan' : 'cyan')};
 `;
 
 export const Icon = styled.span`

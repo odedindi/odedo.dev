@@ -87,6 +87,7 @@ export type ThemeFonts = typeof fonts;
 export const lightTheme: DefaultTheme = { ...fonts, ...light };
 export const darkTheme: DefaultTheme = { ...fonts, ...dark };
 
+type Funky = typeof themeUIFunky;
 const themeUIFunky = {
 	colors: {
 		text: '#000200',
@@ -421,7 +422,6 @@ const themeUIFunky = {
 		},
 	},
 };
-type Funky = typeof themeUIFunky;
 const themeUIDark = {
 	colors: {
 		text: '#fff',

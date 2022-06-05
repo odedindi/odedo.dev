@@ -8,6 +8,9 @@ import Document, {
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
+import rtlPlugin from 'stylis-plugin-rtl';
+import { ServerStyles, createStylesServer } from '@mantine/next';
+
 export default class MyDocument extends Document {
 	static getInitialProps = async (
 		ctx: DocumentContext,
@@ -24,11 +27,17 @@ export default class MyDocument extends Document {
 				});
 
 			const initialProps = await Document.getInitialProps(ctx);
+			const stylesServer = createStylesServer({
+				key: 'odedindi',
+				stylisPlugins: [rtlPlugin],
+			});
+
 			return {
 				...initialProps,
 				styles: (
 					<>
 						{initialProps.styles}
+						<ServerStyles html={initialProps.html} server={stylesServer} />
 						{sheet.getStyleElement()}
 					</>
 				),
@@ -38,13 +47,15 @@ export default class MyDocument extends Document {
 		}
 	};
 	render() {
+		const { locale } = this.props;
+		const dir: 'rtl' | 'ltr' =
+			locale === 'he' || locale === 'ara' ? 'rtl' : 'ltr';
 		return (
-			<Html>
+			<Html dir={dir} lang={locale}>
 				<Head />
 				<body>
 					<Main />
 					<NextScript />
-					<div id="modal-root" />
 				</body>
 			</Html>
 		);

@@ -3,8 +3,10 @@
 	"intro": {
 		"hey": "Hey you!",
 		"thanks": "Thank you very much for taking your time and checking up on me.",
-		"serious": "Whether it is for serious work or serious play, or nothing serious at all.",
-		"contact": "Don't hesitate to contact me."
+		"contact": "Don't hesitate to contact me.",
+		"cv": {
+			"link": "Check out my kinda recent CV here"
+		}
 	},
 	"about": {
 		"firstPart": {
