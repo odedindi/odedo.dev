@@ -38,11 +38,24 @@ export const db: Db = {
 	},
 	positions: [
 		{
+			id: '6',
+			title: 'Frontend',
+			company: 'Credit-Suisse',
+			startDate: '2022-05-01',
+			endDate: undefined,
+			employmentType: 'Sub-contract throught Tata Consultancy Services',
+			location: 'Zurich, Switzerland',
+			achievements: [
+				'Only frontend developer in a high pace, agile team',
+				'Technologies involved: TypeScript (React.js), Redux.',
+			],
+		},
+		{
 			id: '5',
 			title: 'Full Stack',
 			company: 'Softwaremanufaktur.ch Gmbh',
 			startDate: '2022-02-01',
-			endDate: undefined,
+			endDate: '2022-29-04',
 			employmentType: 'Internship',
 			location: 'Luzern, Switzerland',
 			achievements: [
@@ -136,9 +149,9 @@ export const db: Db = {
 			link: 'https://sit.academy/de',
 			startDate: '2021-02-01',
 			endDate: '2021-04-28',
-			location: 'Rehovot, Israel',
+			location: 'Zurich, Switzerland',
 			description: [
-				'HTML, CSS, JavaScript and React.js, Python and Django, SQL, PostgreSQL and Docker.',
+				'HTML', 'CSS', 'JavaScript', 'React.js', 'Python', 'Django', 'SQL and PostgreSQL', 'Docker',
 			],
 		},
 		{
@@ -150,7 +163,7 @@ export const db: Db = {
 			endDate: '2013-08-15',
 			location: 'Rehovot, Israel',
 			description: [
-				'Plant Science, Phytopathology, Pest Management, Environmental Chemistry, Environmental Protection, GIS',
+				'Plant Science', 'Phytopathology', 'Pest Management', 'Environmental Chemistry', 'Environmental Protection', 'GIS',
 			],
 		},
 	],
