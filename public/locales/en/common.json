@@ -33,5 +33,24 @@
 			"ides": "IDEs",
 			"packageManagers": "Package Managers"
 		}
+	},
+	"userSettings": {
+		"pages": {
+			"title": "Pages",
+			"home": "Home",
+			"about": "About me",
+			"dev": "Dev Tools"
+		},
+		"colorTheme": {
+			"title": "Color Theme",
+			"dark": "Dark",
+			"light": "Light"
+		},
+		"languages": {
+			"title": "Languges",
+			"he": "עברית",
+			"en": "English",
+			"de": "Deutsch"
+		}
 	}
 }

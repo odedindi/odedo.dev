@@ -2,11 +2,13 @@ import * as React from 'react';
 
 import { useRouter } from 'next/router';
 
-import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 import * as M from '@mantine/core';
 import * as I from '@modulz/radix-icons';
-import PageLink from './PageLink';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
 
 const Menu: React.FC = ({ children }) => {
 	const { colorScheme, dir } = M.useMantineTheme();
@@ -42,7 +44,58 @@ const Menu: React.FC = ({ children }) => {
 	);
 };
 
+const PageLink: React.FC<{
+	href: string;
+	icon: React.ReactNode;
+	label: string;
+}> = ({ href, icon, label }) => {
+	const router = useRouter();
+	if (router.pathname === href) return null;
+	return (
+		<M.Menu.Item icon={icon} onClick={() => router.push(href)}>
+			<M.Text size="xs" color="dimmed">
+				{label}
+			</M.Text>
+		</M.Menu.Item>
+	);
+};
+
+const LanguageLink: React.FC<{ locale: string; label: string }> = ({
+	label,
+	locale,
+}) => {
+	const router = useRouter();
+
+	const { locale: activeLocale, pathname, query, asPath } = router;
+	const isCurrentlyActive: boolean = locale === activeLocale;
+	return (
+		<M.Menu.Item
+			key={locale}
+			disabled={isCurrentlyActive}
+			sx={({ colors: { cyan, teal }, colorScheme }) => ({
+				border: isCurrentlyActive
+					? `solid 1px ${colorScheme === 'dark' ? teal[7] : cyan[3]}`
+					: undefined,
+				paddingBottom: '16px',
+			})}
+			onClick={() => router.push({ pathname, query }, asPath, { locale })}
+			icon={
+				<M.Avatar
+					mt={7.5}
+					radius="xl"
+					src={`/flags/${locale}.png`}
+					alt={`${locale}`}
+				/>
+			}>
+			<M.Text size="xs" color="dimmed">
+				{label}
+			</M.Text>
+		</M.Menu.Item>
+	);
+};
 const UserSettings = () => {
+	const { t } = useTranslation('common');
+
 	const { colorScheme, dir } = M.useMantineTheme();
 	const isDark = colorScheme === 'dark';
 	const { toggleColorScheme } = M.useMantineColorScheme();
@@ -53,89 +106,66 @@ const UserSettings = () => {
 		left: dir === 'rtl' ? 25 : undefined,
 	};
 
-	const router = useRouter();
-	const { locales, locale: activeLocale, pathname, query, asPath } = router;
+	const { locales } = useRouter();
+
 	return (
 		<M.Affix position={userMenuPosition}>
 			<Menu>
-				{pathname !== '/' && (
-					<M.Menu.Item icon={<I.HomeIcon />}>
-						<Link passHref href={'/'}>
-							<M.Text size="xs" color="dimmed">
-								Home
-							</M.Text>
-						</Link>
-					</M.Menu.Item>
-				)}
-				{pathname !== '/dev' && (
-					<M.Menu.Item icon={<I.ActivityLogIcon />}>
-						<Link passHref href={'/dev'}>
-							<M.Text size="xs" color="dimmed">
-								Dev Tools
-							</M.Text>
-						</Link>
-					</M.Menu.Item>
-				)}
+				<M.Menu.Label>{t('userSettings.pages.title')}</M.Menu.Label>
+				<PageLink
+					href="/"
+					icon={<I.HomeIcon />}
+					label={t('userSettings.pages.home')}
+				/>
+				<PageLink
+					href="/about"
+					icon={
+						<FontAwesomeIcon icon={faUserAstronaut} size={'lg'} radius="xl" />
+					}
+					label={t('userSettings.pages.about')}
+				/>
+				<PageLink
+					href="/dev"
+					icon={<I.ActivityLogIcon />}
+					label={t('userSettings.pages.dev')}
+				/>
 				<M.Divider />
-				<M.Menu.Label>Color Theme</M.Menu.Label>
-
+				<M.Menu.Label>{t('userSettings.colorTheme.title')}</M.Menu.Label>
 				<M.Menu.Item
-					icon={isDark ? <I.SunIcon /> : <I.MoonIcon />}
+					icon={
+						isDark ? (
+							<I.SunIcon color="yellow" />
+						) : (
+							<I.MoonIcon color="silver" />
+						)
+					}
 					onClick={() => toggleColorScheme()}
 					rightSection={
 						<M.Text size="xs" color="dimmed">
 							⌘J
 						</M.Text>
 					}>
-					{isDark ? 'Light' : 'Dark'}
+					{isDark
+						? t('userSettings.colorTheme.light')
+						: t('userSettings.colorTheme.dark')}
 				</M.Menu.Item>
 				<M.Divider />
-
 				<M.Menu.Label>
 					<M.Group>
 						<I.GlobeIcon />
-						Languages
+						{t('userSettings.languages.title')}
 					</M.Group>
 				</M.Menu.Label>
-				{locales?.map((locale) =>
-					locale === activeLocale ? (
-						<M.Menu.Item
-							key={locale}
-							disabled
-							sx={({ colors }) => ({
-								border: `solid 1px ${isDark ? colors.teal[7] : colors.cyan[3]}`,
-							})}
-							icon={<LanguageIcon locale={locale} />}>
-							<M.Text size="xs" color="dimmed">
-								{locale}
-							</M.Text>
-						</M.Menu.Item>
-					) : (
-						<M.Menu.Item key={locale} icon={<LanguageIcon locale={locale} />}>
-							<Link
-								href={{ pathname, query }}
-								as={asPath}
-								locale={locale}
-								passHref>
-								<M.Text size="xs" color="dimmed">
-									{locale}
-								</M.Text>
-							</Link>
-						</M.Menu.Item>
-					),
-				)}
+				{locales?.map((locale) => (
+					<LanguageLink
+						key={locale}
+						locale={locale}
+						label={t(`userSettings.languages.${locale}`)}
+					/>
+				))}
 			</Menu>
 		</M.Affix>
 	);
 };
 
 export default UserSettings;
-
-const LanguageIcon: React.FC<{ locale: string }> = ({ locale }) => (
-	<M.Avatar
-		mt={7.5}
-		radius="xl"
-		src={`/flags/${locale}.png`}
-		alt={`${locale}`}
-	/>
-);

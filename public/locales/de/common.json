@@ -35,5 +35,21 @@
 			"ides": "IDEs",
 			"packageManagers": "Paketmanagers"
 		}
+	},
+	"userSettings": {
+		"pages": {
+			"title": "Seiten",
+			"home": "Zu Hause",
+			"about": "Über mich",
+			"dev": "Entwicklungstools"
+		},
+		"colorTheme": {
+			"title": "Farbthema",
+			"dark": "Dunkel",
+			"light": "Licht"
+		},
+		"languages": {
+			"title": "Sprachen"
+		}
 	}
 }

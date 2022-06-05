@@ -233,34 +233,42 @@ const titlesAndIcons = [
 	{
 		title: 'languages',
 		devTools: langLogos,
+		icon: 'faCode',
 	},
 	{
 		title: 'frontend',
 		devTools: frontLogos,
+		icon: 'faDesktop',
 	},
 	{
 		title: 'backend',
 		devTools: backLogos,
+		icon: 'faServer',
 	},
 	{
 		title: 'databases',
 		devTools: databaseLogos,
+		icon: 'faDatabase',
 	},
 	{
 		title: 'design',
 		devTools: designLogos,
+		icon: 'faDrawPolygon',
 	},
 	{
 		title: 'versionControl',
 		devTools: versionControlLogos,
+		icon: 'faCodeBranch',
 	},
 	{
 		title: 'ides',
 		devTools: ideLogos,
+		icon: 'faWindowRestore',
 	},
 	{
 		title: 'packageManagers',
 		devTools: packagesManagerLogos,
+		icon: 'faClipboardList',
 	},
 ];
 

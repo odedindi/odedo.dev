@@ -1,6 +1,6 @@
 {
 	"title": "About",
-	"hi": "Hi, I'm Oded a Full-Stack Developer",
+	"hi": "Hi, I'm Oded",
 	"storyStart": "My coding journey started in high school far in the early 2000's and my web development adventure began in 2020, as I decided to redirect my professional career.",
 	"storyCurrent": {
 		"intro": "Mostly I freelance, build my own projects, or collaborate, for exemple together with ",
@@ -12,8 +12,7 @@
 	},
 	"aboutMe": {
 		"first": "I'm a confident and capable individual, enjoy and profit from team work, curious by nature, and perpetually eager and work on improving my skills one problem at a time.",
-		"second": "I love diving, camping and traveling in the outdoor, will never say no for a cup of coffee under a tree with some nice view, building and repairing stuff, reading, good music and films, and on top of all I love my wife and daughter.",
-		"third": "I love reading code as well as code things from scratch, and enjoy very much bringing to life ideas on the browser."
+		"second": "I love diving, camping and traveling in the outdoor, will never say no for a cup of coffee under a tree with some nice view, building and repairing stuff, reading, good music and films, and on top of all I love my wife and daughters."
 	},
 	"like to use": "Dev tools I like using",
 	"languages": "Languages",
