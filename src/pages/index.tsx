@@ -39,7 +39,6 @@ const Home: NextPage = () => {
 					</Container>
 				</Grid.Col> */}
 				<Container padding={15}>
-					<Space h={'md'} />
 					<Positions />
 					<Space h={'md'} />
 					<Education />
