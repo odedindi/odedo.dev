@@ -22,23 +22,23 @@ const Home: NextPage = () => {
 			<Objective />
 			<Divider my={15} />
 			<Grid grow>
-				<Grid.Col span={12}></Grid.Col>
+				{/* <Grid.Col span={12}></Grid.Col>
 				<Grid.Col sm={12} md={5}>
 					<Sidebar />
 				</Grid.Col>
-				<Grid.Col sm={12} md={7}>
-					<Container padding={15}>
-						<Accordion multiple initialItem={0}>
-							<Accordion.Item label="Experience">
-								<Positions />
-							</Accordion.Item>
+				<Grid.Col sm={12} md={7}> */}
+				<Container padding={15}>
+					<Accordion multiple initialItem={0}>
+						<Accordion.Item label="Experience">
+							<Positions />
+						</Accordion.Item>
 
-							<Accordion.Item label="Education">
-								<Education />
-							</Accordion.Item>
-						</Accordion>
-					</Container>
-				</Grid.Col>
+						<Accordion.Item label="Education">
+							<Education />
+						</Accordion.Item>
+					</Accordion>
+				</Container>
+				{/* </Grid.Col> */}
 			</Grid>
 			<Footer />
 		</AppShell>

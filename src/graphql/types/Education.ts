@@ -31,7 +31,7 @@ export const EducationQuery = extendType({
 			args: { id: idArg() },
 			// @ts-ignore
 			resolve: (_root, { id }: { id: string }, { db: { education } }) =>
-				education.find((e:EducationT) => e.id === id),
+				education.find((e: EducationT) => e.id === id),
 		});
 	},
 });

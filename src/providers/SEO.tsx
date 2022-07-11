@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { DefaultSeo } from 'next-seo';
+// import { DefaultSeo } from 'next-seo';
 
 const defaultSEO = {
 	title: 'Oded Winberger CV',
@@ -25,7 +25,7 @@ const SEOProvider: React.FC<SEOProps> = ({
 	url,
 }) => (
 	<>
-		<DefaultSeo {...extendSEO({ title, description, image, url })} />
+		{/* <DefaultSeo {...extendSEO({ title, description, image, url })} /> */}
 		<Head>
 			<title>{`Oded Winberger GraphQL CV`}</title>
 			<meta charSet="utf-8" />
