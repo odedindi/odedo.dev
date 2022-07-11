@@ -28,15 +28,15 @@ const Home: NextPage = () => {
 				</Grid.Col>
 				<Grid.Col sm={12} md={7}> */}
 				<Container padding={15}>
-					<Accordion multiple initialItem={0}>
-						<Accordion.Item label="Experience">
+					{/* <Accordion multiple initialItem={0}> */}
+						{/* <Accordion.Item label="Experience"> */}
 							<Positions />
-						</Accordion.Item>
+						{/* </Accordion.Item> */}
 
-						<Accordion.Item label="Education">
+						{/* <Accordion.Item label="Education"> */}
 							<Education />
-						</Accordion.Item>
-					</Accordion>
+						{/* </Accordion.Item> */}
+					{/* </Accordion> */}
 				</Container>
 				{/* </Grid.Col> */}
 			</Grid>
