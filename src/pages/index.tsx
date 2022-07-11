@@ -5,7 +5,7 @@ import {
 	Container,
 	Divider,
 	Grid,
-	Center,
+	Space,
 } from '@mantine/core';
 import Objective from 'src/components/CV/Objective';
 import Positions from 'src/components/CV/Positions';
@@ -26,19 +26,24 @@ const Home: NextPage = () => {
 				<Grid.Col sm={12} md={5}>
 					<Sidebar />
 				</Grid.Col>
-				<Grid.Col sm={12} md={7}> */}
+				<Grid.Col sm={12} md={7}>
+					<Container padding={15}>
+						<Accordion multiple initialItem={0}>
+							<Accordion.Item label="Experience">
+								<Positions />
+							</Accordion.Item>
+							<Accordion.Item label="Education">
+								<Education />
+							</Accordion.Item>
+						</Accordion>
+					</Container>
+				</Grid.Col> */}
 				<Container padding={15}>
-					{/* <Accordion multiple initialItem={0}> */}
-						{/* <Accordion.Item label="Experience"> */}
-							<Positions />
-						{/* </Accordion.Item> */}
-
-						{/* <Accordion.Item label="Education"> */}
-							<Education />
-						{/* </Accordion.Item> */}
-					{/* </Accordion> */}
+					<Space h={'md'} />
+					<Positions />
+					<Space h={'md'} />
+					<Education />
 				</Container>
-				{/* </Grid.Col> */}
 			</Grid>
 			<Footer />
 		</AppShell>
