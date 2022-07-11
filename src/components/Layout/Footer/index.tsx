@@ -3,7 +3,7 @@ import * as S from './styles';
 
 import { useGithubStats } from 'src/hooks';
 
-import { ActionIcon, Group, Text } from '@mantine/core';
+import { ActionIcon, Anchor, Group, Text } from '@mantine/core';
 import { Share1Icon, StarIcon } from '@modulz/radix-icons';
 
 export const Footer = () => {
@@ -24,12 +24,17 @@ export const Footer = () => {
 	];
 	return (
 		<S.Footer>
-			<Group>
+			{/* <Group>
 				{statButtons.map(({ link, title, value }) => (
 					<StatButton key={title} link={link} title={title} value={value} />
 				))}
-			</Group>
-			<Text>&copy; 2022 ODEDINDI</Text>
+			</Group> */}
+			<Text>
+				&copy; 2022{' '}
+				<Anchor href="https://odedo.dev" underline={false}>
+					ODEDINDI
+				</Anchor>
+			</Text>
 		</S.Footer>
 	);
 };
