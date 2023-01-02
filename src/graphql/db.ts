@@ -38,11 +38,24 @@ export const db: Db = {
 	},
 	positions: [
 		{
+			id: '7',
+			title: 'Junior Software developer',
+			company: 'Panter AG',
+			startDate: '2022-08-01',
+			endDate: undefined,
+			employmentType: 'full employment',
+			location: 'Zurich, Switzerland',
+			achievements: [
+				'Work with and learn from incredible engineers',
+				'Technologies involved: TypeScript (Next.js), GraphQL, Kubernetes, catladder.',
+			],
+		},
+		{
 			id: '6',
 			title: 'Frontend',
 			company: 'Credit-Suisse',
 			startDate: '2022-05-01',
-			endDate: undefined,
+			endDate: '2022-07-15',
 			employmentType: 'Sub-contract throught Tata Consultancy Services',
 			location: 'Zurich, Switzerland',
 			achievements: [

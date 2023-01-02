@@ -9,15 +9,31 @@ export const Header = () => {
 		<Container mt={25}>
 			<Center>
 				<Group direction="column">
-					<>
-						<Title order={1}>{me?.name ?? 'Oded Winberger CV'}</Title>
-						<Title order={2}>{me?.tagline ?? 'loading...'}</Title>
-						<Center style={{ width: '100%' }}>
-							<Avatar src={avatar} alt="it's me" radius={100} size={150} />
-						</Center>
-					</>
+					<Title
+						sx={() => ({ textTransform: 'uppercase', margin: 'auto' })}
+						order={1}
+					>
+						{me?.name ?? 'Oded Winberger CV'}
+					</Title>
+
+					<Title sx={() => ({ margin: 'auto' })} order={2}>
+						{me?.tagline ?? 'loading...'}
+					</Title>
+
+					<Avatar
+						sx={() => ({ margin: 'auto' })}
+						src={avatar}
+						alt="it's me"
+						radius={100}
+						size={150}
+					/>
 				</Group>
 			</Center>
 		</Container>
 	);
 };
+
+// <M.Title sx={() => ({ textTransform: 'uppercase' })}>
+// Oded Winberger
+// </M.Title>
+// <M.Title>Full Stack Developer</M.Title>

@@ -9,7 +9,7 @@ export const Sidebar: React.FC = () => (
 	<Center>
 		<S.Sidebar>
 			<ContactSection />
-			<SyntaxHighlighter />
+			{process.env.NODE_ENV === 'development' ? <SyntaxHighlighter /> : null}
 		</S.Sidebar>
 	</Center>
 );

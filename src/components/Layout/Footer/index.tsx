@@ -3,12 +3,12 @@ import * as S from './styles';
 
 import { useGithubStats } from 'src/hooks';
 
-import { ActionIcon, Anchor, Group, Text } from '@mantine/core';
+import { ActionIcon, Group, Title } from '@mantine/core';
 import { Share1Icon, StarIcon } from '@modulz/radix-icons';
 
 export const Footer = () => {
 	const owner = 'odedindi';
-	const repo = 'MyCV';
+	const repo = 'odedo.dev';
 	const { data: stats } = useGithubStats(owner, repo);
 	const statButtons: GithubStatsButton[] = [
 		{
@@ -24,17 +24,22 @@ export const Footer = () => {
 	];
 	return (
 		<S.Footer>
-			{/* <Group>
+			<Title
+				sx={(theme) => ({
+					color:
+						theme.colorScheme === 'dark'
+							? theme.colors.cyan[9]
+							: theme.colors.teal[5],
+					fontSize: theme.fontSizes.xl,
+				})}
+			>
+				&copy; {new Date().getFullYear()} ODEDINDI
+			</Title>
+			<Group>
 				{statButtons.map(({ link, title, value }) => (
 					<StatButton key={title} link={link} title={title} value={value} />
 				))}
-			</Group> */}
-			<Text>
-				&copy; 2022{' '}
-				<Anchor href="https://odedo.dev" underline={false}>
-					ODEDINDI
-				</Anchor>
-			</Text>
+			</Group>
 		</S.Footer>
 	);
 };

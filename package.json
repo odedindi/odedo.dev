@@ -29,6 +29,7 @@
 		"graphql": "^15.5.3",
 		"graphql-scalars": "^1.15.0",
 		"gsap": "^3.9.1",
+		"lodash": "^4.17.21",
 		"micro": "^9.3.4",
 		"next": "^12.1.0",
 		"next-seo": "^5.1.0",
@@ -38,10 +39,12 @@
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
 		"react-query": "^3.34.16",
+		"react-social-icons": "^5.15.0",
 		"styled-components": "^5.3.1"
 	},
 	"devDependencies": {
 		"@types/graphql": "^14.5.0",
+		"@types/lodash": "^4.14.191",
 		"@types/nprogress": "^0.2.0",
 		"@types/react": "^17.0.39",
 		"@types/styled-components": "^5.1.24",
