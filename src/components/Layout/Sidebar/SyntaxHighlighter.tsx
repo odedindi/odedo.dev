@@ -9,17 +9,23 @@ import { PlusCircledIcon } from '@modulz/radix-icons';
 export const SyntaxHighlighter = () => {
 	const { language, queries } = useMyQueries();
 	return (
-		<>
-			<Title align="center">Queries</Title>
-			<Divider my={15} />
-			<Accordion multiple icon={<PlusCircledIcon />}>
-				{queries.map(({ code, label }) => (
-					<Accordion.Item key={label} label={`${label}`}>
-						<Prism language={language}>{print(code)}</Prism>
-					</Accordion.Item>
-				))}
-			</Accordion>
-		</>
+		<Accordion>
+			<Accordion.Item
+				label={
+					<Title align="center" sx={{ position: 'relative', left: '-1.5rem' }}>
+						Queries
+					</Title>
+				}
+			>
+				<Accordion multiple icon={<PlusCircledIcon />}>
+					{queries.map(({ code, label }) => (
+						<Accordion.Item key={label} label={`${label}`}>
+							<Prism language={language}>{print(code)}</Prism>
+						</Accordion.Item>
+					))}
+				</Accordion>
+			</Accordion.Item>
+		</Accordion>
 	);
 };
 

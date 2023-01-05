@@ -68,7 +68,7 @@ export const ContactSection: React.FC = () => {
 					))}
 				</Group>
 			</Center>
-			<Divider my={15} />
+			<Divider mt={15} />
 		</>
 	);
 };

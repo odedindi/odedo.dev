@@ -7,13 +7,16 @@ export const Header = () => {
 
 	return (
 		<Container mt={25}>
-			<Center>
+			<Center mt={'3.5rem'}>
 				<Group direction="column">
 					<Title
-						sx={() => ({ textTransform: 'uppercase', margin: 'auto' })}
+						sx={() => ({
+							textTransform: 'uppercase',
+							textAlign: 'center',
+						})}
 						order={1}
 					>
-						{me?.name ?? 'Oded Winberger CV'}
+						{me?.name}
 					</Title>
 
 					<Title sx={() => ({ margin: 'auto' })} order={2}>
@@ -32,8 +35,3 @@ export const Header = () => {
 		</Container>
 	);
 };
-
-// <M.Title sx={() => ({ textTransform: 'uppercase' })}>
-// Oded Winberger
-// </M.Title>
-// <M.Title>Full Stack Developer</M.Title>

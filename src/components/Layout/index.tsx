@@ -14,10 +14,10 @@ const Layout: React.FC<PropsWithChildren<LayoutProps>> = ({
 		<Head>
 			<title>{pageTitle}</title>
 		</Head>
-		<AppShell padding="md" header={<Header />}>
-			<Box sx={{ minHeight: '35vh' }}>{children}</Box>
-			<Footer />
+		<AppShell padding="md" header={<Header />} sx={{ minHeight: '90vh' }}>
+			<Box sx={{}}>{children}</Box>
 		</AppShell>
+		<Footer />
 	</>
 );
 
