@@ -56,7 +56,7 @@ export const CVLink: React.FC = () => {
 						width: locale === 'de' ? '15em' : '10em',
 					})}
 				>
-					<TextWithTypeWriterEffect text="Check out my kinda recent CV here" />
+					<TextWithTypeWriterEffect text="Download my CV here" />
 				</Anchor>
 			</Link>
 		</Affix>
