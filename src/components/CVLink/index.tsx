@@ -43,7 +43,7 @@ export const CVLink: React.FC = () => {
 	};
 	return (
 		<Affix position={linkPosition}>
-			<Link href={'/cv'} passHref>
+			<Link href={'/assets/cv_oded_winberger.pdf'} passHref>
 				<Anchor
 					target="_blank"
 					rel="noreferrer noopener"

@@ -2,7 +2,6 @@ import React, { PropsWithChildren } from 'react';
 import Head from 'next/head';
 import { AppShell, Box } from '@mantine/core';
 import { Header } from './Header';
-import { Footer } from 'src/components/Layout/Footer';
 
 type LayoutProps = { pageTitle?: string };
 
@@ -13,11 +12,11 @@ const Layout: React.FC<PropsWithChildren<LayoutProps>> = ({
 	<>
 		<Head>
 			<title>{pageTitle}</title>
+			<link rel="icon" href="/favicon.ico" sizes="any" />
 		</Head>
 		<AppShell padding="md" header={<Header />} sx={{ minHeight: '90vh' }}>
-			<Box sx={{}}>{children}</Box>
+			<Box>{children}</Box>
 		</AppShell>
-		<Footer />
 	</>
 );
 

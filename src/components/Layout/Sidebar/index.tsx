@@ -1,16 +1,20 @@
 import * as React from 'react';
-import * as S from './styles';
 
 import ContactSection from './ContactSection';
 import SyntaxHighlighter from './SyntaxHighlighter';
 import { Center } from '@mantine/core';
+import styled from 'styled-components';
 
-export const Sidebar: React.FC = () => (
+const Aside = styled.aside`
+	width: 100%;
+`;
+
+const Sidebar: React.FC = () => (
 	<Center>
-		<S.Sidebar>
+		<Aside>
 			<ContactSection />
 			{process.env.NODE_ENV === 'development' ? <SyntaxHighlighter /> : null}
-		</S.Sidebar>
+		</Aside>
 	</Center>
 );
 
