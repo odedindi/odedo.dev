@@ -39,7 +39,7 @@ export const db: Db = {
 	positions: [
 		{
 			id: '7',
-			title: 'Junior Software developer',
+			title: 'Full Stack Software developer',
 			company: 'Panter AG',
 			startDate: '2022-08-01',
 			endDate: undefined,
@@ -47,7 +47,7 @@ export const db: Db = {
 			location: 'Zurich, Switzerland',
 			achievements: [
 				'Work with and learn from incredible engineers',
-				'Technologies involved: TypeScript (Next.js), GraphQL, Kubernetes, catladder.',
+				'Technologies involved: Google Cloud, Docker, PostgresQL, GraphQL, Express, Apollo, Prisma, Pothos, Next.js',
 			],
 		},
 		{
@@ -78,20 +78,20 @@ export const db: Db = {
 				'Technologies involved: TypeScript (Angular.js), Nx, RestAPIs.',
 			],
 		},
-		{
-			id: '4',
-			title: 'Developer',
-			company: 'Beacon Geo App',
-			startDate: '2021-11-01',
-			endDate: '2021-12-30',
-			employmentType: 'Side Project',
-			location: 'Luzern, Switzerland',
-			achievements: [
-				'Build an advanced live chat app with geo-location aspects, such as distance preferences, live data visualization.',
-				'Technologies involved: TypeScript (React.js, Nest.js), PostgreSQL, PostGIS, Docker.',
-				'Code: https://github.com/odedindi/GeoChat',
-			],
-		},
+		// {
+		// 	id: '4',
+		// 	title: 'Developer',
+		// 	company: 'Beacon Geo App',
+		// 	startDate: '2021-11-01',
+		// 	endDate: '2021-12-30',
+		// 	employmentType: 'Side Project',
+		// 	location: 'Luzern, Switzerland',
+		// 	achievements: [
+		// 		'Build an advanced live chat app with geo-location aspects, such as distance preferences, live data visualization.',
+		// 		'Technologies involved: TypeScript (React.js, Nest.js), PostgreSQL, PostGIS, Docker.',
+		// 		'Code: https://github.com/odedindi/GeoChat',
+		// 	],
+		// },
 		{
 			id: '3',
 			title: 'Full Stack',
@@ -123,21 +123,21 @@ export const db: Db = {
 				'Code: https://github.com/odedindi/basicallyReact/tree/master/djone',
 			],
 		},
-		{
-			id: '1',
-			title: 'Full Stack',
-			company: 'Propulsion Academy (SIT)',
-			startDate: '2021-03-10',
-			endDate: '2021-03-15',
-			employmentType: 'Boot Camp Project',
-			location: 'Zurich, Switzerland',
-			achievements: [
-				'Processing incoming data feeds, building restaurants and restaurants reviews search engine and APIs which are consumed by iOS, Android, and Web clients.',
-				'Team of 5 developers.',
-				'Technologies involved: JavaScript (React.js), Python (DRF), PostgreSQL, Figma.',
-				'Code: https://github.com/odedindi/basicallyReact/tree/master/luna',
-			],
-		},
+		// {
+		// 	id: '1',
+		// 	title: 'Full Stack',
+		// 	company: 'Propulsion Academy (SIT)',
+		// 	startDate: '2021-03-10',
+		// 	endDate: '2021-03-15',
+		// 	employmentType: 'Boot Camp Project',
+		// 	location: 'Zurich, Switzerland',
+		// 	achievements: [
+		// 		'Processing incoming data feeds, building restaurants and restaurants reviews search engine and APIs which are consumed by iOS, Android, and Web clients.',
+		// 		'Team of 5 developers.',
+		// 		'Technologies involved: JavaScript (React.js), Python (DRF), PostgreSQL, Figma.',
+		// 		'Code: https://github.com/odedindi/basicallyReact/tree/master/luna',
+		// 	],
+		// },
 	],
 	otherExperience: [
 		{
