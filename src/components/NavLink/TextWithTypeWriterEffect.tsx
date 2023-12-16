@@ -1,35 +1,36 @@
-import * as React from 'react';
+import { FC, useRef, useEffect } from 'react';
 
 import gsap from 'gsap';
 import { TextPlugin } from 'gsap/dist/TextPlugin';
 
-const TextWithTypeWriterEffect: React.FC<{ text?: string }> = ({
-	text = '',
-}) => {
+const random = (min: number, max: number): number =>
+	Math.random() * (max - min) + min;
+
+const TextWithTypeWriterEffect: FC<{ text?: string }> = ({ text = '' }) => {
 	const titleLength: number = text.length - 1 ?? 1;
 
-	const content = React.useRef<HTMLSpanElement>(undefined!);
-	const cursor = React.useRef<HTMLSpanElement>(undefined!);
+	const content = useRef<HTMLSpanElement>(undefined!);
+	const cursor = useRef<HTMLSpanElement>(undefined!);
 
-	React.useEffect(() => {
+	useEffect(() => {
 		gsap.registerPlugin(TextPlugin);
+		const duration = random(0.5, 1);
 		const cursorTween = gsap.fromTo(
 			cursor.current,
 			{ autoAlpha: 0 },
 			{
 				autoAlpha: 1,
 				text: { value: '|' },
-				duration: 0.5,
-				repeat: -1,
-				ease: `StappedEase.config(${titleLength})`,
+				duration: duration / 4,
+				repeat: titleLength,
 			},
 		);
 
 		const contentTween = gsap.to(content.current, {
 			text: { value: text },
-			duration: 4,
-			delay: 3,
-			ease: 'none',
+			duration,
+			delay: duration * 1.5,
+			ease: `StappedEase.config(${titleLength})`,
 		});
 
 		return () => {
