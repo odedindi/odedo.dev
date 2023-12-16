@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { FC, useEffect, PropsWithChildren } from 'react';
 import { ApolloProvider } from '@apollo/client';
 
 import {
@@ -12,19 +12,17 @@ let apolloClient: ApolloClient<NormalizedCacheObject>;
 
 const initializeApollo = () =>
 	new ApolloClient({
-		link: new HttpLink({
-			uri: '/api/graphql',
-		}),
+		link: new HttpLink({ uri: '/api/graphql' }),
 		ssrMode: false,
 		cache: new InMemoryCache(),
 	});
 
 const useApollo = () => apolloClient ?? initializeApollo();
 
-const ClearClientCache: React.FC<{
+const ClearClientCache: FC<{
 	apolloClient: ApolloClient<NormalizedCacheObject>;
 }> = ({ apolloClient }) => {
-	React.useEffect(() => {
+	useEffect(() => {
 		// clean cache when component get destroyed
 		return () => {
 			apolloClient.resetStore();
@@ -33,7 +31,7 @@ const ClearClientCache: React.FC<{
 	return null;
 };
 
-const ApolloClientProvider: React.FC = ({ children }) => {
+const ApolloClientProvider: FC<PropsWithChildren> = ({ children }) => {
 	const client = useApollo();
 	return (
 		<ApolloProvider client={client}>

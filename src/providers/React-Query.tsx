@@ -1,8 +1,9 @@
+import { FC, PropsWithChildren } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { Hydrate } from 'react-query/hydration';
 
-const ReactQueryProvider: React.FC = ({ children }) => {
+const ReactQueryProvider: FC<PropsWithChildren> = ({ children }) => {
 	const client = new QueryClient();
 	return (
 		<QueryClientProvider client={client}>

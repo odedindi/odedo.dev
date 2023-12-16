@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
-import Head from 'next/head';
 import { AppShell, Box } from '@mantine/core';
 import { Header } from './Header';
+import SEOProvider from 'src/providers/SEO';
 
 type LayoutProps = { pageTitle?: string };
 
@@ -10,11 +10,12 @@ const Layout: React.FC<PropsWithChildren<LayoutProps>> = ({
 	pageTitle,
 }) => (
 	<>
-		<Head>
-			<title>{pageTitle}</title>
-			<link rel="icon" href="/favicon.ico" sizes="any" />
-		</Head>
-		<AppShell padding="md" header={<Header />} sx={{ minHeight: '90vh' }}>
+		<SEOProvider title={pageTitle} />
+		<AppShell
+			padding="md"
+			header={<Header />}
+			sx={{ minHeight: '90vh', minWidth: '320px', overflow: 'hidden' }}
+		>
 			<Box>{children}</Box>
 		</AppShell>
 	</>

@@ -1,22 +1,15 @@
-import {
-	Anchor,
-	Center,
-	Divider,
-	Group,
-	Skeleton,
-	Text,
-	Title,
-} from '@mantine/core';
+import { Anchor, Center, Divider, Group, Skeleton, Title } from '@mantine/core';
 import { useMyContacts } from 'src/hooks';
 
 import Link from 'next/link';
+import Tooltip from 'src/components/Tooltip';
 
 export const ContactSection: React.FC = () => {
 	const myContacts = useMyContacts().data?.myContacts;
 
 	if (!myContacts) return <Skeleton height={8} radius="xl" width="80%" />;
 
-	const { email, website, github, linkedin } = myContacts;
+	const { email, github, linkedin } = myContacts;
 	const contactsSection = {
 		title: 'Contact',
 		contact: [
@@ -25,13 +18,6 @@ export const ContactSection: React.FC = () => {
 				link: {
 					href: `mailto:${email}`,
 					text: email,
-				},
-			},
-			{
-				type: 'Website',
-				link: {
-					href: website,
-					text: new URL(website).host,
 				},
 			},
 			{
@@ -55,16 +41,18 @@ export const ContactSection: React.FC = () => {
 			<Title align="center">{contactsSection.title}</Title>
 			<Divider my={15} />
 			<Center>
-				<Group direction="column">
+				<Group direction="column" align="center">
 					{contactsSection.contact.map(({ type, link: { href, text } }) => (
-						<Text key={type}>
-							<strong>{type}: </strong>
-							<Link passHref href={href}>
-								<Anchor rel="noreferrer noopener" target="_blank">
-									{text}
-								</Anchor>
-							</Link>
-						</Text>
+						<Tooltip content={text} key={type}>
+							<Anchor
+								component={Link}
+								href={href}
+								rel="noreferrer noopener"
+								target="_blank"
+							>
+								<strong>{type}</strong>
+							</Anchor>
+						</Tooltip>
 					))}
 				</Group>
 			</Center>

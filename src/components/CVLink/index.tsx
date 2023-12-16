@@ -1,7 +1,5 @@
 import * as React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-
 import { Affix, Anchor, useMantineTheme } from '@mantine/core';
 
 import TextWithTypeWriterEffect from './TextWithTypeWriterEffect';
@@ -32,33 +30,34 @@ const blueTealGradient = new Gradient({
 	deg: 250,
 });
 
-export const CVLink: React.FC = () => {
-	const { locale } = useRouter();
+type CVLinkProps = {
+	href: string;
+	label: string;
+	top?: number;
+};
+export const CVLink: React.FC<CVLinkProps> = ({ href, label, top = 20 }) => {
 	const { dir } = useMantineTheme();
 
 	const linkPosition = {
-		top: 20,
+		top,
 		left: dir === 'ltr' ? 25 : undefined,
 		right: dir === 'rtl' ? 25 : undefined,
 	};
 	return (
 		<Affix position={linkPosition}>
-			<Link href={'/assets/cv_oded_winberger.pdf'} passHref>
-				<Anchor
-					target="_blank"
-					rel="noreferrer noopener"
-					underline={false}
-					variant="gradient"
-					gradient={blueTealGradient}
-					lineClamp={2}
-					sx={(theme) => ({
-						fontSize: theme.fontSizes.xs,
-						width: locale === 'de' ? '15em' : '10em',
-					})}
-				>
-					<TextWithTypeWriterEffect text="Download my CV here" />
-				</Anchor>
-			</Link>
+			<Anchor
+				component={Link}
+				href={href}
+				target="_blank"
+				rel="noreferrer noopener"
+				underline={false}
+				variant="gradient"
+				gradient={blueTealGradient}
+				lineClamp={2}
+				sx={(theme) => ({ fontSize: theme.fontSizes.xs })}
+			>
+				<TextWithTypeWriterEffect text={label} />
+			</Anchor>
 		</Affix>
 	);
 };
