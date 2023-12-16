@@ -5,6 +5,6 @@ module.exports = {
 		styledComponents: true,
 	},
 	experimental: {
-		topLevelAwait: true,
+		// 	topLevelAwait: true,
 	},
 };

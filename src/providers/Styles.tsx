@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { FC, PropsWithChildren } from 'react';
 import {
 	ColorScheme,
 	ColorSchemeProvider,
@@ -7,7 +7,7 @@ import {
 
 import { useHotkeys, useLocalStorageValue } from '@mantine/hooks';
 
-export const StylesProvider: React.FC = ({ children }) => {
+export const StylesProvider: FC<PropsWithChildren> = ({ children }) => {
 	const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
 		key: 'OdedWinbergerCV-color-scheme',
 		defaultValue: 'dark',

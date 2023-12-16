@@ -13,3 +13,4 @@ schema.prisma
 schema.graphql
 *.env
 *.yml
+*.cjs
