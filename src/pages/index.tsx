@@ -75,7 +75,7 @@ const Home: NextPage = () => {
 						</Tooltip>
 						-year-old coding enthusiast, happily married and blessed with the
 						"joy" of raising two little legends in the scenic heart of Central
-						Switzerland for {inSwitzerland} now.
+						Switzerland for {inSwitzerland} years now.
 					</p>
 					<p>
 						In the backdrop of my life lies a colorful tapestry of experiences.
