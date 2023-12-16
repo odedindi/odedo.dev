@@ -75,18 +75,18 @@ const Home: NextPage = () => {
 						</Tooltip>
 						-year-old coding enthusiast, happily married and blessed with the
 						"joy" of raising two little legends in the scenic heart of Central
-						Switzerland for {inSwitzerland} years now.
+						Switzerland for the past {inSwitzerland} years now.
 					</p>
 					<p>
-						In the backdrop of my life lies a colorful tapestry of experiences.
-						My professiional journey started in the world of agroecology, pest
+						The backdrop of my life lies a colourful tapestry of experiences.
+						My professional journey began in the world of agroecology, pest
 						management, and agricultural development, as the tides of time
 						carried me forward, these ventures became the gateway to my journey
 						into programming, revealing a new world where I found my calling in
 						software and web development.
 					</p>
 					<p>
-						Project like{' '}
+						Projects like{' '}
 						<Tooltip
 							content={
 								<img
@@ -103,10 +103,10 @@ const Home: NextPage = () => {
 								LandPro
 							</Link>
 						</Tooltip>{' '}
-						wasn't just a project; it was an epiphany that programming was my
+						weren't just projects; it was an epiphany that programming was my
 						calling. They ignited a passion for frontend development,
-						particularly in React. This realization steered me towards embracing
-						programming not just as a skill but as a career path, where every
+						particularly in React. This realisation led me to embrace
+						coding not just as a skill but as a career path, where every
 						line of code became a brushstroke in my canvas of the matrix.
 					</p>
 					<p>
@@ -132,10 +132,10 @@ const Home: NextPage = () => {
 						. It's a neat little digital guide I put together with a colleague,
 						sort of like a dictionary, but for our solar system. It's got this
 						cool image gallery showing off the Sun and all the planets, and a
-						simple 3D model demonstrating how these planets revolve around the
+						simple 3D model showing how these planets revolve around the
 						Sun, giving you a glimpse into the dance of our cosmic neighbors.
 						Just a little side project that merges my coding passion with the
-						beauty of space.
+						passion for space.
 					</p>
 				</TypographyStylesProvider>
 			</Container>
