@@ -7,14 +7,9 @@ import Sidebar from 'src/components/Layout/Sidebar';
 import Education from 'src/components/CV/Education';
 
 import Layout from 'src/components/Layout';
-import { NavLinks } from 'src/components/NavLinks';
+import { NavMenu } from 'src/components/NavMenu';
 import { useMe } from 'src/hooks';
 
-const links = [
-	{ href: '/', label: 'Go Back Home' },
-	{ href: '/about', label: 'About me' },
-	{ href: '/assets/cv_oded_winberger.pdf', label: 'Download my CV' },
-];
 const Home: NextPage = () => {
 	const me = useMe().data?.me;
 	return (
@@ -26,7 +21,7 @@ const Home: NextPage = () => {
 				subtitle: me?.name,
 			}}
 		>
-			<NavLinks links={links} />
+			<NavMenu />
 			<Divider my={15} size={5} />
 			<Objective />
 			<Divider my={15} />
