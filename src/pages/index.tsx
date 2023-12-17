@@ -49,7 +49,7 @@ const Home: NextPage = () => {
 						/>
 						<ProjectCard
 							title="Solr"
-							description="Digital guide showcasing planets, Sun, orbits, merging code and cosmic beauty in coding adventures."
+							description="Digital guide showcasing our solar system, merging code and cosmic beauty."
 							imageProps={{
 								src: 'https://solr.vercel.app/icons/apple-touch-icon.png',
 								alt: 'solr',
