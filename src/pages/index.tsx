@@ -34,7 +34,7 @@ const Home: NextPage = () => {
 					</h3>
 					<p>
 						I'll fill this out more thoroughly, and add more of the projects but
-						For now, here are 2 nice ones.
+						for now, here are 2 nice ones.
 					</p>
 					<Space style={{ height: 100 }} />
 					<Group position="apart" style={{ gap: '24px' }}>
