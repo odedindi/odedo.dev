@@ -11,7 +11,7 @@ import Layout from 'src/components/Layout';
 import React, { FC } from 'react';
 import ContactMeButtons from 'src/components/ContactMe';
 import gsap from 'gsap';
-import { NavLinks } from 'src/components/NavLink';
+import { NavLinks } from 'src/components/NavLinks';
 
 import dayjs from 'dayjs';
 import Link from 'next/link';

@@ -74,17 +74,5 @@ const NavLink: FC<NavLinkProps> = ({
 		</Affix>
 	);
 };
-export const NavLinks: FC<{
-	links: {
-		href: string;
-		label: string;
-		target?: HTMLAttributeAnchorTarget;
-	}[];
-}> = ({ links }) => (
-	<>
-		{links.map((link, i) => (
-			<NavLink key={i} {...link} top={(i + 1) * 20} left={25} right={25} />
-		))}
-	</>
-);
-export default NavLinks;
+
+export default NavLink;

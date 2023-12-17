@@ -7,7 +7,7 @@ import Sidebar from 'src/components/Layout/Sidebar';
 import Education from 'src/components/CV/Education';
 
 import Layout from 'src/components/Layout';
-import { NavLinks } from 'src/components/NavLink';
+import { NavLinks } from 'src/components/NavLinks';
 import { useMe } from 'src/hooks';
 
 const links = [

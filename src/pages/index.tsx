@@ -8,7 +8,7 @@ import {
 } from '@mantine/core';
 
 import Layout from 'src/components/Layout';
-import { NavLinks } from 'src/components/NavLink';
+import { NavLinks } from 'src/components/NavLinks';
 import ProjectCard from 'src/components/ProjectCard';
 
 const links = [
