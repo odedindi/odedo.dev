@@ -42,7 +42,7 @@ const Home: NextPage = () => {
 							title="LandPro"
 							description="The power of A.I. and satellite at your finger-tips, allows you to estimate how much carbon there is in cropland’s soil and vegetation."
 							imageProps={{
-								src: 'https://land-pro.vercel.app/_next/image?url=%2Fassets%2Flogos%2Flogo.png&w=64&q=75',
+								src: 'https://land-pro.vercel.app/favicon.png',
 								alt: 'langpro logo',
 							}}
 							linkProps={{ href: 'https://land-pro.vercel.app/' }}
