@@ -6,7 +6,10 @@ import { TextPlugin } from 'gsap/dist/TextPlugin';
 const random = (min: number, max: number): number =>
 	Math.random() * (max - min) + min;
 
-const TextWithTypeWriterEffect: FC<{ text?: string }> = ({ text = '' }) => {
+const TextWithTypeWriterEffect: FC<{ text?: string; dontShow?: boolean }> = ({
+	text = '',
+	dontShow,
+}) => {
 	const titleLength: number = text.length - 1 ?? 1;
 
 	const content = useRef<HTMLSpanElement>(undefined!);
@@ -21,7 +24,7 @@ const TextWithTypeWriterEffect: FC<{ text?: string }> = ({ text = '' }) => {
 			{
 				autoAlpha: 1,
 				text: { value: '|' },
-				duration: duration / 4,
+				duration: duration,
 				repeat: titleLength,
 			},
 		);
@@ -33,11 +36,16 @@ const TextWithTypeWriterEffect: FC<{ text?: string }> = ({ text = '' }) => {
 			ease: `StappedEase.config(${titleLength})`,
 		});
 
+		if (dontShow) {
+			cursorTween.pause(duration / 2);
+			contentTween.pause();
+		}
+
 		return () => {
 			cursorTween.kill();
 			contentTween.kill();
 		};
-	}, [text, titleLength]);
+	}, [dontShow, text, titleLength]);
 	return (
 		<span ref={content} id="text">
 			<span ref={cursor} id="cursor" />

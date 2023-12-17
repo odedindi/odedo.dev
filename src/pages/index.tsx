@@ -8,18 +8,13 @@ import {
 } from '@mantine/core';
 
 import Layout from 'src/components/Layout';
-import { NavLinks } from 'src/components/NavLinks';
+import { NavMenu } from 'src/components/NavMenu';
 import ProjectCard from 'src/components/ProjectCard';
-
-const links = [
-	{ href: '/about', label: 'About me' },
-	{ href: '/cv', label: 'Checkout my CV' },
-];
 
 const Home: NextPage = () => {
 	return (
 		<Layout>
-			<NavLinks links={links} />
+			<NavMenu />
 
 			<Container
 				sx={{

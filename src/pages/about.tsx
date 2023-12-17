@@ -11,7 +11,7 @@ import Layout from 'src/components/Layout';
 import React, { FC } from 'react';
 import ContactMeButtons from 'src/components/ContactMe';
 import gsap from 'gsap';
-import { NavLinks } from 'src/components/NavLinks';
+import { NavMenu } from 'src/components/NavMenu';
 
 import dayjs from 'dayjs';
 import Link from 'next/link';
@@ -20,11 +20,6 @@ import { useMe } from 'src/hooks';
 
 const Tooltip = dynamic(() => import('src/components/Tooltip'), { ssr: false });
 const yearDiff = (year: string) => dayjs().diff(year, 'year');
-
-const links = [
-	{ href: '/', label: 'Go Back Home' },
-	{ href: '/cv', label: 'Checkout my CV' },
-];
 
 const AboutPage: NextPage = () => {
 	const me = useMe().data?.me;
@@ -40,7 +35,7 @@ const AboutPage: NextPage = () => {
 				subtitle: me?.name,
 			}}
 		>
-			<NavLinks links={links} />
+			<NavMenu />
 			<Container
 				sx={{
 					display: 'flex',
