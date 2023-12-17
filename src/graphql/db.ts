@@ -104,7 +104,7 @@ export const db: Db = {
 				'Develop a deep learning AI-model to analyze carbon content in soils, using infrared & radar data to evaluate the land productivity over time.',
 				'Team of 2 developers and 5 data scientists.',
 				'Technologies involved: TypeScript (Next.js), Python (DRF), PostgreSQL, Docker, Nginx, DigitalOcean.',
-				'Live demo: "https://land-pro.vercel.app/"',
+				'Live demo: https://land-pro.vercel.app/',
 				'Code: https://github.com/odedindi/landpro_landing',
 			],
 		},
