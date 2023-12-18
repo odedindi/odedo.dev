@@ -22,12 +22,12 @@ const links = [
 	{ href: '/', label: 'Go Back Home' },
 	{ href: '/about', label: 'About Me' },
 	{ href: '/cv', label: 'Checkout Me CV' },
-	{ href: '/assets/cv_oded_winberger.pdf', label: 'Download PDF' },
+	{ href: '/assets/cv_oded_winberger.pdf', label: 'You can download my CV here' },
 ];
 type PagePathname = '/' | '/about' | '/cv';
 
 const navLinksIndexes: { [Pathname in PagePathname]: number[] } = {
-	'/': [1, 2],
+	'/': [3], //[1, 2],
 	'/about': [0, 2],
 	'/cv': [0, 1, 3],
 };
