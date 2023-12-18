@@ -3,7 +3,8 @@ import { DefaultSeo } from 'next-seo';
 
 const defaultSEO = {
 	title: 'Oded Winberger',
-	description: 'My business card, kinda.',
+	description:
+		'Kind of a place to store my stuff, host live projects, that sort of a thing.',
 	image: '/assets/avatar.png',
 };
 
