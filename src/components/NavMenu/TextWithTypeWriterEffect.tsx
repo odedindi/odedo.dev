@@ -6,9 +6,14 @@ import { TextPlugin } from 'gsap/dist/TextPlugin';
 const random = (min: number, max: number): number =>
 	Math.random() * (max - min) + min;
 
-const TextWithTypeWriterEffect: FC<{ text?: string; dontShow?: boolean }> = ({
+type TextWithTypeWriterEffectProps = {
+	text?: string;
+	hide?: boolean;
+};
+
+const TextWithTypeWriterEffect: FC<TextWithTypeWriterEffectProps> = ({
 	text = '',
-	dontShow,
+	hide,
 }) => {
 	const titleLength: number = text.length - 1 ?? 1;
 
@@ -17,35 +22,41 @@ const TextWithTypeWriterEffect: FC<{ text?: string; dontShow?: boolean }> = ({
 
 	useEffect(() => {
 		gsap.registerPlugin(TextPlugin);
-		const duration = random(0.5, 1);
-		const cursorTween = gsap.fromTo(
-			cursor.current,
-			{ autoAlpha: 0 },
-			{
-				autoAlpha: 1,
-				text: { value: '|' },
-				duration: duration,
-				repeat: titleLength,
-			},
-		);
+		const duration = random(0.35, 0.5);
 
+		const cursorTween = gsap.timeline({
+			repeat: -1,
+			paused: hide,
+		});
 		const contentTween = gsap.to(content.current, {
 			text: { value: text },
 			duration,
-			delay: duration * 1.5,
-			ease: `StappedEase.config(${titleLength})`,
+			delay: random(duration, 2),
+			paused: hide,
+			onComplete: () => {
+				cursorTween.pause();
+			},
 		});
 
-		if (dontShow) {
-			cursorTween.pause(duration / 2);
-			contentTween.pause();
-		}
+		cursorTween.to(content.current, {
+			text: { value: '|' },
+			duration,
+			ease: 'none',
+			yoyo: true,
+		});
+
+		cursorTween.to(cursor.current, {
+			duration: duration / 2,
+			opacity: 0,
+			yoyo: true,
+			ease: 'none',
+		});
 
 		return () => {
 			cursorTween.kill();
 			contentTween.kill();
 		};
-	}, [dontShow, text, titleLength]);
+	}, [hide, text, titleLength]);
 	return (
 		<span ref={content} id="text">
 			<span ref={cursor} id="cursor" />

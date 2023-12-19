@@ -1,59 +1,51 @@
-import { FC, useMemo } from 'react';
+import { FC } from 'react';
 import { Affix, useMantineTheme } from '@mantine/core';
 import NavLink from './NavLink';
 import DarkModeToggler from '../DarkModeToggler';
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
 
 const Base = styled(Affix)`
-	min-height: 8rem;
+	min-height: 4rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	width: clamp(75px, 20vw, 100%);
 `;
 
 const Inner = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 0.25rem;
+	padding-top: 1.1rem;
 `;
 
-const links = [
-	{ href: '/', label: 'Go Back Home' },
-	{ href: '/about', label: 'About Me' },
-	{ href: '/cv', label: 'Checkout Me CV' },
-	{ href: '/assets/cv_oded_winberger.pdf', label: 'You can download my CV here' },
-];
-type PagePathname = '/' | '/about' | '/cv';
-
-const navLinksIndexes: { [Pathname in PagePathname]: number[] } = {
-	'/': [3], //[1, 2],
-	'/about': [0, 2],
-	'/cv': [0, 1, 3],
+const links = {
+	// home: { id: 'home', href: '/', label: 'Go Back Home' },
+	// cv: { id: 'cv', href: '/cv', label: 'Checkout Me CV' },
+	cvPdf: {
+		id: 'cvPdf',
+		href: '/api/cv',
+		label: 'You can download my CV here',
+	},
 };
 
-export const NavMenu: FC = () => {
-	const pathname = useRouter().pathname as PagePathname;
+export const NavMenu: FC<{
+	hideLinks?: { [Key in keyof typeof links]?: boolean };
+}> = ({ hideLinks }) => {
 	const { dir } = useMantineTheme();
 
 	return (
 		<Base
 			position={{
 				top: `${20}px`,
-				left: dir === 'ltr' ? `${25}px` : undefined,
-				right: dir === 'rtl' ? `${25}px` : undefined,
+				left: dir === 'ltr' ? `${40}px` : undefined,
+				right: dir === 'rtl' ? `${40}px` : undefined,
 			}}
 		>
-			<Inner>
-				{links.map((link, i) => (
-					<NavLink
-						key={i}
-						dontShow={!navLinksIndexes[pathname].includes(i)}
-						{...link}
-					/>
-				))}
-			</Inner>
 			<DarkModeToggler />
+			<Inner>
+				<NavLink {...links.cvPdf} hide={hideLinks?.cvPdf} />
+			</Inner>
 		</Base>
 	);
 };

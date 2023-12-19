@@ -31,26 +31,26 @@ type NavLinkProps = LinkProps & {
 	label: string;
 	target?: HTMLAttributeAnchorTarget;
 	rel?: string;
-	dontShow?: boolean;
+	hide?: boolean;
 };
 
-const NavLink: FC<NavLinkProps> = ({ label, dontShow, ...props }) => (
+const NavLink: FC<NavLinkProps> = ({ label, hide, ...props }) => (
 	<Anchor
 		component={Link}
 		underline={false}
 		variant="gradient"
 		gradient={blueTealGradient}
-		lineClamp={2}
+		lineClamp={3}
 		{...props}
 		sx={(theme) => ({
 			fontSize: theme.fontSizes.xs,
 			transition: 'transform 0.2s linear',
 			':hover': { transform: 'scale(1.25)' },
-			cursor: dontShow ? 'auto' : 'pointer',
-			pointerEvents: dontShow ? 'none' : 'auto',
+			cursor: hide ? 'auto' : 'pointer',
+			pointerEvents: hide ? 'none' : 'auto',
 		})}
 	>
-		<TextWithTypeWriterEffect text={label} dontShow={dontShow} />
+		<TextWithTypeWriterEffect text={label} hide={hide} />
 	</Anchor>
 );
 

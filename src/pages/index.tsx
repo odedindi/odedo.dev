@@ -14,6 +14,7 @@ import dynamic from 'next/dynamic';
 import dayjs from 'dayjs';
 import { useMe } from 'src/hooks';
 import Link from 'next/link';
+import ContactMe from 'src/components/ContactMe';
 
 const Tooltip = dynamic(() => import('src/components/Tooltip'), { ssr: false });
 const yearDiff = (year: string) => dayjs().diff(year, 'year');
@@ -45,7 +46,7 @@ const Home: NextPage = () => {
 					<h3 style={{ textAlign: 'center' }}>
 						Hey there you tech-savvy wanderer thanks for looking me up.
 					</h3>
-					<Space style={{ height: 50 }} />
+					<Space h="xl" />
 					<p>
 						I'm a{' '}
 						<Tooltip
@@ -72,15 +73,16 @@ const Home: NextPage = () => {
 						into programming, revealing a new world where I found my calling in
 						software and web development.
 					</p>
-					<Space style={{ height: 25 }} />
+					<Space h="md" />
 					<p>
 						I'll fill this out more thoroughly, and add more of projects
 						detailed or insights into my portfolio, for now, here are 2 nice
 						ones.
 					</p>
-					<Space style={{ height: 25 }} />
+					<Space h="md" />
 					<p>
-					Diving into frontend development, particularly in React, I had a defining moment with {" "}
+						Diving into frontend development, particularly in React, I had a
+						defining moment with{' '}
 						<Tooltip
 							content={
 								<img
@@ -97,15 +99,15 @@ const Home: NextPage = () => {
 								LandPro
 							</Link>
 						</Tooltip>
-						, it wasn't just a project, it was an epiphany that programming was my
-						calling. it ignited a passion for frontend development, particularly
-						in React. This realization steered me towards embracing programming
-						not just as a skill but as a career path, where every line of code
-						became a brushstroke in my canvas of the matrix.
+						, it wasn't just a project, it was an epiphany that programming was
+						my calling. it ignited a passion for frontend development,
+						particularly in React. This realization steered me towards embracing
+						programming not just as a skill but as a career path, where every
+						line of code became a brushstroke in my canvas of the matrix.
 					</p>
 					<p>
-					On the subject of coding adventures, let me share something
-						cosmic with you{' '}
+						On the subject of coding adventures, let me share something cosmic
+						with you{' '}
 						<Tooltip
 							content={
 								<img
@@ -131,7 +133,7 @@ const Home: NextPage = () => {
 						Just a little side project that merges my coding passion with the
 						beauty of space.
 					</p>
-					<Space style={{ height: 50 }} />
+					<Space h="xl" />
 					<Group position="apart" style={{ gap: '24px' }}>
 						<ProjectCard
 							title="LandPro"
@@ -154,6 +156,8 @@ const Home: NextPage = () => {
 					</Group>
 				</TypographyStylesProvider>
 			</Container>
+			<Space h={'xl'} />
+			<ContactMe />
 		</Layout>
 	);
 };

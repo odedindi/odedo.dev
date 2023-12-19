@@ -23,7 +23,6 @@ const Layout: React.FC<PropsWithChildren<LayoutProps>> = ({
 			header={hideHeader ? undefined : <Header {...headerProps} />}
 			sx={{
 				minHeight: '90vh',
-				minWidth: '320px',
 				overflow: 'hidden',
 				paddingTop: hideHeader ? undefined : '2rem',
 			}}
