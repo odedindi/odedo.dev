@@ -56,11 +56,12 @@ const Home: NextPage = () => {
 						>
 							(married + 2)
 						</Tooltip>{' '}
-						and a software developer with a background tourism, mostly ecological
-						and caltural desert tourism and a bit mote of a laid back extreme
-						sports like diving and agriculture, focusing on water resources and
-						pest management. Balancing family life with a tech career, I bring a
-						blend of skills and knowledge to my professional journey.
+						and a software developer with a background tourism, mostly
+						ecological and caltural desert tourism and a bit mote of a laid back
+						extreme sports like diving and agriculture, focusing on water
+						resources and pest management. Balancing family life with a tech
+						career, I bring a blend of skills and knowledge to my professional
+						journey.
 					</p>
 					<Space h="md" />
 					<p>
@@ -70,7 +71,7 @@ const Home: NextPage = () => {
 					</p>
 					<Space h="md" />
 					<p>
-						Diving into software development, I had a defining moment with{' '}
+						I had a defining moment with{' '}
 						<Tooltip
 							content={
 								<img
@@ -112,14 +113,14 @@ const Home: NextPage = () => {
 								Solr
 							</Link>
 						</Tooltip>
-						. It's a neat little guide I put together with a colleague, sort of
-						like a little encyclopedia, of our solar system. We just wanted to
-						play around with Three.js and we both like space, It's got this
-						gallery showing the Sun and all the planets, and a 3D model
-						demonstrating how the planets revolve around the Sun with the
-						acility to adjust the size of the sun and the planets to grasp the
-						sheer size of the solar system, giving you a glimpse into the dance
-						of our cosmic neighbors. Just a little side projet.
+						. It's a neat guide I put together with a colleague, sort of like a
+						little encyclopedia of our solar system. We just wanted to play
+						around with Three.js and we both like space, It's got this gallery
+						showing the Sun and all the planets, and a 3D model demonstrating
+						how the planets revolve around the Sun with the acility to adjust
+						the size of the sun and the planets to grasp the sheer size of the
+						solar system, giving you a glimpse into the dance of our cosmic
+						neighbors. Just a little side projet.
 					</p>
 					<Space h="xl" />
 					<Group position="apart" style={{ gap: '24px' }}>
