@@ -8,18 +8,14 @@ import {
 } from '@mantine/core';
 
 import Layout from 'src/components/Layout';
-import { NavMenu } from 'src/components/NavMenu';
+// import { NavMenu } from 'src/components/NavMenu';
 import ProjectCard from 'src/components/ProjectCard';
 import dynamic from 'next/dynamic';
-import dayjs from 'dayjs';
 import { useMe } from 'src/hooks';
 import Link from 'next/link';
 import ContactMe from 'src/components/ContactMe';
 
 const Tooltip = dynamic(() => import('src/components/Tooltip'), { ssr: false });
-const yearDiff = (year: string) => dayjs().diff(year, 'year');
-const myAge = yearDiff('1986');
-const inSwitzerland = yearDiff('2018');
 
 const Home: NextPage = () => {
 	const me = useMe().data?.me;
@@ -33,7 +29,7 @@ const Home: NextPage = () => {
 				title: me?.tagline,
 			}}
 		>
-			<NavMenu />
+			{/* <NavMenu /> */}
 
 			<Container
 				sx={{
@@ -48,7 +44,7 @@ const Home: NextPage = () => {
 					</h3>
 					<Space h="xl" />
 					<p>
-						I'm a{' '}
+						I'm Oded, a family man{' '}
 						<Tooltip
 							content={
 								<img
@@ -58,20 +54,12 @@ const Home: NextPage = () => {
 								/>
 							}
 						>
-							{myAge}
-						</Tooltip>
-						-year-old coding enthusiast, When I'm not immersed in the world of
-						technology, you'll find me happily married and blessed with the
-						"joy" of raising my two little legends in the scenic heart of
-						Central Switzerland for {inSwitzerland} now.
-					</p>
-					<p>
-						In the backdrop of my life lies a colorful tapestry of experiences.
-						My professiional journey started in the world of agroecology, pest
-						management, and agricultural development, as the tides of time
-						carried me forward, these ventures became the gateway to my journey
-						into programming, revealing a new world where I found my calling in
-						software and web development.
+							(married + 2)
+						</Tooltip>{' '}
+						and a software developer with a background tourism and in
+						agriculture, focusing on water resources and pest management.
+						Balancing family life with a tech career, I bring a blend of skills
+						and knowledge to my professional journey.
 					</p>
 					<Space h="md" />
 					<p>
@@ -81,8 +69,7 @@ const Home: NextPage = () => {
 					</p>
 					<Space h="md" />
 					<p>
-						Diving into frontend development, particularly in React, I had a
-						defining moment with{' '}
+						Diving into software development, I had a defining moment with{' '}
 						<Tooltip
 							content={
 								<img
@@ -99,11 +86,10 @@ const Home: NextPage = () => {
 								LandPro
 							</Link>
 						</Tooltip>
-						, it wasn't just a project, it was an epiphany that programming was
-						my calling. it ignited a passion for frontend development,
-						particularly in React. This realization steered me towards embracing
-						programming not just as a skill but as a career path, where every
-						line of code became a brushstroke in my canvas of the matrix.
+						, it ignited a passion for programming and software development,
+						started with Python and later fell in love with Typescript. This
+						realization steered me towards embracing programming as a career
+						path.
 					</p>
 					<p>
 						On the subject of coding adventures, let me share something cosmic
@@ -125,13 +111,14 @@ const Home: NextPage = () => {
 								Solr
 							</Link>
 						</Tooltip>
-						. It's a neat little digital guide I put together with a colleague,
-						sort of like a dictionary, but for our solar system. It's got this
-						cool image gallery showing off the Sun and all the planets, and a
-						simple 3D model demonstrating how these planets revolve around the
-						Sun, giving you a glimpse into the dance of our cosmic neighbors.
-						Just a little side project that merges my coding passion with the
-						beauty of space.
+						. It's a neat little guide I put together with a colleague, sort of
+						like a little encyclopedia, of our solar system. We just wanted to
+						play around with Three.js and we both like space, It's got this
+						gallery showing the Sun and all the planets, and a 3D model
+						demonstrating how the planets revolve around the Sun with the
+						acility to adjust the size of the sun and the planets to grasp the
+						sheer size of the solar system, giving you a glimpse into the dance
+						of our cosmic neighbors. Just a little side projet.
 					</p>
 					<Space h="xl" />
 					<Group position="apart" style={{ gap: '24px' }}>
