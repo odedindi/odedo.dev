@@ -64,7 +64,7 @@ const Home: NextPage = () => {
 					</p>
 					<Space h="md" />
 					<p>
-						I'll fill this out more one day, probably add more of projects or
+						I'll fill this out more one day, probably add more projects or
 						detailed or insights into this portfolio, for now, here are 2 nice
 						ones.
 					</p>
