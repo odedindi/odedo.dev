@@ -56,15 +56,16 @@ const Home: NextPage = () => {
 						>
 							(married + 2)
 						</Tooltip>{' '}
-						and a software developer with a background tourism and in
-						agriculture, focusing on water resources and pest management.
-						Balancing family life with a tech career, I bring a blend of skills
-						and knowledge to my professional journey.
+						and a software developer with a background tourism, mostly ecological
+						and caltural desert tourism and a bit mote of a laid back extreme
+						sports like diving and agriculture, focusing on water resources and
+						pest management. Balancing family life with a tech career, I bring a
+						blend of skills and knowledge to my professional journey.
 					</p>
 					<Space h="md" />
 					<p>
-						I'll fill this out more thoroughly, and add more of projects
-						detailed or insights into my portfolio, for now, here are 2 nice
+						I'll fill this out more one day, probably add more of projects or
+						detailed or insights into this portfolio, for now, here are 2 nice
 						ones.
 					</p>
 					<Space h="md" />
