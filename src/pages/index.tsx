@@ -44,20 +44,8 @@ const Home: NextPage = () => {
 					</h3>
 					<Space h="xl" />
 					<p>
-						I'm Oded, a family man{' '}
-						<Tooltip
-							content={
-								<img
-									src="https://img.buzzfeed.com/buzzfeed-static/static/2021-11/1/16/asset/aa14aea4ff17/anigif_sub-buzz-415-1635782415-15.gif"
-									alt="i'm old"
-									style={{ borderRadius: '24px' }}
-								/>
-							}
-						>
-							(married + 2)
-						</Tooltip>{' '}
-						and a software developer with a background tourism, mostly
-						ecological and caltural desert tourism and a bit mote of a laid back
+						I'm Oded, a software developer with a background tourism, mostly
+						ecological and cultural desert tourism and a bit mote of a laid back
 						extreme sports like diving and agriculture, focusing on water
 						resources and pest management. Balancing family life with a tech
 						career, I bring a blend of skills and knowledge to my professional
