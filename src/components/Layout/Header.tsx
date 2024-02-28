@@ -12,7 +12,7 @@ export const Header: FC<HeaderProps> = ({ title, subtitle, withAvatar }) => {
 	const me = useMe().data?.me;
 
 	return (
-		<Container mt={20}>
+		<Container mt={25}>
 			{withAvatar ? <Me /> : null}
 			<Center mt={'1rem'}>
 				<Group direction="column">
