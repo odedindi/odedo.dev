@@ -1,5 +1,5 @@
 import 'i18next';
-import type common from '../../public/locales/en/common.json';
+import type common from '../../public/locales/de/common.json';
 
 interface Resources {
 	common: typeof common;
