@@ -6,8 +6,6 @@
 
 - just a landing page
 
-## Tech/framework used
-
 ## Links
 
 - Project homepage: https://github.com/odedindi/odedo.dev
