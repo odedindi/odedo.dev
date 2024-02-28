@@ -19,7 +19,9 @@ const Layout: React.FC<PropsWithChildren<LayoutProps>> = ({
 }) => (
 	<>
 		<SEOProvider title={pageTitle} />
-		<SelectLanguage sx={{ position: 'absolute', top: '0.5rem' }} />
+		<SelectLanguage
+			sx={{ position: 'absolute', top: '0.75rem', left: '0.5rem' }}
+		/>
 		<AppShell
 			padding="md"
 			header={hideHeader ? undefined : <Header {...headerProps} />}
