@@ -19,6 +19,7 @@ const Layout: React.FC<PropsWithChildren<LayoutProps>> = ({
 }) => (
 	<>
 		<SEOProvider title={pageTitle} />
+		<SelectLanguage sx={{ position: 'absolute', top: '0.5rem' }} />
 		<AppShell
 			padding="md"
 			header={hideHeader ? undefined : <Header {...headerProps} />}
@@ -29,7 +30,6 @@ const Layout: React.FC<PropsWithChildren<LayoutProps>> = ({
 			}}
 		>
 			<Box>{children}</Box>
-			<SelectLanguage sx={{ position: 'absolute', top: "1rem" }} />
 		</AppShell>
 	</>
 );
