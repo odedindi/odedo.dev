@@ -1,0 +1,27 @@
+{
+	"selectLanguage": {
+		"title": "Sprache auswählen",
+		"en": "English",
+		"de": "Deutsch"
+	},
+	"title": "Hoi, du technikaffiner Wanderer!",
+	"subtitle": "Danke, dass du nach mir gesucht hast",
+	"preface": [
+		"Ich bin Oded, ein Softwareentwickler mit landwirtschaftlichem Hintergrund.",
+		"Irgendwann werde ich diese Seite weiter füllen, wahrscheinlich noch mehr Projekte oder detaillierte Einblicke in dieses Portfolio hinzufügen, aber hier sind erst einmal zwei schöne aus meiner Vergangenheit."
+	],
+	"examples": {
+		"landpro": "Ich hatte einen entscheidenden Moment mit <0>LandPro</0>, weil es mich dazu gebracht hat, das Programmieren als Berufsweg zu wählen. Leider ist es nicht gut angekommen, aber es war ein großer Erfolg. Der Server läuft auch nicht mehr, also funktioniert die Demo nicht, tut mir leid. Vielleicht werde ich es eines Tages reparieren.",
+		"solr": "Eine andere nette Sache, die ich gebaut habe, ist <0>Solr</0>. Es ist ein netter kleiner Führer, wie eine kleine Broschüre über unser Sonnensystem. Ich wollte nur mit Three.js und uns herumspielen. Es gibt diese Galerie, die die Sonne und alle Planeten zeigt, und ein 3D-Modell, das zeigt, wie die Planeten um die Sonne kreisen, mit der Möglichkeit, die Größe der Sonne und der Planeten anzupassen, um die schiere Größe des Sonnensystems zu erfassen. Nur ein kleines Nebenprojekt."
+	},
+	"projectCards": {
+		"landpro": {
+			"title": "LandPro",
+			"description": "Mit Hilfe von KI und Satelliten lässt sich abschätzen, wie viel Kohlenstoff im Boden und in der Vegetation verschiedener landwirtschaftlich genutzter Flächen gespeichert ist."
+		},
+		"solr": {
+			"title": "Solr",
+			"description": "Digitaler Führer durch unser Sonnensystem."
+		}
+	}
+}

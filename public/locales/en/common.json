@@ -1,0 +1,25 @@
+{
+	"selectLanguage": {
+		"title": "Select language"
+	},
+	"title": "Hey there you tech-savvy wanderer!",
+	"subtitle": "Thanks for looking me up.",
+	"preface": [
+		"I'm Oded, a software developer with a background in agriculture.",
+		"I'll fill this out more one day, probably add more projects or detailed or insights into this portfolio, for now, here are 2 nice ones from my past."
+	],
+	"examples": {
+		"landpro": "<0>LandPro</0> war für mich ein einschneidendes Erlebnis, weil es mich dazu gebracht hat, mich für die Programmierung als Berufsweg zu entscheiden. Leider hat es nicht geklappt, aber es war eine tolle Erfahrung. Außerdem läuft der Server nicht mehr, so dass die Demo nicht mehr funktioniert. Das tut mir leid. Vielleicht repariere ich ihn eines Tages.",
+		"solr": "Another nice thing I've built is <0>Solr</0>. It's a neat little guide, sort of like a little booklet of our solar system. Just wanted to play around with Three.js and we I like outer space, It's got this gallery showing the Sun and all the planets, and a 3D model demonstrating how the planets revolve around the Sun with the ability to adjust the size of the sun and the planets to grasp the sheer size of the solar system, a glimpse into the dance of our cosmic neighbors. Just a little side projet."
+	},
+	"projectCards": {
+		"landpro": {
+			"title": "LandPro",
+			"description": "The power of A.I. and satellite at your finger-tips, aimed at estimating how much carbon is stored in soil and vegetation of different croplands."
+		},
+		"solr": {
+			"title": "Solr",
+			"description": "Digital guide showcasing our solar system."
+		}
+	}
+}

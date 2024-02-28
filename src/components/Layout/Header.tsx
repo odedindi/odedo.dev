@@ -1,6 +1,7 @@
 import { Box, Center, Container, Group, Image, Title } from '@mantine/core';
 import { FC, useState } from 'react';
 import { useMe } from 'src/hooks';
+import SelectLanguage from '../LanguageToggler';
 
 export type HeaderProps = {
 	title?: string;

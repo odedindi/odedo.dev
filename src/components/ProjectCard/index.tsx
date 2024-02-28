@@ -86,7 +86,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 					style={{
 						display: 'flex',
 						justifyContent: 'center',
-						padding: '16px 0',
+						paddingTop: '16px',
 					}}
 				>
 					{imageProps ? (

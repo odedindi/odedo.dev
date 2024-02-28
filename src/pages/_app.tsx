@@ -5,6 +5,7 @@ import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 
 import Providers from 'src/providers';
+import { appWithTranslation } from 'next-i18next';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
 	NProgress.configure({ showSpinner: false });
@@ -18,4 +19,5 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 		</Providers>
 	);
 };
-export default MyApp;
+
+export default appWithTranslation(MyApp);

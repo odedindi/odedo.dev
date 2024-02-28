@@ -24,9 +24,9 @@ const Tooltip: FC<PropsWithChildren<{ content: ReactNode }>> = ({
 			radius="lg"
 			spacing="xs"
 			target={
-				<div onMouseEnter={open} onMouseLeave={close}>
+				<span onMouseEnter={open} onMouseLeave={close}>
 					{children}
-				</div>
+				</span>
 			}
 		>
 			{content}

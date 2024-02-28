@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import { AppShell, Box } from '@mantine/core';
 import { Header, HeaderProps } from './Header';
 import SEOProvider from 'src/providers/SEO';
+import SelectLanguage from '../LanguageToggler';
 
 type LayoutProps = {
 	pageTitle?: string;
@@ -28,6 +29,7 @@ const Layout: React.FC<PropsWithChildren<LayoutProps>> = ({
 			}}
 		>
 			<Box>{children}</Box>
+			<SelectLanguage sx={{ position: 'absolute', top: "1rem" }} />
 		</AppShell>
 	</>
 );
