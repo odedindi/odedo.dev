@@ -35,9 +35,6 @@ const ContactMe: FC = () => {
 			}}
 		>
 			<ContactMeButtons />
-			<Text underline sx={{ paddingTop: 5 }}>
-				Don&apos;t hesitate to contact me.
-			</Text>
 		</Container>
 	);
 };

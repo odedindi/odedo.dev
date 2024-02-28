@@ -10,7 +10,7 @@ export interface Db {
 export const db: Db = {
 	bio: {
 		name: 'Oded Winberger',
-		tagline: 'Life Amidst the Code and Chaos',
+		tagline: 'Life Amidst Code and Chaos',
 		email: 'oded.winberger@email.com',
 		github: 'https://github.com/odedindi',
 		website: 'https://odedo.dev',
