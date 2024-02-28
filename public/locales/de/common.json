@@ -12,7 +12,7 @@
 	],
 	"examples": {
 		"landpro": "<0>LandPro</0> war für mich ein einschneidendes Erlebnis, weil es mich dazu gebracht hat, mich für die Programmierung als Berufsweg zu entscheiden. Leider hat es nicht geklappt, aber es war eine tolle Erfahrung. Außerdem läuft der Server nicht mehr, so dass die Demo nicht mehr funktioniert. Das tut mir leid.",
-		"solr": "Eine andere nette Sache, die ich gebaut habe, ist <0>Solr</0>. Es ist ein netter kleiner Führer, wie eine kleine Broschüre über unser Sonnensystem. Ich wollte nur mit Three.js und uns herumspielen. Es gibt diese Galerie, die die Sonne und alle Planeten zeigt, und ein 3D-Modell, das zeigt, wie die Planeten um die Sonne kreisen, mit der Möglichkeit, die Größe der Sonne und der Planeten anzupassen, um die schiere Größe des Sonnensystems zu erfassen. Nur ein kleines Nebenprojekt."
+		"solr": "Eine andere Sache, die ich gebaut habe, ist <0>Solr</0>. Es ist ein netter kleiner Führer, wie eine kleine Broschüre über unser Sonnensystem. Ich wollte nur mit Three.js herumspielen. Es gibt diese Galerie, die die Sonne und alle Planeten zeigt, und ein 3D-Modell, das zeigt, wie die Planeten um die Sonne kreisen, mit der Möglichkeit, die Größe der Sonne und der Planeten anzupassen, um die schiere Größe des Sonnensystems zu erfassen. Nur ein kleines Nebenprojekt."
 	},
 	"projectCards": {
 		"landpro": {
