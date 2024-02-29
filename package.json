@@ -16,7 +16,7 @@
 		"generate:types": "npx apollo codegen:generate --localSchemaFile=schema.graphql --target=typescript --tagName=gql"
 	},
 	"dependencies": {
-		"@apollo/client": "^3.8.8",
+		"@apollo/client": "^3.9.4",
 		"@mantine/core": "^3.6.14",
 		"@mantine/dates": "^3.6.14",
 		"@mantine/hooks": "^3.6.14",
