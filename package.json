@@ -42,7 +42,7 @@
 		"react-i18next": "^14.0.5",
 		"react-query": "^3.39.3",
 		"react-social-icons": "^6.7.0",
-		"styled-components": "^6.1.1"
+		"styled-components": "^6.1.8"
 	},
 	"devDependencies": {
 		"@types/graphql": "^14.5.0",
