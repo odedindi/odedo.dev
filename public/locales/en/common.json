@@ -9,8 +9,8 @@
 		"I'll fill this out more one day, probably add more projects or detailed or insights into this portfolio, for now, here are 2 nice ones from my past."
 	],
 	"examples": {
-		"landpro": "I had a defining moment with <0>LandPro</0> , as it steered me towards embracing programming as a career path. Sadly it didn't take off, but it was a great ride. Also the server is no longer running, so the demo part is not working, sorry about that.",
-		"solr": "Another thing I've built is <0>Solr</0>. It's a neat little guide, sort of like a little booklet of our solar system. Just wanted to play around with Three.js and we I like outer space, It's got this gallery showing the Sun and all the planets, and a 3D model demonstrating how the planets revolve around the Sun with the ability to adjust the size of the sun and the planets to grasp the sheer size of the solar system, a glimpse into the dance of our cosmic neighbors. Just a little side projet."
+		"landpro": "I had a defining moment with <0>LandPro</0> , as it steered me towards embracing programming as a career path. Unfortunately it didn't take off, but it was a great ride. Also, the server is no longer running, so the demo part does not work, sorry about that.",
+		"solr": "Another thing I've built is <0>Solr</0>. It's a neat little guide, sort of like a little booklet of our solar system. Just wanted to play around with Three.js and we I like outer space, It's got this gallery showing the sun and all the planets, and a 3D model showing how the planets revolve around the sun with the ability to adjust the size of the sun and the planets to grasp the sheer size of the solar system, a glimpse into the dance of our cosmic neighbours. Just a little side projet."
 	},
 	"projectCards": {
 		"landpro": {
