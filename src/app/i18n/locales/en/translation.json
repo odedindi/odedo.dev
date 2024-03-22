@@ -10,7 +10,7 @@
 	],
 	"examples": {
 		"landpro": "In 2021, I had a defining moment with LandPro, as it led me to embrace programming as a career path. Unfortunately it didn't take off, but it was a great ride. Also, the server is no longer running, so the demo part does not work, sorry about that.",
-		"solr": "Another thing I've built is Solr. It's a neat little guide, sort of like a little booklet of our solar system. Just wanted to play around with Three.js and we I like outer space, It's got this gallery showing the sun and all the planets, and a 3D model showing how the planets revolve around the sun with the ability to adjust the size of the sun and the planets to grasp the sheer size of the solar system, a glimpse into the dance of our cosmic neighbours. Just a little side projet."
+		"solr": "Another thing I've built is Solr. It's a neat little guide, sort of like a little booklet of our solar system. Just wanted to play around with Three.js. It's got this gallery showing the sun and all the planets, and a 3D model showing how the planets revolve around the sun with the ability to adjust the size of the sun and the planets to grasp the sheer size of the solar system, a glimpse into the dance of our cosmic neighbours. Just a little side project."
 	},
 	"projectCards": {
 		"landpro": {
