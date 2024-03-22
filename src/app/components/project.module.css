@@ -1,6 +1,6 @@
 .grid {
 	--grid-align: center;
-	padding-inline: var(--mantine-spacing-md);
+	padding-block: var(--mantine-spacing-md);
 }
 
 .cardWrapper {
