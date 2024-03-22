@@ -13,7 +13,8 @@
 
 	max-width: 1280px;
 	margin: 0 auto;
-	--app-shell-padding: 1rem;
+	--app-shell-padding: var(--mantine-spacing-lg);
+	padding-inline: var(--mantine-spacing-xl);
 
 	overflow-x: hidden;
 
@@ -22,4 +23,10 @@
 		white-space: break-spaces;
 		align-self: start;
 	}
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	padding-block: var(--mantine-spacing-xl);
 }

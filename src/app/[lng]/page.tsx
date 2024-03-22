@@ -3,7 +3,6 @@ import { useTranslation } from "../i18n";
 import { Language } from "next/router";
 import { Space, Text, Title } from "@mantine/core";
 import MyImage from "../components/myImage";
-import ContactMe from "../components/contactMe";
 import Project from "../components/Project";
 
 const Page: NextPage<{ params: { lng: Language } }> = async ({
@@ -32,9 +31,6 @@ const Page: NextPage<{ params: { lng: Language } }> = async ({
 				imageSrc="https://solr.vercel.app/icons/apple-touch-icon.png"
 				link="https://solr.vercel.app/"
 			/>
-
-			<Space h="xl" />
-			<ContactMe />
 		</>
 	);
 };

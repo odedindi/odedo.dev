@@ -2,12 +2,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-block: var(--mantine-spacing-lg);
+	/* padding-block: var(--mantine-spacing-lg); */
 }
 
 .iconContainer {
-	width: 5rem;
-	height: 5rem;
+	width: 2.5rem;
+	height: 2.5rem;
 	border-radius: 50%;
 	border: 0;
 }
