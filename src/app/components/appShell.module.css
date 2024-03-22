@@ -1,0 +1,17 @@
+.header {
+	padding-block: 0.5rem;
+	padding-inline-start: 0.5rem;
+
+	border-bottom: none;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	min-height: 100vh;
+
+	max-width: 1024px;
+	margin: 0 auto;
+	--app-shell-padding: 1rem;
+}

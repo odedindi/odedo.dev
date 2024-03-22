@@ -1,0 +1,16 @@
+.base {
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.image {
+	object-fit: cover;
+	aspect-ratio: auto;
+	position: relative;
+	transition: all 0.2s ease;
+	left: -10px;
+	width: 118px;
+	scale: 1.1;
+}
