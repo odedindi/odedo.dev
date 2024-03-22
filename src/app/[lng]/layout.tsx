@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 		locale: "de",
 		url: defaultSEOProps.url,
 		siteName: "Oded Winberger website",
-		images: [{ url: "https://odedo.dev/assets/oded.jpg" }],
+		images: [{ url: "https://odedo.dev/assets/Oded.jpg" }],
 	},
 	keywords: ["oded", "winberger", "odedo", "odedo.dev"],
 };
