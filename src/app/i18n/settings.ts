@@ -3,12 +3,14 @@ import type { Language } from "next/router";
 import i18nConfig from "../../../i18n.config";
 import translationEn from "./locales/en/translation.json";
 import translationDe from "./locales/de/translation.json";
+import translationHe from "./locales/he/translation.json";
 
 export const defaultNS = "translation";
 
 export const resources = {
 	en: { translation: translationEn },
 	de: { translation: translationDe },
+	he: { translation: translationHe },
 };
 
 export const getOptions = (
