@@ -1,11 +1,10 @@
 import { NextPage } from "next";
 import { useTranslation } from "../i18n";
 import { Language } from "next/router";
-import { Space, Text, Title, Group } from "@mantine/core";
+import { Space, Text, Title } from "@mantine/core";
 import MyImage from "../components/myImage";
-import ProjectCard from "../components/projectCard";
-import { NavigationProgress } from "@mantine/nprogress";
 import ContactMe from "../components/contactMe";
+import Project from "../components/Project";
 
 const Page: NextPage<{ params: { lng: Language } }> = async ({
 	params: { lng },
@@ -14,43 +13,26 @@ const Page: NextPage<{ params: { lng: Language } }> = async ({
 
 	return (
 		<>
-			<NavigationProgress />
-
 			<MyImage />
 			<Space h="xl" />
-			<Title>{t("title")}</Title>
+			<Title>{t("title")} 👋</Title>
 			<Space h="xl" />
-			{(t("preface", { returnObjects: true }) as string[]).map((p, i) => (
-				<Text key={i} size="xl">
-					{p}
-				</Text>
-			))}
+			<Text>{t("preface")}</Text>
 			<Space h="xl" />
+			<Project
+				title={t("projects.landpro.title")}
+				description={t("projects.landpro.description")}
+				imageSrc="https://land-pro.vercel.app/favicon.png"
+				link="https://land-pro.vercel.app/"
+			/>
+			<Space h="xl" />
+			<Project
+				title={t("projects.solr.title")}
+				description={t("projects.solr.description")}
+				imageSrc="https://solr.vercel.app/icons/apple-touch-icon.png"
+				link="https://solr.vercel.app/"
+			/>
 
-			<Text size="xl">{t("examples.landpro")}</Text>
-			<Space h="xl" />
-			<Text size="xl">{t("examples.solr")}</Text>
-			<Space h="xl" />
-			<Group justify="apart" style={{ gap: "24px" }}>
-				<ProjectCard
-					title={t("projectCards.landpro.title")}
-					// description={t('projectCards.landpro.description')}
-					image={{
-						src: "https://land-pro.vercel.app/favicon.png",
-						alt: "landpro logo",
-					}}
-					linkProps={{ href: "https://land-pro.vercel.app/" }}
-				/>
-				<ProjectCard
-					title={t("projectCards.solr.title")}
-					// description={t('projectCards.solr.description')}
-					image={{
-						src: "https://solr.vercel.app/icons/apple-touch-icon.png",
-						alt: "solr logo",
-					}}
-					linkProps={{ href: "https://solr.vercel.app/" }}
-				/>
-			</Group>
 			<Space h="xl" />
 			<ContactMe />
 		</>

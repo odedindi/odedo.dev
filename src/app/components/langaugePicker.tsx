@@ -16,6 +16,11 @@ const options = [
 		label: "Deutsch",
 		image: "assets/german.png",
 	},
+	{
+		code: "he",
+		label: "עברית",
+		image: "assets/hebrew.png",
+	},
 ];
 
 const LanguagePicker: FC = () => {

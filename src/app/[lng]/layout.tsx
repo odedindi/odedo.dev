@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import "@mantine/core/styles.css";
-import "@mantine/nprogress/styles.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import { dir } from "i18next";
 import Main from "../components/appShell";

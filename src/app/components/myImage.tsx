@@ -4,7 +4,7 @@ import classes from "./myImage.module.css";
 
 const MyImage: FC = () => (
 	<Box className={classes.base}>
-		<Image src="/assets/Oded.jpg" alt="me" className={classes.image} />
+		<Image src="/assets/Oded.jpg" alt="me" />
 	</Box>
 );
 

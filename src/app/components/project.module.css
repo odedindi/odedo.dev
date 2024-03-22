@@ -1,5 +1,10 @@
-.base {
-	width: 340px;
+.grid {
+	--grid-align: center;
+	padding-inline: var(--mantine-spacing-md);
+}
+
+.cardWrapper {
+	min-width: 320px;
 	margin: auto;
 }
 

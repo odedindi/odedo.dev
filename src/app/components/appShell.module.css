@@ -11,7 +11,15 @@
 
 	min-height: 100vh;
 
-	max-width: 1024px;
+	max-width: 1280px;
 	margin: 0 auto;
 	--app-shell-padding: 1rem;
+
+	overflow-x: hidden;
+
+	p {
+		font-size: var(--mantine-font-size-xl);
+		white-space: break-spaces;
+		align-self: start;
+	}
 }

@@ -190,29 +190,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/nprogress@npm:^7.6.2":
-  version: 7.6.2
-  resolution: "@mantine/nprogress@npm:7.6.2"
-  dependencies:
-    "@mantine/store": "npm:7.6.2"
-  peerDependencies:
-    "@mantine/core": 7.6.2
-    "@mantine/hooks": 7.6.2
-    react: ^18.2.0
-    react-dom: ^18.2.0
-  checksum: 10c0/c286de82df05f7001d6ca2faa1af350a84b2cb827894ac3681c879bf66a64c3563b2040a7ba9cadddaa9b3a8243ce3762fc1cad6cd415c0d4c49f339ec21e768
-  languageName: node
-  linkType: hard
-
-"@mantine/store@npm:7.6.2":
-  version: 7.6.2
-  resolution: "@mantine/store@npm:7.6.2"
-  peerDependencies:
-    react: ^18.2.0
-  checksum: 10c0/2bc2f5a0c34b5b6a7ffc126d4265f7715ea3404841523d4e47af5e5102aef4f5d9f74c80438b0fe8d14cf4e07dca68c04d9077030eafee8063da752dd9082850
-  languageName: node
-  linkType: hard
-
 "@next/env@npm:14.1.4":
   version: 14.1.4
   resolution: "@next/env@npm:14.1.4"
@@ -2572,7 +2549,6 @@ __metadata:
   dependencies:
     "@mantine/core": "npm:^7.6.2"
     "@mantine/hooks": "npm:^7.6.2"
-    "@mantine/nprogress": "npm:^7.6.2"
     "@tabler/icons-react": "npm:^3.1.0"
     "@types/node": "npm:^20.11.30"
     "@types/react": "npm:^18.2.67"
