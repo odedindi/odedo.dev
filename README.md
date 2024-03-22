@@ -13,7 +13,7 @@
 - Issue tracker: https://github.com/odedindi/odedo.dev/issues
   #### I value the care and effort to improve the security and privacy of this project!
 - In case of sensitive bugs like security vulnerabilities, please contact
-  odedindi@gmail.com directly instead of using issue tracker.
+  odedindi@gmail.com directly instead of using the issue tracker.
 
 ## Licensing
 
