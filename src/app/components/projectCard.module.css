@@ -1,0 +1,25 @@
+.base {
+	width: 340px;
+	margin: auto;
+}
+
+.card {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.cardImage {
+	display: flex;
+	justify-content: center;
+	padding-top: var(--mantine-spacing-md);
+}
+
+.cardContent {
+	padding-top: var(--mantine-spacing-sm);
+	padding-bottom: var(--mantine-spacing-md);
+	padding-inline: var(--mantine-spacing-lg);
+
+	p {
+		font-weight: 700;
+	}
+}
