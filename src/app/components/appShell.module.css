@@ -11,7 +11,7 @@
 
 	min-height: 100vh;
 
-	max-width: 1280px;
+	max-width: var(--mantine-breakpoint-xl);
 	margin: 0 auto;
 	--app-shell-padding: var(--mantine-spacing-lg);
 	padding-inline: var(--mantine-spacing-xl);
