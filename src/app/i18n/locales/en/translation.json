@@ -5,11 +5,13 @@
 	"projects": {
 		"landpro": {
 			"title": "LandPro",
-			"description": "In 2021, I had a defining moment with LandPro, as it led me to embrace programming as a career path. Unfortunately it didn't take off, but it was a great ride. Also, the server is no longer running, so the demo part work only partially, sorry about that."
+			"description": "In 2021, I had a defining moment with LandPro, as it led me to embrace programming as a career path. Unfortunately it didn't take off, but it was a great ride. Also, the server is no longer running, so the demo part work only partially, sorry about that.",
+			"tecStack": "The website was constructed with Next.js, Ant Design, and Leaflet for map visualization and editing. The backend was developed using Python and Django, leveraging PostgreSQL as the database, alongside TensorFlow and Pandas for machine learning functionality. Originally deployed on Digital Ocean, the landing page is currently hosted on Vercel."
 		},
 		"solr": {
 			"title": "Solr",
-			"description": "Solr is a neat little guide of our solar system.\nIt's got this gallery showing the sun and all the planets, and a 3D model showing how the planets revolve around the sun with the ability to adjust the size of the sun and the planets to grasp the sheer size of the solar system."
+			"description": "Solr is a neat little guide of our solar system.\nIt's got this gallery showing the sun and all the planets, and a 3D model showing how the planets revolve around the sun with the ability to adjust the size of the sun and the planets to grasp the sheer size of the solar system.",
+			"tecStack": "A Full Stack PWA constructed with Next.js, Mantine.dev, Three.js for the 3D model, and an internal GraphQL API for the data. The website is hosted on Vercel."
 		}
 	}
 }

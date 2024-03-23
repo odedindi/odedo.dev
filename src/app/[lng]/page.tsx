@@ -23,6 +23,8 @@ const Page: NextPage<{ params: { lng: Language } }> = async ({
 				description={t("projects.landpro.description")}
 				imageSrc="https://land-pro.vercel.app/favicon.png"
 				link="https://land-pro.vercel.app/"
+				tecStack={t("projects.landpro.tecStack")}
+				repo="https://github.com/odedindi/landpro_landing"
 			/>
 			<Space h="xl" />
 			<Project
@@ -30,6 +32,8 @@ const Page: NextPage<{ params: { lng: Language } }> = async ({
 				description={t("projects.solr.description")}
 				imageSrc="https://solr.vercel.app/icons/apple-touch-icon.png"
 				link="https://solr.vercel.app/"
+				tecStack={t("projects.solr.tecStack")}
+				repo="https://github.com/odedindi/solr"
 			/>
 		</>
 	);
