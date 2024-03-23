@@ -13,6 +13,10 @@
 		"solr": {
 			"description": "Solr ist ein netter kleiner Führer durch unser Sonnensystem.\nEs gibt diese Galerie, die die Sonne und alle Planeten zeigt, und ein 3D-Modell, das zeigt, wie die Planeten um die Sonne kreisen, und die Möglichkeit, die Größe der Sonne und der Planeten anzupassen, um die Größe des Sonnensystems zu erfassen.",
 			"tecStack": "Eine Full-Stack-Progressive-Web-App, erstellt mit Next.js, Mantine.dev und Three.js für das 3D-Modell. Die Daten werden über eine interne GraphQL-API bereitgestellt. Die Website wird auf Vercel gehostet."
+		},
+		"dialektli": {
+			"description": "Dialektli ist ein kleines, lustiges Projekt, das ich mache, um mehr über die verschiedenen Dialekte in der Schweiz zu lernen. Es ist eine Plattform, auf der Leute ihre Lieblingsdialektwörter und -sätze austauschen und etwas über die verschiedenen Dialekte in der Schweiz lernen können. Es ist noch in Arbeit. aber ich bin gespannt, wohin es führt.",
+			"tecStack": "Eine Full-Stack-Website, die mit Next.js, Mantine.dev und einer internen GraphQL-API für die Daten erstellt wurde. Die Datenbank wird von Digital Ocean bereitgestellt und die Website wird von Vercel gehostet."
 		}
 	}
 }

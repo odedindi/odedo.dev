@@ -16,6 +16,11 @@
 			"title": "Solr",
 			"description": "Solr is a neat little guide of our solar system.\nIt's got this gallery showing the sun and all the planets, and a 3D model showing how the planets revolve around the sun with the ability to adjust the size of the sun and the planets to grasp the sheer size of the solar system.",
 			"tecStack": "A Full Stack PWA constructed with Next.js, Mantine.dev, Three.js for the 3D model, and an internal GraphQL API for the data. The website is hosted on Vercel."
+		},
+		"dialektli": {
+			"title": "Dialektli",
+			"description": "Dialektli is a fun little project I making to learn more about the different dialects in Switzerland. It's a platform where people can share their favorite dialect words and phrases, and learn about the different dialects in Switzerland. It's still a work in progress, but I'm excited to see where it goes.",
+			"tecStack": "A Full Stack website constructed with Next.js, Mantine.dev and an internal GraphQL API for the data. The database is deployed on Digital Ocean and the website is hosted on Vercel."
 		}
 	}
 }

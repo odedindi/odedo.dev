@@ -44,6 +44,15 @@ const Page: NextPage<{ params: { lng: Language } }> = async ({
 				tecStack={t("projects.solr.tecStack")}
 				repo="https://github.com/odedindi/solr"
 			/>
+			<Space h="xl" />
+			<Project
+				title={t("projects.dialektli.title")}
+				description={t("projects.dialektli.description")}
+				imageSrc="https://www.dialektli.ch/assets/dialektli_logo.svg"
+				link="https://www.dialektli.ch/"
+				tecStack={t("projects.dialektli.tecStack")}
+				repo="https://github.com/urbanswisstionary/dialektli/"
+			/>
 		</>
 	);
 };
