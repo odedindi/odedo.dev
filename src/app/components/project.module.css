@@ -5,7 +5,6 @@
 
 .cardWrapper {
 	min-width: calc(var(--mantine-breakpoint-xl) / 4);
-	margin: auto;
 }
 
 .cardImage {

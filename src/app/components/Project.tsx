@@ -28,9 +28,9 @@ const Project: FC<ProjectProps> = ({
 		</Grid.Col>
 		<Grid.Col span={6}>
 			<Box className={classes.cardWrapper}>
-				<Card shadow="lg" padding="lg" radius="md">
+				<Card shadow="lg" padding="lg" radius="md" bg="dark.4">
 					<Card.Section className={classes.cardImage}>
-						<img src={imageSrc} alt={title} height={100} />
+						<img src={imageSrc} alt={title} height={100} width={100} />
 					</Card.Section>
 					<Card.Section className={classes.cardContent}>
 						<Grid grow>
