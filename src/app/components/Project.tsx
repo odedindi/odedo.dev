@@ -34,7 +34,7 @@ const Project: FC<ProjectProps> = ({
 					</Card.Section>
 					<Card.Section className={classes.cardContent}>
 						<Grid grow>
-							<Grid.Col span={9}>
+							<Grid.Col span={10}>
 								<Anchor
 									fz="xl"
 									rel="noopener noreferrer"
