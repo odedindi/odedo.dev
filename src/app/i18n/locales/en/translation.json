@@ -1,12 +1,16 @@
 {
 	"title": "Hey there, I'm Oded",
-	"subtitle": "Thanks for looking me up.",
 	"preface": "I'll fill this out one day more projects or detailed or insights into this portfolio, for now, here are few applications from my past.",
 	"projects": {
 		"landpro": {
 			"title": "LandPro",
 			"description": "In 2021, I had a defining moment with LandPro, as it led me to embrace programming as a career path. Unfortunately it didn't take off, but it was a great ride. Also, the server is no longer running, so the demo part work only partially, sorry about that.",
 			"tecStack": "The website was constructed with Next.js, Ant Design, and Leaflet for map visualization and editing. The backend was developed using Python and Django, leveraging PostgreSQL as the database, alongside TensorFlow and Pandas for machine learning functionality. Originally deployed on Digital Ocean, the landing page is currently hosted on Vercel."
+		},
+		"geoChat": {
+			"title": "GeoChat",
+			"description": "GeoChat is a location-based chat application that allows users to chat with others in their vicinity. It was a fun project to work on, and I learned a lot about websockets and geolocation. The server is no longer online as well, sorry.",
+			"tecStack": "The website was constructed with Next.js, Ionic, RxJS and Socket.io for the chat functionality. The backend was developed using Nest.js, leveraging PostgreSQL as the database. The server was originally deployed on Digital Ocean and the website is hosted on Vercel."
 		},
 		"solr": {
 			"title": "Solr",

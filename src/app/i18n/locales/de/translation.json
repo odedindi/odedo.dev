@@ -1,15 +1,16 @@
 {
 	"title": "Hallo, Ich bin Oded",
-	"subtitle": "Danke, dass du mich gesucht hast.",
 	"preface": "Irgendwann werde ich diese Seite weiter füllen, wahrscheinlich noch mehr Projekte oder detaillierte Einblicke in dieses Portfolio hinzufügen, aber hier sind erst einmal ein paar applikationen aus meiner Vergangenheit.",
 	"projects": {
 		"landpro": {
-			"title": "LandPro",
 			"description": "2021 hatte ich einen entscheidenden Moment bei LandPro, der mich dazu gebracht hat, Programmierung als Berufsweg zu wählen. Leider hat es nicht geklappt, aber es war eine tolle Reise. Außerdem läuft der Server nicht mehr, daher funktioniert der Demoteil nur bedingt. Das tut mir leid.",
 			"tecStack": "Die Webseite wurde mit Next.js, Ant Design und Leaflet für die Kartenvisualisierung und -bearbeitung erstellt. Das Backend wurde mit Python und Django unter Verwendung von PostgreSQL als Datenbank und TensorFlow und Pandas für maschinelle Lernfunktionen entwickelt. Ursprünglich wurde das Projekt auf Digital Ocean gehostet, die Landingpage wird derzeit auf Vercel gehostet."
 		},
+		"geoChat": {
+			"description": "GeoChat ist eine standortbasierte Chat-Anwendung, mit der Benutzer in ihrer Nähe chatten können. Während der Arbeit an diesem Projekt habe ich viel über Websockets und Geolokalisierung gelernt. Der Server ist derzeit offline.",
+			"tecStack": "Die Website wurde mit Next.js, Ionic, RxJS und Socket.io erstellt, um die Chat-Funktionalität zu ermöglichen. Das Backend wurde mit Nest.js entwickelt und PostgreSQL als Datenbank genutzt. Ursprünglich wurde der Server auf Digital Ocean bereitgestellt, jedoch wird die Website nun auf Vercel gehostet."
+		},
 		"solr": {
-			"title": "Solr",
 			"description": "Solr ist ein netter kleiner Führer durch unser Sonnensystem.\nEs gibt diese Galerie, die die Sonne und alle Planeten zeigt, und ein 3D-Modell, das zeigt, wie die Planeten um die Sonne kreisen, und die Möglichkeit, die Größe der Sonne und der Planeten anzupassen, um die Größe des Sonnensystems zu erfassen.",
 			"tecStack": "Eine Full-Stack-Progressive-Web-App, erstellt mit Next.js, Mantine.dev und Three.js für das 3D-Modell. Die Daten werden über eine interne GraphQL-API bereitgestellt. Die Website wird auf Vercel gehostet."
 		}

@@ -28,6 +28,15 @@ const Page: NextPage<{ params: { lng: Language } }> = async ({
 			/>
 			<Space h="xl" />
 			<Project
+				title={t("projects.geoChat.title")}
+				description={t("projects.geoChat.description")}
+				imageSrc="https://geo-chat-omega.vercel.app/assets/beacon.png"
+				link="https://geo-chat-omega.vercel.app/home"
+				tecStack={t("projects.geoChat.tecStack")}
+				repo="https://github.com/odedindi/GeoChat"
+			/>
+			<Space h="xl" />
+			<Project
 				title={t("projects.solr.title")}
 				description={t("projects.solr.description")}
 				imageSrc="https://solr.vercel.app/icons/apple-touch-icon.png"
