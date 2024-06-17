@@ -23,10 +23,10 @@ const Project: FC<ProjectProps> = ({
 	repo,
 }) => (
 	<Grid grow className={classes.grid}>
-		<Grid.Col span={4}>
+		<Grid.Col span={4} order={2}>
 			<Text>{description}</Text>
 		</Grid.Col>
-		<Grid.Col span={6}>
+		<Grid.Col span={6} order={1}>
 			<Box className={classes.cardWrapper}>
 				<Card shadow="lg" padding="lg" radius="md" bg="dark.5">
 					<Card.Section className={classes.cardImage}>
