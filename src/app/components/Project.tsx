@@ -22,11 +22,11 @@ const Project: FC<ProjectProps> = ({
 	tecStack,
 	repo,
 }) => (
-	<Grid grow className={classes.grid}>
-		<Grid.Col span={4} order={2}>
+	<Grid grow className={classes.grid} gutter={"xl"}>
+		<Grid.Col span={{ base: 12, md: 4 }} order={2}>
 			<Text>{description}</Text>
 		</Grid.Col>
-		<Grid.Col span={6} order={1}>
+		<Grid.Col span={{ base: 12, md: 8 }} order={1}>
 			<Box className={classes.cardWrapper}>
 				<Card shadow="lg" padding="lg" radius="md" bg="dark.5">
 					<Card.Section className={classes.cardImage}>
