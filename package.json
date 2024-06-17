@@ -13,31 +13,31 @@
 		"check:all": "yarn check:types && yarn lint && yarn check:format && yarn build"
 	},
 	"dependencies": {
-		"@mantine/core": "^7.6.2",
-		"@mantine/hooks": "^7.6.2",
-		"@tabler/icons-react": "^3.1.0",
+		"@mantine/core": "^7.10.2",
+		"@mantine/hooks": "^7.10.2",
+		"@tabler/icons-react": "^3.6.0",
 		"gsap": "^3.12.5",
-		"i18next": "^23.10.1",
-		"i18next-resources-to-backend": "^1.2.0",
-		"next": "14.1.4",
-		"next-i18n-router": "^5.3.1",
+		"i18next": "^23.11.5",
+		"i18next-resources-to-backend": "^1.2.1",
+		"next": "14.2.4",
+		"next-i18n-router": "^5.5.0",
 		"next-seo": "^6.5.0",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-i18next": "^14.1.0",
-		"react-social-icons": "^6.15.0"
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-i18next": "^14.1.2",
+		"react-social-icons": "^6.16.0"
 	},
 	"devDependencies": {
-		"@types/node": "^20.11.30",
-		"@types/react": "^18.2.67",
-		"@types/react-dom": "^18.2.22",
+		"@types/node": "^20.14.2",
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
 		"eslint": "^8.57.0",
-		"eslint-config-next": "14.1.4",
+		"eslint-config-next": "14.2.4",
 		"postcss": "^8.4.38",
-		"postcss-preset-mantine": "^1.13.0",
+		"postcss-preset-mantine": "^1.15.0",
 		"postcss-simple-vars": "^7.0.1",
-		"prettier": "^3.2.5",
-		"typescript": "^5.4.3"
+		"prettier": "^3.3.2",
+		"typescript": "^5.4.5"
 	},
 	"packageManager": "yarn@4.1.1"
 }
