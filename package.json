@@ -13,9 +13,9 @@
 		"check:all": "yarn check:types && yarn lint && yarn check:format && yarn build"
 	},
 	"dependencies": {
-		"@mantine/core": "^7.10.2",
-		"@mantine/hooks": "^7.10.2",
-		"@tabler/icons-react": "^3.6.0",
+		"@mantine/core": "^7.11.0",
+		"@mantine/hooks": "^7.11.0",
+		"@tabler/icons-react": "^3.7.0",
 		"gsap": "^3.12.5",
 		"i18next": "^23.11.5",
 		"i18next-resources-to-backend": "^1.2.1",
@@ -28,16 +28,16 @@
 		"react-social-icons": "^6.16.0"
 	},
 	"devDependencies": {
-		"@types/node": "^20.14.2",
+		"@types/node": "^20.14.9",
 		"@types/react": "^18.3.3",
 		"@types/react-dom": "^18.3.0",
 		"eslint": "^8.57.0",
 		"eslint-config-next": "14.2.4",
-		"postcss": "^8.4.38",
+		"postcss": "^8.4.39",
 		"postcss-preset-mantine": "^1.15.0",
 		"postcss-simple-vars": "^7.0.1",
 		"prettier": "^3.3.2",
-		"typescript": "^5.4.5"
+		"typescript": "^5.5.2"
 	},
 	"packageManager": "yarn@4.1.1"
 }
