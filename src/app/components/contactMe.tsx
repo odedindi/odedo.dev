@@ -49,19 +49,21 @@ export default ContactMe;
 const AnimatedSocialIcon = forwardRef<
 	HTMLButtonElement,
 	Pick<SocialIconProps, "network" | "url">
->(({ network, url }, ref) => (
-	<ActionIcon
-		className={classes.iconContainer}
-		variant="transparent"
-		title={network}
-		ref={ref}
-		onMouseEnter={({ currentTarget }) =>
-			gsap.to(currentTarget, { y: -10, scale: 1.1, duration: 0.2 })
-		}
-		onMouseLeave={({ currentTarget }) =>
-			gsap.to(currentTarget, { y: 0, scale: 1 })
-		}
-	>
-		<SocialIcon network={network} url={url} />
-	</ActionIcon>
-));
+>(function AnimatedSocialIcon({ network, url }, ref) {
+	return (
+		<ActionIcon
+			className={classes.iconContainer}
+			variant="transparent"
+			title={network}
+			ref={ref}
+			onMouseEnter={({ currentTarget }) =>
+				gsap.to(currentTarget, { y: -10, scale: 1.1, duration: 0.2 })
+			}
+			onMouseLeave={({ currentTarget }) =>
+				gsap.to(currentTarget, { y: 0, scale: 1 })
+			}
+		>
+			<SocialIcon network={network} url={url} />
+		</ActionIcon>
+	);
+});
