@@ -3,7 +3,7 @@ import { AppShell } from "@mantine/core";
 import { FC, PropsWithChildren } from "react";
 import LanguagePicker from "./langaugePicker";
 import classes from "./appShell.module.css";
-import ContactMe from "./contactMe";
+import ContactMe from "./contact/contactMe";
 
 const Main: FC<PropsWithChildren> = ({ children }) => (
 	<AppShell header={{ height: 60 }} footer={{ height: 100 }}>

@@ -18,5 +18,23 @@
 			"description": "Dialektli ist ein lustiges Projekt, das ich mache, um mehr über die verschiedenen Dialekte in der Schweiz zu lernen. Es ist eine Plattform, auf der Leute ihre Lieblingsdialektwörter und -sätze austauschen und etwas über die verschiedenen Dialekte in der Schweiz lernen können. Es ist noch in Arbeit. aber ich bin gespannt, wohin es führt.",
 			"tecStack": "Eine Full-Stack-Website, die mit Next.js, Mantine.dev und einer internen GraphQL-API für die Daten erstellt wurde. Die Datenbank wird von Digital Ocean bereitgestellt und die Website wird von Vercel gehostet."
 		}
+	},
+	"contactMe": {
+		"title": "Kontaktiere mich",
+		"fields": {
+			"name": "Name",
+			"namePlaceholder": "Dein Name",
+			"nameError": "Name ist zu kurz",
+			"email": "Email",
+			"emailError": "Ungültige Email",
+			"emailPlaceholder": "Deine Email-Adresse",
+			"subject": "Betreff",
+			"subjectPlaceholder": "Betreff",
+			"message": "Nachricht",
+			"messagePlaceholder": "Deine Nachricht",
+			"fieldIsRequired": "Dieses Feld ist erforderlich"
+		},
+		"submit": "Absenden",
+		"success": "Nachricht erfolgreich gesendet!"
 	}
 }

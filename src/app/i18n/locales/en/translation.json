@@ -22,5 +22,23 @@
 			"description": "Dialektli is a fun project I'm working on to learn more about the different dialects in Switzerland. It's a platform where people can share their favorite dialect words and phrases, and learn about the different dialects in Switzerland. It's still a work in progress, but I'm excited to see where it goes.",
 			"tecStack": "A Full Stack website constructed with Next.js, Mantine.dev and an internal GraphQL API for the data. The database is deployed on Digital Ocean and the website is hosted on Vercel."
 		}
+	},
+	"contactMe": {
+		"title": "Get In Touch",
+		"fields": {
+			"name": "Name",
+			"namePlaceholder": "Your Name",
+			"nameError": "Name is too short",
+			"email": "Email",
+			"emailError": "Invalid email",
+			"emailPlaceholder": "Your Email",
+			"subject": "Subject",
+			"subjectPlaceholder": "Subject",
+			"message": "Message",
+			"messagePlaceholder": "Your Message",
+			"fieldIsRequired": "This field is required"
+		},
+		"submit": "Submit",
+		"success": "Message sent successfully!"
 	}
 }
