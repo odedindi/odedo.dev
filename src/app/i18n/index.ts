@@ -4,8 +4,16 @@ import { initReactI18next } from "react-i18next/initReactI18next";
 import { getOptions } from "./settings";
 import type { Language } from "next/router";
 
-const initI18next = async ({ lng, ns }: { lng: Language; ns?: Namespace }) => {
-	const i18nInstance = createInstance();
+const initI18next = async ({
+	lng,
+	ns,
+	i18n,
+}: {
+	lng: Language;
+	ns?: Namespace;
+	i18n?: i18n;
+}) => {
+	const i18nInstance = i18n ?? createInstance();
 	await i18nInstance
 		.use(initReactI18next)
 		.use(
@@ -17,6 +25,7 @@ const initI18next = async ({ lng, ns }: { lng: Language; ns?: Namespace }) => {
 		.init(getOptions(lng, ns));
 	return i18nInstance;
 };
+export default initI18next;
 
 export async function useTranslation(
 	lng: Language,
@@ -29,8 +38,8 @@ export async function useTranslation(
 		resources: i18nextInstance.services.resourceStore.data,
 		t: i18nextInstance.getFixedT(
 			lng,
-			Array.isArray(ns) ? ns[0] : ns,
-			options.keyPrefix,
+			(Array.isArray(ns) ? ns[0] : ns) as Namespace | undefined,
+			options?.keyPrefix,
 		),
 	};
 }

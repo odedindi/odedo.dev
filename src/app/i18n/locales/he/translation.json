@@ -19,5 +19,23 @@
 			"description": "דיאלקטלי הוא פרויקט נחמד שאני עובד עליו כדי ללמוד עוד על הניבים השונים בשוויץ. זוהי פלטפורמה שבה אנשים יכולים לשתף את המילים והביטויים האהובים עליהם. זה פרוייקט שאני עובד עליו בימים אלו, אבל יהיה מגניב לראות לאן זה יוביל.",
 			"tecStack": "אתר Full Stack שנבנה עם Next.js, Mantine.dev ו-GraphQL API עבור הנתונים. PostgreSQL Database deployed על Digital Ocean והאתר ב-Vercel."
 		}
+	},
+	"contactMe": {
+		"title": "צרו קשר",
+		"fields": {
+			"name": "שם",
+			"namePlaceholder": "השם שלך",
+			"nameError": "השם קצר מדי",
+			"email": "אימייל",
+			"emailError": "אימייל לא תקין",
+			"emailPlaceholder": "האימייל שלך",
+			"subject": "נושא",
+			"subjectPlaceholder": "נושא",
+			"message": "הודעה",
+			"messagePlaceholder": "ההודעה שלך",
+			"fieldIsRequired": "שדה זה הינו חובה"
+		},
+		"submit": "שלח",
+		"success": "ההודעה נשלחה בהצלחה!"
 	}
 }

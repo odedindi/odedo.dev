@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 
 import "@mantine/core/styles.css";
-import { ColorSchemeScript, MantineProvider } from "@mantine/core";
+import { ColorSchemeScript } from "@mantine/core";
 import { dir } from "i18next";
-import Main from "../components/appShell";
+import AppShell from "../components/appShell";
 import { FC } from "react";
 
 import i18nConfig from "../../../i18n.config";
 import { Language } from "next/router";
+import Providers from "../providers";
 
 const defaultSEOProps = {
 	title: "Oded Winberger",
@@ -39,39 +40,34 @@ type RootLayoutProps = Readonly<{
 	params: { lng: Language };
 }>;
 
-const RootLayout: FC<RootLayoutProps> = ({ children, params: { lng } }) => {
-	return (
-		<html
-			lang={lng}
-			dir={dir(lng ?? i18nConfig.defaultLocale)}
-			data-mantine-color-scheme="dark" // support users with disabled JavaScript
-		>
-			<head>
-				<meta charSet="utf-8" />
-				<meta name="theme-color" content="#fff" />
-				<meta name="author" content="Oded Winberger" />
-				<link rel="canonical" href={defaultSEOProps.url} />
-				<link
-					rel="alternate"
-					href={`${defaultSEOProps.url}/de`}
-					hrefLang="de"
-				/>
-				<link
-					data-react-helmet="true"
-					rel="icon"
-					href={defaultSEOProps.favicon}
-				/>
-				<ColorSchemeScript defaultColorScheme="dark" />
-			</head>
-			<body>
-				<MantineProvider defaultColorScheme="dark">
-					<Main>{children}</Main>
-				</MantineProvider>
-			</body>
-		</html>
-	);
-};
+const RootLayout: FC<RootLayoutProps> = ({ children, params: { lng } }) => (
+	<html
+		lang={lng}
+		dir={dir(lng ?? i18nConfig.defaultLocale)}
+		data-mantine-color-scheme="dark" // support users with disabled JavaScript
+	>
+		<head>
+			<meta charSet="utf-8" />
+			<meta name="theme-color" content="#fff" />
+			<meta name="author" content="Oded Winberger" />
+			<link rel="canonical" href={defaultSEOProps.url} />
+			<link rel="alternate" href={`${defaultSEOProps.url}/de`} hrefLang="de" />
+			<link
+				data-react-helmet="true"
+				rel="icon"
+				href={defaultSEOProps.favicon}
+			/>
+			<ColorSchemeScript defaultColorScheme="dark" />
+		</head>
+		<body>
+			<Providers lng={lng}>
+				<AppShell>{children}</AppShell>
+			</Providers>
+		</body>
+	</html>
+);
+
 export default RootLayout;
 
-export const generateStaticParams = async () =>
+export const generateStaticParams = () =>
 	i18nConfig.locales.map((lng) => ({ lng }));

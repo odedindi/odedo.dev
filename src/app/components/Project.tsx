@@ -4,15 +4,17 @@ import type { FC } from "react";
 import { Text, Grid, Card, Box, Anchor } from "@mantine/core";
 import classes from "./project.module.css";
 import { SocialIcon } from "react-social-icons";
+import { clsx } from "clsx";
 
-type ProjectProps = {
+interface ProjectProps {
 	title: string;
 	description: string;
 	imageSrc: string;
 	link: string;
 	tecStack?: string;
 	repo?: string;
-};
+	className?: string;
+}
 
 const Project: FC<ProjectProps> = ({
 	title,
@@ -21,8 +23,9 @@ const Project: FC<ProjectProps> = ({
 	link,
 	tecStack,
 	repo,
+	className,
 }) => (
-	<Grid grow className={classes.grid} gutter={"xl"}>
+	<Grid grow className={clsx(classes.grid, className)} gutter={"xl"}>
 		<Grid.Col span={{ base: 12, md: 4 }} order={2}>
 			<Text>{description}</Text>
 		</Grid.Col>
