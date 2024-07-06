@@ -56,7 +56,7 @@ const ContactMeForm: FC = () => {
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 	const imageSrc = emailSentImage.src as string;
 
-	return !formSentSuccessfully ? (
+	return formSentSuccessfully ? (
 		<Box className={classes.emailSentWrapper}>
 			<Box className={classes.emailSentBody}>
 				<Title className={classes.emailSentTitle}>{t("success")}</Title>
