@@ -3,7 +3,7 @@ build
 .next
 node_modules
 /node_modules
-
+/.yarn
 yarn-error.log
 yarn.lock
 next-env.d.ts

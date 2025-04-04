@@ -1,0 +1,162 @@
+{
+	"metadata": {
+		"title": "Oded Winberger | Full Stack Developer",
+		"description": "Full Stack Developer specializing in modern web and software technologies"
+	},
+	"header": {
+		"home": "Home",
+		"projects": "Projects",
+		"skills": "Skills",
+		"resume": "Resume",
+		"contact": "Contact",
+		"theme": "Toggle theme"
+	},
+	"hero": {
+		"greeting": "Hi, I'm",
+		"name": "Oded Winberger",
+		"title": "Full Stack Developer",
+		"description": "I build digital experiences with modern web technologies",
+		"cta": "View My Work"
+	},
+	"projects": {
+		"title": "Projects",
+		"subtitle": "Some of my recent work",
+		"viewProject": "View Project",
+		"viewCode": "View Code",
+		"items": {
+			"dialektli": {
+				"title": "Dialektli",
+				"description": "Dialektli is a fun project I'm working on to learn more about the different dialects in Switzerland. Aims to be a platform where people can share their favorite dialect words and phrases, and learn about the different dialects in Switzerland. It's a work in progress, but I'm excited to see where it goes.",
+				"technologies": [
+					"Digital Ocean",
+					"PostgreSQL",
+					"TypeScript",
+					"Next.js",
+					"GraphQL",
+					"Prisma",
+					"Mantine.dev"
+				],
+				"image": "https://www.dialektli.ch/assets/dialektli_logo.svg",
+				"liveUrl": "https://www.dialektli.ch/",
+				"codeUrl": "https://github.com/urbanswisstionary/dialektli/"
+			},
+			"solr": {
+				"title": "Solr",
+				"description": "Solr is a neat little guide of our solar system. It's got this gallery showing the sun and all the planets, and a 3D model showing how the planets revolve around the sun with the ability to adjust the size of the sun and the planets to grasp the sheer size of the solar system.",
+				"technologies": [
+					"Vercel",
+					"TypeScript",
+					"Next.js",
+					"Mantine.dev",
+					"Three.js",
+					"GraphQL"
+				],
+				"image": "https://solr.vercel.app/icons/apple-touch-icon.png",
+				"liveUrl": "https://solr.vercel.app/",
+				"codeUrl": "https://github.com/odedindi/solr"
+			},
+			"geochat": {
+				"title": "GeoChat",
+				"description": "GeoChat is a location-based chat application that allows users to chat with others in their vicinity. It was a fun project to work on, and I learned a lot about websockets and geolocation.",
+				"technologies": [
+					"Vercel",
+					"PostgreSQL",
+					"TypeScript",
+					"Next.js",
+					"Ionic",
+					"RxJS",
+					"Socket.io"
+				],
+				"image": "https://geo-chat-omega.vercel.app/assets/beacon.png",
+				"liveUrl": "https://geo-chat-omega.vercel.app/home",
+				"codeUrl": "https://github.com/odedindi/GeoChat"
+			},
+			"landpro": {
+				"title": "LandPro",
+				"description": "In 2021, I had a defining moment with LandPro, as it led me to embrace programming as a career path. It was a great ride.",
+				"technologies": [
+					"Vercel",
+					"PostgreSQL",
+					"Python",
+					"Django",
+					"TypeScript",
+					"Next.js",
+					"AntDesign",
+					"Leaflet",
+					"Socket.io"
+				],
+				"image": "https://land-pro.vercel.app/favicon.png",
+				"liveUrl": "https://land-pro.vercel.app/",
+				"codeUrl": "https://github.com/odedindi/landpro_landing"
+			}
+		}
+	},
+	"skills": {
+		"title": "Skills & Technologies",
+		"frontend": {
+			"title": "Frontend",
+			"items": {
+				"TypeScript": "TypeScript",
+				"React": "React",
+				"Next_js": "Next.js",
+				"Tanstack": "Tanstack",
+				"Redux": "Redux",
+				"Jotai": "Jotai",
+				"Zustand": "Zustand",
+				"Mui": "Mui",
+				"Tailwind": "Tailwind CSS",
+				"styled-components": "Styled-Components"
+			}
+		},
+		"backend": {
+			"title": "Backend",
+			"items": {
+				"Node_js": "Node.js",
+				"Nest_js": "Nest.js",
+				"Express": "Express",
+				"Python": "Python",
+				"Django": "Django",
+				"REST": "REST",
+				"GraphQL": "GraphQL",
+				"PostgreSQL": "PostgreSQL",
+				"MongoDB": "MongoDB",
+				"Apollo": "Apollo",
+				"Pothos": "Pothos"
+			}
+		},
+		"devops": {
+			"title": "DevOps & Tools",
+			"items": {
+				"Git": "Git",
+				"Docker": "Docker",
+				"GCP": "GCP",
+				"CI/CD": "CI/CD",
+				"Jest": "Jest"
+			}
+		}
+	},
+	"resume": {
+		"title": "Resume",
+		"description": "Download my resume to learn more about me.",
+		"download": "Download CV here"
+	},
+	"contact": {
+		"title": "Get In Touch",
+		"description": "Have a project in mind or want to chat? Please do reach out!",
+		"name": "Name",
+		"email": "Email",
+		"subject": "Subject",
+		"message": "Message",
+		"send": "Send Message",
+		"success": "Message sent successfully!",
+		"error": "There was an error sending your message. Please try again."
+	},
+	"footer": {
+		"copyright": "2025 Oded Winberger.",
+		"social": {
+			"github": "GitHub",
+			"linkedin": "LinkedIn",
+			"twitter": "Twitter"
+		}
+	}
+}
