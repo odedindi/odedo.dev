@@ -16,16 +16,13 @@ export async function sendContactForm(data: z.infer<typeof formSchema>) {
 
 	if (!validatedFields.success) throw new Error("Invalid form data");
 
-	const response = await fetch(
-		`${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
-		{
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(validatedFields.data),
+	const response = await fetch(`${process.env.VERCEL_URL}/api/contact`, {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
 		},
-	);
+		body: JSON.stringify(validatedFields.data),
+	});
 
 	return { success: response.ok };
 }
