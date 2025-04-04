@@ -1,18 +1,12 @@
 import { type NextRequest, NextResponse } from "next/server";
 
-import { sendMail, type MailOptions } from "@/services/emailService";
-import { z } from "zod";
+import { type MailOptions, sendMail } from "@/lib/emailService";
 
-const formDataSchema = z.object({
-	name: z.string(),
-	email: z.string(),
-	subject: z.string(),
-	message: z.string(),
-});
+import { FormData } from "../../[locale]/actions";
 
 export async function POST(request: NextRequest) {
 	try {
-		const data = formDataSchema.parse(await request.json());
+		const data = (await request.json()) as FormData;
 
 		const mailOptions: MailOptions = {
 			subject: data.subject,
