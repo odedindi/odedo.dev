@@ -4,6 +4,10 @@ import { type MailOptions, sendMail } from "@/lib/emailService";
 
 import { FormData } from "../../[locale]/actions";
 
+export const config = {
+	runtime: "nodejs",
+};
+
 export async function POST(request: NextRequest) {
 	try {
 		const data = (await request.json()) as FormData;
