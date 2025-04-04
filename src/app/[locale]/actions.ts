@@ -16,7 +16,7 @@ export async function sendContactForm(data: z.infer<typeof formSchema>) {
 
 	if (!validatedFields.success) throw new Error("Invalid form data");
 
-	const response = await fetch(`${process.env.VERCEL_URL}/api/contact`, {
+	const response = await fetch(`${process.env.BASE_URL}/api/contact`, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
