@@ -17,19 +17,16 @@ export default async function HomePage({
 
 	return (
 		<>
-			<section
-				id="home"
-				className="relative min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden"
-			>
+			<section id="home">
 				<Hero />
 			</section>
-			<section id="skills" className="py-20  bg-muted/50">
+			<section id="skills" className="py-20  bg-muted/50 dark:bg-gray-900/25">
 				<Skills />
 			</section>
 			<section id="projects" className="py-20">
 				<Projects />
 			</section>
-			<section id="resume" className="py-20 bg-muted/50">
+			<section id="resume" className="py-20 bg-muted/50 dark:bg-gray-900/25">
 				<Resume />
 			</section>
 			<section id="contact" className="py-20">
