@@ -29,7 +29,8 @@ export default function Resume() {
 				>
 					<a
 						href="https://rxresu.me/oded.winberger/software-developer"
-						download
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						<FileText className="size-5" />
 						{t("download")}
