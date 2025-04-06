@@ -19,6 +19,12 @@ import { ModeToggle } from "./mode-toggle";
 
 const navItems = ["home", "skills", "projects", "resume", "contact"] as const;
 
+const goToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+	if (typeof window === "undefined") return;
+	e.preventDefault();
+	window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 export function DesktopMenu() {
 	const t = useTranslations("header");
 
@@ -30,6 +36,7 @@ export function DesktopMenu() {
 						key={item}
 						className="text-sm font-medium transition-colors hover:text-primary"
 						href={`#${item}`}
+						onClick={item === "home" ? goToTop : undefined}
 					>
 						{t(item)}
 					</Link>
@@ -62,6 +69,7 @@ export function MobileMenu() {
 												"block select-none space-y-1 rounded-md p-3 no-underline outline-none transition-colors hover:bg-accent dark:hover:bg-gray-700 hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-lg font-medium leading-none"
 											}
 											href={`#${item}`}
+											onClick={item === "home" ? goToTop : undefined}
 										>
 											{t(item)}
 										</Link>
