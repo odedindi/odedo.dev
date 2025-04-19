@@ -24,6 +24,20 @@
 		"viewProject": "View Project",
 		"viewCode": "View Code",
 		"items": {
+			"iGarten": {
+				"title": "iGarten",
+				"description": "iGarten is my version of personal software. It allows you to keep track of your plants, their needs, and your gardening tasks. I use it to keep track of my garden and it's been a great help. At the end of the day, it is just another to-do list, but it is a fun and useful project to work on.",
+				"technologies": [
+					"Vercel",
+					"TypeScript",
+					"Next.js",
+					"Tailwind CSS",
+					"shadcn/ui"
+				],
+				"image": "https://igarten.vercel.app/favicon.ico",
+				"liveUrl": "https://igarten.vercel.app/favicon.ico",
+				"codeUrl": "https://github.com/odedindi/iGarten"
+			},
 			"dialektli": {
 				"title": "Dialektli",
 				"description": "Dialektli is a fun project I'm working on to learn more about the different dialects in Switzerland. Aims to be a platform where people can share their favorite dialect words and phrases, and learn about the different dialects in Switzerland. It's a work in progress, but I'm excited to see where it goes.",
