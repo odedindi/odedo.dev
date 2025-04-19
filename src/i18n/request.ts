@@ -4,6 +4,9 @@ import { getRequestConfig } from "next-intl/server";
 
 import { routing } from "./routing";
 
+const mergeArraysWithoutDuplicates = <T>(target: T[], source: T[]) =>
+	Array.from(new Set([...target, ...source]));
+
 export default getRequestConfig(async ({ requestLocale }) => {
 	// Typically corresponds to the `[locale]` segment
 	const requested = await requestLocale;
@@ -13,7 +16,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
 
 	const userMessages = (await import(`../../messages/${locale}.json`)).default;
 	const defaultMessages = (await import(`../../messages/en.json`)).default;
-	const messages = deepmerge(defaultMessages, userMessages);
+	const messages = deepmerge(defaultMessages, userMessages, {
+		arrayMerge: mergeArraysWithoutDuplicates,
+	});
 	return {
 		locale,
 		messages,
