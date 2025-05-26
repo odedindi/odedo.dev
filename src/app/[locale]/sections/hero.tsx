@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
-import { PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { ArrowDown } from "lucide-react";
 import { useRef } from "react";
@@ -25,7 +24,7 @@ export default function Hero() {
 				eventSource={ref}
 				eventPrefix="client"
 			>
-				<PerspectiveCamera makeDefault position={[0, 0, 300]} fov={-45} />
+				<perspectiveCamera position={[0, 0, 300]} fov={-45} />
 				<HilbertLinesScene />
 			</Canvas>
 
