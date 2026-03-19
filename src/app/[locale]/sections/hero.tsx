@@ -11,6 +11,8 @@ import { TypewriterText } from "@/components/typewriter-text";
 import { Button } from "@/components/ui/button";
 import { heroConfig, siteConfig, socialLinks } from "@/lib/site-config";
 
+const isEven = (n: number) => n % 2 === 0;
+
 export default function Hero() {
 	const containerRef = useRef<HTMLElement>(null);
 	const willChange = useWillChange();
@@ -111,7 +113,7 @@ export default function Hero() {
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-muted-foreground hover:text-primary transition-colors"
-								whileHover={{ scale: 1.2, rotate: 5 }}
+								whileHover={{ scale: 1.2, rotate: isEven(index) ? 5 : -5 }}
 								whileTap={{ scale: 0.9 }}
 								aria-label={social.name}
 							>

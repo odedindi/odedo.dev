@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { navItems, siteConfig } from "@/lib/site-config";
+import { navItems } from "@/lib/site-config";
 
 export function Navigation() {
 	const [isScrolled, setIsScrolled] = useState(false);
