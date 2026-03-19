@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 
-export const LinkedIn: FC<{ className?: string }> = ({ className }) => {
+export const Linkedin: FC<{ className?: string }> = ({ className }) => {
 	return (
 		<svg
 			role="img"

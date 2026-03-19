@@ -2,15 +2,17 @@ import {
 	Bot,
 	Code2,
 	Cog,
-	Github,
-	Linkedin,
 	type LucideIcon,
 	Mail,
 	MapPin,
 	Server,
-	Twitter,
 	Zap,
 } from "lucide-react";
+import type { FC } from "react";
+
+import { Github } from "@/components/icons/github";
+import { Linkedin } from "@/components/icons/linkedin";
+import { X } from "@/components/icons/x";
 
 // ============================================================================
 // SITE CONFIGURATION
@@ -23,13 +25,12 @@ export const siteConfig = {
 	firstName: "Oded",
 	lastName: "Winberger",
 	title: "Full-Stack Developer",
-	tagline:
-		"Building AI-powered web experiences with clean code and modern tooling.",
+	tagline: "Building software with clean code and modern tooling.",
 	email: "odedindi@gmail.com",
-	location: "Zurich, Switzerland",
+	location: "Obwalden, Switzerland",
 	availability: "Open to new opportunities",
 	responseTime: "Within 24 hours",
-	yearStarted: 2021,
+	yearStarted: 2020,
 	resumeUrl: "https://rxresu.me/oded.winberger/software-developer",
 	githubUsername: "odedindi",
 };
@@ -57,7 +58,7 @@ export const navItems: NavItem[] = [
 export interface SocialLink {
 	name: string;
 	href: string;
-	icon: LucideIcon;
+	icon: FC<{ className?: string }>;
 }
 
 export const socialLinks: SocialLink[] = [
@@ -67,7 +68,7 @@ export const socialLinks: SocialLink[] = [
 		href: "https://www.linkedin.com/in/oded-winberger/",
 		icon: Linkedin,
 	},
-	{ name: "Twitter", href: "https://twitter.com/odedindi", icon: Twitter },
+	{ name: "Twitter", href: "https://twitter.com/odedindi", icon: X },
 ];
 
 // ============================================================================
@@ -105,10 +106,13 @@ export interface Stat {
 }
 
 export const stats: Stat[] = [
-	{ value: "4+", label: "Years Coding" },
-	{ value: "10+", label: "Projects Shipped" },
+	{
+		value: `${new Date().getFullYear() - siteConfig.yearStarted}+`,
+		label: "Years Coding",
+	},
+	{ value: "10+", label: "Personal projects Shipped" },
 	{ value: "3", label: "AI Apps Built" },
-	{ value: "ZRH", label: "Based In" },
+	{ value: "CH", label: "Based In" },
 ];
 
 export interface Highlight {
@@ -148,7 +152,7 @@ export const aboutContent = {
 	title: "Crafting Digital",
 	titleHighlight: "Experiences",
 	paragraphs: [
-		"I'm a full-stack developer based in Zurich who loves building things that actually work. My focus is on clean code, thoughtful UX, and integrating AI where it genuinely adds value — not just for the hype.",
+		"I'm a full-stack developer based in Obwalden, Switzerland who loves building things that actually work. My focus is on clean code, thoughtful UX, and integrating AI where it genuinely adds value — not just for the hype.",
 		"From iGarten (a plant care app with Gemini vision AI) to Dialektli (a Swiss dialect platform), I build projects I care about. Currently leaning into AI-powered full-stack development and exploring the Swiss tech scene.",
 	],
 };
@@ -356,7 +360,7 @@ export const avatarConfig = {
 	codeSnippet: `const oded = {
   name: "Oded",
   skills: ["AI", "TS"],
-  location: "Zurich"
+  location: "SWITZERLAND",
 };`,
 };
 
