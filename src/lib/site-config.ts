@@ -265,10 +265,16 @@ export const skillCategories: SkillCategory[] = [
 					"Prompt engineering, structured output, multi-modal input — production use.",
 			},
 			{
-				name: "RAG & Agents",
+				name: "AI Agents",
+				level: 78,
+				description:
+					"Plan, build, and orchestrate agents daily — tool use, multi-step reasoning, context window management (summarization, token budgets), MCP protocol.",
+			},
+			{
+				name: "RAG",
 				level: 45,
 				description:
-					"Solid understanding of the architecture — embeddings, vector DBs, retrieval. Not yet shipped.",
+					"Solid theoretical understanding — embeddings, vector DBs, retrieval pipelines. Not yet built end-to-end.",
 			},
 			{
 				name: "Google ADK",
