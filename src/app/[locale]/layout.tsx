@@ -120,7 +120,6 @@ const websiteJsonLd = {
 	},
 };
 
-
 export default async function LocaleLayout({
 	children,
 	params,
@@ -157,7 +156,6 @@ export default async function LocaleLayout({
 						attribute="class"
 						defaultTheme="dark"
 						enableSystem={false}
-						disableTransitionOnChange
 					>
 						{children}
 						<Toaster />
