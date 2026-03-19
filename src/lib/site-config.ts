@@ -110,8 +110,8 @@ export const stats: Stat[] = [
 		value: `${new Date().getFullYear() - siteConfig.yearStarted}+`,
 		label: "Years Coding",
 	},
-	{ value: "10+", label: "Personal projects Shipped" },
-	{ value: "3", label: "AI Apps Built" },
+	// { value: "10+", label: "Personal projects Shipped" },
+	// { value: "3", label: "AI Apps Built" },
 	{ value: "CH", label: "Based In" },
 ];
 
@@ -403,7 +403,7 @@ export interface ContactInfo {
 export const contactInfo: ContactInfo[] = [
 	{ icon: Mail, label: "Email", value: siteConfig.email },
 	{ icon: MapPin, label: "Location", value: siteConfig.location },
-	{ icon: Cog, label: "Status", value: siteConfig.availability },
+	{ icon: Cog, label: "Status", value: "Married +3" },
 ];
 
 export const contactContent = {
@@ -448,7 +448,7 @@ export const avatarConfig = {
 	} as Record<number, string>,
 	codeSnippet: `const oded = {
   name: "Oded",
-  skills: ["AI", "TS"],
+  skills: ["TS", "AI"],
   location: "SWITZERLAND",
 };`,
 };
