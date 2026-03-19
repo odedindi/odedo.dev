@@ -68,7 +68,7 @@ export function Navigation() {
 						</div>
 
 						{/* CV Link */}
-						<div className="hidden md:flex items-center gap-4">
+						{/* <div className="hidden md:flex items-center gap-4">
 							<motion.a
 								href={siteConfig.resumeUrl}
 								target="_blank"
@@ -82,7 +82,7 @@ export function Navigation() {
 							>
 								CV
 							</motion.a>
-						</div>
+						</div> */}
 
 						{/* Mobile Menu Button */}
 						<Button
