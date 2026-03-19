@@ -5,21 +5,28 @@ import {
 	getTranslations,
 	setRequestLocale,
 } from "next-intl/server";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono, Press_Start_2P } from "next/font/google";
 import { notFound } from "next/navigation";
 import { getLangDir } from "rtl-detect";
 
 import type { PropsWithChildren } from "react";
 
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { routing } from "@/i18n/routing";
 
 import "../globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
+const geistMono = Geist_Mono({
+	subsets: ["latin"],
+	variable: "--font-geist-mono",
+});
+const pressStart2P = Press_Start_2P({
+	weight: "400",
+	subsets: ["latin"],
+	variable: "--font-pixel",
+});
 
 export async function generateMetadata({
 	params,
@@ -59,18 +66,19 @@ export default async function LocaleLayout({
 			lang={locale}
 			dir={direction}
 			suppressHydrationWarning
-			className="scroll-smooth"
+			className="relative scroll-smooth"
 		>
 			<body
-				className={`${inter.className} antialiased transition-all duration-200 ease`}
+				className={`${geist.variable} ${geistMono.variable} ${pressStart2P.variable} font-sans antialiased`}
 			>
 				<NextIntlClientProvider messages={messages}>
-					<ThemeProvider>
-						<main className="min-h-screen">
-							<Header />
-							{children}
-							<Footer />
-						</main>
+					<ThemeProvider
+						attribute="class"
+						defaultTheme="dark"
+						enableSystem={false}
+						disableTransitionOnChange
+					>
+						{children}
 						<Toaster />
 					</ThemeProvider>
 				</NextIntlClientProvider>

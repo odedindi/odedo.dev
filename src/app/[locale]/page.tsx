@@ -1,11 +1,14 @@
 import { type Locale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 
+import { About } from "@/app/[locale]/sections/about";
 import { Contact } from "@/app/[locale]/sections/contact";
 import Hero from "@/app/[locale]/sections/hero";
 import Projects from "@/app/[locale]/sections/projects";
-import Resume from "@/app/[locale]/sections/resume";
 import { Skills } from "@/app/[locale]/sections/skills";
+import { Navigation } from "@/components/navigation";
+import { PixelCursor } from "@/components/pixel-cursor";
+import { ScanlineOverlay } from "@/components/scanline-overlay";
 
 export default async function HomePage({
 	params,
@@ -16,22 +19,15 @@ export default async function HomePage({
 	setRequestLocale(locale);
 
 	return (
-		<>
-			<section id="home">
-				<Hero />
-			</section>
-			<section id="skills" className="py-20  bg-muted/50 dark:bg-gray-900/25">
-				<Skills />
-			</section>
-			<section id="projects" className="py-20">
-				<Projects />
-			</section>
-			<section id="resume" className="py-20 bg-muted/50 dark:bg-gray-900/25">
-				<Resume />
-			</section>
-			<section id="contact" className="py-20">
-				<Contact />
-			</section>
-		</>
+		<main className="relative min-h-screen overflow-x-hidden">
+			<PixelCursor />
+			<ScanlineOverlay />
+			<Navigation />
+			<Hero />
+			<About />
+			<Skills />
+			<Projects />
+			<Contact />
+		</main>
 	);
 }
