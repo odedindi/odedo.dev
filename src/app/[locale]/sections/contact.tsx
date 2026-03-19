@@ -24,12 +24,24 @@ import { Textarea } from "@/components/ui/textarea";
 import { contactContent, contactInfo, siteConfig } from "@/lib/site-config";
 
 const formSchema = z.object({
-	name: z.string().nonempty({ message: "Name is required." }),
-	email: z.string().email({ message: "Please enter a valid email address." }),
-	subject: z.string().nonempty({ message: "Subject is required." }),
+	name: z
+		.string()
+		.nonempty({ message: "Name is required." })
+		.max(100, { message: "Name is too long." }),
+	email: z
+		.string()
+		.email({ message: "Please enter a valid email address." })
+		.max(254),
+	subject: z
+		.string()
+		.nonempty({ message: "Subject is required." })
+		.max(150, { message: "Subject is too long." }),
 	message: z
 		.string()
-		.min(5, { message: "Could you try to be more descriptive?" }),
+		.min(5, { message: "Could you try to be more descriptive?" })
+		.max(5000, { message: "Message is too long (max 5000 characters)." }),
+	// Honeypot field — must remain empty. Bots fill it; humans never see it.
+	website: z.string().max(0, { message: "Bot detected." }).optional(),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -44,7 +56,13 @@ export function Contact() {
 
 	const form = useForm<FormValues>({
 		resolver: zodResolver(formSchema),
-		defaultValues: { name: "", email: "", subject: "", message: "" },
+		defaultValues: {
+			name: "",
+			email: "",
+			subject: "",
+			message: "",
+			website: "",
+		},
 	});
 
 	async function onSubmit(data: FormValues) {
@@ -261,6 +279,16 @@ export function Contact() {
 													<FormMessage />
 												</FormItem>
 											)}
+										/>
+
+										{/* Honeypot field — hidden from humans, filled by bots */}
+										<input
+											type="text"
+											{...form.register("website")}
+											autoComplete="off"
+											tabIndex={-1}
+											aria-hidden="true"
+											style={{ display: "none" }}
 										/>
 
 										<Button
