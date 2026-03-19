@@ -42,6 +42,6 @@ next-env.d.ts
 
 #  Output of 'check:types'
 tsconfig.tsbuildinfo
-/backup_odedo
+.eslintcache
 
 /docs
