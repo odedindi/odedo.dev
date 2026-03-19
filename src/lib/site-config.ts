@@ -276,6 +276,25 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/odedindi/GeoChat",
 		liveUrl: "https://geo-chat-omega.vercel.app/home",
 	},
+	{
+		id: 5,
+		title: "LandPro",
+		description:
+			"Climate hackathon prototype — an AI- and satellite-powered platform for carbon sequestration estimation. Uses TensorFlow + scikit-learn to classify land cover from satellite imagery. Built for the Cool Farm Alliance challenge with interactive Leaflet mapping.",
+		tags: [
+			"React",
+			"Redux",
+			"Leaflet",
+			"Django REST",
+			"TensorFlow",
+			"scikit-learn",
+		],
+		color: "oklch(0.78 0.16 130)",
+		stats: { focus: "AI+SAT", type: "Climate" },
+		featured: false,
+		githubUrl: "https://github.com/odedindi/lpfs",
+		liveUrl: "https://landpro.vercel.app/",
+	},
 ];
 
 // ============================================================================
