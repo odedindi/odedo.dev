@@ -88,7 +88,7 @@ export function PixelAvatar() {
 			</div>
 
 			{/* Status indicator */}
-			<motion.div
+			{/* <motion.div
 				style={{ willChange }}
 				className="absolute -bottom-8 left-1/2 -translate-x-1/2"
 				animate={{ opacity: [0.5, 1, 0.5] }}
@@ -100,7 +100,7 @@ export function PixelAvatar() {
 						AVAILABLE
 					</span>
 				</div>
-			</motion.div>
+			</motion.div> */}
 
 			{/* Code snippet floating */}
 			<motion.div
