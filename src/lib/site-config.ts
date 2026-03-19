@@ -277,16 +277,16 @@ export const skillCategories: SkillCategory[] = [
 		color: "oklch(0.8 0.15 200)",
 		skills: [
 			{
-				name: "Vercel AI SDK",
-				level: 65,
+				name: "LLM Integration",
+				level: 75,
 				description:
-					"Streaming, structured output, tool calling, vision AI — shipped in iGarten.",
+					"Vercel AI SDK, Gemini / OpenAI APIs — streaming, structured output, tool calling, multi-modal, prompt engineering. Shipped in production.",
 			},
 			{
-				name: "LLM APIs (Gemini)",
-				level: 70,
+				name: "Google ADK",
+				level: 50,
 				description:
-					"Prompt engineering, structured output, multi-modal input — production use.",
+					"Used heavily in a work hackathon to prototype agentic product directions. Not yet in production.",
 			},
 			{
 				name: "AI Agents",
@@ -299,12 +299,6 @@ export const skillCategories: SkillCategory[] = [
 				level: 45,
 				description:
 					"Solid theoretical understanding — embeddings, vector DBs, retrieval pipelines. Not yet built end-to-end.",
-			},
-			{
-				name: "Google ADK",
-				level: 50,
-				description:
-					"Used heavily in a work hackathon to prototype agentic product directions. Not yet in production.",
 			},
 		],
 	},
