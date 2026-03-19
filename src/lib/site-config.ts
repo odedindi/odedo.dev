@@ -289,6 +289,12 @@ export const skillCategories: SkillCategory[] = [
 		color: "oklch(0.85 0.18 90)",
 		skills: [
 			{
+				name: "Git",
+				level: 80,
+				description:
+					"Power user — rebase, squash, bisect, reflog recovery, cherry-pick, hooks, worktrees.",
+			},
+			{
 				name: "CI/CD Pipelines",
 				level: 78,
 				description:
