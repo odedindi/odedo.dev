@@ -181,22 +181,16 @@ export const skillCategories: SkillCategory[] = [
 		color: "oklch(0.75 0.2 160)",
 		skills: [
 			{
-				name: "React / Next.js",
-				level: 90,
-				description:
-					"App Router, RSC, Server Actions, streaming — shipped across 5 production projects.",
-			},
-			{
 				name: "TypeScript",
 				level: 90,
 				description:
 					"Generics, conditional types, discriminated unions — used throughout every project.",
 			},
 			{
-				name: "CSS & UI Libraries",
-				level: 85,
+				name: "React / Next.js",
+				level: 90,
 				description:
-					"Vanilla CSS foundation, Tailwind as primary layer, MUI / Mantine / shadcn for component-level work — all shipped in production.",
+					"App Router, RSC, Server Actions, streaming — shipped across 5 production projects.",
 			},
 			{
 				name: "Angular",
@@ -205,10 +199,28 @@ export const skillCategories: SkillCategory[] = [
 					"Built real features on a past project — components, services, RxJS, routing. Not current, would need to re-ramp.",
 			},
 			{
+				name: "CSS & UI Libraries",
+				level: 85,
+				description:
+					"Vanilla CSS foundation, Tailwind as primary layer, MUI / Mantine / shadcn for component-level work — all shipped in production.",
+			},
+			{
 				name: "SEO",
 				level: 70,
 				description:
 					"Technical SEO: structured data (JSON-LD), Core Web Vitals, sitemap, og:image — shipped with measurable results.",
+			},
+			{
+				name: "Accessibility (a11y)",
+				level: 70,
+				description:
+					"Semantic HTML, ARIA roles, keyboard navigation, color contrast — tested with screen readers.",
+			},
+			{
+				name: "Effect-TS",
+				level: 40,
+				description:
+					"Self-teaching: Effect, pipe, Schema, typed error handling — working through the mental model, not yet in production.",
 			},
 		],
 	},
@@ -221,12 +233,6 @@ export const skillCategories: SkillCategory[] = [
 				level: 80,
 				description:
 					"Production APIs with auth, rate limiting, background jobs, and error recovery.",
-			},
-			{
-				name: "Effect-TS",
-				level: 40,
-				description:
-					"Self-teaching: Effect, pipe, Schema, typed error handling — working through the mental model, not yet in production.",
 			},
 			{
 				name: "GraphQL",
@@ -251,6 +257,18 @@ export const skillCategories: SkillCategory[] = [
 				level: 45,
 				description:
 					"Document model, collections, queries, aggregation pipeline — side project experience.",
+			},
+			{
+				name: "Prisma",
+				level: 70,
+				description:
+					"Schema-first ORM — migrations, relations, type-safe queries, used across multiple production projects.",
+			},
+			{
+				name: "Testing",
+				level: 70,
+				description:
+					"Unit and integration tests with Jest / Vitest and Testing Library — part of regular development workflow.",
 			},
 		],
 	},
@@ -323,6 +341,12 @@ export const skillCategories: SkillCategory[] = [
 				level: 65,
 				description:
 					"Built a TypeScript + Bun Windows executable to fully automate company dev setup: tooling, terminal, DB, and IIS config.",
+			},
+			{
+				name: "Linux / Server Admin",
+				level: 50,
+				description:
+					"SSH, file permissions, process management, nginx, cron jobs — can manage a VPS with a guide.",
 			},
 		],
 	},
