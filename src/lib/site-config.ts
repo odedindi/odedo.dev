@@ -242,9 +242,15 @@ export const skillCategories: SkillCategory[] = [
 			},
 			{
 				name: "PostgreSQL",
-				level: 70,
+				level: 65,
 				description:
 					"Schema design, relational modeling, Prisma migrations — shipped in production.",
+			},
+			{
+				name: "MongoDB",
+				level: 45,
+				description:
+					"Document model, collections, queries, aggregation pipeline — side project experience.",
 			},
 		],
 	},
