@@ -2,18 +2,15 @@
 
 import { motion } from "framer-motion";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
+import { useIsMounted } from "@/hooks/useIsMounted";
 import { avatarConfig, themeColors } from "@/lib/site-config";
 
 export function PixelAvatar() {
 	const [isHovered, setIsHovered] = useState(false);
-	const [isMounted, setIsMounted] = useState(false);
+	const isMounted = useIsMounted();
 	const { pattern, colors, pixelSize, codeSnippet } = avatarConfig;
-
-	useEffect(() => {
-		setIsMounted(true);
-	}, []);
 
 	return (
 		<motion.div

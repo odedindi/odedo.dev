@@ -2,8 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { useEffect, useState } from "react";
-
+import { useIsMounted } from "@/hooks/useIsMounted";
 import type { ContributionCalendar } from "@/lib/github";
 import { LEVEL_MAP } from "@/lib/github";
 
@@ -26,11 +25,7 @@ export function ContributionGraph({
 	calendar,
 	year,
 }: ContributionGraphProps) {
-	const [isMounted, setIsMounted] = useState(false);
-
-	useEffect(() => {
-		setIsMounted(true);
-	}, []);
+	const isMounted = useIsMounted();
 
 	const weeks = calendar?.weeks ?? [];
 	const totalContributions = calendar?.totalContributions ?? 0;

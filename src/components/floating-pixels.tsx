@@ -2,17 +2,12 @@
 
 import { motion } from "framer-motion";
 
-import { useEffect, useState } from "react";
-
+import { useIsMounted } from "@/hooks/useIsMounted";
 import { floatingPixelsConfig } from "@/lib/site-config";
 
 export function FloatingPixels() {
-	const [isMounted, setIsMounted] = useState(false);
+	const isMounted = useIsMounted();
 	const { pixels, colors } = floatingPixelsConfig;
-
-	useEffect(() => {
-		setIsMounted(true);
-	}, []);
 
 	// Only render on client to avoid hydration mismatch with animations
 	if (!isMounted) {

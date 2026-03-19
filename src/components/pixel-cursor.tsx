@@ -84,13 +84,19 @@ export function PixelCursor() {
 		const handleMouseLeave = () => setIsVisible(false);
 		const handleMouseEnter = () => setIsVisible(true);
 
-		window.addEventListener("mousemove", handleMouseMove, { passive: true });
-		document.body.addEventListener("mouseleave", handleMouseLeave);
-		document.body.addEventListener("mouseenter", handleMouseEnter);
+		const abortController = new AbortController(); // For cleanup in case component unmounts
+		window.addEventListener("mousemove", handleMouseMove, {
+			passive: true,
+			signal: abortController.signal,
+		});
+		document.body.addEventListener("mouseleave", handleMouseLeave, {
+			signal: abortController.signal,
+		});
+		document.body.addEventListener("mouseenter", handleMouseEnter, {
+			signal: abortController.signal,
+		});
 		return () => {
-			window.removeEventListener("mousemove", handleMouseMove);
-			document.body.removeEventListener("mouseleave", handleMouseLeave);
-			document.body.removeEventListener("mouseenter", handleMouseEnter);
+			abortController.abort();
 		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
