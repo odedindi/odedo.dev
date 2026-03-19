@@ -226,7 +226,6 @@ export interface Project {
 	tags: string[];
 	color: string;
 	stats: Record<string, string>;
-	featured: boolean;
 	githubUrl?: string;
 	liveUrl?: string;
 }
@@ -240,7 +239,6 @@ export const projects: Project[] = [
 		tags: ["Next.js", "Vercel AI SDK", "Gemini", "TypeScript", "Tailwind"],
 		color: "oklch(0.75 0.2 160)",
 		stats: { features: "3 AI", type: "App" },
-		featured: true,
 		githubUrl: "https://github.com/odedindi/iGarten",
 		liveUrl: "https://igarten.vercel.app/",
 	},
@@ -252,7 +250,6 @@ export const projects: Project[] = [
 		tags: ["Next.js", "GraphQL", "Prisma", "PostgreSQL", "TypeScript"],
 		color: "oklch(0.7 0.22 330)",
 		stats: { dialects: "26+", stack: "Full" },
-		featured: true,
 		githubUrl: "https://github.com/urbanswisstionary/dialektli/",
 		liveUrl: "https://www.dialektli.ch/",
 	},
@@ -264,7 +261,6 @@ export const projects: Project[] = [
 		tags: ["Next.js", "Three.js", "TypeScript", "GraphQL"],
 		color: "oklch(0.8 0.15 200)",
 		stats: { planets: "8+", engine: "3D" },
-		featured: false,
 		githubUrl: "https://github.com/odedindi/solr",
 		liveUrl: "https://solr.vercel.app/",
 	},
@@ -276,7 +272,6 @@ export const projects: Project[] = [
 		tags: ["Next.js", "Socket.io", "PostgreSQL", "Ionic", "RxJS"],
 		color: "oklch(0.85 0.18 90)",
 		stats: { tech: "RT", type: "Chat" },
-		featured: false,
 		githubUrl: "https://github.com/odedindi/GeoChat",
 		liveUrl: "https://geo-chat-omega.vercel.app/home",
 	},
@@ -295,7 +290,6 @@ export const projects: Project[] = [
 		],
 		color: "oklch(0.78 0.16 130)",
 		stats: { focus: "AI+SAT", type: "Climate" },
-		featured: false,
 		githubUrl: "https://github.com/odedindi/lpfs",
 		liveUrl: "https://landpro.vercel.app/",
 	},
