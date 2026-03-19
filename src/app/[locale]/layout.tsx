@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { type Locale, NextIntlClientProvider, hasLocale } from "next-intl";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
 import {
 	getMessages,
 	getTranslations,
@@ -27,14 +27,12 @@ const pressStart2P = Press_Start_2P({
 	subsets: ["latin"],
 	variable: "--font-pixel",
 });
-
-export async function generateMetadata({
-	params,
-}: {
-	params: Promise<{ locale: Locale }>;
-}) {
+export async function generateMetadata({ params }: LayoutProps<"/[locale]">) {
 	const { locale } = await params;
-	const t = await getTranslations({ locale, namespace: "metadata" });
+	const t = await getTranslations({
+		locale: hasLocale(routing.locales, locale) ? locale : routing.defaultLocale,
+		namespace: "metadata",
+	});
 
 	return {
 		title: t("title"),
@@ -49,9 +47,7 @@ export function generateStaticParams() {
 export default async function LocaleLayout({
 	children,
 	params,
-}: PropsWithChildren<{
-	params: Promise<{ locale: Locale }>;
-}>) {
+}: LayoutProps<"/[locale]">) {
 	const { locale } = await params;
 	const direction = getLangDir(locale);
 	if (!hasLocale(routing.locales, locale)) {

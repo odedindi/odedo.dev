@@ -1,4 +1,4 @@
-import { type Locale } from "next-intl";
+import { type Locale, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 
 import { About } from "@/app/[locale]/sections/about";
@@ -9,14 +9,14 @@ import { Skills } from "@/app/[locale]/sections/skills";
 import { Navigation } from "@/components/navigation";
 import { PixelCursor } from "@/components/pixel-cursor";
 import { ScanlineOverlay } from "@/components/scanline-overlay";
+import { routing } from "@/i18n/routing";
 
-export default async function HomePage({
-	params,
-}: {
-	params: Promise<{ locale: Locale }>;
-}) {
+export default async function HomePage({ params }: PageProps<"/[locale]">) {
 	const { locale } = await params;
-	setRequestLocale(locale);
+	const requestLocale = hasLocale(routing.locales, locale)
+		? locale
+		: routing.defaultLocale;
+	setRequestLocale(requestLocale);
 
 	return (
 		<main className="relative min-h-screen overflow-x-hidden">
