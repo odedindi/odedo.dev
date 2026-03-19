@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useWillChange } from "framer-motion";
 
 import { useState } from "react";
 
@@ -10,6 +10,7 @@ import { avatarConfig, themeColors } from "@/lib/site-config";
 export function PixelAvatar() {
 	const [isHovered, setIsHovered] = useState(false);
 	const isMounted = useIsMounted();
+	const willChange = useWillChange();
 	const { pattern, colors, pixelSize, codeSnippet } = avatarConfig;
 
 	return (
@@ -88,6 +89,7 @@ export function PixelAvatar() {
 
 			{/* Status indicator */}
 			<motion.div
+				style={{ willChange }}
 				className="absolute -bottom-8 left-1/2 -translate-x-1/2"
 				animate={{ opacity: [0.5, 1, 0.5] }}
 				transition={{ duration: 1.5, repeat: Infinity }}
@@ -102,6 +104,7 @@ export function PixelAvatar() {
 
 			{/* Code snippet floating */}
 			<motion.div
+				style={{ willChange }}
 				className="absolute -right-32 top-1/4 font-mono text-[10px] text-muted-foreground/50 whitespace-pre hidden xl:block"
 				animate={{
 					x: [0, 10, 0],

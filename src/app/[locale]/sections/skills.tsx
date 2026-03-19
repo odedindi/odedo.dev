@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useWillChange } from "framer-motion";
 
 import { useRef, useState } from "react";
 
@@ -8,6 +8,7 @@ import { skillCategories } from "@/lib/site-config";
 
 export function Skills() {
 	const ref = useRef(null);
+	const willChange = useWillChange();
 	const isInView = useInView(ref, { once: true, margin: "-100px" });
 	const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
@@ -140,6 +141,7 @@ export function Skills() {
 				>
 					<div className="inline-flex items-center gap-4 px-6 py-3 border border-accent bg-accent/10">
 						<motion.div
+							style={{ willChange }}
 							animate={{ rotate: [0, 10, -10, 0] }}
 							transition={{ duration: 2, repeat: Infinity }}
 							className="text-2xl"

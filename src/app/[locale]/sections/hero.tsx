@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useWillChange } from "framer-motion";
 
 import { ArrowDown } from "lucide-react";
-import { useRef } from "react";
+import { useCallback, useRef } from "react";
 
 import { FloatingPixels } from "@/components/floating-pixels";
 import { PixelAvatar } from "@/components/pixel-avatar";
@@ -13,6 +13,8 @@ import { heroConfig, siteConfig, socialLinks } from "@/lib/site-config";
 
 export default function Hero() {
 	const containerRef = useRef<HTMLElement>(null);
+	const willChange = useWillChange();
+
 	const { scrollYProgress } = useScroll({
 		target: containerRef,
 		offset: ["start start", "end start"],
@@ -22,12 +24,12 @@ export default function Hero() {
 	const rightX = useTransform(scrollYProgress, [0, 1], [0, 100]);
 	const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-	const scrollToSection = (sectionId: string) => {
+	const scrollToSection = useCallback((sectionId: string) => {
 		const element = document.getElementById(sectionId);
 		if (element) {
 			element.scrollIntoView({ behavior: "smooth" });
 		}
-	};
+	}, []);
 
 	return (
 		<section
@@ -113,7 +115,9 @@ export default function Hero() {
 								whileTap={{ scale: 0.9 }}
 								aria-label={social.name}
 							>
-								<social.icon className="w-5 h-5" />
+								<social.icon
+									className={`fill-white ${social.name === "LinkedIn" ? "size-7.5 [&_rect]:fill-transparent" : "size-5"}`}
+								/>
 							</motion.a>
 						))}
 					</motion.div>
@@ -134,6 +138,7 @@ export default function Hero() {
 
 				{/* Decorative Elements */}
 				<motion.div
+					style={{ willChange }}
 					className="absolute top-20 right-20 font-[family-name:var(--font-pixel)] text-[10px] text-primary/40"
 					animate={{ opacity: [0.4, 1, 0.4] }}
 					transition={{ duration: 2, repeat: Infinity }}
@@ -142,6 +147,7 @@ export default function Hero() {
 				</motion.div>
 
 				<motion.div
+					style={{ willChange }}
 					className="absolute bottom-40 left-20 font-[family-name:var(--font-pixel)] text-[8px] text-accent/40"
 					animate={{ opacity: [0.3, 0.8, 0.3] }}
 					transition={{ duration: 3, repeat: Infinity, delay: 1 }}
@@ -150,6 +156,7 @@ export default function Hero() {
 				</motion.div>
 
 				<motion.div
+					style={{ willChange }}
 					className="absolute top-1/3 right-32 font-[family-name:var(--font-pixel)] text-[8px] text-muted-foreground/30"
 					animate={{ opacity: [0.2, 0.6, 0.2] }}
 					transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
@@ -160,6 +167,7 @@ export default function Hero() {
 
 			{/* Scroll Indicator */}
 			<motion.button
+				style={{ willChange }}
 				className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
 				animate={{ y: [0, 10, 0] }}
 				transition={{ duration: 1.5, repeat: Infinity }}

@@ -1,12 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useWillChange } from "framer-motion";
 
 import { useEffect, useState } from "react";
 
 import { typewriterPhrases } from "@/lib/site-config";
 
 export function TypewriterText() {
+	const willChange = useWillChange();
 	const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
 	const [displayedText, setDisplayedText] = useState("");
 	const [isDeleting, setIsDeleting] = useState(false);
@@ -43,6 +44,7 @@ export function TypewriterText() {
 		<div className="font-[family-name:var(--font-pixel)] text-[11px] text-accent">
 			<span>{displayedText}</span>
 			<motion.span
+				style={{ willChange }}
 				animate={{ opacity: [1, 0] }}
 				transition={{ duration: 0.5, repeat: Infinity }}
 				className="inline-block w-2 h-4 bg-accent ml-1"

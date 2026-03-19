@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useWillChange } from "framer-motion";
 import { toast } from "sonner";
 import { z } from "zod";
 
@@ -37,6 +37,8 @@ type FormValues = z.infer<typeof formSchema>;
 export function Contact() {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true, margin: "-100px" });
+	const willChange = useWillChange();
+
 	const [isSubmitted, setIsSubmitted] = useState(false);
 	const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -124,6 +126,7 @@ export function Contact() {
 							className="inline-flex items-center gap-3 px-4 py-3 border border-primary bg-primary/10"
 						>
 							<motion.div
+								style={{ willChange }}
 								className="w-2 h-2 bg-primary"
 								animate={{ opacity: [1, 0.3, 1] }}
 								transition={{ duration: 1.5, repeat: Infinity }}
@@ -304,6 +307,7 @@ export function Contact() {
 								Built with
 							</span>
 							<motion.span
+								style={{ willChange }}
 								animate={{ scale: [1, 1.2, 1] }}
 								transition={{ duration: 1, repeat: Infinity }}
 								className="text-accent"

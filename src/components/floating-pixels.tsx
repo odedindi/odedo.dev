@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 
+import { memo } from "react";
+
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { floatingPixelsConfig } from "@/lib/site-config";
 
-export function FloatingPixels() {
+export const FloatingPixels = memo(function FloatingPixels() {
 	const isMounted = useIsMounted();
 	const { pixels, colors } = floatingPixelsConfig;
 
@@ -45,4 +47,4 @@ export function FloatingPixels() {
 			))}
 		</div>
 	);
-}
+});
