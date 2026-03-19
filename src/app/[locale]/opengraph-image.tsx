@@ -91,7 +91,7 @@ export default function Image() {
 					letterSpacing: 2,
 				}}
 			>
-				// BUILDING THE FUTURE
+				{"// BUILDING THE FUTURE"}
 			</div>
 
 			{/* Content */}
