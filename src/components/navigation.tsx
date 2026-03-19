@@ -130,7 +130,7 @@ export function Navigation() {
 										{item.label}
 									</motion.button>
 								))}
-								<motion.a
+								{/* <motion.a
 									href={siteConfig.resumeUrl}
 									target="_blank"
 									rel="noopener noreferrer"
@@ -140,7 +140,7 @@ export function Navigation() {
 									transition={{ delay: navItems.length * 0.1 }}
 								>
 									CV
-								</motion.a>
+								</motion.a> */}
 							</div>
 						</div>
 					</motion.div>

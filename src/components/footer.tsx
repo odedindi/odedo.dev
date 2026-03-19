@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 import { Github } from "./icons/github";
-import { LinkedIn } from "./icons/linkedin";
+import { Linkedin } from "./icons/linkedin";
 import { X } from "./icons/x";
 
 const isEven = (n: number) => n % 2 === 0;
@@ -19,7 +19,7 @@ const socialLinks = [
 	{
 		name: "linkedin",
 		href: "https://linkedin.com/in/odedw/",
-		Icon: LinkedIn,
+		Icon: Linkedin,
 	},
 	{
 		name: "twitter",
