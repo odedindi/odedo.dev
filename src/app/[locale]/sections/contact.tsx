@@ -312,7 +312,7 @@ export function Contact() {
 								transition={{ duration: 1, repeat: Infinity }}
 								className="text-accent"
 							>
-								*
+								❤︎⁠
 							</motion.span>
 							<span className="text-[10px] text-muted-foreground">
 								using Next.js
