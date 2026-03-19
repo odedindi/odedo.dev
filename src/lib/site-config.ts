@@ -199,10 +199,10 @@ export const skillCategories: SkillCategory[] = [
 					"Vanilla CSS foundation, Tailwind as primary layer, MUI / Mantine / shadcn for component-level work — all shipped in production.",
 			},
 			{
-				name: "Framer Motion",
-				level: 70,
+				name: "Angular",
+				level: 50,
 				description:
-					"Advanced animation sequences, layout transitions, gesture-based interactions.",
+					"Built real features on a past project — components, services, RxJS, routing. Not current, would need to re-ramp.",
 			},
 			{
 				name: "SEO",
