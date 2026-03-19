@@ -30,7 +30,7 @@ export const siteConfig = {
 	location: "Obwalden, Switzerland",
 	availability: "Open to new opportunities",
 	responseTime: "Within 24 hours",
-	yearStarted: 2020,
+	yearStarted: 2018,
 	resumeUrl: "https://rxresu.me/oded.winberger/software-developer",
 	githubUsername: "odedindi",
 };
@@ -163,7 +163,10 @@ export const aboutContent = {
 
 export interface Skill {
 	name: string;
+	/** 0–100 scale (maps to 1–10: multiply by 10). Used as progress bar width. */
 	level: number;
+	/** Short description of what you actually did / can do with this skill. */
+	description?: string;
 }
 
 export interface SkillCategory {
@@ -177,40 +180,132 @@ export const skillCategories: SkillCategory[] = [
 		name: "Frontend",
 		color: "oklch(0.75 0.2 160)",
 		skills: [
-			{ name: "React / Next.js", level: 92 },
-			{ name: "TypeScript", level: 90 },
-			{ name: "Tailwind CSS", level: 88 },
-			{ name: "Framer Motion", level: 78 },
+			{
+				name: "React / Next.js",
+				level: 90,
+				description:
+					"App Router, RSC, Server Actions, streaming — shipped across 5 production projects.",
+			},
+			{
+				name: "TypeScript",
+				level: 90,
+				description:
+					"Generics, conditional types, discriminated unions — used throughout every project.",
+			},
+			{
+				name: "CSS & UI Libraries",
+				level: 85,
+				description:
+					"Vanilla CSS foundation, Tailwind as primary layer, MUI / Mantine / shadcn for component-level work — all shipped in production.",
+			},
+			{
+				name: "Framer Motion",
+				level: 70,
+				description:
+					"Advanced animation sequences, layout transitions, gesture-based interactions.",
+			},
+			{
+				name: "SEO",
+				level: 70,
+				description:
+					"Technical SEO: structured data (JSON-LD), Core Web Vitals, sitemap, og:image — shipped with measurable results.",
+			},
 		],
 	},
 	{
 		name: "Backend",
 		color: "oklch(0.7 0.22 330)",
 		skills: [
-			{ name: "Node.js / Nest.js", level: 85 },
-			{ name: "GraphQL / REST", level: 87 },
-			{ name: "PostgreSQL", level: 80 },
-			{ name: "Python / Django", level: 72 },
+			{
+				name: "Node.js (TypeScript)",
+				level: 80,
+				description:
+					"Production APIs with auth, rate limiting, background jobs, and error recovery.",
+			},
+			{
+				name: "Effect-TS",
+				level: 40,
+				description:
+					"Self-teaching: Effect, pipe, Schema, typed error handling — working through the mental model, not yet in production.",
+			},
+			{
+				name: "GraphQL",
+				level: 70,
+				description:
+					"Schema design from scratch, resolvers, mutations, Prisma ORM — Dialektli.",
+			},
+			{
+				name: "REST API Design",
+				level: 75,
+				description:
+					"RESTful services, route design, middleware chains, request validation.",
+			},
+			{
+				name: "PostgreSQL",
+				level: 70,
+				description:
+					"Schema design, relational modeling, Prisma migrations — shipped in production.",
+			},
 		],
 	},
 	{
 		name: "AI & LLMs",
 		color: "oklch(0.8 0.15 200)",
 		skills: [
-			{ name: "Vercel AI SDK", level: 85 },
-			{ name: "Gemini / OpenAI", level: 83 },
-			{ name: "RAG & Agents", level: 75 },
-			{ name: "n8n Workflows", level: 70 },
+			{
+				name: "Vercel AI SDK",
+				level: 65,
+				description:
+					"Streaming, structured output, tool calling, vision AI — shipped in iGarten.",
+			},
+			{
+				name: "LLM APIs (Gemini)",
+				level: 70,
+				description:
+					"Prompt engineering, structured output, multi-modal input — production use.",
+			},
+			{
+				name: "RAG & Agents",
+				level: 45,
+				description:
+					"Solid understanding of the architecture — embeddings, vector DBs, retrieval. Not yet shipped.",
+			},
+			{
+				name: "Google ADK",
+				level: 50,
+				description:
+					"Used heavily in a work hackathon to prototype agentic product directions. Not yet in production.",
+			},
 		],
 	},
 	{
-		name: "DevOps & Tools",
+		name: "Infrastructure",
 		color: "oklch(0.85 0.18 90)",
 		skills: [
-			{ name: "Git / GitHub", level: 90 },
-			{ name: "Docker", level: 72 },
-			{ name: "Vercel / GCP", level: 80 },
-			{ name: "CI/CD", level: 75 },
+			{
+				name: "CI/CD Pipelines",
+				level: 78,
+				description:
+					"GitHub Actions and GitLab CI — full pipelines: lint, test, build, deploy, triggered on PR and merge.",
+			},
+			{
+				name: "Docker",
+				level: 60,
+				description:
+					"Dockerfiles, docker-compose for multi-service stacks, working staging deployments.",
+			},
+			{
+				name: "Cloud Deployment",
+				level: 60,
+				description:
+					"Production deploys on Vercel and DigitalOcean — custom domains, env management.",
+			},
+			{
+				name: "Developer Tooling",
+				level: 65,
+				description:
+					"Built a TypeScript + Bun Windows executable to fully automate company dev setup: tooling, terminal, DB, and IIS config.",
+			},
 		],
 	},
 ];
