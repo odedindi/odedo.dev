@@ -1,133 +1,175 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import Link from "next/link";
+import { motion } from "framer-motion";
 
-import { Canvas } from "@react-three/fiber";
 import { ArrowDown } from "lucide-react";
-import { useRef } from "react";
+import { useCallback, useRef } from "react";
 
-import HilbertLinesScene from "@/components/Three/HilbertLinesScene";
+import { FloatingPixels } from "@/components/floating-pixels";
+import { PixelAvatar } from "@/components/pixel-avatar";
+import { TypewriterText } from "@/components/typewriter-text";
 import { Button } from "@/components/ui/button";
+import { heroConfig, siteConfig, socialLinks } from "@/lib/site-config";
+
+const isEven = (n: number) => n % 2 === 0;
 
 export default function Hero() {
-	const t = useTranslations("hero");
+	const containerRef = useRef<HTMLElement>(null);
 
-	const ref = useRef<HTMLDivElement>(null!);
+	const scrollToSection = useCallback((sectionId: string) => {
+		const element = document.getElementById(sectionId);
+		if (element) {
+			element.scrollIntoView({ behavior: "smooth" });
+		}
+	}, []);
 
 	return (
-		<div ref={ref} className="relative h-[calc(100vh-4rem)] w-full">
-			<Canvas
-				className="absolute inset-0"
-				eventSource={ref}
-				eventPrefix="client"
+		<section
+			ref={containerRef}
+			id="hero"
+			className="relative min-h-screen flex"
+		>
+			{/* Left Side - Minimalist */}
+			<motion.div
+				className="w-full lg:w-1/2 flex flex-col justify-center px-8 lg:px-16 py-32 relative z-10"
+				initial={{ opacity: 0, x: -50 }}
+				animate={{ opacity: 1, x: 0 }}
+				transition={{ duration: 0.8 }}
 			>
-				<perspectiveCamera position={[0, 0, 300]} fov={-45} />
-				<HilbertLinesScene />
-			</Canvas>
-
-			<div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 p-4">
-				<AnimatePresence>
-					<motion.div
-						className="absolute top-20 right-10 md:right-20 lg:right-40 z-10 hidden md:block"
-						initial={{ y: -500, x: 500, opacity: 0, rotate: -100 }}
-						animate={{ y: 0, x: 0, opacity: 1, rotate: 0 }}
-						exit={{ y: -100, opacity: 0 }}
-						transition={{
-							type: "spring",
-							stiffness: 100,
-							damping: 10,
-							duration: 1.5,
-							delay: 1.5,
-						}}
-						viewport={{ once: true }}
+				<motion.div
+					initial={{ opacity: 0, y: 40 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.8 }}
+					className="max-w-xl"
+				>
+					<motion.p
+						className="font-[family-name:var(--font-pixel)] text-[10px] text-primary mb-4 tracking-wider"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ delay: 0.2 }}
 					>
-						<div className="relative w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40">
-							<Image
-								src="/assets/me.jpg"
-								alt="my photo"
-								width={160}
-								height={160}
-								className="drop-shadow-lg rounded-lg"
-							/>
-						</div>
-					</motion.div>
-				</AnimatePresence>
+						{heroConfig.subtitle}
+					</motion.p>
 
-				<div className="container px-4 py-24 md:py-32">
+					<h1 className="font-sans text-5xl lg:text-7xl font-bold text-foreground mb-6 tracking-tight">
+						<span className="block">{siteConfig.name.split(" ")[0]}</span>
+						<span className="block text-primary">
+							{siteConfig.name.split(" ")[1]}
+						</span>
+					</h1>
+
+					<div className="h-16 mb-8">
+						<TypewriterText />
+					</div>
+
+					<motion.p
+						className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-md"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ delay: 0.6 }}
+					>
+						{siteConfig.tagline}
+					</motion.p>
+
 					<motion.div
+						className="flex items-center gap-4 mb-12"
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5 }}
-						className="max-w-3xl mx-auto text-center"
+						transition={{ delay: 0.8 }}
 					>
-						<motion.h2
-							className="text-xl md:text-2xl font-medium text-current/75 dark:text-muted/75 mb-2"
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ delay: 0.2, duration: 0.5 }}
+						<Button
+							className="font-[family-name:var(--font-pixel)] text-[10px] px-6 py-5"
+							onClick={() => scrollToSection("projects")}
 						>
-							{t("greeting")}
-						</motion.h2>
-
-						<motion.h1
-							className="text-4xl md:text-6xl font-bold mb-4 text-current dark:text-muted"
-							initial={{ opacity: 0, scale: 0.9 }}
-							animate={{ opacity: 1, scale: 1 }}
-							transition={{ delay: 0.4, duration: 0.5 }}
+							View Work
+						</Button>
+						<Button
+							variant="outline"
+							className="font-[family-name:var(--font-pixel)] text-[10px] px-6 py-5"
+							onClick={() => scrollToSection("contact")}
 						>
-							{t("name")}
-						</motion.h1>
-
-						<motion.h3
-							className="relative text-2xl md:text-3xl font-semibold mb-6 bg-gradient-to-r from-primary to-purple-300 dark:to-violet-200 text-transparent bg-clip-text"
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ delay: 0.6, duration: 0.5 }}
-						>
-							{t("title")}
-						</motion.h3>
-
-						<motion.div
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ delay: 1, duration: 0.5 }}
-						>
-							<Button
-								size="lg"
-								onClick={(e) => {
-									e.preventDefault();
-									const projectsSection = document.getElementById("projects");
-									if (projectsSection) {
-										projectsSection.scrollIntoView({ behavior: "smooth" });
-									}
-								}}
-								className="relative overflow-hidden hover:bg-gradient-to-r from-purple-600 to-violet-600 duration-300"
-							>
-								<span className="relative z-10">{t("cta")}</span>
-							</Button>
-						</motion.div>
+							Contact
+						</Button>
 					</motion.div>
+
+					<motion.div
+						className="flex items-center gap-6"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ delay: 1 }}
+					>
+						{socialLinks.map((social, index) => (
+							<motion.a
+								key={index}
+								href={social.href}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-muted-foreground hover:text-primary transition-colors"
+								whileHover={{ scale: 1.2, rotate: isEven(index) ? 5 : -5 }}
+								whileTap={{ scale: 0.9 }}
+								aria-label={social.name}
+							>
+								<social.icon
+									className={`fill-white ${social.name === "LinkedIn" ? "size-7.5 [&_rect]:fill-transparent" : "size-5"}`}
+								/>
+							</motion.a>
+						))}
+					</motion.div>
+				</motion.div>
+			</motion.div>
+
+			{/* Right Side - Interactive Rich Design */}
+			<motion.div
+				className="hidden lg:flex w-1/2 relative overflow-hidden"
+				initial={{ opacity: 0, x: 50 }}
+				animate={{ opacity: 1, x: 0 }}
+				transition={{ duration: 0.8 }}
+			>
+				<div className="absolute inset-0 retro-grid" />
+				<FloatingPixels />
+
+				<div className="relative z-10 flex items-center justify-center w-full">
+					<PixelAvatar />
 				</div>
 
+				{/* Decorative Elements */}
 				<motion.div
-					className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-					animate={{
-						y: [0, 10, 0],
-					}}
-					transition={{
-						repeat: Number.POSITIVE_INFINITY,
-						duration: 2,
-						ease: "easeInOut",
-					}}
+					// style={{ willChange }}
+					className="absolute top-20 right-20 font-[family-name:var(--font-pixel)] text-[10px] text-primary/40"
+					animate={{ opacity: [0.4, 1, 0.4] }}
+					transition={{ duration: 2, repeat: Infinity }}
 				>
-					<Link href="#skills" aria-label="Scroll down">
-						<ArrowDown className="size-8" />
-					</Link>
+					{heroConfig.decorativeTexts[0].text}
 				</motion.div>
-			</div>
-		</div>
+
+				<motion.div
+					// style={{ willChange }}
+					className="absolute bottom-40 left-20 font-[family-name:var(--font-pixel)] text-[8px] text-accent/40"
+					animate={{ opacity: [0.3, 0.8, 0.3] }}
+					transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+				>
+					{heroConfig.decorativeTexts[1].text}
+				</motion.div>
+
+				<motion.div
+					// style={{ willChange }}
+					className="absolute top-1/3 right-32 font-[family-name:var(--font-pixel)] text-[8px] text-muted-foreground/30"
+					animate={{ opacity: [0.2, 0.6, 0.2] }}
+					transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
+				>
+					{heroConfig.decorativeTexts[2].text}
+				</motion.div>
+			</motion.div>
+
+			{/* Scroll Indicator */}
+			<motion.button
+				className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
+				animate={{ y: [0, 10, 0] }}
+				transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+				onClick={() => scrollToSection("about")}
+			>
+				<ArrowDown className="w-6 h-6 text-primary" />
+			</motion.button>
+		</section>
 	);
 }
