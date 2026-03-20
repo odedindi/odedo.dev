@@ -43,7 +43,7 @@ export default function Hero() {
 					className="max-w-xl"
 				>
 					<motion.p
-						className="font-[family-name:var(--font-pixel)] text-[10px] text-primary mb-4 tracking-wider"
+						className="font-(family-name:--font-pixel) text-[10px] text-primary mb-4 tracking-wider"
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ delay: 0.2 }}
@@ -51,7 +51,7 @@ export default function Hero() {
 						{heroConfig.subtitle}
 					</motion.p>
 
-					<h1 className="font-sans text-5xl lg:text-7xl font-bold text-foreground mb-6 tracking-tight">
+					<h1 className="font-(family-name:--font-pixel) text-3xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
 						<span className="block">{siteConfig.name.split(" ")[0]}</span>
 						<span className="block text-primary">
 							{siteConfig.name.split(" ")[1]}
@@ -63,7 +63,7 @@ export default function Hero() {
 					</div>
 
 					<motion.p
-						className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-md"
+						className="font-(family-name:--font-pixel) text-muted-foreground text-sm leading-relaxed mb-8 max-w-md"
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						transition={{ delay: 0.6 }}
@@ -78,14 +78,14 @@ export default function Hero() {
 						transition={{ delay: 0.8 }}
 					>
 						<Button
-							className="font-[family-name:var(--font-pixel)] text-[10px] px-6 py-5"
+							className="font-(family-name:--font-pixel) text-[10px] px-6 py-5"
 							onClick={() => scrollToSection("projects")}
 						>
 							View Work
 						</Button>
 						<Button
 							variant="outline"
-							className="font-[family-name:var(--font-pixel)] text-[10px] px-6 py-5"
+							className="font-(family-name:--font-pixel) text-[10px] px-6 py-5"
 							onClick={() => scrollToSection("contact")}
 						>
 							Contact
@@ -134,8 +134,7 @@ export default function Hero() {
 
 				{/* Decorative Elements */}
 				<motion.div
-					// style={{ willChange }}
-					className="absolute top-20 right-20 font-[family-name:var(--font-pixel)] text-[10px] text-primary/40"
+					className="absolute top-20 right-20 font-(family-name:--font-pixel) text-[10px] text-primary/40"
 					animate={{ opacity: [0.4, 1, 0.4] }}
 					transition={{ duration: 2, repeat: Infinity }}
 				>
@@ -143,8 +142,7 @@ export default function Hero() {
 				</motion.div>
 
 				<motion.div
-					// style={{ willChange }}
-					className="absolute bottom-40 left-20 font-[family-name:var(--font-pixel)] text-[8px] text-accent/40"
+					className="absolute bottom-40 left-20 font-(family-name:--font-pixel) text-[8px] text-accent/40"
 					animate={{ opacity: [0.3, 0.8, 0.3] }}
 					transition={{ duration: 3, repeat: Infinity, delay: 1 }}
 				>
@@ -152,8 +150,7 @@ export default function Hero() {
 				</motion.div>
 
 				<motion.div
-					// style={{ willChange }}
-					className="absolute top-1/3 right-32 font-[family-name:var(--font-pixel)] text-[8px] text-muted-foreground/30"
+					className="absolute top-1/3 right-32 font-(family-name:--font-pixel) text-[8px] text-muted-foreground/30"
 					animate={{ opacity: [0.2, 0.6, 0.2] }}
 					transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
 				>

@@ -108,7 +108,7 @@ export function PixelCursor() {
 			{trail.map((dot, i) => (
 				<motion.div
 					key={i}
-					className="fixed pointer-events-none z-[9998]"
+					className="fixed pointer-events-none z-9998"
 					style={{
 						x: dot.x,
 						y: dot.y,
@@ -121,7 +121,7 @@ export function PixelCursor() {
 				/>
 			))}
 			<motion.div
-				className="fixed pointer-events-none z-[9999] mix-blend-difference"
+				className="fixed pointer-events-none z-9999 mix-blend-difference"
 				style={{ x: headX, y: headY, willChange: "transform" }}
 			>
 				<div

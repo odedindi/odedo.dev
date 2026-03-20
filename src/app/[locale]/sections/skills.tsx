@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView, useWillChange } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 import { memo, useMemo, useRef, useState } from "react";
 
@@ -32,7 +32,7 @@ const SkillsCategory = memo(function SkillsCategory({
 			{/* Category Header */}
 			<div className="flex items-center gap-3 mb-6">
 				<div className="w-3 h-3" style={{ backgroundColor: category.color }} />
-				<h3 className="font-[family-name:var(--font-pixel)] text-sm text-foreground">
+				<h3 className="font-(family-name:--font-pixel) text-sm text-foreground">
 					{category.name}
 				</h3>
 			</div>
@@ -51,9 +51,9 @@ const SkillsCategory = memo(function SkillsCategory({
 						onMouseLeave={() => setHoveredSkill(null)}
 						className="relative"
 					>
-						<div className="flex justify-between items-center mb-2">
-							<span className="text-sm text-foreground">{skill.name}</span>
-							<span className="font-[family-name:var(--font-pixel)] text-[10px] text-muted-foreground">
+						<div className="font-(family-name:--font-pixel) flex justify-between items-center mb-2">
+							<span className="text-xs text-foreground">{skill.name}</span>
+							<span className="text-[0.75rem] text-muted-foreground">
 								{skill.level}%
 							</span>
 						</div>
@@ -88,7 +88,7 @@ const SkillsCategory = memo(function SkillsCategory({
 							<motion.div
 								initial={{ opacity: 0, y: 5 }}
 								animate={{ opacity: 1, y: 0 }}
-								className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 text-primary-foreground font-[family-name:var(--font-pixel)] text-[8px] whitespace-nowrap z-10"
+								className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 text-primary-foreground font-(family-name:--font-pixel) text-[8px] whitespace-nowrap z-10"
 								style={{ backgroundColor: category.color }}
 							>
 								EXP: {skill.level * 100} XP
@@ -109,7 +109,6 @@ const SkillsCategory = memo(function SkillsCategory({
 
 export function Skills() {
 	const ref = useRef(null);
-	const willChange = useWillChange();
 	const isInView = useInView(ref, { once: true, margin: "-100px" });
 
 	return (
@@ -127,14 +126,14 @@ export function Skills() {
 					animate={isInView ? { opacity: 1, y: 0 } : {}}
 					className="text-center mb-16"
 				>
-					<p className="font-[family-name:var(--font-pixel)] text-[10px] text-primary mb-4 tracking-wider">
+					<p className="font-(family-name:--font-pixel) text-[0.75rem] text-primary mb-4 tracking-wider">
 						SKILL TREE
 					</p>
-					<h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
+					<h2 className="font-(family-name:--font-pixel) text-2xl lg:text-3xl font-bold text-foreground mb-4 text-balance">
 						Level Up Your
 						<span className="text-accent"> Project</span>
 					</h2>
-					<p className="text-muted-foreground max-w-2xl mx-auto">
+					<p className="font-(family-name:--font-pixel) text-xs text-muted-foreground max-w-2xl mx-auto">
 						A diverse tech stack refined through years of building real-world
 						applications.
 					</p>
@@ -160,16 +159,13 @@ export function Skills() {
 					className="mt-16 text-center"
 				>
 					<div className="inline-flex items-center gap-4 px-6 py-3 border border-accent bg-accent/10">
-						<motion.div
-							style={{ willChange }}
-							animate={{ rotate: [0, 10, -10, 0] }}
-							transition={{ duration: 2, repeat: Infinity }}
-							className="text-2xl"
+						<span
+							className="font-(family-name:--font-pixel) text-[0.5rem] animate-wiggle"
 							aria-hidden="true"
 						>
 							*
-						</motion.div>
-						<span className="font-[family-name:var(--font-pixel)] text-[10px] text-accent">
+						</span>
+						<span className="font-(family-name:--font-pixel) text-[0.7rem] text-accent">
 							ACHIEVEMENT UNLOCKED: POLYGLOT DEVELOPER
 						</span>
 					</div>

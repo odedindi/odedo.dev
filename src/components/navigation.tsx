@@ -35,7 +35,7 @@ export function Navigation() {
 				animate={{ y: 0 }}
 				className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 					isScrolled
-						? "bg-background/90 backdrop-blur-sm border-b border-border"
+						? "bg-background/75 backdrop-blur-sm border-b border-border"
 						: "bg-transparent"
 				}`}
 			>
@@ -43,7 +43,7 @@ export function Navigation() {
 					<div className="flex items-center justify-between">
 						<motion.button
 							onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-							className="font-[family-name:var(--font-pixel)] text-primary text-xs tracking-wider"
+							className="font-(family-name:--font-pixel) text-primary text-xs tracking-wider"
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 						>
@@ -56,7 +56,7 @@ export function Navigation() {
 								<motion.button
 									key={item.label}
 									onClick={() => scrollToSection(item.href)}
-									className="font-[family-name:var(--font-pixel)] text-[10px] text-muted-foreground hover:text-primary transition-colors relative group"
+									className="font-(family-name:--font-pixel) text-[10px] text-muted-foreground hover:text-primary transition-colors relative group"
 									initial={{ opacity: 0, y: -20 }}
 									animate={{ opacity: 1, y: 0 }}
 									transition={{ delay: index * 0.1 }}
@@ -73,7 +73,7 @@ export function Navigation() {
 								href={siteConfig.resumeUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="font-[family-name:var(--font-pixel)] text-[10px] text-accent hover:text-primary transition-colors border border-accent hover:border-primary px-3 py-1.5"
+								className="font-(family-name:--font-pixel) text-[10px] text-accent hover:text-primary transition-colors border border-accent hover:border-primary px-3 py-1.5"
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
 								transition={{ delay: 0.5 }}
@@ -104,7 +104,7 @@ export function Navigation() {
 						initial={{ opacity: 0 }}
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
-						className="fixed inset-0 z-[60] bg-background/98 backdrop-blur-lg md:hidden"
+						className="fixed inset-0 z-60 bg-background/98 backdrop-blur-lg md:hidden"
 					>
 						<div className="flex flex-col h-full p-6">
 							<div className="flex justify-end">
@@ -122,7 +122,7 @@ export function Navigation() {
 									<motion.button
 										key={item.label}
 										onClick={() => scrollToSection(item.href)}
-										className="font-[family-name:var(--font-pixel)] text-sm text-foreground hover:text-primary transition-colors"
+										className="font-(family-name:--font-pixel) text-sm text-foreground hover:text-primary transition-colors"
 										initial={{ opacity: 0, x: -50 }}
 										animate={{ opacity: 1, x: 0 }}
 										transition={{ delay: index * 0.1 }}
@@ -134,7 +134,7 @@ export function Navigation() {
 									href={siteConfig.resumeUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="font-[family-name:var(--font-pixel)] text-sm text-accent hover:text-primary transition-colors"
+									className="font-(family-name:--font-pixel) text-sm text-accent hover:text-primary transition-colors"
 									initial={{ opacity: 0, x: -50 }}
 									animate={{ opacity: 1, x: 0 }}
 									transition={{ delay: navItems.length * 0.1 }}

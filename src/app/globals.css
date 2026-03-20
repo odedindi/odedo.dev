@@ -232,4 +232,35 @@
 			opacity: 0.1;
 		}
 	}
+
+	@keyframes blink {
+		0%,
+		100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0;
+		}
+	}
+
+	.animate-blink {
+		animation: blink 0.5s step-end infinite;
+	}
+
+	@keyframes wiggle {
+		0%,
+		100% {
+			transform: rotate(0deg);
+		}
+		25% {
+			transform: rotate(10deg);
+		}
+		75% {
+			transform: rotate(-10deg);
+		}
+	}
+
+	.animate-wiggle {
+		animation: wiggle 2s ease-in-out infinite;
+	}
 }

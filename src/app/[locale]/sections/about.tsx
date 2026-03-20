@@ -20,10 +20,10 @@ export function About() {
 						animate={isInView ? { opacity: 1, x: 0 } : {}}
 						transition={{ duration: 0.8 }}
 					>
-						<p className="font-[family-name:var(--font-pixel)] text-[10px] text-primary mb-4 tracking-wider">
+						<p className="font-(family-name:--font-pixel) text-[10px] text-primary mb-4 tracking-wider">
 							ABOUT ME
 						</p>
-						<h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground text-balance">
+						<h2 className="font-(family-name:--font-pixel) text-2xl lg:text-3xl font-bold mb-6 text-foreground text-balance">
 							{aboutContent.title}
 							<span className="text-primary">
 								{" "}
@@ -33,7 +33,7 @@ export function About() {
 						{aboutContent.paragraphs.map((paragraph, index) => (
 							<p
 								key={index}
-								className={`text-muted-foreground leading-relaxed mb-8 ${index === 0 ? "text-lg" : ""}`}
+								className={`font-(family-name:--font-pixel) text-muted-foreground leading-relaxed mb-8 ${index === 0 ? "text-sm" : "text-xs"}`}
 							>
 								{paragraph}
 							</p>
@@ -49,10 +49,10 @@ export function About() {
 									transition={{ delay: index * 0.1 + 0.4 }}
 									className="text-center p-4 border border-border bg-card"
 								>
-									<div className="font-[family-name:var(--font-pixel)] text-xl text-primary mb-1">
+									<div className="font-(family-name:--font-pixel) text-xl text-primary mb-1">
 										{stat.value}
 									</div>
-									<div className="text-[10px] text-muted-foreground uppercase tracking-wider">
+									<div className="font-(family-name:--font-pixel) text-[0.5rem] text-muted-foreground uppercase tracking-wider">
 										{stat.label}
 									</div>
 								</motion.div>
@@ -65,7 +65,7 @@ export function About() {
 						initial={{ opacity: 0, x: 50 }}
 						animate={isInView ? { opacity: 1, x: 0 } : {}}
 						transition={{ duration: 0.8, delay: 0.2 }}
-						className="grid grid-cols-2 gap-4"
+						className="grid grid-cols-1 md:grid-cols-2 gap-4"
 					>
 						{highlights.map((item, index) => (
 							<motion.div
@@ -81,10 +81,10 @@ export function About() {
 								<div className="absolute bottom-0 left-0 w-4 h-4 bg-accent opacity-0 group-hover:opacity-100 transition-opacity" />
 
 								<item.icon className="w-8 h-8 text-primary mb-4" />
-								<h3 className="font-[family-name:var(--font-pixel)] text-xs text-foreground mb-2">
+								<h3 className="font-(family-name:--font-pixel) text-xs text-foreground mb-2">
 									{item.title}
 								</h3>
-								<p className="text-sm text-muted-foreground leading-relaxed">
+								<p className="font-(family-name:--font-pixel) text-[0.75rem] text-muted-foreground leading-relaxed">
 									{item.description}
 								</p>
 							</motion.div>

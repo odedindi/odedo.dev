@@ -1,7 +1,7 @@
 import {
+	Infinity,
 	Bot,
 	Code2,
-	Cog,
 	type LucideIcon,
 	Mail,
 	MapPin,
@@ -105,13 +105,13 @@ export interface Stat {
 }
 
 export const stats: Stat[] = [
+	{ value: "CH", label: "Based In" },
 	{
 		value: `${new Date().getFullYear() - siteConfig.yearStarted}+`,
 		label: "Years Coding",
 	},
-	// { value: "10+", label: "Personal projects Shipped" },
-	// { value: "3", label: "AI Apps Built" },
-	{ value: "CH", label: "Based In" },
+	{ value: "4", label: "Continents visited" },
+	{ value: "3 : 1", label: "Kids:Keyboards" },
 ];
 
 export interface Highlight {
@@ -151,8 +151,8 @@ export const aboutContent = {
 	title: "Crafting Digital",
 	titleHighlight: "Experiences",
 	paragraphs: [
-		"I'm a full-stack developer based in Obwalden, Switzerland who loves building things that actually work. My focus is on clean code, thoughtful UX, and integrating AI where it genuinely adds value — not just for the hype.",
-		"From iGarten (a plant care app with Gemini vision AI) to Dialektli (a Swiss dialect platform), I build projects I care about. Currently leaning into AI-powered full-stack development and exploring the Swiss tech scene.",
+		"I'm a full-stack developer based in Obwalden, Switzerland who loves building things that actually work. My focus is on clean code, thoughtful UX, and integrating AI where it genuinely adds value, not just for the hype.",
+		"From Dialektli (a Swiss dialect platform) to iGarten (a plant care app with Gemini vision AI), I build projects I care about. Currently leaning into Learning Management Systems, AI-powered full-stack development and exploring the Swiss outdoors.",
 	],
 };
 
@@ -183,43 +183,43 @@ export const skillCategories: SkillCategory[] = [
 				name: "TypeScript",
 				level: 90,
 				description:
-					"Generics, conditional types, discriminated unions — used throughout every project.",
+					"Generics, conditional types, discriminated unions. Used throughout every project.",
 			},
 			{
 				name: "React / Next.js",
 				level: 90,
 				description:
-					"App Router, RSC, Server Actions, streaming — shipped across variety of production projects.",
+					"App Router, RSC, Server Actions, streaming. Shipped across variety of production projects.",
 			},
 			{
 				name: "Angular",
 				level: 50,
 				description:
-					"Built real features on a past project — components, services, RxJS, routing. Not current, would need to re-ramp.",
+					"Built real features on a past project. Components, services, RxJS, routing. Not current, would need to re-ramp.",
 			},
 			{
 				name: "CSS & UI Libraries",
 				level: 85,
 				description:
-					"Vanilla CSS foundation, Tailwind as primary layer, MUI / Mantine / shadcn for component-level work — all shipped in production.",
+					"Vanilla CSS foundation, Tailwind as primary layer, MUI / Mantine / shadcn for component-level work. All shipped in production.",
 			},
 			{
 				name: "SEO",
 				level: 70,
 				description:
-					"Technical SEO: structured data (JSON-LD), Core Web Vitals, sitemap, og:image — shipped with measurable results.",
+					"Technical SEO: structured data (JSON-LD), Core Web Vitals, sitemap, og:image. Shipped with measurable results.",
 			},
 			{
 				name: "Accessibility (a11y)",
 				level: 70,
 				description:
-					"Semantic HTML, ARIA roles, keyboard navigation, color contrast — tested with screen readers.",
+					"Semantic HTML, ARIA roles, keyboard navigation, color contrast. Tested with screen readers.",
 			},
 			{
 				name: "Effect-TS",
 				level: 40,
 				description:
-					"Self-teaching: Effect, pipe, Schema, typed error handling — working through the mental model, not yet in production.",
+					"Self-teaching: Effect, pipe, Schema, typed error handling. Working through the mental model, not yet in production.",
 			},
 		],
 	},
@@ -237,7 +237,7 @@ export const skillCategories: SkillCategory[] = [
 				name: "GraphQL",
 				level: 70,
 				description:
-					"Schema design from scratch, resolvers, mutations, Prisma ORM — Dialektli.",
+					"Schema design from scratch, resolvers, mutations, Prisma ORM. Dialektli.",
 			},
 			{
 				name: "REST API Design",
@@ -249,25 +249,25 @@ export const skillCategories: SkillCategory[] = [
 				name: "PostgreSQL",
 				level: 65,
 				description:
-					"Schema design, relational modeling, Prisma migrations — shipped in production.",
+					"Schema design, relational modeling, Prisma migrations. Shipped in production.",
 			},
 			{
 				name: "MongoDB",
 				level: 45,
 				description:
-					"Document model, collections, queries, aggregation pipeline — side project experience.",
+					"Document model, collections, queries, aggregation pipeline. Side project experience.",
 			},
 			{
 				name: "Prisma",
 				level: 70,
 				description:
-					"Schema-first ORM — migrations, relations, type-safe queries, used across multiple production projects.",
+					"Schema-first ORM. Migrations, relations, type-safe queries, used across multiple production projects.",
 			},
 			{
 				name: "Testing",
 				level: 70,
 				description:
-					"Unit and integration tests with Jest / Vitest and Testing Library — part of regular development workflow.",
+					"Unit and integration tests with Jest / Vitest and Testing Library. Part of regular development workflow.",
 			},
 		],
 	},
@@ -279,19 +279,19 @@ export const skillCategories: SkillCategory[] = [
 				name: "LLM Integration",
 				level: 75,
 				description:
-					"Vercel AI SDK, Google ADK, Gemini / OpenAI APIs — streaming, structured output, tool calling, multi-modal, prompt engineering. Shipped in production.",
+					"Vercel AI SDK, Google ADK, Gemini / OpenAI APIs. Streaming, structured output, tool calling, multi-modal, prompt engineering. Shipped in production.",
 			},
 			{
 				name: "AI Agents",
 				level: 78,
 				description:
-					"Plan, build, and orchestrate agents daily — tool use, multi-step reasoning, context window management (summarization, token budgets), MCP protocol.",
+					"Plan, build, and orchestrate agents daily. Tool use, multi-step reasoning, context window management (summarization, token budgets), MCP protocol.",
 			},
 			{
 				name: "RAG",
 				level: 45,
 				description:
-					"Solid theoretical understanding — embeddings, vector DBs, retrieval pipelines. Not yet built end-to-end.",
+					"Solid theoretical understanding. Embeddings, vector DBs, retrieval pipelines. Not yet built end-to-end.",
 			},
 		],
 	},
@@ -303,13 +303,13 @@ export const skillCategories: SkillCategory[] = [
 				name: "Git",
 				level: 80,
 				description:
-					"Power user — rebase, squash, bisect, reflog recovery, cherry-pick, hooks, worktrees.",
+					"Power user. Rebase, squash, bisect, reflog recovery, cherry-pick, hooks, worktrees.",
 			},
 			{
 				name: "CI/CD Pipelines",
 				level: 78,
 				description:
-					"GitHub Actions and GitLab CI — full pipelines: lint, test, build, deploy, triggered on PR and merge.",
+					"GitHub Actions and GitLab CI. Full pipelines: lint, test, build, deploy, triggered on PR and merge.",
 			},
 			{
 				name: "Docker",
@@ -321,7 +321,7 @@ export const skillCategories: SkillCategory[] = [
 				name: "Cloud Deployment",
 				level: 60,
 				description:
-					"Production deploys on Vercel and DigitalOcean — custom domains, env management.",
+					"Production deploys on Vercel and DigitalOcean. Custom domains, env management.",
 			},
 			{
 				name: "Developer Tooling",
@@ -333,7 +333,7 @@ export const skillCategories: SkillCategory[] = [
 				name: "Linux / Server Admin",
 				level: 50,
 				description:
-					"SSH, file permissions, process management, nginx, cron jobs — can manage a VPS with a guide.",
+					"SSH, file permissions, process management, nginx, cron jobs. Can manage a VPS with a guide.",
 			},
 		],
 	},
@@ -370,7 +370,7 @@ export const projects: Project[] = [
 		id: 2,
 		title: "Dialektli",
 		description:
-			"Platform for exploring Swiss German dialects — share and discover regional words and phrases from across Switzerland. Built with a full GraphQL API and Prisma ORM.",
+			"Platform for exploring Swiss German dialects. Share and discover regional words and phrases from across Switzerland. Built with a full GraphQL API and Prisma ORM.",
 		tags: ["Next.js", "GraphQL", "Prisma", "PostgreSQL", "TypeScript"],
 		color: "oklch(0.7 0.22 330)",
 		stats: { dialects: "26+", stack: "Full" },
@@ -392,7 +392,7 @@ export const projects: Project[] = [
 		id: 4,
 		title: "GeoChat",
 		description:
-			"Location-based real-time chat app — connect with people nearby using WebSockets and geolocation. Built with Ionic and Socket.io.",
+			"Location-based real-time chat app. Connect with people nearby using WebSockets and geolocation. Built with Ionic and Socket.io.",
 		tags: ["Next.js", "Socket.io", "PostgreSQL", "Ionic", "RxJS"],
 		color: "oklch(0.85 0.18 90)",
 		stats: { tech: "RT", type: "Chat" },
@@ -403,7 +403,7 @@ export const projects: Project[] = [
 		id: 5,
 		title: "LandPro",
 		description:
-			"Climate hackathon prototype — an AI- and satellite-powered platform for carbon sequestration estimation. Uses TensorFlow + scikit-learn to classify land cover from satellite imagery. Built for the Cool Farm Alliance challenge with interactive Leaflet mapping.",
+			"Climate hackathon prototype. An AI- and satellite-powered platform for carbon sequestration estimation. Uses TensorFlow + scikit-learn to classify land cover from satellite imagery. Built for the Cool Farm Alliance challenge with interactive Leaflet mapping.",
 		tags: [
 			"React",
 			"Redux",
@@ -432,7 +432,7 @@ export interface ContactInfo {
 export const contactInfo: ContactInfo[] = [
 	{ icon: Mail, label: "Email", value: siteConfig.email },
 	{ icon: MapPin, label: "Location", value: siteConfig.location },
-	{ icon: Cog, label: "Status", value: "Married +3" },
+	{ icon: Infinity, label: "Tabs Open", value: "42" },
 ];
 
 export const contactContent = {

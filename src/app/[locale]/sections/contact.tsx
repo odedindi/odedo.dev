@@ -6,7 +6,6 @@ import { toast } from "sonner";
 import { z } from "zod";
 
 import { CheckCircle, Send } from "lucide-react";
-import { CircleAlert, CircleCheck } from "lucide-react";
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -72,15 +71,25 @@ export function Contact() {
 			form.reset();
 			setIsSubmitted(true);
 			toast("Message sent!", {
-				icon: <CircleCheck className="size-4" color="green" />,
+				icon: (
+					<span className="font-(family-name:--font-pixel) text-lg text-green-500 -translate-y-1">
+						✓
+					</span>
+				),
 				position: "top-center",
+				className: "font-(family-name:--font-pixel) text-[0.6rem]!",
 			});
 			setTimeout(() => setIsSubmitted(false), 3000);
 		} catch (error) {
 			console.error("Error submitting form:", error);
 			toast("Something went wrong. Please try again.", {
-				icon: <CircleAlert className="size-4" color="red" />,
+				icon: (
+					<span className="font-(family-name:--font-pixel) text-sm text-red-500">
+						X
+					</span>
+				),
 				position: "top-center",
+				className: "font-(family-name:--font-pixel) text-[0.6rem]!",
 			});
 		} finally {
 			setIsSubmitting(false);
@@ -88,7 +97,7 @@ export function Contact() {
 	}
 
 	return (
-		<section id="contact" className="py-32 px-8 relative" ref={ref}>
+		<section id="contact" className="pt-32 pb-16 px-8 relative" ref={ref}>
 			{/* Background Grid */}
 			<div className="absolute inset-0 retro-grid opacity-20" />
 
@@ -99,7 +108,7 @@ export function Contact() {
 						initial={{ opacity: 0, x: -50 }}
 						animate={isInView ? { opacity: 1, x: 0 } : {}}
 					>
-						<p className="font-[family-name:var(--font-pixel)] text-[10px] text-primary mb-4 tracking-wider">
+						<p className="font-(family-name:--font-pixel) text-[0.75rem] text-primary mb-4 tracking-wider">
 							START A QUEST
 						</p>
 						<h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
@@ -126,11 +135,11 @@ export function Contact() {
 									<div className="w-12 h-12 border border-border bg-card flex items-center justify-center group-hover:border-primary transition-colors">
 										<item.icon className="w-5 h-5 text-primary" />
 									</div>
-									<div>
-										<p className="text-[10px] text-muted-foreground uppercase tracking-wider">
+									<div className="font-(family-name:--font-pixel)">
+										<p className="text-[0.5rem] text-muted-foreground uppercase tracking-wider">
 											{item.label}
 										</p>
-										<p className="text-foreground">{item.value}</p>
+										<p className="text-xs text-foreground">{item.value}</p>
 									</div>
 								</motion.div>
 							))}
@@ -149,7 +158,7 @@ export function Contact() {
 								animate={{ opacity: [1, 0.3, 1] }}
 								transition={{ duration: 1.5, repeat: Infinity }}
 							/>
-							<span className="font-[family-name:var(--font-pixel)] text-[10px] text-primary uppercase">
+							<span className="font-(family-name:--font-pixel) text-[0.75rem] text-primary uppercase">
 								{siteConfig.availability}
 							</span>
 						</motion.div>
@@ -167,7 +176,7 @@ export function Contact() {
 								<div className="w-3 h-3 bg-destructive" />
 								<div className="w-3 h-3 bg-accent" />
 								<div className="w-3 h-3 bg-primary" />
-								<span className="ml-4 font-[family-name:var(--font-pixel)] text-[10px] text-muted-foreground">
+								<span className="ml-4 font-(family-name:--font-pixel) text-[0.7rem] text-muted-foreground">
 									message.new
 								</span>
 							</div>
@@ -185,10 +194,10 @@ export function Contact() {
 									>
 										<CheckCircle className="w-16 h-16 text-primary mb-4" />
 									</motion.div>
-									<h3 className="font-[family-name:var(--font-pixel)] text-sm text-foreground mb-2">
+									<h3 className="font-(family-name:--font-pixel) text-xs text-foreground mb-2">
 										MESSAGE SENT!
 									</h3>
-									<p className="text-muted-foreground">
+									<p className="font-(family-name:--font-pixel) text-[0.75rem] text-muted-foreground">
 										I&apos;ll get back to you within {siteConfig.responseTime}.
 									</p>
 								</motion.div>
@@ -203,14 +212,14 @@ export function Contact() {
 											name="subject"
 											render={({ field }) => (
 												<FormItem>
-													<label className="font-[family-name:var(--font-pixel)] text-[10px] text-muted-foreground block mb-2">
+													<label className="font-(family-name:--font-pixel) text-[0.75rem] text-muted-foreground block mb-2">
 														SUBJECT
 													</label>
 													<FormControl>
 														<Input
 															{...field}
 															placeholder="What's this about?"
-															className="bg-secondary border-border focus:border-primary"
+															className="bg-secondary border-border focus:border-primary font-(family-name:--font-pixel) placeholder:text-[0.6rem] text-[0.6rem]"
 														/>
 													</FormControl>
 													<FormMessage />
@@ -224,14 +233,14 @@ export function Contact() {
 												name="name"
 												render={({ field }) => (
 													<FormItem>
-														<label className="font-[family-name:var(--font-pixel)] text-[10px] text-muted-foreground block mb-2">
+														<label className="font-(family-name:--font-pixel) text-[0.75rem] text-muted-foreground block mb-2">
 															YOUR NAME
 														</label>
 														<FormControl>
 															<Input
 																{...field}
 																placeholder="Enter your name"
-																className="bg-secondary border-border focus:border-primary"
+																className="bg-secondary border-border focus:border-primary font-(family-name:--font-pixel) placeholder:text-[0.6rem] text-[0.6rem]"
 															/>
 														</FormControl>
 														<FormMessage />
@@ -244,7 +253,7 @@ export function Contact() {
 												name="email"
 												render={({ field }) => (
 													<FormItem>
-														<label className="font-[family-name:var(--font-pixel)] text-[10px] text-muted-foreground block mb-2">
+														<label className="font-(family-name:--font-pixel) text-[0.75rem] text-muted-foreground block mb-2">
 															EMAIL ADDRESS
 														</label>
 														<FormControl>
@@ -252,7 +261,7 @@ export function Contact() {
 																type="email"
 																{...field}
 																placeholder="Enter your email"
-																className="bg-secondary border-border focus:border-primary"
+																className="bg-secondary border-border focus:border-primary font-(family-name:--font-pixel) placeholder:text-[0.6rem] text-[0.6rem]"
 															/>
 														</FormControl>
 														<FormMessage />
@@ -266,14 +275,14 @@ export function Contact() {
 											name="message"
 											render={({ field }) => (
 												<FormItem>
-													<label className="font-[family-name:var(--font-pixel)] text-[10px] text-muted-foreground block mb-2">
+													<label className="font-(family-name:--font-pixel) text-[0.75rem] text-muted-foreground block mb-2">
 														YOUR MESSAGE
 													</label>
 													<FormControl>
 														<Textarea
 															{...field}
 															placeholder="Tell me about your project..."
-															className="bg-secondary border-border focus:border-primary min-h-[150px] resize-none"
+															className="bg-secondary border-border focus:border-primary min-h-37.5 resize-none font-(family-name:--font-pixel) placeholder:text-[0.6rem] text-[0.6rem]"
 														/>
 													</FormControl>
 													<FormMessage />
@@ -293,7 +302,7 @@ export function Contact() {
 
 										<Button
 											type="submit"
-											className="w-full font-[family-name:var(--font-pixel)] text-[10px] py-6"
+											className="w-full font-(family-name:--font-pixel) text-[0.75rem] py-6"
 											disabled={isSubmitting}
 										>
 											{isSubmitting ? (
@@ -324,27 +333,18 @@ export function Contact() {
 					className="mt-32 pt-8 border-t border-border"
 				>
 					<div className="flex flex-col md:flex-row justify-between items-center gap-4">
-						<p className="font-[family-name:var(--font-pixel)] text-[10px] text-primary">
+						<p className="font-(family-name:--font-pixel) text-[0.75rem] text-primary">
 							{"<OW/>"}
 						</p>
-						<p className="text-sm text-muted-foreground">
+						<p className="font-(family-name:--font-pixel) text-[0.5rem] text-muted-foreground">
 							Crafted with pixels and passion. {new Date().getFullYear()}.
 						</p>
-						<div className="flex items-center gap-2">
-							<span className="text-[10px] text-muted-foreground">
-								Built with
-							</span>
-							<motion.span
-								style={{ willChange }}
-								animate={{ scale: [1, 1.2, 1] }}
-								transition={{ duration: 1, repeat: Infinity }}
-								className="text-accent"
-							>
+						<div className="font-(family-name:--font-pixel) text-[0.5rem] flex items-center gap-2">
+							<span className="text-muted-foreground">Built with</span>
+							<span className="text-accent text-sm -translate-y-0.5 animate-pulse">
 								❤︎⁠
-							</motion.span>
-							<span className="text-[10px] text-muted-foreground">
-								using Next.js
 							</span>
+							<span className="text-muted-foreground">using Next.js</span>
 						</div>
 					</div>
 				</motion.footer>

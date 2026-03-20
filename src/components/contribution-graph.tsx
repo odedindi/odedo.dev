@@ -38,16 +38,16 @@ export function ContributionGraph({
 			className="mt-16 p-6 border border-border bg-card"
 		>
 			<div className="flex items-center justify-between mb-4">
-				<span className="font-[family-name:var(--font-pixel)] text-[10px] text-muted-foreground">
+				<span className="font-(family-name:--font-pixel) text-[0.5rem] text-muted-foreground">
 					CONTRIBUTION ACTIVITY
 				</span>
-				<span className="font-[family-name:var(--font-pixel)] text-[10px] text-primary">
+				<span className="font-(family-name:--font-pixel) text-[0.5rem] text-primary">
 					{totalContributions.toLocaleString()} commits in {year}
 				</span>
 			</div>
 
 			{weeks.length === 0 ? (
-				<p className="font-[family-name:var(--font-pixel)] text-[10px] text-muted-foreground">
+				<p className="font-(family-name:--font-pixel) text-[0.5rem] text-muted-foreground">
 					NO DATA AVAILABLE
 				</p>
 			) : (
@@ -60,7 +60,7 @@ export function ContributionGraph({
 								return isMounted ? (
 									<motion.div
 										key={day.date}
-										className={`w-3 h-3 flex-shrink-0 ${colorClass}`}
+										className={`w-3 h-3 shrink-0 ${colorClass}`}
 										title={`${day.contributionCount} contributions on ${day.date}`}
 										initial={{ opacity: 0, scale: 0 }}
 										animate={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -75,7 +75,7 @@ export function ContributionGraph({
 								) : (
 									<div
 										key={day.date}
-										className={`w-3 h-3 flex-shrink-0 ${colorClass}`}
+										className={`w-3 h-3 shrink-0 ${colorClass}`}
 										title={`${day.contributionCount} contributions on ${day.date}`}
 									/>
 								);
@@ -87,13 +87,13 @@ export function ContributionGraph({
 
 			{/* Legend */}
 			<div className="flex items-center gap-2 mt-3">
-				<span className="font-[family-name:var(--font-pixel)] text-[8px] text-muted-foreground">
+				<span className="font-(family-name:--font-pixel) text-[0.4rem] text-muted-foreground">
 					LESS
 				</span>
 				{[0, 1, 2, 3, 4].map((level) => (
 					<div key={level} className={`w-3 h-3 ${LEVEL_CLASSES[level]}`} />
 				))}
-				<span className="font-[family-name:var(--font-pixel)] text-[8px] text-muted-foreground">
+				<span className="font-(family-name:--font-pixel) text-[0.4rem] text-muted-foreground">
 					MORE
 				</span>
 			</div>
