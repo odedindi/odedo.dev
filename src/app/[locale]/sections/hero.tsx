@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, useWillChange } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { ArrowDown } from "lucide-react";
 import { useCallback, useRef } from "react";
@@ -15,16 +15,6 @@ const isEven = (n: number) => n % 2 === 0;
 
 export default function Hero() {
 	const containerRef = useRef<HTMLElement>(null);
-	const willChange = useWillChange();
-
-	const { scrollYProgress } = useScroll({
-		target: containerRef,
-		offset: ["start start", "end start"],
-	});
-
-	const leftX = useTransform(scrollYProgress, [0, 1], [0, -100]);
-	const rightX = useTransform(scrollYProgress, [0, 1], [0, 100]);
-	const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
 	const scrollToSection = useCallback((sectionId: string) => {
 		const element = document.getElementById(sectionId);
@@ -42,7 +32,9 @@ export default function Hero() {
 			{/* Left Side - Minimalist */}
 			<motion.div
 				className="w-full lg:w-1/2 flex flex-col justify-center px-8 lg:px-16 py-32 relative z-10"
-				style={{ x: leftX, opacity }}
+				initial={{ opacity: 0, x: -50 }}
+				animate={{ opacity: 1, x: 0 }}
+				transition={{ duration: 0.8 }}
 			>
 				<motion.div
 					initial={{ opacity: 0, y: 40 }}
@@ -129,7 +121,9 @@ export default function Hero() {
 			{/* Right Side - Interactive Rich Design */}
 			<motion.div
 				className="hidden lg:flex w-1/2 relative overflow-hidden"
-				style={{ x: rightX, opacity }}
+				initial={{ opacity: 0, x: 50 }}
+				animate={{ opacity: 1, x: 0 }}
+				transition={{ duration: 0.8 }}
 			>
 				<div className="absolute inset-0 retro-grid" />
 				<FloatingPixels />
@@ -140,7 +134,7 @@ export default function Hero() {
 
 				{/* Decorative Elements */}
 				<motion.div
-					style={{ willChange }}
+					// style={{ willChange }}
 					className="absolute top-20 right-20 font-[family-name:var(--font-pixel)] text-[10px] text-primary/40"
 					animate={{ opacity: [0.4, 1, 0.4] }}
 					transition={{ duration: 2, repeat: Infinity }}
@@ -149,7 +143,7 @@ export default function Hero() {
 				</motion.div>
 
 				<motion.div
-					style={{ willChange }}
+					// style={{ willChange }}
 					className="absolute bottom-40 left-20 font-[family-name:var(--font-pixel)] text-[8px] text-accent/40"
 					animate={{ opacity: [0.3, 0.8, 0.3] }}
 					transition={{ duration: 3, repeat: Infinity, delay: 1 }}
@@ -158,7 +152,7 @@ export default function Hero() {
 				</motion.div>
 
 				<motion.div
-					style={{ willChange }}
+					// style={{ willChange }}
 					className="absolute top-1/3 right-32 font-[family-name:var(--font-pixel)] text-[8px] text-muted-foreground/30"
 					animate={{ opacity: [0.2, 0.6, 0.2] }}
 					transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
@@ -169,12 +163,10 @@ export default function Hero() {
 
 			{/* Scroll Indicator */}
 			<motion.button
-				style={{ willChange }}
 				className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
 				animate={{ y: [0, 10, 0] }}
-				transition={{ duration: 1.5, repeat: Infinity }}
+				transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
 				onClick={() => scrollToSection("about")}
-				aria-label="Scroll to about section"
 			>
 				<ArrowDown className="w-6 h-6 text-primary" />
 			</motion.button>

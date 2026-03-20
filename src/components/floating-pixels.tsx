@@ -1,7 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 import { memo } from "react";
 
 import { useIsMounted } from "@/hooks/useIsMounted";
@@ -21,28 +19,21 @@ export const FloatingPixels = memo(function FloatingPixels() {
 	return (
 		<div className="absolute inset-0 overflow-hidden pointer-events-none">
 			{pixels.map((pixel) => (
-				<motion.div
+				<div
 					key={pixel.id}
-					className="absolute"
-					style={{
-						left: `${pixel.x}%`,
-						top: `${pixel.y}%`,
-						width: pixel.size,
-						height: pixel.size,
-						backgroundColor: colors[pixel.colorIndex],
-						opacity: 0.3,
-					}}
-					animate={{
-						y: [0, -100, 0],
-						opacity: [0.1, 0.5, 0.1],
-						scale: [1, 1.5, 1],
-					}}
-					transition={{
-						duration: pixel.duration,
-						delay: pixel.delay,
-						repeat: Infinity,
-						ease: "easeInOut",
-					}}
+					className="absolute pixel-float"
+					style={
+						{
+							left: `${pixel.x}%`,
+							top: `${pixel.y}%`,
+							width: pixel.size,
+							height: pixel.size,
+							backgroundColor: colors[pixel.colorIndex],
+							opacity: 0.1,
+							"--duration": `${pixel.duration}s`,
+							"--delay": `${pixel.delay}s`,
+						} as React.CSSProperties
+					}
 				/>
 			))}
 		</div>

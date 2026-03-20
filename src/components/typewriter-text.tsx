@@ -2,11 +2,11 @@
 
 import { motion, useWillChange } from "framer-motion";
 
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 
 import { typewriterPhrases } from "@/lib/site-config";
 
-export function TypewriterText() {
+export const TypewriterText = memo(function TypewriterText() {
 	const willChange = useWillChange();
 	const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
 	const [displayedText, setDisplayedText] = useState("");
@@ -51,4 +51,4 @@ export function TypewriterText() {
 			/>
 		</div>
 	);
-}
+});

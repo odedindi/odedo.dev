@@ -1,15 +1,79 @@
 "use client";
 
-import { motion, useWillChange } from "framer-motion";
+import { motion } from "framer-motion";
 
-import { useState } from "react";
+import { memo, useState } from "react";
 
 import { avatarConfig, themeColors } from "@/lib/site-config";
 
+const { pattern, colors, pixelSize, codeSnippet } = avatarConfig;
+
+const Pixel = function Pixel({
+	rowIndex,
+	rowLength,
+	colIndex,
+	colorIndex,
+}: {
+	rowIndex: number;
+	rowLength: number;
+	colIndex: number;
+	colorIndex: number;
+}) {
+	return (
+		<motion.div
+			key={`${rowIndex}-${colIndex}`}
+			style={{
+				width: pixelSize,
+				height: pixelSize,
+				backgroundColor: colors[colorIndex],
+			}}
+			initial={{ opacity: 0, scale: 0 }}
+			animate={{
+				opacity: 1,
+				scale: 1,
+			}}
+			transition={{
+				delay: (rowIndex * rowLength + colIndex) * 0.01,
+				duration: 0.2,
+			}}
+			whileHover={{
+				backgroundColor: colorIndex !== 0 ? themeColors.primary : "transparent",
+				transition: { duration: 0.1 },
+			}}
+		/>
+	);
+};
+
+const PixelRow = memo(function PixelRow({
+	row,
+	rowIndex,
+}: {
+	row: number[];
+	rowIndex: number;
+}) {
+	return (
+		<div
+			style={{
+				display: "grid",
+				gridTemplateColumns: `repeat(${row.length}, ${pixelSize}px)`,
+				gap: 0,
+			}}
+		>
+			{row.map((colorIndex, colIndex) => (
+				<Pixel
+					key={`${rowIndex}-${colIndex}`}
+					rowIndex={rowIndex}
+					rowLength={row.length}
+					colIndex={colIndex}
+					colorIndex={colorIndex}
+				/>
+			))}
+		</div>
+	);
+});
+
 export function PixelAvatar() {
 	const [isHovered, setIsHovered] = useState(false);
-	const willChange = useWillChange();
-	const { pattern, colors, pixelSize, codeSnippet } = avatarConfig;
 
 	return (
 		<motion.div
@@ -42,45 +106,12 @@ export function PixelAvatar() {
 				}}
 			>
 				{pattern.map((row, rowIndex) => (
-					<div
-						key={rowIndex}
-						style={{
-							display: "grid",
-							gridTemplateColumns: `repeat(${row.length}, ${pixelSize}px)`,
-							gap: 0,
-						}}
-					>
-						{row.map((colorIndex, colIndex) => (
-							<motion.div
-								key={`${rowIndex}-${colIndex}`}
-								style={{
-									width: pixelSize,
-									height: pixelSize,
-									backgroundColor: colors[colorIndex],
-								}}
-								initial={{ opacity: 0, scale: 0 }}
-								animate={{
-									opacity: 1,
-									scale: 1,
-								}}
-								transition={{
-									delay: (rowIndex * row.length + colIndex) * 0.01,
-									duration: 0.2,
-								}}
-								whileHover={{
-									backgroundColor:
-										colorIndex !== 0 ? themeColors.primary : "transparent",
-									transition: { duration: 0.1 },
-								}}
-							/>
-						))}
-					</div>
+					<PixelRow key={rowIndex} row={row} rowIndex={rowIndex} />
 				))}
 			</div>
 
 			{/* Status indicator */}
 			{/* <motion.div
-				style={{ willChange }}
 				className="absolute -bottom-8 left-1/2 -translate-x-1/2"
 				animate={{ opacity: [0.5, 1, 0.5] }}
 				transition={{ duration: 1.5, repeat: Infinity }}
@@ -95,7 +126,6 @@ export function PixelAvatar() {
 
 			{/* Code snippet floating */}
 			<motion.div
-				style={{ willChange }}
 				className="absolute -right-32 top-1/4 font-mono text-[10px] text-muted-foreground/50 whitespace-pre hidden xl:block"
 				initial={{
 					x: 0,
