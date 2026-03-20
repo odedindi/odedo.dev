@@ -89,11 +89,10 @@ export const heroConfig = {
 // ============================================================================
 
 export const typewriterPhrases: string[] = [
-	"Building AI-powered apps",
-	"Crafting scalable backends",
 	"Shipping pixel-perfect UIs",
+	"Crafting scalable backends",
 	"Integrating LLMs & agents",
-	"Building for the Swiss market",
+	"Building for tomorrow",
 ];
 
 // ============================================================================
