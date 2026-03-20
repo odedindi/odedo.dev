@@ -189,7 +189,7 @@ export const skillCategories: SkillCategory[] = [
 				name: "React / Next.js",
 				level: 90,
 				description:
-					"App Router, RSC, Server Actions, streaming — shipped across 5 production projects.",
+					"App Router, RSC, Server Actions, streaming — shipped across variety of production projects.",
 			},
 			{
 				name: "Angular",
@@ -279,13 +279,7 @@ export const skillCategories: SkillCategory[] = [
 				name: "LLM Integration",
 				level: 75,
 				description:
-					"Vercel AI SDK, Gemini / OpenAI APIs — streaming, structured output, tool calling, multi-modal, prompt engineering. Shipped in production.",
-			},
-			{
-				name: "Google ADK",
-				level: 50,
-				description:
-					"Used heavily in a work hackathon to prototype agentic product directions. Not yet in production.",
+					"Vercel AI SDK, Google ADK, Gemini / OpenAI APIs — streaming, structured output, tool calling, multi-modal, prompt engineering. Shipped in production.",
 			},
 			{
 				name: "AI Agents",
