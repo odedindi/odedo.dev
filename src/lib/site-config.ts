@@ -151,7 +151,7 @@ export const aboutContent = {
 	title: "Crafting Digital",
 	titleHighlight: "Experiences",
 	paragraphs: [
-		"I'm a full-stack developer based in Obwalden, Switzerland who loves building things that actually work. My focus is on clean code, thoughtful UX, and integrating AI where it genuinely adds value, not just for the hype.",
+		"I'm a full-stack developer based in Obwalden, Switzerland who loves building things that actually work. My focus is on the user, thoughtful UX, clean code, and my family.",
 		"From Dialektli (a Swiss dialect platform) to iGarten (a plant care app with Gemini vision AI), I build projects I care about. Currently leaning into Learning Management Systems, AI-powered full-stack development and exploring the Swiss outdoors.",
 	],
 };
