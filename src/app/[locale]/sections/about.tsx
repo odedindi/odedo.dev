@@ -33,7 +33,7 @@ export function About() {
 						{aboutContent.paragraphs.map((paragraph, index) => (
 							<p
 								key={index}
-								className={`font-(family-name:--font-pixel) text-muted-foreground leading-relaxed mb-8 ${index === 0 ? "text-sm" : "text-xs"}`}
+								className={`font-(family-name:--font-pixel) text-muted-foreground leading-relaxed mb-8 ${index === 0 ? "text-xs" : "text-[0.7rem]"}`}
 							>
 								{paragraph}
 							</p>

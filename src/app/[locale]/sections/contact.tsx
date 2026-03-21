@@ -111,14 +111,14 @@ export function Contact() {
 						<p className="font-(family-name:--font-pixel) text-[0.75rem] text-primary mb-4 tracking-wider">
 							START A QUEST
 						</p>
-						<h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+						<h2 className="font-(family-name:--font-pixel) text-2xl lg:text-3xl font-bold text-foreground mb-6 text-balance">
 							{contactContent.title}
 							<span className="text-accent">
 								{" "}
 								{contactContent.titleHighlight}
 							</span>
 						</h2>
-						<p className="text-muted-foreground text-lg leading-relaxed mb-12">
+						<p className="font-(family-name:--font-pixel) text-muted-foreground text-xs leading-relaxed mb-12">
 							{contactContent.description}
 						</p>
 
