@@ -6,10 +6,10 @@ import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 
 import { ContributionGraph } from "@/components/contribution-graph";
+import { ProjectListItem } from "@/components/project-list-item";
 import { Button } from "@/components/ui/button";
 import type { ContributionCalendar } from "@/lib/github";
 import { projects } from "@/lib/site-config";
-import { ProjectListItem } from "@/components/project-list-item";
 
 interface ProjectsClientProps {
 	calendar: ContributionCalendar | null;
