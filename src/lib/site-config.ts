@@ -397,6 +397,17 @@ export const projects: Project[] = [
 	},
 	{
 		id: 4,
+		title: "Aviron",
+		description:
+			"Realtime plane spotter. See every aircraft flying above you.",
+		tags: ["Next.js", "TypeScript", "Tailwind CSS", "Jotai", "SWR", "Radix UI"],
+		color: "oklch(0.72 0.18 230)",
+		stats: { data: "Live", source: "OpenSky" },
+		githubUrl: "https://github.com/odedindi/aviron",
+		liveUrl: "https://aviron.odedo.dev/",
+	},
+	{
+		id: 5,
 		title: "Dialektli",
 		description:
 			"Platform for exploring Swiss German dialects. Share and discover regional words and phrases from across Switzerland. Built with a full GraphQL API and Prisma ORM.",
@@ -407,7 +418,7 @@ export const projects: Project[] = [
 		liveUrl: "https://www.dialektli.ch/",
 	},
 	{
-		id: 5,
+		id: 6,
 		title: "iGarten",
 		description:
 			"Personal plant care app with AI superpowers. Features a Gemini vision-based plant identifier, AI-generated care schedules with structured output, and a streaming chat assistant.",
@@ -416,17 +427,6 @@ export const projects: Project[] = [
 		stats: { features: "3 AI", type: "App" },
 		githubUrl: "https://github.com/odedindi/iGarten",
 		liveUrl: "https://igarten.odedo.dev/",
-	},
-	{
-		id: 6,
-		title: "Planespotter",
-		description:
-			"Real-time plane spotter. See every aircraft flying above you.",
-		tags: ["Next.js", "TypeScript", "Tailwind CSS", "Jotai", "SWR", "Radix UI"],
-		color: "oklch(0.72 0.18 230)",
-		stats: { data: "Live", source: "OpenSky" },
-		githubUrl: "https://github.com/odedindi/planespotter",
-		liveUrl: "https://planespotter.odedo.dev/",
 	},
 ];
 
