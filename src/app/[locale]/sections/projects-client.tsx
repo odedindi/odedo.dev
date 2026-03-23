@@ -61,7 +61,7 @@ export function ProjectsClient({ calendar, year }: ProjectsClientProps) {
 
 				{/* Projects Grid */}
 				<div className="grid lg:grid-cols-2 gap-6">
-					{projects.map((project, index) => (
+					{projects.toReversed().map((project, index) => (
 						<ProjectListItem
 							key={project.id}
 							project={project}
