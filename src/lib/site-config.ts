@@ -368,7 +368,7 @@ export const projects: Project[] = [
 			"TensorFlow",
 			"scikit-learn",
 		],
-		color: "oklch(0.28 0.9 85)",
+		color: "oklch(0.55 0.12 50)",
 		stats: { focus: "AI+SAT", type: "Climate" },
 		githubUrl: "https://github.com/odedindi/lpfs",
 		liveUrl: "https://landpro.odedo.dev/",
