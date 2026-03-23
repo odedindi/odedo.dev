@@ -7,6 +7,7 @@ import { memo, useState } from "react";
 
 import { Github } from "@/components/icons/github";
 import type { Project } from "@/lib/site-config";
+import { cn } from "@/lib/utils";
 
 interface ProjectListItemProps {
 	project: Project;
@@ -33,7 +34,7 @@ export const ProjectListItem = memo(function ProjectListItem({
 			{/* Project Header Bar */}
 			<div className="h-1 w-full" style={{ backgroundColor: project.color }} />
 
-			<div className="p-6">
+			<div className="p-6 flex flex-col h-full">
 				{/* Title Row */}
 				<div className="flex items-start justify-between mb-4">
 					<div>
@@ -53,12 +54,13 @@ export const ProjectListItem = memo(function ProjectListItem({
 								href={project.githubUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+								className="p-2 text-muted-foreground hover:text-(--tag-color) transition-colors"
 								whileHover={{ scale: 1.1 }}
 								whileTap={{ scale: 0.95 }}
 								aria-label={`View ${project.title} on GitHub`}
+								style={{ "--tag-color": project.color } as React.CSSProperties}
 							>
-								<Github className="w-4 h-4 fill-muted-foreground" />
+								<Github className="w-4 h-4 fill-current" />
 							</motion.a>
 						)}
 						{project.liveUrl && (
@@ -66,10 +68,11 @@ export const ProjectListItem = memo(function ProjectListItem({
 								href={project.liveUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+								className="p-2 text-muted-foreground hover:text-(--tag-color) transition-colors"
 								whileHover={{ scale: 1.1 }}
 								whileTap={{ scale: 0.95 }}
 								aria-label={`View ${project.title} live site`}
+								style={{ "--tag-color": project.color } as React.CSSProperties}
 							>
 								<ExternalLink className="w-4 h-4" />
 							</motion.a>
@@ -78,7 +81,7 @@ export const ProjectListItem = memo(function ProjectListItem({
 				</div>
 
 				{/* Description */}
-				<p className="font-(family-name:--font-pixel) text-muted-foreground text-xs leading-relaxed mb-6">
+				<p className="font-(family-name:--font-pixel) text-muted-foreground text-xs leading-relaxed mb-6 flex-1">
 					{project.description}
 				</p>
 
@@ -87,7 +90,10 @@ export const ProjectListItem = memo(function ProjectListItem({
 					{project.tags.map((tag) => (
 						<span
 							key={tag}
-							className="font-(family-name:--font-pixel) px-2 py-1 text-[0.5rem] border border-border text-muted-foreground hover:border-primary hover:text-primary transition-colors cursor-default"
+							className={cn(
+								"font-(family-name:--font-pixel) px-2 py-1 text-[0.5rem] border border-border text-muted-foreground hover:border-(--tag-color) hover:text-(--tag-color) transition-colors cursor-default",
+							)}
+							style={{ "--tag-color": project.color } as React.CSSProperties}
 						>
 							{tag}
 						</span>
