@@ -357,50 +357,6 @@ export interface Project {
 export const projects: Project[] = [
 	{
 		id: 1,
-		title: "iGarten",
-		description:
-			"Personal plant care app with AI superpowers. Features a Gemini vision-based plant identifier, AI-generated care schedules with structured output, and a streaming chat assistant.",
-		tags: ["Next.js", "Vercel AI SDK", "Gemini", "TypeScript", "Tailwind"],
-		color: "oklch(0.75 0.2 160)",
-		stats: { features: "3 AI", type: "App" },
-		githubUrl: "https://github.com/odedindi/iGarten",
-		liveUrl: "https://igarten.vercel.app/",
-	},
-	{
-		id: 2,
-		title: "Dialektli",
-		description:
-			"Platform for exploring Swiss German dialects. Share and discover regional words and phrases from across Switzerland. Built with a full GraphQL API and Prisma ORM.",
-		tags: ["Next.js", "GraphQL", "Prisma", "PostgreSQL", "TypeScript"],
-		color: "oklch(0.7 0.22 330)",
-		stats: { dialects: "26+", stack: "Full" },
-		githubUrl: "https://github.com/urbanswisstionary/dialektli/",
-		liveUrl: "https://www.dialektli.ch/",
-	},
-	{
-		id: 3,
-		title: "Solr",
-		description:
-			"Interactive solar system guide with a 3D model of planetary orbits powered by Three.js. Includes a gallery of the sun and all planets with adjustable scale.",
-		tags: ["Next.js", "Three.js", "TypeScript", "GraphQL"],
-		color: "oklch(0.8 0.15 200)",
-		stats: { planets: "8+", engine: "3D" },
-		githubUrl: "https://github.com/odedindi/solr",
-		liveUrl: "https://solr.vercel.app/",
-	},
-	{
-		id: 4,
-		title: "GeoChat",
-		description:
-			"Location-based real-time chat app. Connect with people nearby using WebSockets and geolocation. Built with Ionic and Socket.io.",
-		tags: ["Next.js", "Socket.io", "PostgreSQL", "Ionic", "RxJS"],
-		color: "oklch(0.85 0.18 90)",
-		stats: { tech: "RT", type: "Chat" },
-		githubUrl: "https://github.com/odedindi/GeoChat",
-		liveUrl: "https://geo-chat-omega.vercel.app/home",
-	},
-	{
-		id: 5,
 		title: "LandPro",
 		description:
 			"Climate hackathon prototype. An AI- and satellite-powered platform for carbon sequestration estimation. Uses TensorFlow + scikit-learn to classify land cover from satellite imagery. Built for the Cool Farm Alliance challenge with interactive Leaflet mapping.",
@@ -415,7 +371,62 @@ export const projects: Project[] = [
 		color: "oklch(0.78 0.16 130)",
 		stats: { focus: "AI+SAT", type: "Climate" },
 		githubUrl: "https://github.com/odedindi/lpfs",
-		liveUrl: "https://landpro.vercel.app/",
+		liveUrl: "https://landpro.odedo.dev/",
+	},
+	{
+		id: 2,
+		title: "GeoChat",
+		description:
+			"Location-based real-time chat app. Connect with people nearby using WebSockets and geolocation. Built with Ionic and Socket.io.",
+		tags: ["Next.js", "Socket.io", "PostgreSQL", "Ionic", "RxJS"],
+		color: "oklch(0.85 0.18 90)",
+		stats: { tech: "RT", type: "Chat" },
+		githubUrl: "https://github.com/odedindi/GeoChat",
+		liveUrl: "https://geo-chat-omega.odedo.dev",
+	},
+	{
+		id: 3,
+		title: "Solr",
+		description:
+			"Interactive solar system guide with a 3D model of planetary orbits powered by Three.js. Includes a gallery of the sun and all planets with adjustable scale.",
+		tags: ["Next.js", "Three.js", "TypeScript", "GraphQL"],
+		color: "oklch(0.8 0.15 200)",
+		stats: { planets: "8+", engine: "3D" },
+		githubUrl: "https://github.com/odedindi/solr",
+		liveUrl: "https://solr.vercel.app/",
+	},
+	{
+		id: 4,
+		title: "Dialektli",
+		description:
+			"Platform for exploring Swiss German dialects. Share and discover regional words and phrases from across Switzerland. Built with a full GraphQL API and Prisma ORM.",
+		tags: ["Next.js", "GraphQL", "Prisma", "PostgreSQL", "TypeScript"],
+		color: "oklch(0.7 0.22 330)",
+		stats: { dialects: "26+", stack: "Full" },
+		githubUrl: "https://github.com/urbanswisstionary/dialektli/",
+		liveUrl: "https://www.dialektli.ch/",
+	},
+	{
+		id: 5,
+		title: "iGarten",
+		description:
+			"Personal plant care app with AI superpowers. Features a Gemini vision-based plant identifier, AI-generated care schedules with structured output, and a streaming chat assistant.",
+		tags: ["Next.js", "Vercel AI SDK", "Gemini", "TypeScript", "Tailwind"],
+		color: "oklch(0.75 0.2 160)",
+		stats: { features: "3 AI", type: "App" },
+		githubUrl: "https://github.com/odedindi/iGarten",
+		liveUrl: "https://igarten.odedo.dev/",
+	},
+	{
+		id: 6,
+		title: "Planespotter",
+		description:
+			"Real-time plane spotter. See every aircraft flying above you.",
+		tags: ["Next.js", "TypeScript", "Tailwind CSS", "Jotai", "SWR", "Radix UI"],
+		color: "oklch(0.72 0.18 230)",
+		stats: { data: "Live", source: "OpenSky" },
+		githubUrl: "https://github.com/odedindi/planespotter",
+		liveUrl: "https://planespotter.odedo.dev/",
 	},
 ];
 
