@@ -15,6 +15,10 @@ import { projects, siteConfig, socialLinks } from "@/lib/site-config";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://odedo.dev";
 
+type PageProps = {
+	params: Promise<{ locale: string }>;
+};
+
 function buildJsonLd(locale: Locale) {
 	const profilePage = {
 		"@context": "https://schema.org",
@@ -81,7 +85,7 @@ function buildJsonLd(locale: Locale) {
 	return profilePage;
 }
 
-export default async function HomePage({ params }: PageProps<"/[locale]">) {
+export default async function HomePage({ params }: PageProps) {
 	const { locale } = await params;
 	const requestLocale = hasLocale(routing.locales, locale)
 		? locale

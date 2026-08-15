@@ -9,6 +9,8 @@ import { Geist, Geist_Mono, Press_Start_2P } from "next/font/google";
 import { notFound } from "next/navigation";
 import { getLangDir } from "rtl-detect";
 
+import type { ReactNode } from "react";
+
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { routing } from "@/i18n/routing";
@@ -17,6 +19,11 @@ import { siteConfig } from "@/lib/site-config";
 import "../globals.css";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://odedo.dev";
+
+type LayoutProps = {
+	children: ReactNode;
+	params: Promise<{ locale: string }>;
+};
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist-sans" });
 const geistMono = Geist_Mono({
@@ -29,7 +36,7 @@ const pressStart2P = Press_Start_2P({
 	variable: "--font-pixel",
 });
 
-export async function generateMetadata({ params }: LayoutProps<"/[locale]">) {
+export async function generateMetadata({ params }: LayoutProps) {
 	const { locale } = await params;
 	const t = await getTranslations({
 		locale: hasLocale(routing.locales, locale) ? locale : routing.defaultLocale,
@@ -120,10 +127,7 @@ const websiteJsonLd = {
 	},
 };
 
-export default async function LocaleLayout({
-	children,
-	params,
-}: LayoutProps<"/[locale]">) {
+export default async function LocaleLayout({ children, params }: LayoutProps) {
 	const { locale } = await params;
 	const direction = getLangDir(locale);
 	if (!hasLocale(routing.locales, locale)) {
