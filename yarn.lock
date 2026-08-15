@@ -868,10 +868,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:15.5.13":
-  version: 15.5.13
-  resolution: "@next/env@npm:15.5.13"
-  checksum: 10c0/288e288fac99377f138dfb64d4d0d3ec9716bf1c21e61a33eff5e02466b21d3ee37cf054276afdd181459f1ee5e5fdb0d207060b713daf07dc99f98de06f1e9e
+"@next/env@npm:16.1.5":
+  version: 16.1.5
+  resolution: "@next/env@npm:16.1.5"
+  checksum: 10c0/9d6442bee75386593d5da6e952146cf3c4338202e68a0ba9464d70c24ab7abb0c7e4ecd0ab661ca211e544fe7d6bd075270379bee3e97c5da3b6d082f95a04cd
   languageName: node
   linkType: hard
 
@@ -884,58 +884,58 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:15.5.13":
-  version: 15.5.13
-  resolution: "@next/swc-darwin-arm64@npm:15.5.13"
+"@next/swc-darwin-arm64@npm:16.1.5":
+  version: 16.1.5
+  resolution: "@next/swc-darwin-arm64@npm:16.1.5"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:15.5.13":
-  version: 15.5.13
-  resolution: "@next/swc-darwin-x64@npm:15.5.13"
+"@next/swc-darwin-x64@npm:16.1.5":
+  version: 16.1.5
+  resolution: "@next/swc-darwin-x64@npm:16.1.5"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:15.5.13":
-  version: 15.5.13
-  resolution: "@next/swc-linux-arm64-gnu@npm:15.5.13"
+"@next/swc-linux-arm64-gnu@npm:16.1.5":
+  version: 16.1.5
+  resolution: "@next/swc-linux-arm64-gnu@npm:16.1.5"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:15.5.13":
-  version: 15.5.13
-  resolution: "@next/swc-linux-arm64-musl@npm:15.5.13"
+"@next/swc-linux-arm64-musl@npm:16.1.5":
+  version: 16.1.5
+  resolution: "@next/swc-linux-arm64-musl@npm:16.1.5"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:15.5.13":
-  version: 15.5.13
-  resolution: "@next/swc-linux-x64-gnu@npm:15.5.13"
+"@next/swc-linux-x64-gnu@npm:16.1.5":
+  version: 16.1.5
+  resolution: "@next/swc-linux-x64-gnu@npm:16.1.5"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:15.5.13":
-  version: 15.5.13
-  resolution: "@next/swc-linux-x64-musl@npm:15.5.13"
+"@next/swc-linux-x64-musl@npm:16.1.5":
+  version: 16.1.5
+  resolution: "@next/swc-linux-x64-musl@npm:16.1.5"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:15.5.13":
-  version: 15.5.13
-  resolution: "@next/swc-win32-arm64-msvc@npm:15.5.13"
+"@next/swc-win32-arm64-msvc@npm:16.1.5":
+  version: 16.1.5
+  resolution: "@next/swc-win32-arm64-msvc@npm:16.1.5"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:15.5.13":
-  version: 15.5.13
-  resolution: "@next/swc-win32-x64-msvc@npm:15.5.13"
+"@next/swc-win32-x64-msvc@npm:16.1.5":
+  version: 16.1.5
+  resolution: "@next/swc-win32-x64-msvc@npm:16.1.5"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -2725,6 +2725,15 @@ __metadata:
   version: 4.0.4
   resolution: "balanced-match@npm:4.0.4"
   checksum: 10c0/07e86102a3eb2ee2a6a1a89164f29d0dbaebd28f2ca3f5ca786f36b8b23d9e417eb3be45a4acf754f837be5ac0a2317de90d3fcb7f4f4dc95720a1f36b26a17b
+  languageName: node
+  linkType: hard
+
+"baseline-browser-mapping@npm:^2.8.3":
+  version: 2.11.14
+  resolution: "baseline-browser-mapping@npm:2.11.14"
+  bin:
+    baseline-browser-mapping: dist/cli.cjs
+  checksum: 10c0/b0d248660ed8a09b0738fb9ca383668e8e445ad23b3efa8a5c41ee91fdf09399766513f97e5effd77e2e5027c1eec225f84bbfdf01586871e5ba2bb4cce8ea83
   languageName: node
   linkType: hard
 
@@ -5080,56 +5089,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"new@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "new@workspace:."
-  dependencies:
-    "@eslint/eslintrc": "npm:^3.3.5"
-    "@hookform/resolvers": "npm:^5.2.2"
-    "@radix-ui/react-dropdown-menu": "npm:^2.1.16"
-    "@radix-ui/react-label": "npm:^2.1.8"
-    "@radix-ui/react-navigation-menu": "npm:^1.2.14"
-    "@radix-ui/react-slot": "npm:^1.2.4"
-    "@tailwindcss/postcss": "npm:^4.2.2"
-    "@trivago/prettier-plugin-sort-imports": "npm:^6.0.2"
-    "@types/eslint-plugin-jsx-a11y": "npm:^6.10.1"
-    "@types/node": "npm:^22.19.15"
-    "@types/nodemailer": "npm:^6.4.23"
-    "@types/react": "npm:^19.2.14"
-    "@types/react-dom": "npm:^19.2.3"
-    "@types/rtl-detect": "npm:^1.0.3"
-    "@upstash/ratelimit": "npm:^2.0.8"
-    "@upstash/redis": "npm:^1.37.0"
-    class-variance-authority: "npm:^0.7.1"
-    clsx: "npm:^2.1.1"
-    deepmerge: "npm:^4.3.1"
-    eslint: "npm:^10.0.3"
-    eslint-config-next: "npm:16.2.0"
-    eslint-config-prettier: "npm:^10.1.8"
-    eslint-plugin-jsx-a11y: "npm:^6.10.2"
-    eslint-plugin-prettier: "npm:^5.5.5"
-    framer-motion: "npm:^12.38.0"
-    jiti: "npm:^2.6.1"
-    lucide-react: "npm:^0.577.0"
-    next: "npm:15.5.13"
-    next-intl: "npm:^4.8.3"
-    next-themes: "npm:^0.4.6"
-    nodemailer: "npm:^7.0.13"
-    prettier: "npm:^3.8.1"
-    prettier-plugin-tailwindcss: "npm:^0.7.2"
-    react: "npm:^19.2.4"
-    react-dom: "npm:^19.2.4"
-    react-hook-form: "npm:^7.71.2"
-    rtl-detect: "npm:^1.1.2"
-    sonner: "npm:^2.0.7"
-    tailwind-merge: "npm:^3.5.0"
-    tailwindcss: "npm:^4.2.2"
-    tw-animate-css: "npm:^1.4.0"
-    typescript: "npm:^5.9.3"
-    zod: "npm:^3.25.76"
-  languageName: unknown
-  linkType: soft
-
 "next-intl-swc-plugin-extractor@npm:^4.8.3":
   version: 4.8.3
   resolution: "next-intl-swc-plugin-extractor@npm:4.8.3"
@@ -5170,23 +5129,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:15.5.13":
-  version: 15.5.13
-  resolution: "next@npm:15.5.13"
+"next@npm:16.1.5":
+  version: 16.1.5
+  resolution: "next@npm:16.1.5"
   dependencies:
-    "@next/env": "npm:15.5.13"
-    "@next/swc-darwin-arm64": "npm:15.5.13"
-    "@next/swc-darwin-x64": "npm:15.5.13"
-    "@next/swc-linux-arm64-gnu": "npm:15.5.13"
-    "@next/swc-linux-arm64-musl": "npm:15.5.13"
-    "@next/swc-linux-x64-gnu": "npm:15.5.13"
-    "@next/swc-linux-x64-musl": "npm:15.5.13"
-    "@next/swc-win32-arm64-msvc": "npm:15.5.13"
-    "@next/swc-win32-x64-msvc": "npm:15.5.13"
+    "@next/env": "npm:16.1.5"
+    "@next/swc-darwin-arm64": "npm:16.1.5"
+    "@next/swc-darwin-x64": "npm:16.1.5"
+    "@next/swc-linux-arm64-gnu": "npm:16.1.5"
+    "@next/swc-linux-arm64-musl": "npm:16.1.5"
+    "@next/swc-linux-x64-gnu": "npm:16.1.5"
+    "@next/swc-linux-x64-musl": "npm:16.1.5"
+    "@next/swc-win32-arm64-msvc": "npm:16.1.5"
+    "@next/swc-win32-x64-msvc": "npm:16.1.5"
     "@swc/helpers": "npm:0.5.15"
+    baseline-browser-mapping: "npm:^2.8.3"
     caniuse-lite: "npm:^1.0.30001579"
     postcss: "npm:8.4.31"
-    sharp: "npm:^0.34.3"
+    sharp: "npm:^0.34.4"
     styled-jsx: "npm:5.1.6"
   peerDependencies:
     "@opentelemetry/api": ^1.1.0
@@ -5225,7 +5185,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 10c0/67b8c31e0bda950de54d37de3ecc7c740207f16cce32a052845e5bd9ec9be1634d48ad782981d114fa930c347b21031116ef0d5dca2abe71e0b67812c3f41163
+  checksum: 10c0/ff9f7dd0cae79f7ba2a64ac0d29ca77c94921dfc37b36899f4f997b948242f72585f4bb75829aaf8704d46c6f7d1a9796b8ff30688a3467c04c738b3a4247a9f
   languageName: node
   linkType: hard
 
@@ -5364,6 +5324,56 @@ __metadata:
   checksum: 10c0/3c47814fdc64842ae3d5a74bc9d06bdd8d21563c04d9939bf6716a9c00596a4ebc342552f8934013d1ec991c74e3671b26710a0c51815f0b603795605ab6b2c9
   languageName: node
   linkType: hard
+
+"odedo.dev@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "odedo.dev@workspace:."
+  dependencies:
+    "@eslint/eslintrc": "npm:^3.3.5"
+    "@hookform/resolvers": "npm:^5.2.2"
+    "@radix-ui/react-dropdown-menu": "npm:^2.1.16"
+    "@radix-ui/react-label": "npm:^2.1.8"
+    "@radix-ui/react-navigation-menu": "npm:^1.2.14"
+    "@radix-ui/react-slot": "npm:^1.2.4"
+    "@tailwindcss/postcss": "npm:^4.2.2"
+    "@trivago/prettier-plugin-sort-imports": "npm:^6.0.2"
+    "@types/eslint-plugin-jsx-a11y": "npm:^6.10.1"
+    "@types/node": "npm:^22.19.15"
+    "@types/nodemailer": "npm:^6.4.23"
+    "@types/react": "npm:^19.2.14"
+    "@types/react-dom": "npm:^19.2.3"
+    "@types/rtl-detect": "npm:^1.0.3"
+    "@upstash/ratelimit": "npm:^2.0.8"
+    "@upstash/redis": "npm:^1.37.0"
+    class-variance-authority: "npm:^0.7.1"
+    clsx: "npm:^2.1.1"
+    deepmerge: "npm:^4.3.1"
+    eslint: "npm:^10.0.3"
+    eslint-config-next: "npm:16.2.0"
+    eslint-config-prettier: "npm:^10.1.8"
+    eslint-plugin-jsx-a11y: "npm:^6.10.2"
+    eslint-plugin-prettier: "npm:^5.5.5"
+    framer-motion: "npm:^12.38.0"
+    jiti: "npm:^2.6.1"
+    lucide-react: "npm:^0.577.0"
+    next: "npm:16.1.5"
+    next-intl: "npm:^4.8.3"
+    next-themes: "npm:^0.4.6"
+    nodemailer: "npm:^7.0.13"
+    prettier: "npm:^3.8.1"
+    prettier-plugin-tailwindcss: "npm:^0.7.2"
+    react: "npm:^19.2.4"
+    react-dom: "npm:^19.2.4"
+    react-hook-form: "npm:^7.71.2"
+    rtl-detect: "npm:^1.1.2"
+    sonner: "npm:^2.0.7"
+    tailwind-merge: "npm:^3.5.0"
+    tailwindcss: "npm:^4.2.2"
+    tw-animate-css: "npm:^1.4.0"
+    typescript: "npm:^5.9.3"
+    zod: "npm:^3.25.76"
+  languageName: unknown
+  linkType: soft
 
 "optionator@npm:^0.9.3":
   version: 0.9.4
@@ -5966,7 +5976,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.34.3":
+"sharp@npm:^0.34.4":
   version: 0.34.5
   resolution: "sharp@npm:0.34.5"
   dependencies:
