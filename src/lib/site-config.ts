@@ -398,8 +398,7 @@ export const projects: Project[] = [
 	{
 		id: 4,
 		title: "Aviron",
-		description:
-			"Realtime plane spotter. See every aircraft flying above you.",
+		description: "Realtime plane spotter. See every aircraft flying above you.",
 		tags: ["Next.js", "TypeScript", "Tailwind CSS", "Jotai", "SWR", "Radix UI"],
 		color: "oklch(0.72 0.18 230)",
 		stats: { data: "Live", source: "OpenSky" },

@@ -6,9 +6,7 @@ import { type MailOptions, sendMail } from "@/lib/emailService";
 
 import { FormData } from "../../[locale]/actions";
 
-export const config = {
-	runtime: "nodejs",
-};
+export const runtime = "nodejs";
 
 const ratelimit = new Ratelimit({
 	redis: Redis.fromEnv(),
