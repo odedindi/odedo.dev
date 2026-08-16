@@ -17,12 +17,22 @@ const ratelimit = new Ratelimit({
 
 export async function POST(request: NextRequest) {
 	try {
-		// Rate limiting — keyed by IP
+		// Rate limiting — keyed by IP (fail-open if Redis unavailable)
 		const ip =
 			request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
 			"anonymous";
-		const { success } = await ratelimit.limit(ip);
-		if (!success) {
+		let rateLimited = false;
+		try {
+			const { success } = await ratelimit.limit(ip);
+			rateLimited = !success;
+		} catch (rlError) {
+			// Fail-open: log the error but continue to send the email
+			console.error(
+				"Rate limiter unavailable, proceeding without rate limiting",
+				rlError,
+			);
+		}
+		if (rateLimited) {
 			return NextResponse.json(
 				{ error: "Too many requests. Please try again later." },
 				{ status: 429 },
