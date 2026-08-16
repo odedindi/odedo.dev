@@ -429,9 +429,9 @@ export const projects: Project[] = [
 	},
 	{
 		id: 7,
-		title: "logo-kids-ide",
+		title: "Logo Kids IDE",
 		description:
-			"A playful Logo interpreter and turtle-graphics IDE for kids. CodeMirror editor with live linting and one-click quick-fixes, built-in tutorials and challenges, full English/Hebrew i18n.",
+			"A playful Logo interpreter and turtle-graphics IDE for kids. CodeMirror editor with live linting and one-click quick-fixes, built-in tutorials and challenges, and full English/Hebrew i18n.",
 		tags: ["React", "TypeScript", "CodeMirror", "Vite", "Tailwind"],
 		color: "oklch(0.85 0.2 60)",
 		stats: { language: "LOGO", audience: "Kids" },
