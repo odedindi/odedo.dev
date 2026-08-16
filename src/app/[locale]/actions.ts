@@ -4,7 +4,7 @@ import { z } from "zod";
 
 const formSchema = z.object({
 	name: z.string().max(100),
-	email: z.string().email().max(254),
+	email: z.email().max(254),
 	subject: z.string().max(150),
 	message: z.string().min(5).max(5000),
 	// Honeypot — must stay empty

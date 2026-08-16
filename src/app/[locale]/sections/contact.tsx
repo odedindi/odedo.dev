@@ -25,15 +25,12 @@ import { contactContent, contactInfo, siteConfig } from "@/lib/site-config";
 const formSchema = z.object({
 	name: z
 		.string()
-		.nonempty({ message: "Name is required." })
+		.min(1, { message: "Name is required." })
 		.max(100, { message: "Name is too long." }),
-	email: z
-		.string()
-		.email({ message: "Please enter a valid email address." })
-		.max(254),
+	email: z.email({ message: "Please enter a valid email address." }).max(254),
 	subject: z
 		.string()
-		.nonempty({ message: "Subject is required." })
+		.min(1, { message: "Subject is required." })
 		.max(150, { message: "Subject is too long." }),
 	message: z
 		.string()
