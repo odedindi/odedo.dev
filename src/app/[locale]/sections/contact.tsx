@@ -64,7 +64,10 @@ export function Contact() {
 	async function onSubmit(data: FormValues) {
 		setIsSubmitting(true);
 		try {
-			await sendContactForm(data);
+			const result = await sendContactForm(data);
+			if (!result.success) {
+				throw new Error("Message could not be sent.");
+			}
 			form.reset();
 			setIsSubmitted(true);
 			toast("Message sent!", {
