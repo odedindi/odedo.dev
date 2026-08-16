@@ -427,6 +427,17 @@ export const projects: Project[] = [
 		githubUrl: "https://github.com/odedindi/iGarten",
 		liveUrl: "https://igarten.odedo.dev/",
 	},
+	{
+		id: 7,
+		title: "Logo Kids IDE",
+		description:
+			"A playful Logo interpreter and turtle-graphics IDE for kids. CodeMirror editor with live linting and one-click quick-fixes, built-in tutorials and challenges, and full English/Hebrew i18n.",
+		tags: ["React", "TypeScript", "CodeMirror", "Vite", "Tailwind"],
+		color: "oklch(0.85 0.2 60)",
+		stats: { language: "LOGO", audience: "Kids" },
+		githubUrl: "https://github.com/odedindi/logo-kids-ide",
+		liveUrl: "https://logo.odedo.dev/",
+	},
 ];
 
 // ============================================================================
